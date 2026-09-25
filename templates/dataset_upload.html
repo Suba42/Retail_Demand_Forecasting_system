@@ -1,0 +1,1568 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dataset Management | Retail Demand Forecasting System
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <div class="dashboard-label">
+                DATA MANAGEMENT & DATA QUALITY
+            </div>
+
+            <h1>
+                Dataset Management
+            </h1>
+
+            <p>
+                Upload, analyze and prepare retail datasets
+                before forecasting and machine learning.
+            </p>
+
+        </div>
+
+        <div class="role-badge">
+
+            <i class="bi bi-database-check"></i>
+
+            Data Hub
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         UPLOAD CARD
+    ====================================================== -->
+
+    <div class="large-card">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    Upload Retail Dataset
+                </h4>
+
+                <p class="muted mb-0">
+                    Upload a CSV file and the system will
+                    automatically analyze its structure.
+                </p>
+
+            </div>
+
+            <div class="card-icon">
+
+                <i class="bi bi-cloud-arrow-up"></i>
+
+            </div>
+
+        </div>
+
+
+        <!-- FLASH MESSAGES -->
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+
+            {% if messages %}
+
+                {% for category, message in messages %}
+
+                    <div class="alert alert-{{ category }} mt-4">
+                        {{ message }}
+                    </div>
+
+                {% endfor %}
+
+            {% endif %}
+
+        {% endwith %}
+
+
+        <!-- =================================================
+             UPLOAD FORM
+        ================================================== -->
+
+        <form
+            action="{{ url_for('upload_dataset') }}"
+            method="POST"
+            enctype="multipart/form-data"
+            class="mt-4"
+            id="datasetUploadForm"
+        >
+
+            <!-- DATASET TYPE -->
+
+            <div class="mb-4">
+
+                <label
+                    for="dataset_type"
+                    class="form-label"
+                >
+                    Dataset Type
+                </label>
+
+                <select
+                    name="dataset_type"
+                    id="dataset_type"
+                    class="form-select"
+                    required
+                >
+
+                    <option value="">
+                        Select dataset type
+                    </option>
+
+                    <option value="sales">
+                        Sales Dataset
+                    </option>
+
+                    <option value="inventory">
+                        Inventory Dataset
+                    </option>
+
+                    <option value="product">
+                        Product Dataset
+                    </option>
+
+                    <option value="supplier">
+                        Supplier Dataset
+                    </option>
+
+                    <option value="weather">
+                        Weather Dataset
+                    </option>
+
+                    <option value="holiday">
+                        Holiday / Festival Dataset
+                    </option>
+
+                    <option value="other">
+                        Other Dataset
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- FILE -->
+
+            <div class="mb-4">
+
+                <label
+                    for="dataset"
+                    class="form-label"
+                >
+                    CSV Dataset
+                </label>
+
+                <input
+                    type="file"
+                    name="dataset"
+                    id="dataset"
+                    class="form-control"
+                    accept=".csv"
+                    required
+                >
+
+                <div
+                    id="fileInfo"
+                    class="small text-muted mt-2"
+                >
+                    Only CSV files are currently supported.
+                </div>
+
+            </div>
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+                id="uploadButton"
+            >
+
+                <i class="bi bi-cloud-arrow-up"></i>
+
+                Upload & Analyze Dataset
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- =====================================================
+         ANALYSIS RESULTS
+    ====================================================== -->
+
+    {% if upload_success %}
+
+    <div class="large-card mt-4">
+
+        <!-- RESULT HEADER -->
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    DATA QUALITY ANALYSIS
+                </div>
+
+                <h4>
+                    Dataset Analysis
+                </h4>
+
+                <p class="muted mb-0">
+                    Automated analysis of the uploaded
+                    retail dataset.
+                </p>
+
+            </div>
+
+            <span class="badge bg-success">
+
+                <i class="bi bi-check-circle"></i>
+
+                Successfully Processed
+
+            </span>
+
+        </div>
+
+
+        <!-- =================================================
+             SUMMARY CARDS
+        ================================================== -->
+
+        <div class="row g-4 mt-3">
+
+            <!-- ROWS -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-list-ol"></i>
+                    </div>
+
+                    <h5>
+                        Total Rows
+                    </h5>
+
+                    <h3>
+                        {{ total_rows }}
+                    </h3>
+
+                    <span>
+                        Records detected
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- COLUMNS -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-layout-three-columns"></i>
+                    </div>
+
+                    <h5>
+                        Total Columns
+                    </h5>
+
+                    <h3>
+                        {{ total_columns }}
+                    </h3>
+
+                    <span>
+                        Features detected
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MISSING VALUES -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-question-circle"></i>
+                    </div>
+
+                    <h5>
+                        Missing Values
+                    </h5>
+
+                    <h3>
+                        {{ missing_values }}
+                    </h3>
+
+                    <span>
+                        Values requiring review
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DUPLICATES -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-files"></i>
+                    </div>
+
+                    <h5>
+                        Duplicate Rows
+                    </h5>
+
+                    <h3>
+                        {{ duplicate_rows }}
+                    </h3>
+
+                    <span>
+                        Duplicate records detected
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             DATASET INFORMATION
+        ================================================== -->
+
+        <div class="large-card mt-4">
+
+            <h5>
+                Dataset Information
+            </h5>
+
+            <p class="muted">
+                Basic information about the uploaded file.
+            </p>
+
+
+            <div class="status-item">
+
+                <span>
+                    File Name
+                </span>
+
+                <strong>
+                    {{ filename }}
+                </strong>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Dataset Type
+                </span>
+
+                <strong>
+                    {{ dataset_type|capitalize }}
+                </strong>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    File Format
+                </span>
+
+                <strong>
+                    CSV
+                </strong>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Processing
+                </span>
+
+                <strong class="online">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    Completed
+
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             AUTOMATIC COLUMN MAPPING
+        ================================================== -->
+
+        <div class="large-card mt-4">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <div>
+
+                    <h5>
+                        Automatic Column Mapping
+                    </h5>
+
+                    <p class="muted mb-0">
+                        Important retail columns detected automatically.
+                    </p>
+
+                </div>
+
+                {% if mapped_count is defined %}
+
+                    <span class="badge bg-primary">
+
+                        {{ mapped_count }}
+
+                        /
+
+                        {{ total_mapping_fields }}
+
+                        Mapped
+
+                    </span>
+
+                {% else %}
+
+                    <span class="badge bg-primary">
+                        Automatic
+                    </span>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="row g-4 mt-3">
+
+
+                <!-- DATE -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-calendar3"></i>
+                        </div>
+
+                        <h6>
+                            Date Column
+                        </h6>
+
+                        {% if column_mapping.date %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.date }}
+
+                            </span>
+
+                            <p class="muted mt-2 mb-0">
+                                Used for time-series forecasting.
+                            </p>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-box"></i>
+                        </div>
+
+                        <h6>
+                            Product Column
+                        </h6>
+
+                        {% if column_mapping.product %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.product }}
+
+                            </span>
+
+                            <p class="muted mt-2 mb-0">
+                                Identifies products or SKUs.
+                            </p>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- DEMAND -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-cart-check"></i>
+                        </div>
+
+                        <h6>
+                            Demand Column
+                        </h6>
+
+                        {% if column_mapping.demand %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.demand }}
+
+                            </span>
+
+                            <p class="muted mt-2 mb-0">
+                                Used as forecasting target.
+                            </p>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- SALES -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+
+                        <h6>
+                            Sales Column
+                        </h6>
+
+                        {% if column_mapping.sales %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.sales }}
+
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- STORE -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-shop"></i>
+                        </div>
+
+                        <h6>
+                            Store Column
+                        </h6>
+
+                        {% if column_mapping.store %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.store }}
+
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRICE -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-currency-rupee"></i>
+                        </div>
+
+                        <h6>
+                            Price Column
+                        </h6>
+
+                        {% if column_mapping.price %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.price }}
+
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- DISCOUNT -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-percent"></i>
+                        </div>
+
+                        <h6>
+                            Discount Column
+                        </h6>
+
+                        {% if column_mapping.discount %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.discount }}
+
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROMOTION -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-megaphone"></i>
+                        </div>
+
+                        <h6>
+                            Promotion Column
+                        </h6>
+
+                        {% if column_mapping.promotion %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.promotion }}
+
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- INVENTORY -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+
+                        <h6>
+                            Inventory Column
+                        </h6>
+
+                        {% if column_mapping.inventory %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.inventory }}
+
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-tags"></i>
+                        </div>
+
+                        <h6>
+                            Category Column
+                        </h6>
+
+                        {% if column_mapping.category %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.category }}
+
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUPPLIER -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+
+                        <h6>
+                            Supplier Column
+                        </h6>
+
+                        {% if column_mapping.supplier %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.supplier }}
+
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- LEAD TIME -->
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-icon">
+                            <i class="bi bi-clock"></i>
+                        </div>
+
+                        <h6>
+                            Lead Time Column
+                        </h6>
+
+                        {% if column_mapping.lead_time %}
+
+                            <span class="badge bg-success">
+
+                                <i class="bi bi-check-circle"></i>
+
+                                {{ column_mapping.lead_time }}
+
+                            </span>
+
+                        {% else %}
+
+                            <span class="badge bg-secondary">
+                                Not Detected
+                            </span>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             DETECTED COLUMNS
+        ================================================== -->
+
+        <div class="large-card mt-4">
+
+            <h5>
+                Detected Dataset Columns
+            </h5>
+
+            <p class="muted">
+                Columns found inside the uploaded CSV.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 mt-3">
+
+                {% for column in columns %}
+
+                    <span class="badge rounded-pill bg-primary">
+                        {{ column }}
+                    </span>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             DATA QUALITY STATUS
+        ================================================== -->
+
+        <div class="large-card mt-4">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <div>
+
+                    <h5>
+                        Data Quality Status
+                    </h5>
+
+                    <p class="muted mb-0">
+                        Initial quality checks performed on
+                        the uploaded dataset.
+                    </p>
+
+                </div>
+
+                <span class="badge bg-success">
+                    Analysis Complete
+                </span>
+
+            </div>
+
+
+            <div class="row g-4 mt-3">
+
+                <div class="col-md-4">
+
+                    <div class="status-item">
+
+                        <span>
+                            Missing Value Check
+                        </span>
+
+                        <strong class="online">
+
+                            <i class="bi bi-check-circle"></i>
+
+                            Completed
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="status-item">
+
+                        <span>
+                            Duplicate Check
+                        </span>
+
+                        <strong class="online">
+
+                            <i class="bi bi-check-circle"></i>
+
+                            Completed
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="status-item">
+
+                        <span>
+                            Column Detection
+                        </span>
+
+                        <strong class="online">
+
+                            <i class="bi bi-check-circle"></i>
+
+                            Completed
+
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             DATA CLEANING STATUS
+        ================================================== -->
+
+        <div class="large-card mt-4">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <div>
+
+                    <h5>
+                        Data Cleaning Status
+                    </h5>
+
+                    <p class="muted mb-0">
+                        Dataset cleaning preparation before
+                        machine learning.
+                    </p>
+
+                </div>
+
+
+                {% if cleaned_success is defined and cleaned_success %}
+
+                    <span class="badge bg-success">
+
+                        <i class="bi bi-check-circle"></i>
+
+                        Cleaning Completed
+
+                    </span>
+
+                {% else %}
+
+                    <span class="badge bg-warning text-dark">
+
+                        <i class="bi bi-hourglass-split"></i>
+
+                        Pending
+
+                    </span>
+
+                {% endif %}
+
+            </div>
+
+
+            {% if cleaned_success is defined and cleaned_success %}
+
+                <div class="mt-4">
+
+                    <div class="status-item">
+
+                        <span>
+                            Cleaned Dataset
+                        </span>
+
+                        <strong class="online">
+                            ✓ Created
+                        </strong>
+
+                    </div>
+
+
+                    <div class="status-item">
+
+                        <span>
+                            Remaining Missing Values
+                        </span>
+
+                        <strong>
+                            {{ cleaned_missing_values }}
+                        </strong>
+
+                    </div>
+
+
+                    <div class="status-item">
+
+                        <span>
+                            Remaining Duplicate Rows
+                        </span>
+
+                        <strong>
+                            {{ cleaned_duplicate_rows }}
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            {% else %}
+
+                <div class="alert alert-info mt-4 mb-0">
+
+                    <i class="bi bi-info-circle"></i>
+
+                    Dataset analysis is complete.
+                    Data cleaning will be performed in the
+                    next processing stage.
+
+                </div>
+
+            {% endif %}
+
+        </div>
+
+
+        <!-- =================================================
+             DATASET PREVIEW
+        ================================================== -->
+
+        <div class="large-card mt-4">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <div>
+
+                    <h5>
+                        Dataset Preview
+                    </h5>
+
+                    <p class="muted mb-0">
+                        Preview of the uploaded retail data.
+                    </p>
+
+                </div>
+
+                <span class="badge bg-secondary">
+                    First 10 Rows
+                </span>
+
+            </div>
+
+
+            <div class="table-responsive mt-3">
+
+                {{ preview_html | safe }}
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             FORECASTING READINESS
+        ================================================== -->
+
+        <div class="large-card mt-4">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <div>
+
+                    <h5>
+                        Forecasting Readiness
+                    </h5>
+
+                    <p class="muted mb-0">
+                        Dataset preparation status before
+                        connecting the forecasting models.
+                    </p>
+
+                </div>
+
+
+                {% if forecasting_ready is defined and forecasting_ready %}
+
+                    <span class="badge bg-success">
+
+                        <i class="bi bi-check-circle"></i>
+
+                        Ready for Forecasting
+
+                    </span>
+
+                {% else %}
+
+                    <span class="badge bg-warning text-dark">
+
+                        <i class="bi bi-hourglass-split"></i>
+
+                        Additional Processing Required
+
+                    </span>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="mt-4">
+
+                <!-- UPLOAD -->
+
+                <div class="status-item">
+
+                    <span>
+                        Dataset Uploaded
+                    </span>
+
+                    <strong class="online">
+                        ✓ Complete
+                    </strong>
+
+                </div>
+
+
+                <!-- ANALYSIS -->
+
+                <div class="status-item">
+
+                    <span>
+                        Dataset Analysis
+                    </span>
+
+                    <strong class="online">
+                        ✓ Complete
+                    </strong>
+
+                </div>
+
+
+                <!-- MAPPING -->
+
+                <div class="status-item">
+
+                    <span>
+                        Automatic Column Mapping
+                    </span>
+
+                    <strong class="online">
+
+                        ✓
+
+                        {% if mapped_count is defined %}
+
+                            {{ mapped_count }} Fields Detected
+
+                        {% else %}
+
+                            Completed
+
+                        {% endif %}
+
+                    </strong>
+
+                </div>
+
+
+                <!-- CLEANING -->
+
+                <div class="status-item">
+
+                    <span>
+                        Data Cleaning
+                    </span>
+
+                    {% if cleaned_success is defined and cleaned_success %}
+
+                        <strong class="online">
+                            ✓ Complete
+                        </strong>
+
+                    {% else %}
+
+                        <strong class="ready">
+                            Pending
+                        </strong>
+
+                    {% endif %}
+
+                </div>
+
+
+                <!-- ML -->
+
+                <div class="status-item">
+
+                    <span>
+                        ML Forecasting
+                    </span>
+
+                    {% if forecasting_ready is defined and forecasting_ready %}
+
+                        <strong class="online">
+                            Ready
+                        </strong>
+
+                    {% else %}
+
+                        <strong class="ready">
+                            Waiting for Processing
+                        </strong>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+
+<!-- =====================================================
+     CLIENT-SIDE FILE VALIDATION
+====================================================== -->
+
+<script>
+
+const datasetInput =
+    document.getElementById("dataset");
+
+const fileInfo =
+    document.getElementById("fileInfo");
+
+const uploadForm =
+    document.getElementById("datasetUploadForm");
+
+
+/* =====================================================
+   FILE SELECTION
+===================================================== */
+
+if (datasetInput) {
+
+    datasetInput.addEventListener(
+        "change",
+        function () {
+
+            const file = this.files[0];
+
+            if (!file) {
+
+                fileInfo.innerHTML =
+                    "Only CSV files are currently supported.";
+
+                return;
+
+            }
+
+
+            const fileName =
+                file.name.toLowerCase();
+
+
+            if (!fileName.endsWith(".csv")) {
+
+                fileInfo.innerHTML = `
+
+                    <span class="text-danger">
+
+                        <i class="bi bi-exclamation-triangle"></i>
+
+                        Please select a CSV file.
+
+                    </span>
+
+                `;
+
+                this.value = "";
+
+                return;
+
+            }
+
+
+            const fileSizeMB =
+                file.size / (1024 * 1024);
+
+
+            fileInfo.innerHTML = `
+
+                <span class="text-success">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    ${file.name}
+
+                    |
+
+                    ${fileSizeMB.toFixed(2)} MB
+
+                </span>
+
+            `;
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   FORM VALIDATION
+===================================================== */
+
+if (uploadForm) {
+
+    uploadForm.addEventListener(
+        "submit",
+        function (event) {
+
+            const datasetType =
+                document.getElementById(
+                    "dataset_type"
+                ).value;
+
+
+            const file =
+                document.getElementById(
+                    "dataset"
+                ).files[0];
+
+
+            if (!datasetType) {
+
+                event.preventDefault();
+
+                alert(
+                    "Please select the dataset type."
+                );
+
+                return;
+
+            }
+
+
+            if (!file) {
+
+                event.preventDefault();
+
+                alert(
+                    "Please select a CSV file."
+                );
+
+                return;
+
+            }
+
+
+            if (
+                !file.name
+                    .toLowerCase()
+                    .endsWith(".csv")
+            ) {
+
+                event.preventDefault();
+
+                alert(
+                    "Only CSV files are supported."
+                );
+
+                return;
+
+            }
+
+
+            /* Loading state */
+
+            const button =
+                document.getElementById(
+                    "uploadButton"
+                );
+
+
+            button.disabled = true;
+
+
+            button.innerHTML = `
+
+                <span
+                    class="spinner-border spinner-border-sm"
+                    role="status"
+                ></span>
+
+                Processing Dataset...
+
+            `;
+
+        }
+    );
+
+}
+
+</script>
+
+{% endblock %}

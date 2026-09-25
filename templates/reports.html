@@ -1,0 +1,1196 @@
+{% extends "base.html" %}
+
+{% block title %}
+Reports | Retail Demand Forecasting System
+{% endblock %}
+
+{% block content %}
+
+<style>
+    .reports-container {
+        padding: 25px;
+    }
+
+    .reports-header {
+        margin-bottom: 25px;
+    }
+
+    .reports-header h1 {
+        font-size: 32px;
+        font-weight: 800;
+        margin-bottom: 6px;
+    }
+
+    .reports-header p {
+        opacity: 0.75;
+        margin: 0;
+    }
+
+    .kpi-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-bottom: 25px;
+    }
+
+    .kpi-card {
+        padding: 22px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .kpi-title {
+        font-size: 13px;
+        opacity: 0.7;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .kpi-value {
+        font-size: 28px;
+        font-weight: 800;
+    }
+
+    .report-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+
+    .report-card {
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        padding: 22px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    .report-card.full-width {
+        grid-column: 1 / -1;
+    }
+
+    .report-card h3 {
+        margin: 0 0 5px 0;
+        font-size: 19px;
+        font-weight: 750;
+    }
+
+    .report-card p {
+        margin-bottom: 18px;
+        opacity: 0.65;
+        font-size: 13px;
+    }
+
+    .chart-container {
+        position: relative;
+        height: 320px;
+        width: 100%;
+    }
+
+    .recommendations {
+        margin-top: 25px;
+    }
+
+    .recommendation-item {
+        padding: 14px 16px;
+        margin-bottom: 10px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.10);
+        border-left: 4px solid #8b5cf6;
+    }
+
+    .product-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .product-table th,
+    .product-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .product-table th {
+        font-size: 13px;
+        opacity: 0.7;
+    }
+
+    .product-table td {
+        font-size: 14px;
+    }
+
+    /* =========================================================
+       AUTOMATIC BI REPORT SECTION
+       ========================================================= */
+
+    .bi-section {
+        margin-top: 30px;
+    }
+
+    .bi-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 18px;
+    }
+
+    .bi-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .bi-button:hover {
+        transform: translateY(-2px);
+        text-decoration: none;
+    }
+
+    .bi-button-primary {
+        background: #6f42c1;
+        color: white;
+    }
+
+    .bi-button-primary:hover {
+        color: white;
+        opacity: 0.92;
+    }
+
+    .bi-button-success {
+        background: #198754;
+        color: white;
+    }
+
+    .bi-button-success:hover {
+        color: white;
+        opacity: 0.92;
+    }
+
+    .bi-info {
+        margin-top: 18px;
+        padding: 14px 16px;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.08);
+        font-size: 13px;
+        opacity: 0.8;
+    }
+
+    @media (max-width: 1100px) {
+        .kpi-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .report-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .reports-container {
+            padding: 15px;
+        }
+
+        .kpi-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .reports-header h1 {
+            font-size: 26px;
+        }
+
+        .bi-actions {
+            flex-direction: column;
+        }
+
+        .bi-button {
+            width: 100%;
+        }
+    }
+</style>
+
+
+<div class="reports-container">
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <div class="reports-header">
+
+        <h1>
+            Reports Dashboard
+        </h1>
+
+        <p>
+            Automated overview of demand, inventory and forecasting.
+        </p>
+
+        {% if reports_dashboard.generated_at %}
+
+        <small>
+            Generated:
+            {{ reports_dashboard.generated_at }}
+        </small>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         KPI CARDS
+         ===================================================== -->
+
+    <div class="kpi-grid">
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+                Total Records
+            </div>
+
+            <div class="kpi-value">
+                {{ "{:,}".format(reports_dashboard.kpis.records) }}
+            </div>
+
+        </div>
+
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+                Total Demand
+            </div>
+
+            <div class="kpi-value">
+                {{ "{:,.0f}".format(reports_dashboard.kpis.total_demand) }}
+            </div>
+
+        </div>
+
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+                Total Inventory
+            </div>
+
+            <div class="kpi-value">
+                {{ "{:,.0f}".format(reports_dashboard.kpis.total_inventory) }}
+            </div>
+
+        </div>
+
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+                Products
+            </div>
+
+            <div class="kpi-value">
+                {{ "{:,}".format(reports_dashboard.kpis.products) }}
+            </div>
+
+        </div>
+
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+                Inventory Records
+            </div>
+
+            <div class="kpi-value">
+                {{ "{:,}".format(reports_dashboard.kpis.inventory_rows) }}
+            </div>
+
+        </div>
+
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+                Low Stock
+            </div>
+
+            <div class="kpi-value">
+                {{ "{:,}".format(reports_dashboard.kpis.low_stock_rows) }}
+            </div>
+
+        </div>
+
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+                Overstock
+            </div>
+
+            <div class="kpi-value">
+                {{ "{:,}".format(reports_dashboard.kpis.overstock_rows) }}
+            </div>
+
+        </div>
+
+
+        <div class="kpi-card">
+
+            <div class="kpi-title">
+                Best Forecast Model
+            </div>
+
+            <div
+                class="kpi-value"
+                style="font-size:20px;"
+            >
+                {{ reports_dashboard.kpis.forecast_best_model }}
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         CHARTS
+         ===================================================== -->
+
+    <div class="report-grid">
+
+        <!-- DEMAND TREND -->
+
+        <div class="report-card full-width">
+
+            <h3>
+                Overall Demand Trend
+            </h3>
+
+            <p>
+                Total demand over time.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas id="demandTrendChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOP PRODUCTS -->
+
+        <div class="report-card">
+
+            <h3>
+                Top Demand Products
+            </h3>
+
+            <p>
+                Products with the highest total demand.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas id="topProductsChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- WEEKDAY -->
+
+        <div class="report-card">
+
+            <h3>
+                Demand by Weekday
+            </h3>
+
+            <p>
+                Demand distribution across weekdays.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas id="weekdayDemandChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- MONTHLY -->
+
+        <div class="report-card">
+
+            <h3>
+                Monthly Demand
+            </h3>
+
+            <p>
+                Monthly demand overview.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas id="monthlyDemandChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- INVENTORY STATUS -->
+
+        <div class="report-card">
+
+            <h3>
+                Inventory Status
+            </h3>
+
+            <p>
+                Current inventory status distribution.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas id="inventoryStatusChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- INVENTORY VS DEMAND -->
+
+        <div class="report-card">
+
+            <h3>
+                Inventory vs Demand
+            </h3>
+
+            <p>
+                Relationship between available inventory and demand.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas id="inventoryDemandChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORECAST MODELS -->
+
+        <div class="report-card">
+
+            <h3>
+                Forecast Model Performance
+            </h3>
+
+            <p>
+                Comparison of forecasting models.
+            </p>
+
+            <div class="chart-container">
+
+                <canvas id="forecastModelsChart"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOP PRODUCTS TABLE
+         ===================================================== -->
+
+    <div
+        class="report-card full-width"
+        style="margin-top:22px;"
+    >
+
+        <h3>
+            Top Demand Products
+        </h3>
+
+        <p>
+            Products ranked by total demand.
+        </p>
+
+
+        <div style="overflow-x:auto;">
+
+            <table class="product-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Rank
+                        </th>
+
+                        <th>
+                            Product Code
+                        </th>
+
+                        <th>
+                            Total Demand
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% if reports_dashboard.charts.top_products %}
+
+                        {% for item in reports_dashboard.charts.top_products %}
+
+                        <tr>
+
+                            <td>
+                                {{ loop.index }}
+                            </td>
+
+                            <td>
+                                {{ item.product }}
+                            </td>
+
+                            <td>
+                                {{ "{:,.2f}".format(item.demand) }}
+                            </td>
+
+                        </tr>
+
+                        {% endfor %}
+
+                    {% else %}
+
+                        <tr>
+
+                            <td
+                                colspan="3"
+                                style="text-align:center; opacity:0.6;"
+                            >
+                                No product demand data available.
+                            </td>
+
+                        </tr>
+
+                    {% endif %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         RECOMMENDATIONS
+         ===================================================== -->
+
+    <div class="report-card recommendations">
+
+        <h3>
+            Automated Recommendations
+        </h3>
+
+        <p>
+            Recommendations generated from the available project data.
+        </p>
+
+
+        {% if reports_dashboard.recommendations %}
+
+            {% for recommendation in reports_dashboard.recommendations %}
+
+            <div class="recommendation-item">
+                {{ recommendation }}
+            </div>
+
+            {% endfor %}
+
+        {% else %}
+
+            <div class="recommendation-item">
+                Continue monitoring demand, inventory and forecast results.
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         FUTURE ENHANCEMENT
+         ===================================================== -->
+
+    <div class="report-card full-width bi-section">
+
+        <p style="margin:0; opacity:0.8; font-size:14px;">
+            Future enhancement: adding Power BI.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     CHART.JS
+     ========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const reportData =
+            {{ reports_dashboard | tojson }};
+
+        const charts =
+            reportData.charts || {};
+
+
+        const commonOptions = {
+
+            responsive: true,
+
+            maintainAspectRatio: false,
+
+            plugins: {
+
+                legend: {
+
+                    display: true,
+
+                    position: "bottom"
+
+                }
+
+            }
+
+        };
+
+
+        /* =====================================================
+           DEMAND TREND
+           ===================================================== */
+
+        const demandTrend =
+            charts.demand_trend || [];
+
+
+        new Chart(
+
+            document.getElementById(
+                "demandTrendChart"
+            ),
+
+            {
+
+                type: "line",
+
+                data: {
+
+                    labels:
+                        demandTrend.map(
+                            item => item.date
+                        ),
+
+                    datasets: [
+
+                        {
+
+                            label:
+                                "Demand",
+
+                            data:
+                                demandTrend.map(
+
+                                    item =>
+                                        Number(
+                                            item.demand || 0
+                                        )
+
+                                ),
+
+                            tension:
+                                0.3,
+
+                            fill:
+                                false
+
+                        }
+
+                    ]
+
+                },
+
+                options:
+                    commonOptions
+
+            }
+
+        );
+
+
+        /* =====================================================
+           TOP PRODUCTS
+           ===================================================== */
+
+        const topProducts =
+            charts.top_products || [];
+
+
+        new Chart(
+
+            document.getElementById(
+                "topProductsChart"
+            ),
+
+            {
+
+                type: "bar",
+
+                data: {
+
+                    labels:
+                        topProducts.map(
+                            item => item.product
+                        ),
+
+                    datasets: [
+
+                        {
+
+                            label:
+                                "Demand",
+
+                            data:
+                                topProducts.map(
+
+                                    item =>
+                                        Number(
+                                            item.demand || 0
+                                        )
+
+                                )
+
+                        }
+
+                    ]
+
+                },
+
+                options: {
+
+                    ...commonOptions,
+
+                    indexAxis:
+                        "y"
+
+                }
+
+            }
+
+        );
+
+
+        /* =====================================================
+           WEEKDAY DEMAND
+           ===================================================== */
+
+        const weekdayDemand =
+            charts.weekday_demand || [];
+
+
+        new Chart(
+
+            document.getElementById(
+                "weekdayDemandChart"
+            ),
+
+            {
+
+                type: "bar",
+
+                data: {
+
+                    labels:
+                        weekdayDemand.map(
+                            item => item.day
+                        ),
+
+                    datasets: [
+
+                        {
+
+                            label:
+                                "Demand",
+
+                            data:
+                                weekdayDemand.map(
+
+                                    item =>
+                                        Number(
+                                            item.demand || 0
+                                        )
+
+                                )
+
+                        }
+
+                    ]
+
+                },
+
+                options:
+                    commonOptions
+
+            }
+
+        );
+
+
+        /* =====================================================
+           MONTHLY DEMAND
+           ===================================================== */
+
+        const monthlyDemand =
+            charts.monthly_demand || [];
+
+
+        new Chart(
+
+            document.getElementById(
+                "monthlyDemandChart"
+            ),
+
+            {
+
+                type: "line",
+
+                data: {
+
+                    labels:
+                        monthlyDemand.map(
+                            item => item.month
+                        ),
+
+                    datasets: [
+
+                        {
+
+                            label:
+                                "Monthly Demand",
+
+                            data:
+                                monthlyDemand.map(
+
+                                    item =>
+                                        Number(
+                                            item.demand || 0
+                                        )
+
+                                ),
+
+                            tension:
+                                0.3,
+
+                            fill:
+                                false
+
+                        }
+
+                    ]
+
+                },
+
+                options:
+                    commonOptions
+
+            }
+
+        );
+
+
+        /* =====================================================
+           INVENTORY STATUS
+           ===================================================== */
+
+        const inventoryStatus =
+            charts.inventory_status || [];
+
+
+        new Chart(
+
+            document.getElementById(
+                "inventoryStatusChart"
+            ),
+
+            {
+
+                type: "doughnut",
+
+                data: {
+
+                    labels:
+                        inventoryStatus.map(
+                            item => item.status
+                        ),
+
+                    datasets: [
+
+                        {
+
+                            label:
+                                "Inventory",
+
+                            data:
+                                inventoryStatus.map(
+
+                                    item =>
+                                        Number(
+                                            item.count || 0
+                                        )
+
+                                ),
+
+                            backgroundColor: [
+
+                                "#6f42c1",
+
+                                "#0d6efd",
+
+                                "#20c997",
+
+                                "#ffc107",
+
+                                "#fd7e14",
+
+                                "#dc3545"
+
+                            ],
+
+                            borderWidth:
+                                2
+
+                        }
+
+                    ]
+
+                },
+
+                options:
+                    commonOptions
+
+            }
+
+        );
+
+
+        /* =====================================================
+           INVENTORY VS DEMAND
+           ===================================================== */
+
+        const inventoryDemand =
+            charts.inventory_vs_demand || [];
+
+
+        new Chart(
+
+            document.getElementById(
+                "inventoryDemandChart"
+            ),
+
+            {
+
+                type: "scatter",
+
+                data: {
+
+                    datasets: [
+
+                        {
+
+                            label:
+                                "Inventory vs Demand",
+
+                            data:
+                                inventoryDemand.map(
+
+                                    item => ({
+
+                                        x:
+                                            Number(
+                                                item.inventory || 0
+                                            ),
+
+                                        y:
+                                            Number(
+                                                item.demand || 0
+                                            )
+
+                                    })
+
+                                )
+
+                        }
+
+                    ]
+
+                },
+
+                options: {
+
+                    ...commonOptions,
+
+                    scales: {
+
+                        x: {
+
+                            title: {
+
+                                display:
+                                    true,
+
+                                text:
+                                    "Inventory"
+
+                            }
+
+                        },
+
+                        y: {
+
+                            title: {
+
+                                display:
+                                    true,
+
+                                text:
+                                    "Demand"
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        );
+
+
+        /* =====================================================
+           FORECAST MODELS
+           ===================================================== */
+
+        const forecastModels =
+            charts.forecast_models || [];
+
+
+        new Chart(
+
+            document.getElementById(
+                "forecastModelsChart"
+            ),
+
+            {
+
+                type: "bar",
+
+                data: {
+
+                    labels:
+                        forecastModels.map(
+                            item => item.model
+                        ),
+
+                    datasets: [
+
+                        {
+
+                            label:
+                                "MAE",
+
+                            data:
+                                forecastModels.map(
+
+                                    item =>
+                                        Number(
+                                            item.mae || 0
+                                        )
+
+                                )
+
+                        },
+
+                        {
+
+                            label:
+                                "RMSE",
+
+                            data:
+                                forecastModels.map(
+
+                                    item =>
+                                        Number(
+                                            item.rmse || 0
+                                        )
+
+                                )
+
+                        }
+
+                    ]
+
+                },
+
+                options:
+                    commonOptions
+
+            }
+
+        );
+
+    }
+
+);
+
+</script>
+
+{% endblock %}

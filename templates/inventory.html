@@ -1,0 +1,2220 @@
+{% extends "base.html" %}
+
+{% block title %}
+Inventory Optimization | Retail Demand Forecasting System
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <div class="dashboard-label">
+                INVENTORY OPTIMIZATION
+            </div>
+
+            <h1>
+                Inventory Management
+            </h1>
+
+            <p>
+                AI-powered stockout risk prediction and inventory
+                optimization using your shared cleaned dataset.
+            </p>
+
+        </div>
+
+        <div class="role-badge">
+
+            <i class="bi bi-box-seam"></i>
+
+            Smart Inventory
+
+        </div>
+
+    </div>
+
+
+    {% include "_dataset_source.html" %}
+
+
+    <!-- =====================================================
+         INVENTORY OVERVIEW
+    ====================================================== -->
+
+    <div class="row g-4">
+
+
+        <!-- TOTAL PRODUCTS -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-box-seam"></i>
+                </div>
+
+                <h5>
+                    Total Products
+                </h5>
+
+                <h3>
+                    {{ total_products if total_products is not none else '—' }}
+                </h3>
+
+                <span>
+                    {{ selected_dataset_source|capitalize }} dataset
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOW STOCK -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-exclamation-triangle"></i>
+                </div>
+
+                <h5>
+                    Low Stock
+                </h5>
+
+                <h3>
+                    {{ low_stock if low_stock is not none else '—' }}
+                </h3>
+
+                <span>
+                    Low stock / high-risk items
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- OVERSTOCK -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-stack"></i>
+                </div>
+
+                <h5>
+                    Overstock
+                </h5>
+
+                <h3>
+                    {{ overstock if overstock is not none else '—' }}
+                </h3>
+
+                <span>
+                    Overstock items
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- REORDER -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-cart-plus"></i>
+                </div>
+
+                <h5>
+                    Reorder Required
+                </h5>
+
+                <h3>
+                    {{ reorder_required if reorder_required is not none else '—' }}
+                </h3>
+
+                <span>
+                    Items requiring replenishment
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         AI MODEL STATUS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    ARTIFICIAL INTELLIGENCE
+                </div>
+
+                <h4>
+                    Stockout Risk Intelligence
+                </h4>
+
+                <p class="muted mb-0">
+                    The system analyzes inventory, demand, supplier
+                    reliability, promotion and weather information
+                    to identify stockout risk.
+                </p>
+
+            </div>
+
+            {% if inventory_ml_available %}
+
+                <span class="badge bg-success">
+                    ML Active
+                </span>
+
+            {% else %}
+
+                <span class="badge bg-secondary">
+                    Optimization Active
+                </span>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="row g-4 mt-3">
+
+
+            <!-- ML MODEL -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-cpu"></i>
+
+                    </div>
+
+                    <h5>
+                        ML Model
+                    </h5>
+
+                    {% if inventory_ml_available %}
+
+                        <h3>
+                            Random Forest
+                        </h3>
+
+                        <span>
+                            Stockout risk classifier
+                        </span>
+
+                    {% else %}
+
+                        <h3>
+                            Rule Engine
+                        </h3>
+
+                        <span>
+                            Optimization fallback
+                        </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <!-- ACCURACY -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-bullseye"></i>
+
+                    </div>
+
+                    <h5>
+                        Model Accuracy
+                    </h5>
+
+                    <h3>
+
+                        {% if inventory_ml_accuracy is not none %}
+
+                            {{ inventory_ml_accuracy }}%
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+                        Validation accuracy
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TRAINING ROWS -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-database-check"></i>
+
+                    </div>
+
+                    <h5>
+                        Training Records
+                    </h5>
+
+                    <h3>
+
+                        {% if inventory_ml_training_rows %}
+
+                            {{ inventory_ml_training_rows }}
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+                        Records used for ML
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        {% if inventory_ml_message %}
+
+        <div class="alert alert-info mt-4 mb-0">
+
+            <i class="bi bi-info-circle"></i>
+
+            {{ inventory_ml_message }}
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         INVENTORY KPI SUMMARY
+    ====================================================== -->
+
+    {% if inventory_available %}
+
+    <div class="row g-4 mt-1">
+
+
+        <!-- AVERAGE DAILY DEMAND -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-graph-up"></i>
+
+                </div>
+
+                <h5>
+                    Avg Daily Demand
+                </h5>
+
+                <h3>
+
+                    {% if average_daily_demand is not none %}
+                        {{ average_daily_demand }}
+                    {% else %}
+                        —
+                    {% endif %}
+
+                </h3>
+
+                <span>
+                    Units / day
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- LEAD TIME -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-clock"></i>
+
+                </div>
+
+                <h5>
+                    Avg Lead Time
+                </h5>
+
+                <h3>
+
+                    {% if lead_time is not none %}
+                        {{ lead_time }}
+                    {% else %}
+                        —
+                    {% endif %}
+
+                </h3>
+
+                <span>
+                    Days
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- SAFETY STOCK -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-shield-check"></i>
+
+                </div>
+
+                <h5>
+                    Avg Safety Stock
+                </h5>
+
+                <h3>
+
+                    {% if safety_stock is not none %}
+                        {{ safety_stock }}
+                    {% else %}
+                        —
+                    {% endif %}
+
+                </h3>
+
+                <span>
+                    Units
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- REORDER POINT -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-arrow-repeat"></i>
+
+                </div>
+
+                <h5>
+                    Avg Reorder Point
+                </h5>
+
+                <h3>
+
+                    {% if reorder_point is not none %}
+                        {{ reorder_point }}
+                    {% else %}
+                        —
+                    {% endif %}
+
+                </h3>
+
+                <span>
+                    Units
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         ADDITIONAL INVENTORY KPIs
+    ====================================================== -->
+
+    <div class="row g-4 mt-1">
+
+
+        <!-- CRITICAL -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-exclamation-octagon"></i>
+
+                </div>
+
+                <h5>
+                    Critical Items
+                </h5>
+
+                <h3>
+                    {{ critical_items if critical_items is not none else 0 }}
+                </h3>
+
+                <span>
+                    Reorder immediately
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- HIGH RISK -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-shield-exclamation"></i>
+
+                </div>
+
+                <h5>
+                    High Risk
+                </h5>
+
+                <h3>
+                    {{ high_risk_items if high_risk_items is not none else 0 }}
+                </h3>
+
+                <span>
+                    ML stockout risk
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- HEALTHY -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-check-circle"></i>
+
+                </div>
+
+                <h5>
+                    Healthy Items
+                </h5>
+
+                <h3>
+                    {{ healthy_items if healthy_items is not none else 0 }}
+                </h3>
+
+                <span>
+                    Stock within healthy range
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOTAL ORDER -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-cart-check"></i>
+
+                </div>
+
+                <h5>
+                    Recommended Order
+                </h5>
+
+                <h3>
+
+                    {% if total_recommended_order is not none %}
+                        {{ total_recommended_order }}
+                    {% else %}
+                        —
+                    {% endif %}
+
+                </h3>
+
+                <span>
+                    Total units to replenish
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+
+    <!-- =====================================================
+         PRODUCT-LEVEL INVENTORY ANALYSIS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    PRODUCT-LEVEL ANALYSIS
+                </div>
+
+                <h4>
+                    AI Inventory Recommendations
+                </h4>
+
+                <p class="muted mb-0">
+                    Automatically calculated inventory requirements
+                    for products in the shared cleaned dataset.
+                </p>
+
+            </div>
+
+            {% if inventory_available %}
+
+                <span class="badge bg-success">
+                    Analysis Complete
+                </span>
+
+            {% else %}
+
+                <span class="badge bg-secondary">
+                    Waiting for Dataset
+                </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if inventory_available and inventory_products %}
+
+
+        <!-- =================================================
+             INVENTORY TABLE
+        ================================================== -->
+
+        <div class="table-responsive mt-4">
+
+            <table class="table table-hover align-middle">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Product
+                        </th>
+
+                        <th>
+                            Current Stock
+                        </th>
+
+                        <th>
+                            Daily Demand
+                        </th>
+
+                        <th>
+                            Lead Time
+                        </th>
+
+                        <th>
+                            Safety Stock
+                        </th>
+
+                        <th>
+                            Reorder Point
+                        </th>
+
+                        <th>
+                            Recommended Order
+                        </th>
+
+                        <th>
+                            Stockout Risk
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% for product in inventory_products %}
+
+                    <tr>
+
+
+                        <!-- PRODUCT -->
+
+                        <td>
+
+                            <strong>
+                                {{ product.product_id }}
+                            </strong>
+
+                        </td>
+
+
+                        <!-- CURRENT STOCK -->
+
+                        <td>
+
+                            {{ product.current_stock }}
+
+                        </td>
+
+
+                        <!-- DAILY DEMAND -->
+
+                        <td>
+
+                            {{ product.daily_demand }}
+
+                        </td>
+
+
+                        <!-- LEAD TIME -->
+
+                        <td>
+
+                            {{ product.lead_time_days }}
+                            days
+
+                        </td>
+
+
+                        <!-- SAFETY STOCK -->
+
+                        <td>
+
+                            {{ product.safety_stock }}
+
+                        </td>
+
+
+                        <!-- REORDER POINT -->
+
+                        <td>
+
+                            <strong>
+                                {{ product.reorder_point }}
+                            </strong>
+
+                        </td>
+
+
+                        <!-- RECOMMENDED ORDER -->
+
+                        <td>
+
+                            {% if product.recommended_order|float > 0 %}
+
+                                <strong>
+                                    {{ product.recommended_order }}
+                                </strong>
+
+                            {% else %}
+
+                                <span>
+                                    0
+                                </span>
+
+                            {% endif %}
+
+                        </td>
+
+
+                        <!-- STOCKOUT RISK -->
+
+                        <td>
+
+                            {% if product.ml_risk == "High" %}
+
+                                <span class="badge bg-danger">
+
+                                    High
+
+                                    {% if product.stockout_probability != "" %}
+                                        — {{ product.stockout_probability }}%
+                                    {% endif %}
+
+                                </span>
+
+
+                            {% elif product.ml_risk == "Medium" %}
+
+                                <span class="badge bg-warning text-dark">
+
+                                    Medium
+
+                                    {% if product.stockout_probability != "" %}
+                                        — {{ product.stockout_probability }}%
+                                    {% endif %}
+
+                                </span>
+
+
+                            {% elif product.ml_risk == "Low" %}
+
+                                <span class="badge bg-success">
+
+                                    Low
+
+                                    {% if product.stockout_probability != "" %}
+                                        — {{ product.stockout_probability }}%
+                                    {% endif %}
+
+                                </span>
+
+
+                            {% else %}
+
+                                <span class="badge bg-secondary">
+                                    N/A
+                                </span>
+
+                            {% endif %}
+
+                        </td>
+
+
+                        <!-- STATUS -->
+
+                        <td>
+
+                            {% if product.status == "Critical - Reorder Now" %}
+
+                                <span class="badge bg-danger">
+                                    Critical
+                                </span>
+
+
+                            {% elif product.status == "High Risk" %}
+
+                                <span class="badge bg-danger">
+                                    High Risk
+                                </span>
+
+
+                            {% elif product.status == "Overstock" %}
+
+                                <span class="badge bg-warning text-dark">
+                                    Overstock
+                                </span>
+
+
+                            {% elif product.status == "Low Stock" %}
+
+                                <span class="badge bg-warning text-dark">
+                                    Low Stock
+                                </span>
+
+
+                            {% else %}
+
+                                <span class="badge bg-success">
+                                    Healthy
+                                </span>
+
+                            {% endif %}
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- =================================================
+             STOCK COVER
+        ================================================== -->
+
+        {% if average_stock_cover_days is not none %}
+
+        <div class="alert alert-info mt-4">
+
+            <i class="bi bi-calendar-check"></i>
+
+            <strong>
+                Average Stock Coverage:
+            </strong>
+
+            {{ average_stock_cover_days }} days
+
+            <br>
+
+            This represents the approximate number of days
+            the current inventory can support the observed
+            daily demand.
+
+        </div>
+
+        {% endif %}
+
+
+        <!-- =================================================
+             INVENTORY OPTIMIZATION LOGIC
+        ================================================== -->
+
+        <div class="alert alert-info mt-4">
+
+            <i class="bi bi-info-circle"></i>
+
+            <strong>
+                Inventory optimization logic
+            </strong>
+
+            <br><br>
+
+            <strong>
+                Lead-Time Demand
+            </strong>
+
+            =
+            
+            Daily Demand × Lead Time
+
+            <br>
+
+            <strong>
+                Safety Stock
+            </strong>
+
+            =
+            
+            Service-Level Factor × Demand Variability × √Lead Time
+
+            <br>
+
+            <strong>
+                Reorder Point
+            </strong>
+
+            =
+            
+            Lead-Time Demand + Safety Stock
+
+            <br>
+
+            <strong>
+                Target Stock
+            </strong>
+
+            =
+            
+            Demand × (Lead Time + Review Period) + Safety Stock
+
+            <br>
+
+            <strong>
+                Recommended Order
+            </strong>
+
+            =
+            
+            Target Stock − Current Stock
+
+        </div>
+
+
+        {% else %}
+
+
+        <!-- =================================================
+             NO DATA
+        ================================================== -->
+
+        <div class="alert alert-info mt-4">
+
+            <i class="bi bi-info-circle"></i>
+
+            {{ inventory_message }}
+
+            <br><br>
+
+            Upload the main CSV through
+            <strong>Data Management</strong>.
+
+            <br>
+
+            After the dataset is cleaned, it will automatically
+            become available to the Inventory module.
+
+        </div>
+
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         MANUAL INVENTORY CALCULATOR
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    MANUAL INVENTORY CALCULATOR
+                </div>
+
+                <h4>
+                    Calculate Reorder Requirement
+                </h4>
+
+                <p class="muted mb-0">
+                    Manually calculate inventory requirements
+                    for an individual product.
+                </p>
+
+            </div>
+
+            <div class="card-icon">
+
+                <i class="bi bi-calculator"></i>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CALCULATION FORM
+        ================================================== -->
+
+        <form
+            id="inventoryCalculator"
+            class="mt-4"
+        >
+
+            <div class="row g-4">
+
+
+                <!-- PRODUCT -->
+
+                <div class="col-md-6">
+
+                    <label
+                        for="productName"
+                        class="form-label"
+                    >
+                        Product Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="productName"
+                        class="form-control"
+                        placeholder="Example: P1000"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CURRENT STOCK -->
+
+                <div class="col-md-6">
+
+                    <label
+                        for="currentStock"
+                        class="form-label"
+                    >
+                        Current Stock
+                    </label>
+
+                    <input
+                        type="number"
+                        id="currentStock"
+                        class="form-control"
+                        min="0"
+                        step="0.01"
+                        placeholder="Enter current stock"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- DAILY DEMAND -->
+
+                <div class="col-md-6">
+
+                    <label
+                        for="dailyDemand"
+                        class="form-label"
+                    >
+                        Expected Daily Demand
+                    </label>
+
+                    <input
+                        type="number"
+                        id="dailyDemand"
+                        class="form-control"
+                        min="0"
+                        step="0.01"
+                        placeholder="Enter expected daily demand"
+                        required
+                    >
+
+                    <div class="small text-muted mt-2">
+
+                        Use forecasted demand when available.
+
+                    </div>
+
+                </div>
+
+
+                <!-- LEAD TIME -->
+
+                <div class="col-md-6">
+
+                    <label
+                        for="leadTime"
+                        class="form-label"
+                    >
+                        Supply Lead Time (Days)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="leadTime"
+                        class="form-control"
+                        min="0"
+                        step="1"
+                        placeholder="Example: 5"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- SAFETY STOCK -->
+
+                <div class="col-md-6">
+
+                    <label
+                        for="safetyStock"
+                        class="form-label"
+                    >
+                        Safety Stock
+                    </label>
+
+                    <input
+                        type="number"
+                        id="safetyStock"
+                        class="form-control"
+                        min="0"
+                        step="0.01"
+                        placeholder="Enter safety stock"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- TARGET STOCK -->
+
+                <div class="col-md-6">
+
+                    <label
+                        for="targetStock"
+                        class="form-label"
+                    >
+                        Target Stock Level
+                    </label>
+
+                    <input
+                        type="number"
+                        id="targetStock"
+                        class="form-control"
+                        min="0"
+                        step="0.01"
+                        placeholder="Optional target stock"
+                    >
+
+                    <div class="small text-muted mt-2">
+
+                        Leave empty to use the calculated reorder point.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="mt-4">
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+
+                    <i class="bi bi-calculator"></i>
+
+                    Calculate Inventory Requirement
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="btn btn-secondary ms-2"
+                    id="clearCalculator"
+                >
+
+                    <i class="bi bi-arrow-counterclockwise"></i>
+
+                    Clear
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- =====================================================
+         MANUAL CALCULATION RESULT
+    ====================================================== -->
+
+    <div
+        class="large-card mt-4"
+        id="calculationResult"
+        style="display: none;"
+    >
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    CALCULATION RESULT
+                </div>
+
+                <h4>
+                    Inventory Recommendation
+                </h4>
+
+                <p
+                    class="muted mb-0"
+                    id="resultProduct"
+                ></p>
+
+            </div>
+
+            <span
+                class="badge"
+                id="stockStatus"
+            ></span>
+
+        </div>
+
+
+        <!-- =================================================
+             RESULT CARDS
+        ================================================== -->
+
+        <div class="row g-4 mt-3">
+
+
+            <!-- DEMAND -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-graph-up"></i>
+
+                    </div>
+
+                    <h5>
+                        Daily Demand
+                    </h5>
+
+                    <h3 id="resultDemand">
+                        —
+                    </h3>
+
+                    <span>
+                        Units / day
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- LEAD TIME -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-clock"></i>
+
+                    </div>
+
+                    <h5>
+                        Lead Time
+                    </h5>
+
+                    <h3 id="resultLeadTime">
+                        —
+                    </h3>
+
+                    <span>
+                        Days
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- REORDER POINT -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-arrow-repeat"></i>
+
+                    </div>
+
+                    <h5>
+                        Reorder Point
+                    </h5>
+
+                    <h3 id="resultReorderPoint">
+                        —
+                    </h3>
+
+                    <span>
+                        Units
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ORDER QUANTITY -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-cart-plus"></i>
+
+                    </div>
+
+                    <h5>
+                        Recommended Order
+                    </h5>
+
+                    <h3 id="resultOrderQuantity">
+                        —
+                    </h3>
+
+                    <span>
+                        Units
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORMULA -->
+
+        <div class="alert alert-info mt-4">
+
+            <i class="bi bi-info-circle"></i>
+
+            <strong>
+                Reorder Point:
+            </strong>
+
+            Daily Demand × Lead Time + Safety Stock
+
+        </div>
+
+
+        <!-- RECOMMENDATION -->
+
+        <div
+            class="alert mt-3"
+            id="recommendationMessage"
+        ></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         AI INVENTORY INTELLIGENCE
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    ARTIFICIAL INTELLIGENCE
+                </div>
+
+                <h4>
+                    AI Inventory Intelligence
+                </h4>
+
+                <p class="muted mb-0">
+                    Machine learning identifies stockout risk while
+                    inventory optimization determines the required
+                    stock level and reorder quantity.
+                </p>
+
+            </div>
+
+            <span class="badge bg-success">
+                Active
+            </span>
+
+        </div>
+
+
+        <div class="row g-4 mt-3">
+
+
+            <!-- DATA -->
+
+            <div class="col-lg-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-database"></i>
+
+                    </div>
+
+                    <h5>
+                        Shared Dataset
+                    </h5>
+
+                    <p>
+                        The inventory module automatically uses the
+                        cleaned dataset selected by the system.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ML -->
+
+            <div class="col-lg-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-cpu"></i>
+
+                    </div>
+
+                    <h5>
+                        Stockout Risk ML
+                    </h5>
+
+                    <p>
+
+                        Random Forest analyzes stock, demand,
+                        lead time, supplier reliability,
+                        promotions and weather impact.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- OPTIMIZATION -->
+
+            <div class="col-lg-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-lightbulb"></i>
+
+                    </div>
+
+                    <h5>
+                        Smart Recommendation
+                    </h5>
+
+                    <p>
+
+                        The system calculates safety stock,
+                        reorder point, target stock and
+                        recommended order quantity.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         INVENTORY FORMULAS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="dashboard-label">
+            INVENTORY OPTIMIZATION LOGIC
+        </div>
+
+        <h4>
+            How the System Makes Recommendations
+        </h4>
+
+        <p class="muted">
+            The system combines machine learning with standard
+            inventory optimization calculations.
+        </p>
+
+
+        <div class="row g-4 mt-2">
+
+
+            <!-- STOCKOUT RISK -->
+
+            <div class="col-lg-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-shield-exclamation"></i>
+
+                    </div>
+
+                    <h5>
+                        1. Stockout Risk
+                    </h5>
+
+                    <p>
+
+                        Random Forest evaluates inventory and
+                        operational features to estimate the
+                        probability of stockout.
+
+                    </p>
+
+                    <span>
+                        Machine Learning
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- SAFETY STOCK -->
+
+            <div class="col-lg-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-shield-check"></i>
+
+                    </div>
+
+                    <h5>
+                        2. Safety Stock
+                    </h5>
+
+                    <p>
+
+                        Demand variability, lead time and supplier
+                        reliability are used to determine a
+                        protective inventory buffer.
+
+                    </p>
+
+                    <span>
+                        Inventory Optimization
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- REORDER -->
+
+            <div class="col-lg-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-cart-check"></i>
+
+                    </div>
+
+                    <h5>
+                        3. Reorder Recommendation
+                    </h5>
+
+                    <p>
+
+                        The system compares current stock with
+                        the optimized target level and recommends
+                        the required replenishment quantity.
+
+                    </p>
+
+                    <span>
+                        Decision Support
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORMULA DETAILS -->
+
+        <div class="alert alert-info mt-4">
+
+            <i class="bi bi-info-circle"></i>
+
+            <strong>
+                Core formulas
+            </strong>
+
+            <br><br>
+
+            <strong>
+                Lead-Time Demand
+            </strong>
+
+            =
+            
+            Daily Demand × Lead Time
+
+            <br><br>
+
+            <strong>
+                Safety Stock
+            </strong>
+
+            =
+            
+            Service-Level Factor × Demand Variability × √Lead Time
+
+            <br><br>
+
+            <strong>
+                Reorder Point
+            </strong>
+
+            =
+            
+            Lead-Time Demand + Safety Stock
+
+            <br><br>
+
+            <strong>
+                Target Stock
+            </strong>
+
+            =
+            
+            Demand × (Lead Time + Review Period) + Safety Stock
+
+            <br><br>
+
+            <strong>
+                Recommended Order
+            </strong>
+
+            =
+            
+            max(0, Target Stock − Current Stock)
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- =====================================================
+     MANUAL INVENTORY CALCULATOR JAVASCRIPT
+====================================================== -->
+
+<script>
+
+const inventoryForm =
+    document.getElementById("inventoryCalculator");
+
+const calculationResult =
+    document.getElementById("calculationResult");
+
+const clearButton =
+    document.getElementById("clearCalculator");
+
+
+/* =====================================================
+   CALCULATOR SUBMIT
+====================================================== */
+
+inventoryForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        /* ---------------------------------------------
+           GET VALUES
+        --------------------------------------------- */
+
+        const productName =
+            document.getElementById(
+                "productName"
+            ).value.trim();
+
+
+        const currentStock =
+            parseFloat(
+                document.getElementById(
+                    "currentStock"
+                ).value
+            );
+
+
+        const dailyDemand =
+            parseFloat(
+                document.getElementById(
+                    "dailyDemand"
+                ).value
+            );
+
+
+        const leadTime =
+            parseFloat(
+                document.getElementById(
+                    "leadTime"
+                ).value
+            );
+
+
+        const safetyStock =
+            parseFloat(
+                document.getElementById(
+                    "safetyStock"
+                ).value
+            );
+
+
+        const targetStockInput =
+            document.getElementById(
+                "targetStock"
+            ).value;
+
+
+        const targetStock =
+            targetStockInput === ""
+                ? null
+                : parseFloat(targetStockInput);
+
+
+        /* ---------------------------------------------
+           VALIDATION
+        --------------------------------------------- */
+
+        if (
+            !productName ||
+            isNaN(currentStock) ||
+            isNaN(dailyDemand) ||
+            isNaN(leadTime) ||
+            isNaN(safetyStock)
+        ) {
+
+            alert(
+                "Please enter all required inventory values."
+            );
+
+            return;
+
+        }
+
+
+        if (
+            currentStock < 0 ||
+            dailyDemand < 0 ||
+            leadTime < 0 ||
+            safetyStock < 0
+        ) {
+
+            alert(
+                "Inventory values cannot be negative."
+            );
+
+            return;
+
+        }
+
+
+        if (
+            targetStock !== null &&
+            (
+                isNaN(targetStock) ||
+                targetStock < 0
+            )
+        ) {
+
+            alert(
+                "Target stock must be zero or greater."
+            );
+
+            return;
+
+        }
+
+
+        /* ---------------------------------------------
+           LEAD-TIME DEMAND
+        --------------------------------------------- */
+
+        const leadTimeDemand =
+            dailyDemand * leadTime;
+
+
+        /* ---------------------------------------------
+           REORDER POINT
+        --------------------------------------------- */
+
+        const reorderPoint =
+            leadTimeDemand + safetyStock;
+
+
+        /* ---------------------------------------------
+           TARGET STOCK
+        --------------------------------------------- */
+
+        let finalTargetStock;
+
+
+        if (targetStock !== null) {
+
+            finalTargetStock =
+                targetStock;
+
+        }
+        else {
+
+            /*
+             * If no target stock is provided,
+             * use the reorder point.
+             */
+
+            finalTargetStock =
+                reorderPoint;
+
+        }
+
+
+        /* ---------------------------------------------
+           RECOMMENDED ORDER
+        --------------------------------------------- */
+
+        const recommendedOrder =
+            Math.max(
+                0,
+                finalTargetStock - currentStock
+            );
+
+
+        /* ---------------------------------------------
+           STOCK COVER
+        --------------------------------------------- */
+
+        let stockCoverDays = 0;
+
+
+        if (dailyDemand > 0) {
+
+            stockCoverDays =
+                currentStock / dailyDemand;
+
+        }
+
+
+        /* ---------------------------------------------
+           STOCK STATUS
+        --------------------------------------------- */
+
+        let statusText;
+        let statusClass;
+        let recommendationText;
+        let recommendationClass;
+
+
+        if (currentStock <= reorderPoint) {
+
+            statusText =
+                "Reorder Required";
+
+            statusClass =
+                "bg-danger";
+
+            recommendationText =
+                "Current stock is at or below the calculated reorder point. Additional inventory is recommended.";
+
+            recommendationClass =
+                "alert-danger";
+
+        }
+
+        else if (
+            currentStock >
+            finalTargetStock * 1.20
+        ) {
+
+            statusText =
+                "Overstock";
+
+            statusClass =
+                "bg-warning text-dark";
+
+            recommendationText =
+                "Current stock is significantly above the target stock level. New purchasing should be reviewed.";
+
+            recommendationClass =
+                "alert-warning";
+
+        }
+
+        else {
+
+            statusText =
+                "Stock Sufficient";
+
+            statusClass =
+                "bg-success";
+
+            recommendationText =
+                "Current stock is above the reorder point. No immediate reorder is required.";
+
+            recommendationClass =
+                "alert-success";
+
+        }
+
+
+        /* ---------------------------------------------
+           DISPLAY PRODUCT
+        --------------------------------------------- */
+
+        document.getElementById(
+            "resultProduct"
+        ).innerHTML =
+            "Product: <strong>"
+            +
+            escapeHtml(productName)
+            +
+            "</strong>";
+
+
+        /* ---------------------------------------------
+           DISPLAY DEMAND
+        --------------------------------------------- */
+
+        document.getElementById(
+            "resultDemand"
+        ).textContent =
+            dailyDemand.toFixed(2);
+
+
+        /* ---------------------------------------------
+           DISPLAY LEAD TIME
+        --------------------------------------------- */
+
+        document.getElementById(
+            "resultLeadTime"
+        ).textContent =
+            leadTime;
+
+
+        /* ---------------------------------------------
+           DISPLAY REORDER POINT
+        --------------------------------------------- */
+
+        document.getElementById(
+            "resultReorderPoint"
+        ).textContent =
+            reorderPoint.toFixed(2);
+
+
+        /* ---------------------------------------------
+           DISPLAY ORDER QUANTITY
+        --------------------------------------------- */
+
+        document.getElementById(
+            "resultOrderQuantity"
+        ).textContent =
+            recommendedOrder.toFixed(2);
+
+
+        /* ---------------------------------------------
+           STATUS BADGE
+        --------------------------------------------- */
+
+        const stockStatus =
+            document.getElementById(
+                "stockStatus"
+            );
+
+
+        stockStatus.textContent =
+            statusText;
+
+
+        stockStatus.className =
+            "badge " + statusClass;
+
+
+        /* ---------------------------------------------
+           RECOMMENDATION
+        --------------------------------------------- */
+
+        const recommendationMessage =
+            document.getElementById(
+                "recommendationMessage"
+            );
+
+
+        recommendationMessage.innerHTML =
+            "<strong>"
+            +
+            recommendationText
+            +
+            "</strong>"
+            +
+            "<br><br>"
+            +
+            "Lead-time demand: "
+            +
+            leadTimeDemand.toFixed(2)
+            +
+            " units"
+            +
+            "<br>"
+            +
+            "Stock coverage: "
+            +
+            stockCoverDays.toFixed(2)
+            +
+            " days";
+
+
+        recommendationMessage.className =
+            "alert mt-3 "
+            +
+            recommendationClass;
+
+
+        /* ---------------------------------------------
+           SHOW RESULT
+        --------------------------------------------- */
+
+        calculationResult.style.display =
+            "block";
+
+
+        /* ---------------------------------------------
+           SCROLL TO RESULT
+        --------------------------------------------- */
+
+        calculationResult.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+);
+
+
+/* =====================================================
+   CLEAR CALCULATOR
+====================================================== */
+
+clearButton.addEventListener(
+    "click",
+    function() {
+
+        inventoryForm.reset();
+
+        calculationResult.style.display =
+            "none";
+
+    }
+);
+
+
+/* =====================================================
+   SIMPLE HTML ESCAPE
+====================================================== */
+
+function escapeHtml(value) {
+
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+
+}
+
+</script>
+
+
+{% endblock %}

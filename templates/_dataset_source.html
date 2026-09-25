@@ -1,0 +1,95 @@
+<div class="large-card mb-4">
+
+    <div class="d-flex justify-content-between align-items-start gap-3">
+
+        <div>
+            <div class="dashboard-label">DATA SOURCE</div>
+            <h4>Use processed data</h4>
+            <p class="muted mb-0">
+                Choose the shared cleaned dataset or this module's independent dataset.
+            </p>
+        </div>
+
+        <span class="badge {% if selected_dataset_source == 'shared' %}bg-success{% else %}bg-primary{% endif %}">
+            Using {{ selected_dataset_source|capitalize }} Dataset
+        </span>
+
+    </div>
+
+    <div class="row g-3 mt-2">
+
+        <div class="col-md-6">
+            <a
+                href="{{ request.path }}?source=shared"
+                class="btn {% if selected_dataset_source == 'shared' %}btn-success{% else %}btn-outline-success{% endif %} w-100 text-start"
+            >
+                <i class="bi bi-database-check me-2"></i>
+                <strong>Use Shared Dataset</strong><br>
+                <small>
+                    {% if shared_dataset_available %}
+                        {{ shared_dataset_filename }} · {{ shared_dataset_rows }} rows
+                    {% else %}
+                        No cleaned dataset is available yet.
+                    {% endif %}
+                </small>
+            </a>
+        </div>
+
+        <div class="col-md-6">
+            <a
+                href="{{ request.path }}?source=independent"
+                class="btn {% if selected_dataset_source == 'independent' %}btn-primary{% else %}btn-outline-primary{% endif %} w-100 text-start {% if not independent_dataset_available %}disabled{% endif %}"
+            >
+                <i class="bi bi-file-earmark-spreadsheet me-2"></i>
+                <strong>Use Independent Dataset</strong><br>
+                <small>
+                    {% if independent_dataset_available %}
+                        {{ independent_dataset_filename }} · module only
+                    {% else %}
+                        Upload one below to enable this option.
+                    {% endif %}
+                </small>
+            </a>
+        </div>
+
+    </div>
+
+    {% if selected_dataset_filename %}
+    <p class="small text-muted mt-3 mb-0">
+        Active file: {{ selected_dataset_filename }}
+    </p>
+    {% endif %}
+
+</div>
+
+<div class="large-card mb-4">
+    <div class="dashboard-label">INDEPENDENT WORKFLOW</div>
+    <h5>Analyze another CSV in {{ module_name|capitalize }}</h5>
+    <p class="muted">
+        This upload is cleaned and saved for this module only. It never replaces the shared dataset.
+    </p>
+    <form
+        action="{{ url_for('upload_module_dataset', module_name=module_name) }}"
+        method="POST"
+        enctype="multipart/form-data"
+        class="row g-3 align-items-end"
+    >
+        <div class="col-md-8">
+            <label class="form-label" for="{{ module_name }}IndependentDataset">CSV Dataset</label>
+            <input
+                type="file"
+                class="form-control"
+                id="{{ module_name }}IndependentDataset"
+                name="dataset"
+                accept=".csv"
+                required
+            >
+        </div>
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-outline-primary w-100">
+                <i class="bi bi-upload me-2"></i>
+                Analyze Independently
+            </button>
+        </div>
+    </form>
+</div>

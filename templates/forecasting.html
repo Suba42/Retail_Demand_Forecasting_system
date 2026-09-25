@@ -1,0 +1,1487 @@
+{% extends "base.html" %}
+
+{% block title %}
+Sales Forecasting | Retail Demand Forecasting System
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <div class="dashboard-label">
+                AI DEMAND FORECASTING
+            </div>
+
+            <h1>
+                Sales Forecasting
+            </h1>
+
+            <p>
+                Generate demand forecasts using the cleaned
+                dataset shared by the Data Management module.
+            </p>
+
+        </div>
+
+        <div class="role-badge">
+
+            <i class="bi bi-graph-up-arrow"></i>
+
+            Forecast Engine
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SHARED DATASET
+    ====================================================== -->
+
+    {% if shared_dataset_available %}
+
+    <div class="large-card">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-database-check"></i>
+                    Shared Dataset
+                </h4>
+
+                <p class="muted mb-0">
+                    Forecasting is using the cleaned dataset
+                    prepared in Data Management.
+                </p>
+
+            </div>
+
+            <span class="badge bg-success">
+
+                <i class="bi bi-check-circle"></i>
+
+                Dataset Available
+
+            </span>
+
+        </div>
+
+
+        <!-- DATASET SUMMARY -->
+
+        <div class="row g-4 mt-3">
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-database"></i>
+                    </div>
+
+                    <h5>
+                        Dataset
+                    </h5>
+
+                    <h3>
+                        Shared
+                    </h3>
+
+                    <span>
+                        Cleaned dataset
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-list-ol"></i>
+                    </div>
+
+                    <h5>
+                        Records
+                    </h5>
+
+                    <h3>
+                        {{ shared_dataset_rows }}
+                    </h3>
+
+                    <span>
+                        Rows available
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-layout-three-columns"></i>
+                    </div>
+
+                    <h5>
+                        Features
+                    </h5>
+
+                    <h3>
+                        {{ shared_dataset_columns }}
+                    </h3>
+
+                    <span>
+                        Columns available
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         COLUMN MAPPING
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <h4>
+            Forecasting Data Configuration
+        </h4>
+
+        <p class="muted">
+            The system automatically detects the columns
+            required for demand forecasting.
+        </p>
+
+
+        <div class="row g-4 mt-3">
+
+            <!-- DATE -->
+
+            <div class="col-md-6">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-calendar3"></i>
+                    </div>
+
+                    <h6>
+                        Date Column
+                    </h6>
+
+                    {% if column_mapping.date %}
+
+                    <span class="badge bg-success">
+
+                        <i class="bi bi-check-circle"></i>
+
+                        {{ column_mapping.date }}
+
+                    </span>
+
+                    <p class="muted mt-2 mb-0">
+                        Used as the forecasting time variable.
+                    </p>
+
+                    {% else %}
+
+                    <span class="badge bg-danger">
+
+                        <i class="bi bi-x-circle"></i>
+
+                        Not Detected
+
+                    </span>
+
+                    <p class="muted mt-2 mb-0">
+                        A date column is required.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <!-- DEMAND -->
+
+            <div class="col-md-6">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-cart-check"></i>
+                    </div>
+
+                    <h6>
+                        Demand / Quantity Column
+                    </h6>
+
+                    {% if column_mapping.quantity %}
+
+                    <span class="badge bg-success">
+
+                        <i class="bi bi-check-circle"></i>
+
+                        {{ column_mapping.quantity }}
+
+                    </span>
+
+                    <p class="muted mt-2 mb-0">
+                        Used as the demand target.
+                    </p>
+
+                    {% elif column_mapping.demand %}
+
+                    <span class="badge bg-success">
+
+                        <i class="bi bi-check-circle"></i>
+
+                        {{ column_mapping.demand }}
+
+                    </span>
+
+                    <p class="muted mt-2 mb-0">
+                        Used as the demand target.
+                    </p>
+
+                    {% elif column_mapping.sales %}
+
+                    <span class="badge bg-success">
+
+                        <i class="bi bi-check-circle"></i>
+
+                        {{ column_mapping.sales }}
+
+                    </span>
+
+                    <p class="muted mt-2 mb-0">
+                        Sales column is being used as demand.
+                    </p>
+
+                    {% else %}
+
+                    <span class="badge bg-danger">
+
+                        <i class="bi bi-x-circle"></i>
+
+                        Not Detected
+
+                    </span>
+
+                    <p class="muted mt-2 mb-0">
+                        A demand, quantity or sales column is required.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <!-- SALES -->
+
+            <div class="col-md-6">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-currency-rupee"></i>
+                    </div>
+
+                    <h6>
+                        Sales Column
+                    </h6>
+
+                    {% if column_mapping.sales %}
+
+                    <span class="badge bg-success">
+
+                        <i class="bi bi-check-circle"></i>
+
+                        {{ column_mapping.sales }}
+
+                    </span>
+
+                    {% else %}
+
+                    <span class="badge bg-secondary">
+                        Not Detected
+                    </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT -->
+
+            <div class="col-md-6">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-box"></i>
+                    </div>
+
+                    <h6>
+                        Product Column
+                    </h6>
+
+                    {% if column_mapping.product %}
+
+                    <span class="badge bg-success">
+
+                        <i class="bi bi-check-circle"></i>
+
+                        {{ column_mapping.product }}
+
+                    </span>
+
+                    {% else %}
+
+                    <span class="badge bg-secondary">
+                        Not Detected
+                    </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FORECASTING READINESS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    Forecasting Readiness
+                </h4>
+
+                <p class="muted mb-0">
+                    Checking whether the shared dataset
+                    contains the required forecasting fields.
+                </p>
+
+            </div>
+
+
+            {% if column_mapping.date and (column_mapping.quantity or column_mapping.demand or column_mapping.sales) %}
+
+            <span class="badge bg-success">
+
+                <i class="bi bi-check-circle"></i>
+
+                Ready
+
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-warning text-dark">
+
+                <i class="bi bi-hourglass-split"></i>
+
+                Additional Data Required
+
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="mt-4">
+
+            <!-- DATASET -->
+
+            <div class="status-item">
+
+                <span>
+                    Shared Dataset
+                </span>
+
+                <strong class="online">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    Available
+
+                </strong>
+
+            </div>
+
+
+            <!-- DATE -->
+
+            <div class="status-item">
+
+                <span>
+                    Date Field
+                </span>
+
+                {% if column_mapping.date %}
+
+                <strong class="online">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    Detected
+
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Pending
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- DEMAND -->
+
+            <div class="status-item">
+
+                <span>
+                    Demand Field
+                </span>
+
+                {% if column_mapping.quantity or column_mapping.demand or column_mapping.sales %}
+
+                <strong class="online">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    Detected
+
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Pending
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- MODEL -->
+
+            <div class="status-item">
+
+                <span>
+                    Forecasting Model
+                </span>
+
+                {% if forecast_result and forecast_result.success %}
+
+                <strong class="online">
+
+                    <i class="bi bi-check-circle"></i>
+
+                    {{ best_model }}
+
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting for Model Execution
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FORECASTING MODEL
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    MACHINE LEARNING
+                </div>
+
+                <h4>
+                    Forecasting Model
+                </h4>
+
+                <p class="muted mb-0">
+
+                    The system evaluates Random Forest,
+                    Gradient Boosting and Prophet and selects
+                    the model with the lowest RMSE.
+
+                </p>
+
+            </div>
+
+            <div class="card-icon">
+                <i class="bi bi-cpu"></i>
+            </div>
+
+        </div>
+
+
+        <div class="row g-4 mt-3">
+
+            <!-- RANDOM FOREST -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-tree"></i>
+                    </div>
+
+                    <h5>
+                        Random Forest
+                    </h5>
+
+                    <p class="muted">
+                        Ensemble machine learning model
+                        suitable for demand prediction.
+                    </p>
+
+                    <span class="badge bg-primary">
+                        Machine Learning
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- GRADIENT BOOSTING -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+
+                    <h5>
+                        Gradient Boosting
+                    </h5>
+
+                    <p class="muted">
+                        Sequential ensemble model that
+                        improves prediction errors.
+                    </p>
+
+                    <span class="badge bg-primary">
+                        Machine Learning
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROPHET -->
+
+            <div class="col-md-6 col-xl-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+
+                    <h5>
+                        Prophet
+                    </h5>
+
+                    <p class="muted">
+                        Time-series forecasting model
+                        designed for business data.
+                    </p>
+
+                    <span class="badge bg-primary">
+                        Time Series
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MODEL STATUS -->
+
+        {% if forecast_result and forecast_result.success %}
+
+        <div class="alert alert-success mt-4 mb-0">
+
+            <i class="bi bi-check-circle"></i>
+
+            Forecast generated successfully using
+
+            <strong>
+                {{ best_model }}
+            </strong>.
+
+        </div>
+
+        {% elif forecasting_message %}
+
+        <div class="alert alert-warning mt-4 mb-0">
+
+            <i class="bi bi-info-circle"></i>
+
+            {{ forecasting_message }}
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-info mt-4 mb-0">
+
+            <i class="bi bi-info-circle"></i>
+
+            Forecasting models are evaluated automatically
+            when this page is opened or when forecasting
+            is run manually.
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         FORECAST RESULTS
+    ====================================================== -->
+
+    {% if forecast_result and forecast_result.success %}
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    MODEL RESULTS
+                </div>
+
+                <h4>
+                    Forecast Performance
+                </h4>
+
+                <p class="muted mb-0">
+                    Performance metrics for the selected
+                    forecasting model.
+                </p>
+
+            </div>
+
+            <div class="card-icon">
+                <i class="bi bi-speedometer2"></i>
+            </div>
+
+        </div>
+
+
+        <div class="row g-4 mt-3">
+
+            <!-- BEST MODEL -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+
+                    <h6>
+                        Selected Model
+                    </h6>
+
+                    <h4>
+                        {{ best_model }}
+                    </h4>
+
+                    <span>
+                        Lowest RMSE
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MAE -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-bullseye"></i>
+                    </div>
+
+                    <h6>
+                        MAE
+                    </h6>
+
+                    <h3>
+                        {{ best_mae }}
+                    </h3>
+
+                    <span>
+                        Mean Absolute Error
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MSE -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+
+                    <h6>
+                        MSE
+                    </h6>
+
+                    <h3>
+                        {{ best_mse }}
+                    </h3>
+
+                    <span>
+                        Mean Squared Error
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- RMSE -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-activity"></i>
+                    </div>
+
+                    <h6>
+                        RMSE
+                    </h6>
+
+                    <h3>
+                        {{ best_rmse }}
+                    </h3>
+
+                    <span>
+                        Root Mean Squared Error
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MODEL COMPARISON -->
+
+        {% if forecast_models %}
+
+        <div class="mt-4">
+
+            <h5>
+                Model Comparison
+            </h5>
+
+            <div class="table-responsive mt-3">
+
+                <table class="table table-hover">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Model</th>
+                            <th>MAE</th>
+                            <th>MSE</th>
+                            <th>RMSE</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        {% for model in forecast_models %}
+
+                        <tr>
+
+                            <td>
+                                {{ model.model }}
+                            </td>
+
+                            <td>
+                                {{ model.mae }}
+                            </td>
+
+                            <td>
+                                {{ model.mse }}
+                            </td>
+
+                            <td>
+                                {{ model.rmse }}
+                            </td>
+
+                            <td>
+
+                                {% if model.forecast is not none %}
+
+                                <span class="badge bg-success">
+                                    Available
+                                </span>
+
+                                {% elif model.available is defined and not model.available %}
+
+                                <span class="badge bg-secondary">
+                                    Not Installed
+                                </span>
+
+                                {% else %}
+
+                                <span class="badge bg-danger">
+                                    Failed
+                                </span>
+
+                                {% endif %}
+
+                            </td>
+
+                        </tr>
+
+                        {% endfor %}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         ACTUAL VS PREDICTED CHART
+    ====================================================== -->
+
+        <div class="large-card mt-4 forecast-chart-card" id="forecast-chart-card">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    FORECAST PERFORMANCE
+                </div>
+
+                <h4>
+                    Actual Demand vs Predicted Demand
+                </h4>
+
+                <p class="muted mb-0">
+                    Historical demand compared with predictions
+                    from the selected forecasting model.
+                </p>
+
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+
+                <button
+                    type="button"
+                    class="btn btn-outline-primary forecast-chart-toggle"
+                    id="forecast-chart-expand"
+                    title="View chart full screen"
+                    aria-label="View chart full screen"
+                >
+                    <i class="bi bi-arrows-fullscreen"></i>
+                </button>
+
+                <button
+                    type="button"
+                    class="btn btn-outline-primary forecast-chart-toggle d-none"
+                    id="forecast-chart-close"
+                    title="Exit full screen"
+                    aria-label="Exit full screen"
+                >
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+                <div class="card-icon">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="mt-4 forecast-chart-wrapper">
+
+            <canvas id="forecastChart"></canvas>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FUTURE FORECAST
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    FUTURE FORECAST
+                </div>
+
+                <h4>
+                    Predicted Future Demand
+                </h4>
+
+                <p class="muted mb-0">
+                    Future demand predicted by the selected
+                    best forecasting model.
+                </p>
+
+            </div>
+
+            <div class="card-icon">
+                <i class="bi bi-calendar-range"></i>
+            </div>
+
+        </div>
+
+
+        {% if forecast_rows %}
+
+        <div class="table-responsive mt-4">
+
+            <table class="table table-hover">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Predicted Demand
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for row in forecast_rows %}
+
+                    <tr>
+
+                        <td>
+                            {{ row.date }}
+                        </td>
+
+                        <td>
+
+                            <strong>
+                                {{ row.predicted_demand }}
+                            </strong>
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="text-center py-5">
+
+            <div class="card-icon mx-auto mb-3">
+
+                <i class="bi bi-bar-chart-line"></i>
+
+            </div>
+
+            <h5>
+                No Forecast Generated
+            </h5>
+
+            <p class="muted">
+                Run a forecasting model to generate
+                future demand predictions.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         OPTIONAL DATASET
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h5>
+                    Optional Dataset Override
+                </h5>
+
+                <p class="muted mb-0">
+
+                    The forecasting module automatically uses
+                    the shared cleaned dataset.
+
+                    You may add a separate dataset here later
+                    if required.
+
+                </p>
+
+            </div>
+
+            <span class="badge bg-secondary">
+                Optional
+            </span>
+
+        </div>
+
+    </div>
+
+
+    {% endif %}
+
+
+    {% else %}
+
+
+    <!-- =====================================================
+         NO DATASET
+    ====================================================== -->
+
+    <div class="large-card">
+
+        <div class="text-center py-5">
+
+            <div class="card-icon mx-auto mb-4">
+
+                <i class="bi bi-database-x"></i>
+
+            </div>
+
+            <h3>
+                No Shared Dataset Available
+            </h3>
+
+            <p class="muted">
+
+                Please ask an Admin to upload and process
+                a retail CSV dataset from Data Management.
+
+            </p>
+
+            {% if current_user.role == "Admin" %}
+
+            <a
+                href="{{ url_for('datasets') }}"
+                class="btn btn-primary mt-3"
+            >
+
+                <i class="bi bi-cloud-arrow-up"></i>
+
+                Go to Data Management
+
+            </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+
+<!-- =====================================================
+     CHART DATA
+====================================================== -->
+
+{% if forecast_result and forecast_result.success %}
+
+<div
+    id="forecast-chart-data"
+    style="display: none;"
+>{{ {
+    "dates": chart_dates,
+    "actual": chart_actual,
+    "predicted": chart_predicted
+} | tojson }}</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dataElement =
+        document.getElementById("forecast-chart-data");
+
+    const chartCanvas =
+        document.getElementById("forecastChart");
+
+    const chartCard =
+        document.getElementById("forecast-chart-card");
+
+    const expandButton =
+        document.getElementById("forecast-chart-expand");
+
+    const closeButton =
+        document.getElementById("forecast-chart-close");
+
+
+    if (!dataElement || !chartCanvas) {
+
+        return;
+
+    }
+
+    if (!chartCard || !expandButton || !closeButton) {
+
+        console.error("Forecast chart controls are unavailable.");
+
+        return;
+
+    }
+
+
+    let chartDates = [];
+    let chartActual = [];
+    let chartPredicted = [];
+
+
+    try {
+
+        const chartData =
+            JSON.parse(dataElement.textContent || "{}");
+
+        chartDates = chartData.dates || [];
+        chartActual = chartData.actual || [];
+        chartPredicted = chartData.predicted || [];
+
+    } catch (error) {
+
+        console.error(
+            "Unable to read forecast chart data:",
+            error
+        );
+
+        return;
+
+    }
+
+
+    if (
+        chartDates.length === 0 ||
+        chartActual.length === 0 ||
+        chartPredicted.length === 0
+    ) {
+
+        console.log(
+            "Forecast chart data is empty."
+        );
+
+        return;
+
+    }
+
+
+    const ctx =
+        chartCanvas.getContext("2d");
+
+
+    const forecastChart = new Chart(ctx, {
+
+        type: "line",
+
+
+        data: {
+
+            labels: chartDates,
+
+
+            datasets: [
+
+                {
+
+                    label:
+                        "Actual Demand",
+
+                    data:
+                        chartActual,
+
+                    borderWidth:
+                        2,
+
+                    tension:
+                        0.3,
+
+                    fill:
+                        false,
+
+                    pointRadius:
+                        2
+
+                },
+
+
+                {
+
+                    label:
+                        "Predicted Demand",
+
+                    data:
+                        chartPredicted,
+
+                    borderWidth:
+                        2,
+
+                    borderDash:
+                        [6, 6],
+
+                    tension:
+                        0.3,
+
+                    fill:
+                        false,
+
+                    pointRadius:
+                        2
+
+                }
+
+            ]
+
+        },
+
+
+        options: {
+
+            responsive:
+                true,
+
+            maintainAspectRatio:
+                false,
+
+
+            interaction: {
+
+                mode:
+                    "index",
+
+                intersect:
+                    false
+
+            },
+
+
+            plugins: {
+
+                legend: {
+
+                    display:
+                        true
+
+                },
+
+
+                tooltip: {
+
+                    enabled:
+                        true
+
+                }
+
+            },
+
+
+            scales: {
+
+                x: {
+
+                    title: {
+
+                        display:
+                            true,
+
+                        text:
+                            "Date"
+
+                    }
+
+                },
+
+
+                y: {
+
+                    beginAtZero:
+                        true,
+
+                    title: {
+
+                        display:
+                            true,
+
+                        text:
+                            "Demand"
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    });
+
+    function setChartExpanded(expanded) {
+
+        chartCard.classList.toggle("forecast-chart-expanded", expanded);
+        expandButton.classList.toggle("d-none", expanded);
+        closeButton.classList.toggle("d-none", !expanded);
+        document.body.classList.toggle("forecast-chart-lock-scroll", expanded);
+
+        window.requestAnimationFrame(function () {
+            forecastChart.resize();
+        });
+
+    }
+
+    expandButton.addEventListener("click", function () {
+        setChartExpanded(true);
+    });
+
+    closeButton.addEventListener("click", function () {
+        setChartExpanded(false);
+    });
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape" && chartCard.classList.contains("forecast-chart-expanded")) {
+            setChartExpanded(false);
+        }
+
+    });
+
+});
+
+</script>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{
+    "original_rows": 2800,
+    "cleaned_rows": 2800,
+    "original_columns": 10,
+    "cleaned_columns": 10,
+    "duplicates_removed": 0,
+    "missing_values_before": 0,
+    "missing_values_after": 0,
+    "outliers_detected": {
+        "current_stock": 0,
+        "daily_demand": 0,
+        "lead_time_days": 0,
+        "supplier_reliability_score": 0
+    },
+    "extreme_outliers_removed": 0,
+    "automatic_column_mapping": {
+        "date": "date",
+        "product_id": "product_id",
+        "store": "store_id",
+        "inventory": "current_stock",
+        "demand": "daily_demand",
+        "promotion": "promotion_active",
+        "supplier": "supplier_reliability_score",
+        "lead_time": "lead_time_days"
+    },
+    "warnings": []
+}

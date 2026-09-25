@@ -1,0 +1,2444 @@
+{% extends "base.html" %}
+
+{% block title %}
+Seasonal & Event Analysis | Retail Demand Forecasting System
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <div class="dashboard-label">
+                SEASONAL & EVENT ANALYSIS
+            </div>
+
+            <h1>
+                Seasonal Patterns
+            </h1>
+
+            <p>
+                Analyze recurring demand patterns, seasonal
+                strength, peak periods, events and time-series
+                behaviour using machine learning and statistical
+                analysis.
+            </p>
+
+        </div>
+
+        <div class="role-badge">
+            <i class="bi bi-calendar2-week"></i>
+            Seasonal Engine
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DATASET SOURCE
+    ====================================================== -->
+
+    {% include "_dataset_source.html" %}
+
+
+    <!-- =====================================================
+         ENGINE STATUS
+    ====================================================== -->
+
+    <div class="large-card">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-cpu"></i>
+                    Seasonal Analysis Engine
+                </h4>
+
+                <p class="muted mb-0">
+                    Time-series and seasonal machine learning
+                    analysis using the selected retail dataset.
+                </p>
+
+            </div>
+
+            {% if seasonal_available %}
+
+            <span class="badge bg-success">
+                <i class="bi bi-check-circle"></i>
+                ML Engine Active
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-warning text-dark">
+                <i class="bi bi-clock"></i>
+                Awaiting Dataset
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if seasonal_available %}
+
+        <div class="alert alert-success mt-4">
+
+            <i class="bi bi-robot"></i>
+
+            <strong>
+                Seasonal ML Analysis Completed
+            </strong>
+
+            <br>
+
+            {{ seasonal_message }}
+
+            {% if selected_dataset_filename %}
+
+            <div class="mt-2">
+
+                <strong>Dataset:</strong>
+                {{ selected_dataset_filename }}
+
+                &nbsp; | &nbsp;
+
+                <strong>Source:</strong>
+                {{ selected_dataset_source|capitalize }}
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-info mt-4">
+
+            <i class="bi bi-info-circle"></i>
+
+            {{ seasonal_message }}
+
+            <br><br>
+
+            Upload and process a compatible retail dataset
+            from <strong>Dataset Management</strong> to activate
+            Seasonal Analysis.
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         OVERVIEW
+    ====================================================== -->
+
+    <div class="row g-4 mt-1">
+
+        <!-- RECORDS -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-database"></i>
+                </div>
+
+                <h5>
+                    Records Analyzed
+                </h5>
+
+                <h3>
+                    {{ total_records }}
+                </h3>
+
+                <span>
+                    Historical records
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOTAL DEMAND -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+
+                <h5>
+                    Total Demand
+                </h5>
+
+                <h3>
+
+                    {% if total_demand is not none %}
+                        {{ total_demand }}
+                    {% else %}
+                        —
+                    {% endif %}
+
+                </h3>
+
+                <span>
+                    Units / demand
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PEAK DAY -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-calendar-day"></i>
+                </div>
+
+                <h5>
+                    Peak Weekday
+                </h5>
+
+                <h3>
+
+                    {% if peak_day %}
+                        {{ peak_day }}
+                    {% else %}
+                        —
+                    {% endif %}
+
+                </h3>
+
+                <span>
+
+                    {% if peak_day_demand is not none %}
+                        Avg. demand: {{ peak_day_demand }}
+                    {% else %}
+                        Weekly pattern
+                    {% endif %}
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PEAK MONTH -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-calendar-month"></i>
+                </div>
+
+                <h5>
+                    Peak Month
+                </h5>
+
+                <h3>
+
+                    {% if peak_month %}
+                        {{ peak_month }}
+                    {% else %}
+                        —
+                    {% endif %}
+
+                </h3>
+
+                <span>
+
+                    {% if peak_month_demand is not none %}
+                        Avg. demand: {{ peak_month_demand }}
+                    {% else %}
+                        Monthly pattern
+                    {% endif %}
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DATA INFORMATION
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="status-item">
+
+                    <span>
+                        Date Column
+                    </span>
+
+                    {% if date_column %}
+
+                    <strong class="online">
+                        ✓ {{ date_column }}
+                    </strong>
+
+                    {% else %}
+
+                    <strong class="ready">
+                        Not detected
+                    </strong>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="status-item">
+
+                    <span>
+                        Demand Column
+                    </span>
+
+                    {% if demand_column %}
+
+                    <strong class="online">
+                        ✓ {{ demand_column }}
+                    </strong>
+
+                    {% else %}
+
+                    <strong class="ready">
+                        Not detected
+                    </strong>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="status-item">
+
+                    <span>
+                        Data Period
+                    </span>
+
+                    {% if data_period %}
+
+                    <strong class="online">
+                        {{ data_period }}
+                    </strong>
+
+                    {% else %}
+
+                    <strong class="ready">
+                        Not available
+                    </strong>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         WEEKLY SEASONALITY
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-calendar-week"></i>
+                    Weekly Seasonality
+                </h4>
+
+                <p class="muted mb-0">
+                    Average demand across each day of the week.
+                </p>
+
+            </div>
+
+            {% if weekly_data %}
+
+            <span class="badge bg-success">
+                Pattern Detected
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                No Data
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if weekly_data %}
+
+        <div class="row g-4 mt-2">
+
+            {% for item in weekly_data %}
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-calendar-day"></i>
+                    </div>
+
+                    <h5>
+                        {{ item.day }}
+                    </h5>
+
+                    <h3>
+                        {{ item.demand }}
+                    </h3>
+
+                    {% if item.day == peak_day %}
+
+                    <span class="text-success">
+                        Peak demand day
+                    </span>
+
+                    {% elif item.day == lowest_day %}
+
+                    <span class="text-muted">
+                        Lowest demand day
+                    </span>
+
+                    {% else %}
+
+                    <span>
+                        Average demand
+                    </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <div class="mt-4" style="height: 350px;">
+            <canvas id="weeklySeasonalityChart"></canvas>
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-light border mt-4 text-center p-5">
+
+            <i class="bi bi-calendar-x display-6"></i>
+
+            <h5 class="mt-3">
+                Weekly Analysis Not Available
+            </h5>
+
+            <p class="muted mb-0">
+                Valid date and demand data are required.
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         MONTHLY SEASONALITY
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-calendar-month"></i>
+                    Monthly Seasonality
+                </h4>
+
+                <p class="muted mb-0">
+                    Average demand behaviour across calendar months.
+                </p>
+
+            </div>
+
+            {% if monthly_data %}
+
+            <span class="badge bg-success">
+                Monthly Pattern Detected
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                No Data
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if monthly_data %}
+
+        <div class="mt-4" style="height: 380px;">
+            <canvas id="monthlySeasonalityChart"></canvas>
+        </div>
+
+
+        <div class="table-responsive mt-4">
+
+            <table class="table table-bordered align-middle">
+
+                <thead>
+
+                    <tr>
+                        <th>Month</th>
+                        <th>Average Demand</th>
+                        <th>Classification</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for item in monthly_data %}
+
+                    <tr>
+
+                        <td>
+                            <strong>
+                                {{ item.month }}
+                            </strong>
+                        </td>
+
+                        <td>
+                            {{ item.demand }}
+                        </td>
+
+                        <td>
+
+                            {% if item.month == peak_month %}
+
+                            <span class="badge bg-success">
+                                Peak Season
+                            </span>
+
+                            {% elif item.month == lowest_month %}
+
+                            <span class="badge bg-secondary">
+                                Low Season
+                            </span>
+
+                            {% else %}
+
+                            <span class="badge bg-info">
+                                Normal
+                            </span>
+
+                            {% endif %}
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-light border mt-4">
+
+            Monthly seasonality requires valid historical
+            date and demand records.
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         QUARTERLY ANALYSIS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-calendar3"></i>
+                    Quarterly Demand Analysis
+                </h4>
+
+                <p class="muted mb-0">
+                    Compare demand behaviour across business quarters.
+                </p>
+
+            </div>
+
+            {% if quarterly_data %}
+
+            <span class="badge bg-success">
+                Available
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                No Data
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if quarterly_data %}
+
+        <div class="row g-4 mt-2">
+
+            {% for item in quarterly_data %}
+
+            <div class="col-md-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-bar-chart"></i>
+                    </div>
+
+                    <h5>
+                        {{ item.quarter }}
+                    </h5>
+
+                    <h3>
+                        {{ item.demand }}
+                    </h3>
+
+                    {% if item.quarter == peak_quarter %}
+
+                    <span class="text-success">
+                        Highest quarter
+                    </span>
+
+                    {% else %}
+
+                    <span>
+                        Average demand
+                    </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <div class="mt-4" style="height: 320px;">
+            <canvas id="quarterlyChart"></canvas>
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-light border mt-4">
+            Quarterly analysis is unavailable for the selected dataset.
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         SEASONAL INDEX
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-speedometer2"></i>
+                    Seasonal Index
+                </h4>
+
+                <p class="muted mb-0">
+                    Seasonal demand relative to the overall average demand.
+                </p>
+
+            </div>
+
+            {% if seasonal_indices %}
+
+            <span class="badge bg-success">
+                Calculated
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                Waiting
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if seasonal_indices %}
+
+        <div class="table-responsive mt-4">
+
+            <table class="table table-bordered align-middle">
+
+                <thead>
+
+                    <tr>
+                        <th>Month</th>
+                        <th>Seasonal Index</th>
+                        <th>Relative Demand</th>
+                        <th>Interpretation</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% set month_names = [
+                        "January",
+                        "February",
+                        "March",
+                        "April",
+                        "May",
+                        "June",
+                        "July",
+                        "August",
+                        "September",
+                        "October",
+                        "November",
+                        "December"
+                    ] %}
+
+                    {% for item in seasonal_indices %}
+
+                    <tr>
+
+                        <td>
+
+                            <strong>
+                                {{ month_names[item.month - 1] }}
+                            </strong>
+
+                        </td>
+
+                        <td>
+                            {{ item.seasonal_index }}
+                        </td>
+
+                        <td>
+                            {{ item.percentage }}%
+                        </td>
+
+                        <td>
+
+                            {% if item.seasonal_index >= 1.20 %}
+
+                            <span class="badge bg-success">
+                                High Season
+                            </span>
+
+                            {% elif item.seasonal_index <= 0.80 %}
+
+                            <span class="badge bg-secondary">
+                                Low Season
+                            </span>
+
+                            {% else %}
+
+                            <span class="badge bg-info">
+                                Normal
+                            </span>
+
+                            {% endif %}
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div class="alert alert-light border mt-3">
+
+            <strong>
+                Overall average demand:
+            </strong>
+
+            {% if overall_average is not none %}
+                {{ overall_average }}
+            {% else %}
+                —
+            {% endif %}
+
+            <br>
+
+            <small class="text-muted">
+                Index above 1.00 indicates demand above the
+                overall average. Index below 1.00 indicates
+                demand below the overall average.
+            </small>
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-light border mt-4">
+
+            Seasonal indices cannot be calculated until
+            sufficient historical demand data is available.
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         STL DECOMPOSITION
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-diagram-3"></i>
+                    Time-Series Decomposition
+                </h4>
+
+                <p class="muted mb-0">
+                    Separate demand into trend, seasonal and
+                    residual components using STL.
+                </p>
+
+            </div>
+
+            {% if decomposition_method %}
+
+            <span class="badge bg-success">
+                {{ decomposition_method }}
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                Waiting
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="row g-4 mt-2">
+
+            <!-- SEASONAL STRENGTH -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+
+                    <h5>
+                        Seasonal Strength
+                    </h5>
+
+                    <h3>
+
+                        {% if seasonal_strength_percentage is not none %}
+                            {{ seasonal_strength_percentage }}%
+                        {% else %}
+                            —
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+                        Recurring seasonal influence
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- TREND STRENGTH -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+
+                    <h5>
+                        Trend Strength
+                    </h5>
+
+                    <h3>
+
+                        {% if trend_strength_percentage is not none %}
+                            {{ trend_strength_percentage }}%
+                        {% else %}
+                            —
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+                        Long-term movement
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PERIOD -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+
+                    <h5>
+                        Seasonal Period
+                    </h5>
+
+                    <h3>
+
+                        {% if decomposition_method %}
+
+                            {% if seasonal_ml.decomposition.period is defined %}
+                                {{ seasonal_ml.decomposition.period }}
+                            {% else %}
+                                7
+                            {% endif %}
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+                        Days
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- METHOD -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+
+                    <h5>
+                        Method
+                    </h5>
+
+                    <h3>
+
+                        {% if decomposition_method %}
+                            STL
+                        {% else %}
+                            —
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+                        Robust decomposition
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        {% if decomposition_data %}
+
+        <div class="mt-4" style="height: 400px;">
+            <canvas id="decompositionChart"></canvas>
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-light border mt-4">
+
+            <i class="bi bi-info-circle"></i>
+
+            STL decomposition requires sufficient historical
+            daily observations.
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         RECURRING SEASONAL CYCLES
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-arrow-repeat"></i>
+                    Recurring Seasonal Cycles
+                </h4>
+
+                <p class="muted mb-0">
+                    Autocorrelation is used to identify recurring
+                    demand cycles in the historical time series.
+                </p>
+
+            </div>
+
+            {% if strongest_cycle %}
+
+            <span class="badge bg-success">
+                Cycle Detected
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                No Strong Cycle
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if strongest_cycle %}
+
+        <div class="row g-4 mt-2">
+
+            <div class="col-md-6">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-arrow-repeat"></i>
+                    </div>
+
+                    <h5>
+                        Strongest Cycle
+                    </h5>
+
+                    <h3>
+                        {{ strongest_cycle.lag_days }} days
+                    </h3>
+
+                    <span>
+                        Autocorrelation:
+                        {{ strongest_cycle.correlation }}
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-activity"></i>
+                    </div>
+
+                    <h5>
+                        Detection Method
+                    </h5>
+
+                    <h3>
+                        ACF
+                    </h3>
+
+                    <span>
+                        Autocorrelation analysis
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endif %}
+
+
+        {% if seasonal_cycles %}
+
+        <div class="table-responsive mt-4">
+
+            <table class="table table-bordered align-middle">
+
+                <thead>
+
+                    <tr>
+                        <th>Rank</th>
+                        <th>Cycle Length</th>
+                        <th>Correlation</th>
+                        <th>Strength</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for cycle in seasonal_cycles %}
+
+                    <tr>
+
+                        <td>
+                            {{ loop.index }}
+                        </td>
+
+                        <td>
+                            {{ cycle.lag_days }} days
+                        </td>
+
+                        <td>
+                            {{ cycle.correlation }}
+                        </td>
+
+                        <td>
+
+                            {% if cycle.correlation >= 0.70 %}
+
+                            <span class="badge bg-success">
+                                Strong
+                            </span>
+
+                            {% elif cycle.correlation >= 0.50 %}
+
+                            <span class="badge bg-info">
+                                Moderate
+                            </span>
+
+                            {% else %}
+
+                            <span class="badge bg-secondary">
+                                Weak
+                            </span>
+
+                            {% endif %}
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-light border mt-4">
+            No strong recurring cycles were identified.
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         FESTIVAL / EVENT ANALYSIS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-calendar-heart"></i>
+                    Festival & Event Analysis
+                </h4>
+
+                <p class="muted mb-0">
+                    Measure demand changes associated with
+                    festivals, holidays and special events.
+                </p>
+
+            </div>
+
+            {% if festival_available %}
+
+            <span class="badge bg-success">
+                Events Detected
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                No Event Data
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if festival_available and festival_events %}
+
+        <div class="table-responsive mt-4">
+
+            <table class="table table-bordered align-middle">
+
+                <thead>
+
+                    <tr>
+                        <th>Event</th>
+                        <th>Average Demand</th>
+                        <th>Records</th>
+                        <th>Demand Change</th>
+                        <th>Effect</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for event in festival_events %}
+
+                    <tr>
+
+                        <td>
+                            <strong>
+                                {{ event.event }}
+                            </strong>
+                        </td>
+
+                        <td>
+                            {{ event.average_demand }}
+                        </td>
+
+                        <td>
+                            {{ event.records }}
+                        </td>
+
+                        <td>
+                            {{ event.demand_lift_percentage }}%
+                        </td>
+
+                        <td>
+
+                            {% if event.demand_lift_percentage > 0 %}
+
+                            <span class="badge bg-success">
+                                Increased Demand
+                            </span>
+
+                            {% elif event.demand_lift_percentage < 0 %}
+
+                            <span class="badge bg-secondary">
+                                Reduced Demand
+                            </span>
+
+                            {% else %}
+
+                            <span class="badge bg-info">
+                                Neutral
+                            </span>
+
+                            {% endif %}
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-info mt-4">
+
+            <i class="bi bi-info-circle"></i>
+
+            {{ festival_message }}
+
+            <br><br>
+
+            If your dataset contains a column such as
+            <strong>festival</strong>,
+            <strong>holiday</strong>
+            or <strong>event</strong>, the system can analyze
+            its effect on demand automatically.
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         PEAK PERIODS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-fire"></i>
+                    Peak Demand Periods
+                </h4>
+
+                <p class="muted mb-0">
+                    Periods with the strongest average demand.
+                </p>
+
+            </div>
+
+            {% if monthly_peaks or weekly_peaks %}
+
+            <span class="badge bg-success">
+                Peak Periods Identified
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                No Data
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="row g-4 mt-2">
+
+
+            <!-- TOP MONTHS -->
+
+            <div class="col-lg-6">
+
+                <div class="large-card">
+
+                    <h5>
+                        <i class="bi bi-calendar-month"></i>
+                        Top Monthly Periods
+                    </h5>
+
+
+                    {% if monthly_peaks %}
+
+                    <div class="table-responsive mt-3">
+
+                        <table class="table table-bordered">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Month</th>
+                                    <th>Avg. Demand</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                {% set peak_month_names = [
+                                    "",
+                                    "January",
+                                    "February",
+                                    "March",
+                                    "April",
+                                    "May",
+                                    "June",
+                                    "July",
+                                    "August",
+                                    "September",
+                                    "October",
+                                    "November",
+                                    "December"
+                                ] %}
+
+                                {% for item in monthly_peaks %}
+
+                                <tr>
+
+                                    <td>
+                                        {{ loop.index }}
+                                    </td>
+
+                                    <td>
+                                        {{ peak_month_names[item.month] }}
+                                    </td>
+
+                                    <td>
+                                        {{ item.average_demand }}
+                                    </td>
+
+                                </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    {% else %}
+
+                    <p class="muted mt-3">
+                        No monthly peak data available.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <!-- TOP DAYS -->
+
+            <div class="col-lg-6">
+
+                <div class="large-card">
+
+                    <h5>
+                        <i class="bi bi-calendar-week"></i>
+                        Top Weekly Periods
+                    </h5>
+
+
+                    {% if weekly_peaks %}
+
+                    <div class="table-responsive mt-3">
+
+                        <table class="table table-bordered">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Day</th>
+                                    <th>Avg. Demand</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                {% for item in weekly_peaks %}
+
+                                <tr>
+
+                                    <td>
+                                        {{ loop.index }}
+                                    </td>
+
+                                    <td>
+
+                                        {% set weekly_day_names = [
+                                            "Monday",
+                                            "Tuesday",
+                                            "Wednesday",
+                                            "Thursday",
+                                            "Friday",
+                                            "Saturday",
+                                            "Sunday"
+                                        ] %}
+
+                                        {{ weekly_day_names[item.day] }}
+
+                                    </td>
+
+                                    <td>
+                                        {{ item.average_demand }}
+                                    </td>
+
+                                </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                    {% else %}
+
+                    <p class="muted mt-3">
+                        No weekly peak data available.
+                    </p>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         AI RECOMMENDATIONS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-lightbulb"></i>
+                    AI Seasonal Recommendations
+                </h4>
+
+                <p class="muted mb-0">
+                    Business recommendations generated from
+                    the seasonal analysis results.
+                </p>
+
+            </div>
+
+            <span class="badge bg-primary">
+                AI Insights
+            </span>
+
+        </div>
+
+
+        {% if seasonal_recommendations %}
+
+        <div class="mt-4">
+
+            {% for recommendation in seasonal_recommendations %}
+
+            <div class="alert alert-light border d-flex align-items-start">
+
+                <i class="bi bi-stars me-3 fs-4"></i>
+
+                <div>
+
+                    <strong>
+                        Recommendation {{ loop.index }}
+                    </strong>
+
+                    <br>
+
+                    {{ recommendation }}
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-info mt-4">
+
+            Seasonal recommendations will appear after
+            the ML pipeline processes the dataset.
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         SEASONAL PIPELINE
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-diagram-3"></i>
+                    Seasonal ML Pipeline
+                </h4>
+
+                <p class="muted mb-0">
+                    Current status of the seasonal analysis workflow.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="mt-4">
+
+            <!-- DATASET -->
+
+            <div class="status-item">
+
+                <span>
+                    Dataset
+                </span>
+
+                {% if selected_dataset_filename %}
+
+                <strong class="online">
+                    ✓ Available
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- DATE -->
+
+            <div class="status-item">
+
+                <span>
+                    Date Detection
+                </span>
+
+                {% if date_column %}
+
+                <strong class="online">
+                    ✓ {{ date_column }}
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- DEMAND -->
+
+            <div class="status-item">
+
+                <span>
+                    Demand Detection
+                </span>
+
+                {% if demand_column %}
+
+                <strong class="online">
+                    ✓ {{ demand_column }}
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- WEEKLY -->
+
+            <div class="status-item">
+
+                <span>
+                    Weekly Seasonality
+                </span>
+
+                {% if weekly_data %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- MONTHLY -->
+
+            <div class="status-item">
+
+                <span>
+                    Monthly Seasonality
+                </span>
+
+                {% if monthly_data %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- QUARTERLY -->
+
+            <div class="status-item">
+
+                <span>
+                    Quarterly Analysis
+                </span>
+
+                {% if quarterly_data %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- SEASONAL INDEX -->
+
+            <div class="status-item">
+
+                <span>
+                    Seasonal Index Calculation
+                </span>
+
+                {% if seasonal_indices %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- STL -->
+
+            <div class="status-item">
+
+                <span>
+                    STL Decomposition
+                </span>
+
+                {% if decomposition_data %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- ACF -->
+
+            <div class="status-item">
+
+                <span>
+                    Seasonal Cycle Detection
+                </span>
+
+                {% if seasonal_cycles %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- FESTIVAL -->
+
+            <div class="status-item">
+
+                <span>
+                    Festival / Event Analysis
+                </span>
+
+                {% if festival_available %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Optional
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <!-- RECOMMENDATIONS -->
+
+            <div class="status-item">
+
+                <span>
+                    AI Recommendations
+                </span>
+
+                {% if seasonal_recommendations %}
+
+                <strong class="online">
+                    ✓ Generated
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     CHART.JS
+========================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =====================================================
+       DATA FROM FLASK / JINJA
+    ====================================================== */
+
+    const weeklyData = {{ weekly_data | tojson | safe }};
+
+    const monthlyData = {{ monthly_data | tojson | safe }};
+
+    const quarterlyData = {{ quarterly_data | tojson | safe }};
+
+    const decompositionData =
+        {{ decomposition_data | tojson | safe }};
+
+
+    /* =====================================================
+       WEEKLY SEASONALITY CHART
+    ====================================================== */
+
+    const weeklyCanvas =
+        document.getElementById("weeklySeasonalityChart");
+
+    if (weeklyCanvas && weeklyData.length > 0) {
+
+        const weeklyLabels = [];
+
+        const weeklyValues = [];
+
+        weeklyData.forEach(function (item) {
+
+            weeklyLabels.push(item.day);
+
+            weeklyValues.push(item.demand);
+
+        });
+
+
+        new Chart(weeklyCanvas, {
+
+            type: "bar",
+
+            data: {
+
+                labels: weeklyLabels,
+
+                datasets: [
+
+                    {
+
+                        label: "Average Demand",
+
+                        data: weeklyValues,
+
+                        borderWidth: 1
+
+                    }
+
+                ]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                plugins: {
+
+                    legend: {
+                        display: true
+                    }
+
+                },
+
+                scales: {
+
+                    y: {
+
+                        beginAtZero: true,
+
+                        title: {
+
+                            display: true,
+
+                            text: "Average Demand"
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       MONTHLY SEASONALITY CHART
+    ====================================================== */
+
+    const monthlyCanvas =
+        document.getElementById("monthlySeasonalityChart");
+
+    if (monthlyCanvas && monthlyData.length > 0) {
+
+        const monthlyLabels = [];
+
+        const monthlyValues = [];
+
+
+        monthlyData.forEach(function (item) {
+
+            monthlyLabels.push(item.month);
+
+            monthlyValues.push(item.demand);
+
+        });
+
+
+        new Chart(monthlyCanvas, {
+
+            type: "line",
+
+            data: {
+
+                labels: monthlyLabels,
+
+                datasets: [
+
+                    {
+
+                        label: "Average Monthly Demand",
+
+                        data: monthlyValues,
+
+                        tension: 0.35,
+
+                        fill: false,
+
+                        pointRadius: 4,
+
+                        pointHoverRadius: 6,
+
+                        borderWidth: 2
+
+                    }
+
+                ]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                interaction: {
+
+                    intersect: false,
+
+                    mode: "index"
+
+                },
+
+                plugins: {
+
+                    legend: {
+
+                        display: true
+
+                    }
+
+                },
+
+                scales: {
+
+                    y: {
+
+                        beginAtZero: true,
+
+                        title: {
+
+                            display: true,
+
+                            text: "Average Demand"
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       QUARTERLY CHART
+    ====================================================== */
+
+    const quarterlyCanvas =
+        document.getElementById("quarterlyChart");
+
+    if (quarterlyCanvas && quarterlyData.length > 0) {
+
+        const quarterlyLabels = [];
+
+        const quarterlyValues = [];
+
+
+        quarterlyData.forEach(function (item) {
+
+            quarterlyLabels.push(item.quarter);
+
+            quarterlyValues.push(item.demand);
+
+        });
+
+
+        new Chart(quarterlyCanvas, {
+
+            type: "bar",
+
+            data: {
+
+                labels: quarterlyLabels,
+
+                datasets: [
+
+                    {
+
+                        label: "Average Quarterly Demand",
+
+                        data: quarterlyValues,
+
+                        borderWidth: 1
+
+                    }
+
+                ]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                plugins: {
+
+                    legend: {
+
+                        display: true
+
+                    }
+
+                },
+
+                scales: {
+
+                    y: {
+
+                        beginAtZero: true,
+
+                        title: {
+
+                            display: true,
+
+                            text: "Average Demand"
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       STL DECOMPOSITION CHART
+    ====================================================== */
+
+    const decompositionCanvas =
+        document.getElementById("decompositionChart");
+
+    if (
+        decompositionCanvas &&
+        decompositionData.length > 0
+    ) {
+
+        const decompositionLabels = [];
+
+        const actualValues = [];
+
+        const trendValues = [];
+
+        const seasonalValues = [];
+
+
+        decompositionData.forEach(function (item) {
+
+            decompositionLabels.push(item.date);
+
+            actualValues.push(item.actual);
+
+            trendValues.push(item.trend);
+
+            seasonalValues.push(item.seasonal);
+
+        });
+
+
+        new Chart(decompositionCanvas, {
+
+            type: "line",
+
+            data: {
+
+                labels: decompositionLabels,
+
+                datasets: [
+
+                    {
+
+                        label: "Actual Demand",
+
+                        data: actualValues,
+
+                        tension: 0.25,
+
+                        pointRadius: 1,
+
+                        borderWidth: 2
+
+                    },
+
+                    {
+
+                        label: "Trend",
+
+                        data: trendValues,
+
+                        tension: 0.25,
+
+                        pointRadius: 1,
+
+                        borderWidth: 2
+
+                    },
+
+                    {
+
+                        label: "Seasonal Component",
+
+                        data: seasonalValues,
+
+                        tension: 0.25,
+
+                        pointRadius: 1,
+
+                        borderWidth: 2
+
+                    }
+
+                ]
+
+            },
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                interaction: {
+
+                    intersect: false,
+
+                    mode: "index"
+
+                },
+
+                plugins: {
+
+                    legend: {
+
+                        display: true
+
+                    }
+
+                },
+
+                scales: {
+
+                    x: {
+
+                        ticks: {
+
+                            maxTicksLimit: 15
+
+                        }
+
+                    },
+
+                    y: {
+
+                        title: {
+
+                            display: true,
+
+                            text: "Demand"
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+    }
+
+});
+
+</script>
+
+{% endblock %}

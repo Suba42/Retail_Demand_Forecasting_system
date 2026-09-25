@@ -1,0 +1,2801 @@
+store_id,product_id,date,category,price,promotion_active,discount_percent,units_sold,inventory_level,day_of_week
+12,1823,2024-09-19,Home,1902,No,0,17,251,Friday
+6,1551,2024-12-21,Grocery,2629,Yes,0,14,248,Wednesday
+40,1015,2024-09-27,Grocery,2488,No,0,25,251,Saturday
+50,1475,2024-06-16,Home,293,Yes,5,7,470,Tuesday
+32,1004,2024-12-05,Grocery,2470,Yes,20,37,139,Saturday
+46,1260,2024-06-10,Electronics,1923,No,0,10,228,Friday
+26,1110,2024-05-28,Home,2150,No,0,6,35,Monday
+4,1481,2024-07-11,Home,323,Yes,30,19,20,Tuesday
+22,1089,2024-06-08,Clothing,1769,Yes,20,26,342,Tuesday
+16,1723,2024-02-21,Grocery,112,No,0,13,408,Monday
+44,1572,2024-04-06,Home,295,No,0,16,428,Thursday
+42,1392,2024-02-29,Home,2134,Yes,30,37,413,Tuesday
+2,1215,2024-04-05,Home,1773,Yes,0,34,158,Sunday
+17,1009,2024-11-08,Clothing,2515,Yes,0,33,94,Tuesday
+14,1596,2024-11-21,Electronics,1263,No,0,10,57,Monday
+9,1982,2024-10-27,Home,113,No,0,34,210,Friday
+20,1930,2024-04-26,Personal Care,2403,Yes,15,27,113,Saturday
+13,1703,2024-07-17,Home,1071,Yes,5,51,398,Saturday
+3,1524,2024-05-10,Electronics,2522,Yes,15,9,44,Monday
+19,1532,2024-03-30,Grocery,2935,No,0,36,151,Thursday
+18,1217,2024-04-14,Grocery,567,Yes,15,22,306,Saturday
+4,1047,2024-03-31,Clothing,333,No,0,20,230,Thursday
+22,1672,2024-12-19,Personal Care,1560,Yes,0,33,205,Tuesday
+23,1717,2024-06-08,Grocery,2443,Yes,20,34,37,Monday
+21,1139,2024-02-07,Grocery,137,Yes,15,37,54,Saturday
+22,1360,2024-02-13,Home,1905,No,0,13,397,Monday
+37,1014,2024-11-15,Home,368,No,0,36,424,Monday
+41,1118,2024-05-11,Home,1603,Yes,20,14,56,Monday
+29,1473,2024-10-04,Grocery,1402,No,0,44,498,Saturday
+2,1235,2024-12-23,Grocery,2174,Yes,10,37,327,Monday
+20,1146,2024-12-13,Personal Care,2086,No,0,28,150,Monday
+16,1334,2024-07-26,Clothing,879,Yes,10,38,357,Thursday
+14,1393,2024-04-22,Personal Care,863,No,0,27,431,Sunday
+3,1728,2024-02-02,Clothing,1346,Yes,5,28,88,Thursday
+27,1391,2024-11-16,Personal Care,742,Yes,15,21,261,Wednesday
+21,1076,2024-01-17,Clothing,2072,No,0,43,386,Sunday
+20,1664,2024-10-15,Grocery,2538,Yes,30,33,382,Wednesday
+50,1849,2024-05-16,Electronics,2675,Yes,15,9,252,Tuesday
+41,1548,2024-12-01,Clothing,627,Yes,30,17,79,Thursday
+12,1731,2024-01-06,Home,369,Yes,5,22,441,Thursday
+35,1714,2024-09-23,Personal Care,2240,Yes,5,28,135,Wednesday
+6,1420,2024-07-17,Electronics,2566,Yes,15,32,454,Sunday
+25,1563,2024-10-18,Personal Care,1895,No,0,15,120,Saturday
+7,1739,2024-11-24,Grocery,1455,No,0,28,187,Saturday
+21,1268,2024-01-09,Clothing,923,Yes,15,42,64,Wednesday
+27,1786,2024-05-20,Home,2117,Yes,0,40,245,Wednesday
+12,1545,2024-06-20,Electronics,166,Yes,0,17,239,Sunday
+44,1705,2024-08-13,Home,1977,Yes,20,52,481,Saturday
+19,1851,2024-10-14,Electronics,2421,Yes,5,41,244,Friday
+40,1213,2024-06-04,Electronics,2191,No,0,39,179,Saturday
+27,1548,2024-02-28,Personal Care,2281,No,0,17,313,Thursday
+34,1939,2024-07-24,Personal Care,70,No,0,2,34,Friday
+5,1953,2024-10-02,Home,2355,Yes,15,28,67,Saturday
+32,1130,2024-06-22,Home,1744,No,0,35,157,Tuesday
+40,1030,2024-05-13,Electronics,2001,No,0,31,75,Tuesday
+1,1703,2024-05-25,Clothing,2925,Yes,0,19,119,Tuesday
+47,1596,2024-03-03,Personal Care,1505,Yes,20,40,275,Monday
+28,1023,2024-07-11,Home,2603,No,0,38,387,Tuesday
+41,1223,2024-09-28,Electronics,2218,Yes,20,53,124,Sunday
+12,1323,2024-11-04,Clothing,2273,Yes,5,38,488,Saturday
+16,1135,2024-02-15,Clothing,847,Yes,5,14,474,Monday
+46,1129,2024-04-12,Home,1638,Yes,15,42,446,Thursday
+24,1118,2024-12-26,Personal Care,2622,Yes,0,27,122,Friday
+5,1493,2024-02-24,Grocery,2649,No,0,27,277,Saturday
+8,1208,2024-03-29,Electronics,203,No,0,16,95,Tuesday
+5,1783,2024-02-19,Clothing,1209,Yes,20,38,51,Tuesday
+28,1215,2024-11-03,Clothing,1651,No,0,27,238,Friday
+24,1757,2024-07-08,Home,104,Yes,5,35,112,Thursday
+21,1914,2024-02-13,Home,849,Yes,0,15,282,Sunday
+18,1933,2024-02-29,Electronics,2383,Yes,20,25,319,Wednesday
+50,1442,2024-04-02,Home,1711,Yes,10,30,470,Friday
+31,1103,2024-01-06,Clothing,897,Yes,0,24,428,Wednesday
+22,1221,2024-12-03,Home,2666,Yes,5,35,159,Saturday
+32,1657,2024-04-19,Grocery,2382,Yes,20,41,59,Thursday
+17,1454,2024-07-24,Personal Care,1669,Yes,0,20,335,Monday
+17,1256,2024-05-21,Clothing,256,Yes,30,17,212,Monday
+41,1455,2024-11-26,Grocery,2303,No,0,11,286,Friday
+31,1993,2024-03-27,Home,2300,Yes,15,32,496,Tuesday
+34,1408,2024-11-02,Clothing,2269,Yes,15,26,273,Thursday
+36,1951,2024-05-25,Clothing,1547,No,0,32,267,Saturday
+27,1772,2024-12-16,Home,160,Yes,5,16,319,Monday
+38,1740,2024-06-12,Grocery,266,No,0,8,403,Thursday
+49,1249,2024-01-24,Personal Care,966,No,0,21,388,Thursday
+39,1723,2024-02-28,Grocery,453,No,0,30,93,Sunday
+4,1365,2024-09-27,Electronics,2606,No,0,18,253,Monday
+30,1615,2024-05-14,Personal Care,559,No,0,31,246,Tuesday
+9,1975,2024-05-28,Electronics,2843,No,0,48,206,Sunday
+33,1639,2024-07-02,Clothing,1026,No,0,24,78,Friday
+13,1974,2024-05-07,Personal Care,1162,Yes,30,36,162,Sunday
+1,1277,2024-05-12,Home,2724,Yes,30,19,40,Saturday
+5,1773,2024-02-14,Electronics,160,Yes,0,22,133,Friday
+23,1215,2024-06-22,Clothing,2305,Yes,30,41,211,Thursday
+40,1858,2024-04-19,Home,2075,Yes,0,33,430,Monday
+24,1157,2024-11-30,Personal Care,1788,No,0,24,219,Sunday
+28,1669,2024-07-08,Personal Care,1382,No,0,26,300,Sunday
+35,1085,2024-08-09,Personal Care,447,No,0,10,468,Wednesday
+20,1843,2024-01-05,Grocery,2376,No,0,44,437,Saturday
+32,1742,2024-12-21,Clothing,1320,Yes,30,30,329,Monday
+24,1928,2024-03-01,Clothing,1208,Yes,5,36,203,Saturday
+29,1542,2024-06-05,Home,2955,No,0,22,311,Friday
+16,1086,2024-07-04,Clothing,1350,Yes,15,51,498,Saturday
+13,1756,2024-10-15,Clothing,148,No,0,29,366,Thursday
+6,1777,2024-08-20,Clothing,1648,Yes,20,20,308,Tuesday
+37,1302,2024-01-12,Home,141,Yes,20,14,49,Friday
+22,1083,2024-05-20,Grocery,312,No,0,10,423,Friday
+7,1763,2024-11-28,Home,1335,Yes,0,24,344,Saturday
+49,1470,2024-07-20,Clothing,1055,Yes,15,29,411,Friday
+32,1550,2024-02-07,Personal Care,1433,No,0,36,364,Tuesday
+1,1825,2024-07-12,Grocery,239,No,0,37,407,Sunday
+8,1431,2024-08-03,Electronics,1953,Yes,20,19,205,Saturday
+21,1209,2024-07-18,Home,1056,Yes,30,31,212,Saturday
+20,1748,2024-02-28,Clothing,2217,No,0,35,160,Monday
+2,1598,2024-09-03,Grocery,2704,Yes,5,35,487,Monday
+38,1241,2024-11-03,Home,1330,Yes,5,19,114,Wednesday
+12,1932,2024-06-08,Personal Care,2486,Yes,15,33,114,Wednesday
+26,1936,2024-06-24,Personal Care,2304,No,0,36,456,Wednesday
+4,1222,2024-03-09,Home,428,No,0,30,461,Tuesday
+1,1895,2024-08-29,Clothing,2210,No,0,20,423,Monday
+27,1160,2024-06-13,Electronics,1893,Yes,30,21,235,Friday
+34,1547,2024-01-28,Electronics,1112,Yes,30,28,399,Friday
+9,1084,2024-06-29,Clothing,2392,Yes,0,24,124,Sunday
+48,1600,2024-10-05,Personal Care,2568,Yes,15,13,375,Thursday
+29,1213,2024-01-20,Personal Care,1293,Yes,5,11,233,Tuesday
+21,1318,2024-07-26,Grocery,1742,No,0,34,100,Sunday
+24,1076,2024-12-17,Electronics,2328,No,0,19,259,Saturday
+42,1455,2024-01-07,Home,483,No,0,12,366,Thursday
+30,1790,2024-01-06,Electronics,2965,No,0,12,141,Wednesday
+48,1305,2024-06-21,Home,2573,Yes,10,41,341,Thursday
+47,1112,2024-06-17,Clothing,2325,Yes,10,31,116,Tuesday
+29,1846,2024-07-14,Grocery,1171,No,0,36,390,Saturday
+12,1197,2024-07-24,Grocery,467,Yes,20,20,68,Tuesday
+8,1444,2024-07-27,Grocery,1947,Yes,0,15,136,Monday
+42,1210,2024-03-16,Home,1449,No,0,13,494,Friday
+47,1410,2024-11-09,Clothing,2027,No,0,5,491,Thursday
+20,1666,2024-08-13,Grocery,1053,Yes,10,28,189,Tuesday
+19,1844,2024-02-22,Personal Care,2332,No,0,26,124,Friday
+36,1239,2024-06-29,Personal Care,2972,Yes,10,26,412,Friday
+46,1723,2024-04-10,Personal Care,2099,Yes,20,42,385,Tuesday
+37,1427,2024-12-22,Clothing,159,Yes,0,35,89,Tuesday
+29,1996,2024-03-10,Electronics,1398,Yes,10,14,156,Thursday
+48,1918,2024-06-20,Personal Care,2381,Yes,20,19,488,Wednesday
+16,1776,2024-10-20,Clothing,646,Yes,0,38,167,Saturday
+30,1032,2024-07-25,Electronics,729,Yes,20,23,300,Sunday
+40,1606,2024-11-23,Grocery,2746,Yes,10,41,407,Saturday
+34,1395,2024-03-01,Personal Care,699,Yes,15,17,259,Monday
+16,1581,2024-06-19,Grocery,1711,Yes,10,23,286,Tuesday
+26,1982,2024-09-11,Personal Care,2678,Yes,30,30,363,Sunday
+49,1288,2024-09-05,Home,469,No,0,31,196,Thursday
+37,1117,2024-09-26,Clothing,2877,No,0,12,442,Thursday
+4,1303,2024-11-11,Home,2200,No,0,25,235,Monday
+38,1898,2024-02-05,Electronics,1592,No,0,34,404,Sunday
+4,1487,2024-12-21,Grocery,559,No,0,30,144,Friday
+16,1900,2024-02-05,Clothing,2205,Yes,20,44,176,Saturday
+15,1665,2024-08-03,Personal Care,2287,No,0,25,308,Sunday
+8,1903,2024-10-02,Personal Care,552,Yes,0,23,286,Sunday
+2,1332,2024-03-29,Grocery,1906,Yes,10,36,144,Saturday
+10,1365,2024-12-20,Personal Care,1855,No,0,30,437,Friday
+20,1332,2024-09-12,Electronics,995,Yes,10,22,35,Thursday
+13,1323,2024-06-30,Home,1985,Yes,5,19,171,Sunday
+13,1545,2024-11-19,Electronics,115,Yes,30,56,470,Saturday
+18,1890,2024-08-03,Electronics,834,Yes,30,31,74,Wednesday
+15,1882,2024-06-06,Grocery,1421,No,0,15,232,Monday
+33,1680,2024-05-31,Clothing,2960,Yes,10,32,112,Saturday
+12,1683,2024-04-25,Clothing,1575,Yes,20,28,284,Tuesday
+5,1543,2024-01-24,Grocery,592,Yes,15,41,59,Thursday
+37,1089,2024-03-25,Clothing,2506,No,0,32,295,Wednesday
+2,1190,2024-03-18,Grocery,826,Yes,5,51,162,Saturday
+1,1951,2024-09-12,Grocery,2597,No,0,39,489,Sunday
+21,1674,2024-09-04,Grocery,786,Yes,20,42,417,Saturday
+48,1974,2024-09-29,Electronics,2166,No,0,48,278,Sunday
+43,1451,2024-10-07,Clothing,2482,Yes,0,20,331,Thursday
+38,1617,2024-09-12,Clothing,2983,Yes,10,21,270,Friday
+12,1332,2024-03-18,Personal Care,194,Yes,20,37,385,Monday
+29,1740,2024-05-14,Grocery,122,No,0,37,432,Thursday
+38,1810,2024-05-01,Personal Care,347,Yes,5,50,311,Saturday
+40,1756,2024-09-26,Clothing,648,Yes,10,27,237,Monday
+11,1387,2024-05-10,Electronics,2461,No,0,47,65,Saturday
+4,1323,2024-07-29,Home,704,No,0,44,373,Saturday
+49,1779,2024-11-03,Electronics,1542,Yes,30,37,41,Tuesday
+1,1246,2024-07-28,Personal Care,642,No,0,17,287,Saturday
+28,1958,2024-02-09,Grocery,629,Yes,15,38,304,Wednesday
+16,1428,2024-08-24,Grocery,2834,Yes,10,42,149,Monday
+3,1164,2024-07-25,Personal Care,980,No,0,18,178,Wednesday
+30,1880,2024-07-20,Electronics,2711,Yes,30,22,195,Friday
+27,1355,2024-05-06,Electronics,1611,No,0,18,420,Monday
+39,1478,2024-06-06,Home,2300,Yes,15,21,124,Thursday
+32,1209,2024-10-03,Home,1881,No,0,26,340,Saturday
+18,1635,2024-01-10,Personal Care,1766,Yes,0,28,373,Wednesday
+18,1105,2024-07-03,Grocery,795,No,0,18,282,Thursday
+47,1859,2024-03-02,Grocery,678,No,0,30,90,Sunday
+21,1262,2024-09-22,Grocery,1369,No,0,29,250,Monday
+3,1192,2024-03-18,Personal Care,1287,No,0,36,331,Tuesday
+28,1490,2024-10-05,Electronics,2488,Yes,0,31,126,Wednesday
+43,1386,2024-03-16,Electronics,2167,No,0,43,180,Saturday
+34,1886,2024-07-01,Electronics,1198,No,0,29,227,Tuesday
+9,1041,2024-01-13,Home,470,No,0,18,209,Wednesday
+14,1571,2024-12-18,Clothing,2368,Yes,30,25,172,Saturday
+6,1818,2024-08-06,Grocery,2780,Yes,10,33,140,Sunday
+22,1291,2024-09-11,Clothing,1657,No,0,29,50,Thursday
+23,1681,2024-12-30,Electronics,957,Yes,15,18,123,Thursday
+31,1596,2024-05-11,Personal Care,2181,Yes,30,20,195,Thursday
+26,1278,2024-01-28,Home,1313,Yes,15,12,81,Wednesday
+17,1074,2024-01-13,Grocery,2079,No,0,35,260,Saturday
+17,1834,2024-12-08,Electronics,1471,No,0,24,476,Wednesday
+24,1031,2024-10-21,Electronics,2680,No,0,26,216,Friday
+5,1282,2024-02-04,Home,359,Yes,20,35,297,Thursday
+9,1699,2024-09-16,Clothing,1891,No,0,7,485,Thursday
+10,1619,2024-04-08,Clothing,1314,No,0,6,204,Thursday
+34,1000,2024-10-05,Home,985,No,0,20,368,Tuesday
+6,1639,2024-10-14,Clothing,64,Yes,20,54,272,Sunday
+46,1212,2024-12-22,Home,1131,No,0,25,73,Monday
+22,1636,2024-12-18,Home,2862,Yes,5,16,442,Tuesday
+24,1766,2024-12-08,Personal Care,2359,No,0,23,209,Thursday
+46,1182,2024-09-20,Electronics,2091,Yes,30,31,147,Wednesday
+8,1869,2024-08-19,Personal Care,309,Yes,0,34,473,Saturday
+31,1054,2024-06-25,Clothing,2832,No,0,26,40,Tuesday
+24,1732,2024-12-15,Clothing,1677,No,0,31,149,Saturday
+37,1848,2024-03-07,Personal Care,801,No,0,28,458,Sunday
+11,1128,2024-04-12,Home,1772,Yes,20,36,399,Sunday
+1,1483,2024-10-26,Electronics,2594,No,0,26,138,Saturday
+25,1955,2024-12-13,Electronics,1147,No,0,30,234,Wednesday
+13,1292,2024-07-01,Personal Care,249,Yes,30,23,80,Sunday
+31,1175,2024-07-10,Grocery,542,No,0,39,188,Monday
+15,1401,2024-11-12,Home,1316,No,0,33,429,Sunday
+35,1289,2024-03-16,Home,631,No,0,28,365,Saturday
+28,1123,2024-03-18,Clothing,767,Yes,20,40,497,Wednesday
+18,1640,2024-07-23,Clothing,128,No,0,14,309,Friday
+36,1265,2024-10-13,Grocery,1369,Yes,0,28,266,Tuesday
+43,1080,2024-01-03,Electronics,671,Yes,0,34,477,Sunday
+27,1495,2024-01-17,Home,1427,No,0,27,91,Sunday
+36,1631,2024-12-02,Personal Care,1489,No,0,18,305,Monday
+29,1584,2024-01-25,Electronics,1083,No,0,20,116,Wednesday
+18,1367,2024-01-13,Personal Care,159,Yes,20,23,80,Saturday
+5,1982,2024-07-05,Grocery,1319,Yes,20,22,258,Monday
+26,1315,2024-09-29,Grocery,2209,No,0,36,434,Tuesday
+17,1920,2024-11-15,Grocery,2024,No,0,41,450,Saturday
+33,1672,2024-05-21,Clothing,88,Yes,5,29,185,Thursday
+5,1926,2024-11-30,Clothing,2617,No,0,22,201,Wednesday
+14,1048,2024-03-07,Personal Care,2483,Yes,10,18,191,Tuesday
+10,1381,2024-06-28,Electronics,1297,Yes,5,15,197,Monday
+26,1097,2024-06-13,Personal Care,1814,Yes,0,8,224,Friday
+38,1329,2024-08-08,Home,888,Yes,5,12,184,Monday
+18,1071,2024-12-12,Home,949,No,0,26,229,Sunday
+47,1649,2024-12-05,Home,1369,Yes,10,16,288,Monday
+29,1876,2024-12-31,Home,2687,Yes,5,28,335,Friday
+28,1681,2024-08-27,Home,2117,Yes,0,44,448,Saturday
+33,1942,2024-01-17,Personal Care,1625,Yes,15,10,327,Friday
+39,1055,2024-06-15,Electronics,2619,No,0,7,248,Wednesday
+13,1754,2024-08-28,Personal Care,2249,No,0,25,188,Wednesday
+15,1191,2024-11-28,Electronics,1696,Yes,5,13,405,Thursday
+12,1890,2024-01-20,Clothing,519,Yes,20,13,148,Wednesday
+1,1886,2024-08-06,Electronics,1076,No,0,39,252,Tuesday
+7,1568,2024-08-13,Home,2053,No,0,9,349,Tuesday
+5,1815,2024-03-18,Clothing,1040,Yes,15,43,457,Monday
+19,1120,2024-08-01,Electronics,781,Yes,10,16,38,Wednesday
+32,1073,2024-02-15,Electronics,2566,No,0,35,35,Sunday
+36,1684,2024-08-08,Home,2230,No,0,27,468,Saturday
+43,1617,2024-04-16,Electronics,112,No,0,22,378,Wednesday
+3,1132,2024-05-22,Grocery,790,Yes,5,35,375,Friday
+20,1200,2024-01-05,Grocery,1109,No,0,27,332,Friday
+50,1418,2024-04-12,Electronics,2883,Yes,30,30,387,Wednesday
+18,1467,2024-03-09,Personal Care,342,No,0,31,237,Wednesday
+16,1504,2024-10-23,Grocery,556,Yes,10,43,283,Saturday
+15,1956,2024-09-01,Home,1216,Yes,10,36,457,Monday
+41,1065,2024-07-06,Home,863,No,0,33,327,Tuesday
+19,1677,2024-12-21,Grocery,1415,No,0,22,319,Thursday
+38,1916,2024-05-08,Home,2802,Yes,0,13,230,Wednesday
+35,1673,2024-02-20,Home,1772,No,0,11,194,Monday
+47,1604,2024-12-08,Clothing,907,Yes,10,3,28,Wednesday
+30,1517,2024-06-10,Home,145,Yes,15,18,57,Wednesday
+28,1848,2024-04-27,Personal Care,2797,Yes,5,30,30,Sunday
+42,1954,2024-04-21,Personal Care,2921,Yes,0,30,54,Thursday
+33,1404,2024-02-19,Grocery,2443,Yes,15,27,209,Sunday
+43,1830,2024-08-30,Grocery,64,Yes,30,27,376,Friday
+24,1967,2024-01-13,Grocery,1824,No,0,28,99,Monday
+8,1794,2024-02-18,Clothing,1488,No,0,39,294,Friday
+43,1090,2024-09-17,Personal Care,2127,Yes,0,13,310,Tuesday
+16,1604,2024-07-30,Home,1313,No,0,30,200,Sunday
+7,1470,2024-03-11,Grocery,272,Yes,20,44,251,Tuesday
+27,1632,2024-11-09,Grocery,2113,Yes,5,17,308,Friday
+48,1754,2024-12-30,Home,1743,Yes,5,23,98,Sunday
+26,1112,2024-09-09,Clothing,691,No,0,6,291,Friday
+14,1267,2024-10-01,Grocery,2274,Yes,15,13,233,Wednesday
+42,1907,2024-10-13,Electronics,2741,No,0,18,188,Thursday
+48,1614,2024-05-12,Electronics,2376,Yes,15,25,340,Wednesday
+23,1664,2024-08-08,Clothing,1556,Yes,15,32,425,Thursday
+4,1167,2024-09-27,Home,1896,Yes,0,48,179,Sunday
+44,1101,2024-12-31,Clothing,2292,No,0,29,224,Sunday
+34,1767,2024-09-26,Home,182,No,0,19,204,Thursday
+1,1704,2024-10-30,Clothing,86,No,0,11,228,Friday
+20,1214,2024-11-07,Personal Care,1058,No,0,38,326,Saturday
+34,1776,2024-06-25,Grocery,279,No,0,12,114,Thursday
+42,1880,2024-07-10,Home,430,Yes,10,34,321,Wednesday
+6,1406,2024-04-25,Clothing,417,No,0,21,312,Saturday
+19,1657,2024-05-24,Grocery,1394,Yes,10,26,96,Sunday
+9,1949,2024-06-23,Grocery,2058,Yes,15,43,339,Monday
+27,1343,2024-12-13,Grocery,2577,Yes,20,39,299,Monday
+25,1775,2024-08-17,Home,756,Yes,15,26,370,Sunday
+8,1979,2024-07-01,Personal Care,533,No,0,19,183,Saturday
+45,1976,2024-11-30,Personal Care,2966,Yes,30,30,80,Thursday
+9,1859,2024-03-04,Electronics,516,Yes,0,39,232,Wednesday
+25,1205,2024-12-11,Home,1172,No,0,32,228,Monday
+33,1797,2024-09-03,Grocery,2071,No,0,39,373,Sunday
+23,1843,2024-03-24,Clothing,2300,Yes,20,9,185,Tuesday
+23,1789,2024-10-25,Electronics,1594,No,0,34,251,Friday
+15,1647,2024-05-13,Clothing,2018,No,0,36,187,Monday
+25,1249,2024-04-19,Home,1732,Yes,10,23,491,Monday
+30,1396,2024-09-06,Grocery,2579,Yes,20,42,112,Thursday
+33,1867,2024-03-17,Grocery,997,Yes,20,38,72,Saturday
+32,1341,2024-09-07,Electronics,2910,No,0,40,310,Tuesday
+16,1802,2024-03-20,Electronics,1879,No,0,11,432,Wednesday
+38,1172,2024-07-07,Clothing,866,No,0,17,81,Tuesday
+8,1255,2024-07-02,Grocery,1541,Yes,30,27,433,Wednesday
+17,1574,2024-03-08,Clothing,756,No,0,23,361,Wednesday
+33,1155,2024-07-18,Electronics,2036,Yes,10,19,34,Wednesday
+35,1768,2024-12-03,Personal Care,2279,Yes,20,19,65,Friday
+50,1371,2024-11-29,Personal Care,2665,No,0,32,176,Monday
+23,1746,2024-04-20,Personal Care,1006,No,0,38,251,Saturday
+36,1112,2024-10-21,Grocery,1158,No,0,9,473,Tuesday
+13,1376,2024-06-07,Clothing,1288,Yes,0,12,497,Friday
+2,1423,2024-10-19,Electronics,626,Yes,30,20,360,Monday
+6,1539,2024-12-21,Clothing,2856,Yes,15,29,289,Saturday
+27,1142,2024-09-05,Electronics,2558,No,0,11,493,Tuesday
+6,1138,2024-06-02,Clothing,372,No,0,35,35,Friday
+10,1879,2024-08-06,Grocery,1424,Yes,30,45,159,Tuesday
+11,1088,2024-09-22,Electronics,2544,No,0,25,427,Friday
+2,1424,2024-01-17,Electronics,180,Yes,0,34,172,Sunday
+26,1853,2024-04-28,Home,813,Yes,0,18,210,Monday
+1,1920,2024-05-03,Clothing,1485,No,0,30,132,Wednesday
+34,1691,2024-06-29,Home,245,No,0,36,289,Saturday
+14,1259,2024-08-19,Home,2718,Yes,15,17,109,Tuesday
+39,1535,2024-10-21,Clothing,954,No,0,21,114,Tuesday
+20,1521,2024-06-17,Electronics,2398,Yes,5,10,179,Tuesday
+44,1781,2024-09-14,Electronics,2811,Yes,5,11,296,Monday
+24,1685,2024-07-01,Grocery,1858,Yes,0,13,232,Friday
+22,1809,2024-04-15,Home,349,No,0,19,89,Thursday
+32,1033,2024-07-13,Grocery,1225,Yes,15,11,438,Monday
+32,1983,2024-04-25,Clothing,1790,Yes,5,16,54,Tuesday
+3,1197,2024-05-01,Electronics,1450,Yes,5,36,92,Sunday
+24,1381,2024-03-02,Clothing,2923,Yes,30,50,473,Saturday
+8,1314,2024-06-13,Electronics,649,Yes,5,9,391,Wednesday
+37,1453,2024-09-26,Clothing,2435,Yes,10,41,289,Friday
+20,1998,2024-12-12,Personal Care,427,Yes,30,15,134,Monday
+19,1495,2024-11-02,Home,811,Yes,10,13,346,Friday
+10,1966,2024-08-28,Grocery,1484,No,0,17,258,Monday
+11,1046,2024-03-29,Home,1847,No,0,23,298,Monday
+40,1668,2024-02-02,Home,916,Yes,0,36,132,Thursday
+3,1344,2024-05-13,Personal Care,150,Yes,10,21,27,Tuesday
+40,1760,2024-06-11,Electronics,2351,No,0,21,372,Thursday
+28,1553,2024-10-27,Home,1510,Yes,20,35,317,Friday
+44,1958,2024-11-14,Electronics,1100,No,0,19,487,Thursday
+16,1568,2024-10-25,Home,1968,No,0,25,411,Tuesday
+41,1703,2024-01-02,Clothing,695,No,0,21,165,Saturday
+42,1388,2024-12-17,Grocery,2013,Yes,15,50,401,Sunday
+37,1867,2024-11-19,Personal Care,2764,No,0,36,225,Wednesday
+4,1656,2024-03-14,Grocery,1943,Yes,0,35,183,Thursday
+4,1240,2024-10-25,Home,1197,No,0,17,45,Monday
+7,1436,2024-06-29,Personal Care,220,No,0,47,119,Saturday
+19,1323,2024-12-06,Personal Care,288,Yes,15,17,459,Thursday
+45,1854,2024-08-16,Clothing,2110,No,0,18,494,Tuesday
+20,1820,2024-03-31,Grocery,2785,Yes,30,38,146,Sunday
+2,1979,2024-09-19,Clothing,1998,No,0,7,385,Tuesday
+43,1163,2024-02-26,Clothing,1978,No,0,19,497,Saturday
+40,1710,2024-05-13,Personal Care,1229,No,0,16,179,Wednesday
+28,1888,2024-07-27,Home,2708,Yes,30,24,392,Saturday
+15,1393,2024-12-30,Clothing,60,No,0,46,272,Saturday
+15,1669,2024-11-12,Grocery,210,Yes,5,30,275,Sunday
+18,1707,2024-04-05,Grocery,2894,Yes,20,38,240,Wednesday
+22,1336,2024-01-28,Grocery,2703,No,0,21,371,Sunday
+22,1111,2024-05-23,Electronics,1240,No,0,18,257,Sunday
+46,1548,2024-01-26,Home,2190,No,0,11,53,Monday
+16,1444,2024-06-16,Home,2205,Yes,10,30,122,Friday
+34,1880,2024-11-23,Personal Care,336,No,0,18,46,Wednesday
+6,1124,2024-08-07,Home,1747,Yes,15,38,491,Tuesday
+42,1946,2024-09-13,Clothing,1999,No,0,50,410,Saturday
+13,1186,2024-01-30,Personal Care,2451,No,0,5,26,Friday
+18,1785,2024-11-27,Grocery,665,Yes,20,39,159,Sunday
+31,1198,2024-05-09,Grocery,2941,Yes,15,14,51,Thursday
+9,1435,2024-09-12,Personal Care,2304,Yes,0,33,157,Thursday
+44,1884,2024-11-11,Home,1052,No,0,30,437,Saturday
+4,1584,2024-08-30,Home,240,Yes,30,26,308,Tuesday
+47,1479,2024-11-12,Grocery,118,No,0,40,57,Saturday
+41,1122,2024-06-20,Clothing,901,Yes,30,31,269,Friday
+48,1408,2024-04-08,Clothing,140,Yes,30,37,280,Friday
+24,1678,2024-08-11,Electronics,188,Yes,30,24,157,Thursday
+27,1893,2024-06-04,Personal Care,1905,No,0,6,181,Tuesday
+30,1675,2024-07-11,Personal Care,414,No,0,40,396,Thursday
+47,1618,2024-11-02,Home,1694,Yes,30,25,136,Wednesday
+35,1600,2024-06-23,Personal Care,1832,Yes,30,16,172,Tuesday
+23,1784,2024-08-06,Clothing,2965,No,0,28,28,Sunday
+20,1978,2024-04-10,Home,419,No,0,40,133,Sunday
+42,1400,2024-02-04,Personal Care,294,No,0,18,318,Monday
+17,1262,2024-12-27,Personal Care,2966,No,0,35,402,Wednesday
+47,1521,2024-01-12,Clothing,1719,Yes,0,35,89,Sunday
+11,1944,2024-11-16,Home,2373,No,0,25,290,Thursday
+44,1148,2024-02-20,Personal Care,2766,No,0,41,168,Sunday
+29,1583,2024-01-12,Clothing,247,No,0,40,256,Friday
+1,1307,2024-10-06,Electronics,1494,No,0,9,408,Monday
+46,1280,2024-03-15,Clothing,2877,No,0,29,444,Tuesday
+10,1807,2024-06-08,Personal Care,2418,Yes,20,34,211,Thursday
+41,1813,2024-01-14,Electronics,1072,Yes,5,6,33,Monday
+43,1838,2024-05-29,Clothing,1132,Yes,15,14,49,Saturday
+14,1866,2024-08-30,Clothing,915,No,0,26,378,Wednesday
+39,1517,2024-07-02,Electronics,163,No,0,33,489,Sunday
+42,1987,2024-06-23,Home,2297,Yes,20,18,337,Wednesday
+31,1363,2024-11-05,Clothing,1816,Yes,5,16,488,Friday
+31,1373,2024-01-31,Electronics,935,No,0,29,466,Sunday
+38,1025,2024-02-18,Clothing,2069,Yes,30,45,401,Monday
+25,1064,2024-02-22,Home,231,No,0,39,409,Thursday
+45,1694,2024-06-14,Grocery,135,Yes,20,18,159,Monday
+23,1255,2024-07-03,Grocery,1964,No,0,6,133,Friday
+2,1372,2024-06-07,Home,1069,No,0,5,173,Wednesday
+7,1480,2024-12-12,Personal Care,2474,Yes,10,17,108,Monday
+45,1735,2024-09-13,Electronics,827,No,0,43,299,Sunday
+30,1454,2024-09-27,Personal Care,1742,No,0,21,205,Friday
+26,1032,2024-11-27,Grocery,2233,Yes,10,21,31,Wednesday
+24,1889,2024-10-12,Home,2590,No,0,17,166,Friday
+26,1513,2024-10-10,Electronics,2883,No,0,10,401,Thursday
+22,1556,2024-08-06,Personal Care,2426,Yes,0,39,76,Tuesday
+34,1365,2024-02-08,Personal Care,2327,No,0,28,39,Sunday
+29,1575,2024-08-10,Personal Care,511,Yes,5,13,428,Thursday
+30,1762,2024-05-04,Home,2289,Yes,20,13,383,Tuesday
+37,1943,2024-11-19,Personal Care,937,No,0,26,353,Friday
+39,1074,2024-05-04,Clothing,123,Yes,5,29,389,Saturday
+17,1192,2024-04-24,Electronics,1417,Yes,20,20,287,Monday
+13,1649,2024-01-16,Electronics,284,No,0,18,37,Saturday
+21,1650,2024-02-28,Personal Care,1989,No,0,16,432,Wednesday
+25,1732,2024-11-27,Electronics,77,Yes,20,25,175,Thursday
+38,1285,2024-05-18,Electronics,1751,No,0,20,355,Monday
+25,1296,2024-12-06,Grocery,2812,Yes,0,20,148,Tuesday
+32,1007,2024-01-31,Home,2645,No,0,35,498,Saturday
+4,1119,2024-01-15,Clothing,2065,No,0,21,82,Friday
+10,1965,2024-10-30,Personal Care,2544,No,0,29,305,Wednesday
+29,1194,2024-09-05,Grocery,788,Yes,20,19,25,Thursday
+15,1864,2024-08-11,Personal Care,369,Yes,5,35,117,Thursday
+5,1151,2024-05-21,Electronics,1588,Yes,10,29,389,Monday
+10,1088,2024-12-31,Grocery,2569,Yes,0,39,143,Saturday
+38,1115,2024-04-27,Clothing,618,No,0,17,328,Sunday
+5,1655,2024-09-24,Electronics,787,Yes,15,20,77,Thursday
+10,1387,2024-10-17,Personal Care,339,Yes,20,35,425,Thursday
+3,1629,2024-01-15,Electronics,444,No,0,19,22,Thursday
+19,1554,2024-05-26,Electronics,1425,Yes,15,43,474,Sunday
+46,1110,2024-11-30,Grocery,707,No,0,38,429,Saturday
+49,1803,2024-02-20,Electronics,1130,No,0,20,172,Wednesday
+49,1257,2024-02-27,Personal Care,2622,No,0,36,462,Sunday
+38,1619,2024-12-12,Personal Care,544,No,0,38,463,Saturday
+42,1276,2024-10-19,Electronics,2413,No,0,45,139,Sunday
+9,1795,2024-12-01,Grocery,1113,No,0,10,274,Friday
+13,1274,2024-08-17,Grocery,1828,No,0,29,126,Wednesday
+35,1869,2024-05-14,Electronics,1125,Yes,10,29,279,Saturday
+1,1704,2024-01-02,Clothing,1607,No,0,12,395,Monday
+5,1441,2024-04-29,Home,2676,No,0,6,260,Friday
+18,1325,2024-10-14,Home,778,No,0,31,458,Thursday
+35,1701,2024-11-12,Electronics,1038,No,0,44,390,Saturday
+44,1036,2024-08-03,Home,2734,Yes,5,16,335,Friday
+42,1059,2024-07-08,Grocery,800,Yes,20,41,364,Saturday
+44,1261,2024-10-07,Home,196,Yes,15,34,366,Sunday
+31,1234,2024-02-21,Grocery,1574,Yes,0,16,348,Saturday
+9,1095,2024-11-04,Clothing,2451,Yes,0,27,102,Friday
+28,1567,2024-11-22,Personal Care,542,No,0,38,363,Saturday
+29,1792,2024-05-26,Home,1036,Yes,30,29,296,Wednesday
+31,1615,2024-09-17,Electronics,1968,Yes,0,21,245,Thursday
+24,1621,2024-07-06,Grocery,2140,No,0,13,50,Friday
+18,1403,2024-12-16,Home,1238,Yes,15,34,331,Friday
+8,1047,2024-12-25,Home,1680,No,0,10,457,Wednesday
+37,1433,2024-02-20,Personal Care,2234,Yes,30,20,97,Thursday
+24,1393,2024-04-19,Grocery,993,Yes,15,27,352,Wednesday
+9,1116,2024-02-02,Personal Care,63,Yes,15,18,92,Tuesday
+39,1052,2024-05-24,Grocery,2815,Yes,5,17,190,Thursday
+36,1038,2024-11-29,Clothing,1422,Yes,15,14,419,Monday
+3,1933,2024-11-04,Electronics,1975,No,0,28,481,Sunday
+14,1793,2024-11-25,Grocery,1976,No,0,31,174,Wednesday
+4,1741,2024-08-01,Grocery,1767,Yes,15,28,336,Tuesday
+35,1885,2024-05-25,Electronics,2114,Yes,5,38,452,Friday
+49,1248,2024-06-21,Home,751,No,0,21,467,Tuesday
+7,1236,2024-03-27,Electronics,2902,Yes,15,40,52,Monday
+24,1203,2024-07-07,Grocery,1774,No,0,46,453,Saturday
+6,1719,2024-09-15,Personal Care,771,Yes,20,17,330,Tuesday
+27,1800,2024-07-06,Grocery,2175,No,0,28,228,Tuesday
+36,1867,2024-05-17,Electronics,2701,No,0,27,200,Thursday
+17,1393,2024-06-10,Personal Care,1227,No,0,17,368,Saturday
+45,1145,2024-11-22,Personal Care,462,Yes,10,14,322,Thursday
+15,1096,2024-02-04,Clothing,2628,Yes,20,50,150,Sunday
+28,1825,2024-05-22,Clothing,2915,No,0,33,123,Sunday
+32,1196,2024-01-07,Grocery,2014,Yes,5,26,347,Friday
+1,1247,2024-08-20,Home,1767,Yes,0,50,425,Saturday
+34,1431,2024-08-12,Clothing,2502,No,0,7,183,Wednesday
+9,1349,2024-11-18,Grocery,1106,Yes,10,24,338,Sunday
+40,1160,2024-06-02,Clothing,771,Yes,20,35,67,Tuesday
+49,1464,2024-11-26,Grocery,2417,No,0,10,479,Wednesday
+34,1542,2024-07-30,Personal Care,1987,Yes,10,17,362,Monday
+48,1048,2024-03-23,Clothing,2971,No,0,24,67,Sunday
+37,1587,2024-05-23,Personal Care,516,No,0,15,91,Thursday
+32,1560,2024-07-12,Grocery,1408,Yes,10,7,431,Thursday
+27,1336,2024-09-23,Electronics,916,Yes,10,28,156,Saturday
+44,1476,2024-02-24,Personal Care,1803,No,0,3,41,Wednesday
+1,1984,2024-04-19,Home,613,Yes,20,40,292,Friday
+12,1719,2024-09-10,Personal Care,2616,Yes,15,46,442,Saturday
+6,1931,2024-01-03,Home,904,Yes,10,21,104,Thursday
+42,1867,2024-10-02,Clothing,572,No,0,23,66,Tuesday
+30,1517,2024-12-16,Clothing,1840,No,0,23,33,Thursday
+37,1367,2024-01-17,Personal Care,2371,Yes,5,25,43,Friday
+2,1083,2024-06-11,Electronics,375,No,0,27,362,Tuesday
+38,1703,2024-11-12,Home,1560,Yes,10,10,422,Tuesday
+29,1783,2024-04-28,Electronics,1428,Yes,5,6,73,Wednesday
+50,1092,2024-06-04,Grocery,391,Yes,5,36,213,Wednesday
+7,1812,2024-05-14,Grocery,1901,No,0,35,201,Monday
+22,1205,2024-04-24,Grocery,1270,No,0,15,291,Monday
+38,1697,2024-06-12,Electronics,1929,No,0,9,482,Thursday
+3,1051,2024-05-31,Clothing,408,No,0,47,463,Sunday
+5,1421,2024-05-05,Home,1247,No,0,31,224,Monday
+5,1793,2024-01-27,Clothing,2498,No,0,36,244,Tuesday
+37,1551,2024-05-28,Clothing,1738,No,0,30,299,Wednesday
+38,1503,2024-07-12,Grocery,118,No,0,26,365,Monday
+11,1117,2024-05-01,Grocery,1155,Yes,0,34,171,Sunday
+1,1454,2024-10-01,Personal Care,2018,Yes,30,34,470,Monday
+42,1505,2024-02-19,Clothing,715,Yes,15,43,71,Thursday
+44,1307,2024-08-24,Personal Care,1631,No,0,14,277,Thursday
+4,1613,2024-08-31,Electronics,2421,Yes,20,44,294,Friday
+10,1918,2024-09-07,Grocery,1587,Yes,20,26,104,Friday
+22,1230,2024-07-12,Clothing,2646,No,0,5,439,Thursday
+38,1957,2024-12-24,Personal Care,381,No,0,8,383,Thursday
+11,1106,2024-10-23,Home,365,Yes,15,29,265,Tuesday
+44,1513,2024-02-26,Electronics,1944,Yes,15,43,84,Wednesday
+34,1445,2024-03-09,Personal Care,1416,No,0,35,230,Friday
+15,1724,2024-05-05,Electronics,1325,Yes,30,54,484,Sunday
+43,1301,2024-06-08,Grocery,1933,No,0,37,330,Saturday
+43,1242,2024-02-21,Electronics,580,Yes,5,18,394,Sunday
+18,1994,2024-10-24,Home,534,Yes,10,35,300,Monday
+34,1617,2024-12-05,Clothing,574,No,0,22,412,Friday
+15,1761,2024-02-29,Grocery,2668,Yes,5,17,151,Tuesday
+37,1696,2024-02-08,Grocery,2922,No,0,36,454,Saturday
+4,1915,2024-10-26,Home,228,No,0,36,51,Friday
+24,1060,2024-11-23,Grocery,2816,Yes,30,48,182,Saturday
+29,1452,2024-12-14,Personal Care,1601,No,0,14,256,Tuesday
+15,1140,2024-04-23,Home,2982,Yes,5,16,21,Thursday
+47,1314,2024-11-10,Electronics,2897,Yes,30,22,432,Monday
+43,1055,2024-12-14,Personal Care,1501,Yes,10,29,347,Monday
+30,1470,2024-01-08,Personal Care,265,No,0,9,330,Thursday
+1,1660,2024-06-14,Personal Care,2566,Yes,20,12,207,Wednesday
+50,1614,2024-04-17,Home,2063,No,0,7,323,Tuesday
+21,1939,2024-06-28,Grocery,2647,No,0,40,382,Monday
+45,1896,2024-02-19,Personal Care,2384,No,0,9,181,Wednesday
+39,1522,2024-08-04,Clothing,1301,No,0,10,400,Monday
+37,1543,2024-06-03,Electronics,237,No,0,27,338,Saturday
+22,1500,2024-09-25,Personal Care,1378,Yes,20,27,174,Thursday
+19,1974,2024-12-24,Personal Care,1139,No,0,27,53,Thursday
+23,1133,2024-05-06,Grocery,596,No,0,8,399,Thursday
+39,1474,2024-03-09,Home,2240,Yes,20,37,75,Friday
+5,1752,2024-12-08,Grocery,1330,No,0,29,50,Thursday
+39,1437,2024-06-12,Personal Care,1113,Yes,5,35,107,Wednesday
+6,1614,2024-10-24,Grocery,907,No,0,37,481,Sunday
+46,1739,2024-09-26,Personal Care,2025,Yes,20,23,372,Tuesday
+29,1507,2024-01-15,Home,54,Yes,0,46,452,Sunday
+1,1947,2024-08-27,Grocery,2917,No,0,40,40,Saturday
+27,1527,2024-09-26,Clothing,1394,Yes,30,19,232,Wednesday
+24,1209,2024-04-07,Grocery,1226,No,0,30,198,Monday
+11,1928,2024-01-26,Personal Care,460,Yes,20,39,269,Monday
+6,1226,2024-01-10,Electronics,1418,No,0,19,171,Wednesday
+24,1561,2024-06-09,Clothing,167,Yes,15,34,317,Thursday
+23,1623,2024-11-13,Personal Care,822,No,0,6,72,Thursday
+44,1871,2024-04-13,Electronics,256,Yes,30,31,84,Tuesday
+35,1504,2024-01-27,Clothing,1260,Yes,20,22,274,Monday
+1,1901,2024-06-30,Grocery,935,Yes,5,18,171,Saturday
+7,1367,2024-09-30,Clothing,1508,Yes,5,20,241,Tuesday
+29,1842,2024-03-04,Electronics,279,Yes,15,34,70,Sunday
+1,1557,2024-10-10,Home,2410,No,0,31,441,Sunday
+15,1203,2024-03-04,Home,2247,Yes,30,42,249,Tuesday
+27,1881,2024-01-26,Personal Care,1202,Yes,20,31,65,Friday
+16,1174,2024-02-02,Home,544,Yes,30,35,454,Thursday
+6,1354,2024-11-06,Home,2348,Yes,0,35,144,Tuesday
+9,1024,2024-10-31,Clothing,1755,Yes,30,24,27,Tuesday
+26,1502,2024-09-24,Grocery,2685,Yes,20,18,175,Thursday
+12,1854,2024-09-09,Electronics,2640,Yes,30,52,475,Sunday
+49,1469,2024-08-30,Home,1348,No,0,33,123,Monday
+49,1197,2024-05-19,Clothing,605,No,0,23,160,Thursday
+40,1149,2024-10-11,Personal Care,2576,Yes,30,43,474,Friday
+31,1837,2024-04-16,Grocery,2241,Yes,10,33,256,Monday
+8,1583,2024-11-14,Home,1599,No,0,8,278,Thursday
+8,1520,2024-02-10,Home,644,No,0,13,388,Monday
+29,1566,2024-12-14,Electronics,494,Yes,0,9,443,Monday
+7,1864,2024-03-10,Personal Care,1181,Yes,0,32,122,Wednesday
+36,1352,2024-07-28,Personal Care,322,No,0,18,101,Monday
+27,1029,2024-02-17,Home,896,No,0,6,124,Tuesday
+12,1629,2024-04-12,Personal Care,679,Yes,10,22,315,Wednesday
+17,1761,2024-12-13,Electronics,1196,No,0,27,154,Sunday
+17,1815,2024-11-27,Grocery,2303,No,0,6,106,Friday
+16,1068,2024-02-21,Electronics,1321,Yes,0,20,318,Friday
+1,1848,2024-11-17,Electronics,2802,Yes,15,31,159,Tuesday
+7,1388,2024-11-05,Personal Care,2522,Yes,20,29,138,Friday
+47,1893,2024-04-25,Grocery,1212,Yes,30,31,220,Sunday
+36,1302,2024-09-22,Personal Care,1044,No,0,13,80,Thursday
+39,1241,2024-05-29,Grocery,2315,Yes,30,46,107,Friday
+2,1588,2024-07-21,Personal Care,2407,No,0,23,179,Monday
+45,1233,2024-12-15,Clothing,1909,No,0,20,111,Sunday
+34,1733,2024-03-29,Personal Care,881,Yes,5,17,358,Monday
+19,1518,2024-08-25,Personal Care,2682,No,0,14,261,Friday
+40,1275,2024-10-08,Electronics,2870,Yes,10,26,395,Monday
+32,1752,2024-10-08,Electronics,1231,No,0,42,210,Sunday
+40,1160,2024-07-15,Home,1508,Yes,20,30,273,Friday
+50,1446,2024-09-05,Personal Care,406,Yes,0,19,182,Friday
+18,1092,2024-12-11,Personal Care,2647,No,0,50,361,Sunday
+48,1170,2024-07-19,Personal Care,2932,Yes,15,48,265,Saturday
+10,1181,2024-12-30,Electronics,2590,No,0,6,172,Tuesday
+1,1562,2024-04-12,Home,746,Yes,10,45,65,Saturday
+24,1451,2024-05-26,Grocery,367,No,0,37,103,Sunday
+37,1613,2024-08-05,Clothing,2562,No,0,5,438,Friday
+38,1047,2024-11-27,Electronics,821,No,0,37,194,Friday
+29,1237,2024-04-16,Home,2047,No,0,15,167,Thursday
+30,1634,2024-11-22,Home,995,No,0,22,199,Friday
+46,1343,2024-07-03,Clothing,2652,Yes,5,50,337,Saturday
+39,1880,2024-11-14,Clothing,1829,No,0,31,274,Saturday
+37,1147,2024-09-24,Personal Care,1617,No,0,32,221,Thursday
+23,1126,2024-01-08,Personal Care,1830,Yes,5,11,400,Tuesday
+32,1107,2024-08-24,Grocery,266,No,0,21,35,Sunday
+26,1322,2024-08-30,Home,727,No,0,13,26,Saturday
+31,1381,2024-07-04,Home,2577,Yes,20,24,74,Monday
+15,1205,2024-03-22,Home,500,No,0,35,493,Thursday
+6,1628,2024-05-03,Grocery,2041,No,0,8,138,Friday
+15,1011,2024-12-18,Personal Care,817,No,0,11,278,Thursday
+13,1521,2024-11-16,Electronics,1127,Yes,10,36,143,Thursday
+8,1086,2024-01-23,Personal Care,1079,Yes,30,13,350,Monday
+21,1150,2024-08-24,Personal Care,170,Yes,10,45,427,Sunday
+45,1768,2024-08-08,Personal Care,2597,Yes,15,20,387,Friday
+33,1228,2024-04-04,Personal Care,1066,Yes,0,10,459,Tuesday
+28,1942,2024-12-13,Home,2349,No,0,28,165,Monday
+26,1674,2024-06-15,Home,1109,Yes,15,15,224,Wednesday
+15,1791,2024-06-30,Grocery,1348,Yes,20,34,448,Wednesday
+30,1749,2024-10-25,Clothing,2022,No,0,24,282,Sunday
+28,1731,2024-12-16,Personal Care,1702,Yes,5,39,183,Friday
+32,1503,2024-11-05,Clothing,1791,No,0,21,302,Saturday
+48,1363,2024-03-20,Personal Care,1270,No,0,10,324,Thursday
+48,1025,2024-03-10,Personal Care,2628,Yes,15,26,133,Sunday
+43,1174,2024-01-24,Personal Care,1288,No,0,36,392,Monday
+50,1828,2024-04-29,Home,1968,Yes,15,40,139,Monday
+34,1189,2024-04-24,Grocery,2131,Yes,20,42,329,Tuesday
+30,1427,2024-11-21,Personal Care,819,No,0,46,288,Sunday
+24,1901,2024-04-12,Grocery,2420,No,0,39,230,Thursday
+16,1651,2024-11-09,Electronics,2876,Yes,20,27,72,Monday
+16,1176,2024-06-04,Grocery,2300,No,0,32,330,Wednesday
+29,1068,2024-08-07,Personal Care,616,No,0,37,259,Wednesday
+29,1693,2024-08-16,Personal Care,2640,Yes,20,45,434,Saturday
+27,1238,2024-10-12,Personal Care,2718,No,0,22,180,Tuesday
+42,1487,2024-10-02,Electronics,1807,No,0,22,163,Monday
+42,1901,2024-03-20,Grocery,357,Yes,30,22,163,Sunday
+40,1853,2024-04-01,Personal Care,1271,No,0,48,500,Saturday
+48,1296,2024-12-05,Electronics,437,No,0,26,135,Thursday
+31,1959,2024-07-13,Grocery,1901,No,0,31,412,Monday
+5,1613,2024-07-07,Home,2378,Yes,20,54,169,Saturday
+49,1530,2024-11-17,Electronics,240,No,0,18,259,Tuesday
+16,1477,2024-01-23,Clothing,2500,No,0,35,150,Friday
+13,1121,2024-07-18,Grocery,2309,No,0,31,96,Saturday
+9,1623,2024-07-10,Clothing,2671,No,0,40,397,Saturday
+13,1974,2024-08-09,Home,1222,No,0,30,400,Sunday
+25,1377,2024-07-12,Electronics,780,Yes,30,30,76,Tuesday
+11,1409,2024-12-04,Grocery,1421,No,0,15,205,Tuesday
+28,1945,2024-04-15,Grocery,1238,No,0,26,155,Saturday
+29,1423,2024-03-27,Personal Care,2939,No,0,29,450,Wednesday
+26,1637,2024-07-03,Grocery,1928,Yes,0,25,206,Friday
+41,1082,2024-03-16,Clothing,2050,Yes,15,6,25,Thursday
+16,1278,2024-09-27,Clothing,1012,Yes,15,46,315,Saturday
+35,1759,2024-12-09,Grocery,1412,No,0,8,185,Tuesday
+40,1051,2024-11-17,Electronics,1399,No,0,20,441,Saturday
+19,1712,2024-02-28,Clothing,1592,No,0,31,139,Tuesday
+6,1545,2024-03-12,Home,156,Yes,30,52,68,Saturday
+33,1704,2024-09-24,Clothing,703,No,0,47,243,Sunday
+25,1196,2024-02-24,Home,1582,No,0,12,34,Saturday
+28,1557,2024-03-10,Clothing,2213,Yes,30,27,58,Thursday
+29,1694,2024-09-29,Grocery,2513,Yes,15,37,73,Tuesday
+31,1330,2024-05-26,Electronics,81,No,0,29,311,Monday
+1,1374,2024-01-31,Grocery,1342,No,0,34,193,Thursday
+44,1899,2024-02-23,Personal Care,1630,No,0,39,298,Monday
+29,1670,2024-12-11,Electronics,1837,No,0,36,69,Saturday
+4,1721,2024-05-04,Personal Care,2055,No,0,38,239,Tuesday
+47,1526,2024-09-18,Home,730,No,0,26,413,Friday
+2,1706,2024-08-27,Electronics,1608,No,0,43,406,Sunday
+6,1902,2024-12-03,Grocery,1161,Yes,0,34,279,Friday
+27,1917,2024-04-01,Clothing,2570,No,0,8,167,Friday
+42,1962,2024-04-02,Home,858,No,0,29,284,Monday
+11,1468,2024-05-16,Home,495,Yes,20,22,108,Thursday
+43,1216,2024-05-08,Home,813,Yes,10,15,41,Saturday
+48,1716,2024-06-06,Grocery,1919,Yes,0,34,352,Friday
+8,1187,2024-06-01,Electronics,1210,Yes,30,14,371,Friday
+47,1750,2024-10-16,Grocery,190,Yes,30,34,404,Monday
+17,1083,2024-07-16,Electronics,2627,Yes,15,22,231,Monday
+21,1979,2024-01-19,Electronics,1648,No,0,21,25,Sunday
+30,1874,2024-02-10,Clothing,1587,Yes,15,12,157,Tuesday
+33,1479,2024-01-04,Home,560,Yes,20,47,398,Saturday
+38,1448,2024-03-12,Clothing,1736,No,0,36,111,Saturday
+50,1029,2024-06-01,Personal Care,1846,No,0,37,469,Sunday
+14,1872,2024-05-20,Clothing,1945,Yes,5,44,361,Saturday
+5,1663,2024-05-23,Home,1233,Yes,10,20,48,Sunday
+41,1014,2024-07-02,Home,148,No,0,28,264,Sunday
+35,1072,2024-09-07,Personal Care,1836,Yes,5,34,34,Saturday
+10,1584,2024-09-04,Clothing,1847,Yes,10,42,85,Tuesday
+13,1621,2024-08-10,Clothing,1552,No,0,32,319,Saturday
+41,1543,2024-11-09,Clothing,1584,Yes,20,43,278,Saturday
+41,1141,2024-03-06,Electronics,1357,No,0,22,22,Wednesday
+32,1348,2024-07-10,Clothing,436,No,0,39,409,Friday
+20,1590,2024-01-05,Home,264,Yes,0,35,214,Sunday
+29,1867,2024-02-11,Clothing,1306,No,0,28,305,Sunday
+7,1694,2024-11-12,Grocery,1988,Yes,30,32,165,Monday
+41,1937,2024-09-28,Clothing,2626,Yes,30,21,64,Thursday
+5,1801,2024-04-20,Home,423,No,0,37,417,Monday
+26,1442,2024-07-23,Clothing,2369,Yes,20,14,93,Friday
+5,1105,2024-08-30,Home,2572,Yes,15,15,408,Monday
+26,1151,2024-06-28,Electronics,949,Yes,20,22,314,Friday
+48,1077,2024-02-13,Home,2338,No,0,26,26,Friday
+13,1395,2024-08-22,Electronics,2616,No,0,28,49,Friday
+26,1520,2024-12-24,Personal Care,109,No,0,13,55,Wednesday
+26,1719,2024-01-27,Home,2447,Yes,15,37,318,Sunday
+19,1984,2024-11-17,Grocery,2492,No,0,30,93,Tuesday
+5,1652,2024-08-21,Electronics,439,No,0,41,133,Saturday
+41,1645,2024-03-14,Personal Care,2554,Yes,15,24,111,Friday
+35,1711,2024-03-08,Clothing,947,Yes,20,10,118,Tuesday
+40,1518,2024-11-16,Clothing,2922,Yes,10,42,368,Friday
+17,1058,2024-05-25,Personal Care,2315,Yes,15,13,142,Thursday
+10,1462,2024-09-14,Personal Care,1964,Yes,30,28,468,Tuesday
+12,1316,2024-02-04,Electronics,2458,Yes,15,31,216,Thursday
+21,1237,2024-08-27,Electronics,2017,Yes,0,35,249,Friday
+50,1116,2024-06-29,Electronics,2096,No,0,36,200,Sunday
+28,1116,2024-05-29,Grocery,577,No,0,31,433,Tuesday
+39,1536,2024-03-02,Clothing,1081,No,0,17,274,Sunday
+39,1830,2024-12-04,Personal Care,2886,No,0,35,399,Monday
+13,1063,2024-09-13,Personal Care,1919,No,0,20,290,Wednesday
+1,1327,2024-04-16,Electronics,1326,Yes,30,52,207,Saturday
+23,1114,2024-12-19,Home,2586,No,0,45,274,Saturday
+33,1642,2024-09-16,Clothing,1396,Yes,20,19,335,Thursday
+5,1217,2024-01-20,Electronics,2882,No,0,45,153,Sunday
+38,1896,2024-12-02,Grocery,1595,Yes,20,23,268,Tuesday
+49,1498,2024-05-30,Personal Care,322,Yes,10,8,86,Friday
+34,1096,2024-11-16,Clothing,1304,No,0,16,483,Tuesday
+19,1265,2024-12-13,Personal Care,1176,No,0,16,173,Monday
+6,1395,2024-12-16,Home,2553,No,0,8,209,Tuesday
+6,1547,2024-12-04,Grocery,919,Yes,20,27,37,Wednesday
+4,1519,2024-02-12,Electronics,146,No,0,37,95,Thursday
+37,1302,2024-12-03,Personal Care,2282,Yes,15,28,38,Sunday
+6,1062,2024-06-09,Electronics,262,Yes,0,10,319,Wednesday
+1,1660,2024-02-04,Personal Care,1747,No,0,9,314,Tuesday
+44,1140,2024-04-27,Home,569,No,0,24,116,Sunday
+42,1007,2024-08-02,Personal Care,917,Yes,20,31,134,Monday
+4,1112,2024-12-24,Grocery,567,Yes,10,37,136,Friday
+34,1095,2024-01-29,Clothing,2592,No,0,38,85,Monday
+22,1777,2024-06-28,Personal Care,1894,No,0,40,354,Sunday
+14,1029,2024-04-08,Clothing,906,Yes,30,13,423,Wednesday
+40,1833,2024-04-23,Home,1772,No,0,43,448,Saturday
+47,1258,2024-02-13,Home,934,No,0,33,444,Thursday
+22,1028,2024-04-11,Clothing,911,No,0,6,75,Wednesday
+17,1695,2024-04-02,Electronics,2410,No,0,15,40,Tuesday
+21,1580,2024-09-17,Home,2861,Yes,5,1,38,Tuesday
+12,1438,2024-06-16,Grocery,779,Yes,0,21,48,Monday
+37,1215,2024-07-29,Clothing,1366,No,0,5,333,Tuesday
+20,1450,2024-06-10,Electronics,293,Yes,20,16,454,Wednesday
+5,2000,2024-10-24,Electronics,1058,Yes,5,28,385,Wednesday
+18,1883,2024-04-01,Personal Care,2212,Yes,15,39,298,Monday
+14,1673,2024-12-16,Clothing,1041,Yes,0,7,333,Monday
+32,1499,2024-02-15,Personal Care,2761,Yes,30,45,172,Wednesday
+12,1940,2024-06-27,Clothing,2947,Yes,15,33,333,Sunday
+31,1135,2024-02-01,Clothing,242,No,0,32,344,Monday
+33,1386,2024-10-11,Clothing,1252,Yes,15,16,238,Friday
+6,1814,2024-05-14,Personal Care,1717,No,0,38,465,Wednesday
+9,1494,2024-12-08,Clothing,759,No,0,17,437,Friday
+45,1320,2024-07-08,Clothing,2087,No,0,29,388,Friday
+14,1158,2024-01-11,Grocery,977,Yes,20,38,90,Saturday
+37,1448,2024-02-17,Grocery,1270,No,0,36,385,Sunday
+41,1094,2024-09-11,Electronics,1837,No,0,35,257,Sunday
+45,1772,2024-10-26,Personal Care,620,No,0,31,46,Wednesday
+47,1417,2024-02-01,Home,922,No,0,10,395,Thursday
+3,1549,2024-04-15,Clothing,481,Yes,10,12,68,Tuesday
+29,1050,2024-02-10,Clothing,1507,Yes,30,21,85,Thursday
+27,1268,2024-10-24,Grocery,2556,No,0,20,111,Friday
+22,1086,2024-08-09,Clothing,2959,Yes,15,38,426,Sunday
+44,1746,2024-05-05,Clothing,2120,Yes,10,28,304,Monday
+25,1626,2024-08-25,Grocery,2600,Yes,5,41,182,Tuesday
+40,1237,2024-02-22,Grocery,1642,No,0,40,444,Tuesday
+40,1390,2024-02-13,Home,354,No,0,22,414,Wednesday
+6,1982,2024-06-17,Grocery,2483,No,0,36,342,Sunday
+6,1210,2024-09-27,Grocery,995,No,0,5,342,Wednesday
+42,1818,2024-12-15,Electronics,725,No,0,44,100,Sunday
+39,1991,2024-12-01,Grocery,1501,Yes,10,40,141,Saturday
+18,1571,2024-12-31,Personal Care,169,No,0,24,37,Friday
+25,1258,2024-05-20,Clothing,2901,Yes,15,31,295,Friday
+33,1509,2024-11-02,Electronics,981,No,0,12,64,Thursday
+3,1849,2024-02-29,Home,1712,Yes,20,37,40,Monday
+14,1549,2024-02-09,Grocery,544,Yes,10,11,394,Thursday
+36,1206,2024-01-02,Electronics,547,Yes,5,24,348,Sunday
+21,1082,2024-10-13,Clothing,113,Yes,15,41,352,Thursday
+37,1038,2024-01-14,Electronics,188,Yes,15,36,405,Friday
+49,1907,2024-04-24,Grocery,1882,No,0,31,267,Thursday
+1,1114,2024-06-12,Clothing,1858,Yes,15,24,67,Sunday
+45,1116,2024-05-26,Home,895,Yes,30,13,356,Tuesday
+34,1487,2024-09-23,Grocery,2304,No,0,49,59,Sunday
+13,1190,2024-06-29,Electronics,1445,Yes,0,30,382,Saturday
+14,1506,2024-11-26,Grocery,684,No,0,35,338,Tuesday
+28,1937,2024-02-16,Home,544,No,0,40,378,Friday
+21,1632,2024-11-10,Grocery,2689,No,0,11,429,Tuesday
+21,1408,2024-10-29,Home,288,Yes,10,20,390,Saturday
+3,1473,2024-03-24,Grocery,317,No,0,36,272,Sunday
+31,1386,2024-02-28,Home,992,Yes,5,2,31,Wednesday
+27,1784,2024-08-08,Grocery,2592,Yes,5,38,142,Saturday
+17,1568,2024-08-25,Clothing,440,No,0,34,339,Thursday
+13,1448,2024-03-11,Grocery,1697,No,0,29,443,Monday
+45,1919,2024-07-07,Electronics,1162,Yes,15,37,329,Thursday
+44,1597,2024-04-15,Clothing,1647,Yes,20,43,126,Thursday
+29,1300,2024-04-30,Electronics,163,No,0,21,308,Thursday
+30,1085,2024-09-07,Home,2110,No,0,28,84,Thursday
+22,1545,2024-02-16,Electronics,163,No,0,30,414,Thursday
+27,1854,2024-09-09,Home,1434,Yes,30,54,368,Saturday
+14,1507,2024-10-02,Clothing,2114,No,0,8,323,Monday
+42,1759,2024-12-04,Personal Care,2436,Yes,15,52,396,Sunday
+13,1722,2024-07-13,Home,1487,Yes,0,44,323,Saturday
+35,1517,2024-10-21,Grocery,2442,Yes,10,20,20,Sunday
+37,1134,2024-11-27,Personal Care,1207,No,0,40,272,Wednesday
+48,1643,2024-10-10,Clothing,1946,No,0,29,29,Wednesday
+46,1932,2024-01-14,Personal Care,2764,Yes,10,41,58,Thursday
+29,1335,2024-06-09,Personal Care,1663,No,0,9,486,Tuesday
+23,1928,2024-04-01,Home,831,No,0,31,322,Friday
+35,1646,2024-07-24,Clothing,1525,No,0,37,235,Thursday
+46,1793,2024-12-07,Grocery,1101,No,0,9,246,Thursday
+11,1564,2024-06-01,Clothing,439,No,0,21,233,Saturday
+42,1039,2024-11-27,Personal Care,654,No,0,28,252,Friday
+14,1009,2024-11-11,Grocery,762,No,0,10,223,Thursday
+23,1298,2024-04-01,Grocery,316,Yes,30,49,86,Saturday
+40,1484,2024-07-12,Personal Care,2540,No,0,16,294,Friday
+8,1498,2024-02-11,Grocery,2112,No,0,32,174,Saturday
+36,1503,2024-08-27,Personal Care,1904,Yes,30,29,62,Tuesday
+24,1163,2024-06-24,Home,888,Yes,10,52,148,Sunday
+16,1669,2024-06-03,Grocery,589,No,0,7,158,Friday
+15,1973,2024-08-12,Grocery,2965,Yes,0,25,292,Tuesday
+3,1361,2024-05-12,Electronics,1016,No,0,19,219,Wednesday
+31,1899,2024-08-28,Grocery,1535,No,0,5,124,Wednesday
+48,1127,2024-08-19,Grocery,799,No,0,14,285,Monday
+27,1177,2024-04-17,Personal Care,922,Yes,15,44,175,Sunday
+14,1135,2024-10-04,Personal Care,1289,Yes,20,36,86,Monday
+24,1600,2024-08-19,Home,2032,Yes,15,30,34,Saturday
+45,1204,2024-01-17,Home,1281,No,0,29,54,Friday
+47,1115,2024-07-03,Home,1182,Yes,15,51,85,Saturday
+18,1511,2024-06-03,Personal Care,103,Yes,5,8,417,Friday
+48,1777,2024-04-16,Clothing,1618,No,0,32,301,Monday
+28,1273,2024-09-15,Grocery,1404,Yes,15,38,141,Saturday
+34,1771,2024-01-04,Personal Care,2235,No,0,29,185,Wednesday
+25,1480,2024-03-12,Clothing,204,No,0,13,324,Thursday
+24,1755,2024-02-05,Clothing,1495,Yes,20,24,74,Monday
+37,1752,2024-09-29,Clothing,2561,No,0,19,103,Monday
+45,1743,2024-10-21,Electronics,2731,No,0,46,304,Saturday
+18,1315,2024-05-10,Electronics,1990,No,0,26,455,Monday
+36,1291,2024-09-16,Home,600,Yes,0,18,90,Monday
+22,1787,2024-09-17,Personal Care,1084,No,0,44,325,Saturday
+11,1533,2024-08-06,Grocery,1285,Yes,10,21,416,Saturday
+31,1872,2024-04-19,Clothing,2502,No,0,26,165,Monday
+37,1705,2024-09-30,Clothing,1817,No,0,8,242,Friday
+17,1780,2024-02-09,Clothing,2045,No,0,28,28,Wednesday
+21,1875,2024-05-19,Personal Care,1545,Yes,30,30,216,Monday
+31,1943,2024-09-29,Grocery,1244,No,0,24,390,Monday
+42,1795,2024-07-03,Personal Care,1006,Yes,5,22,372,Tuesday
+42,1224,2024-02-06,Clothing,2131,Yes,10,27,289,Friday
+31,1621,2024-09-26,Home,2302,Yes,20,23,135,Sunday
+40,1796,2024-11-05,Home,453,No,0,38,352,Friday
+47,1185,2024-12-02,Grocery,2172,Yes,10,2,30,Thursday
+37,1214,2024-11-30,Home,1366,Yes,0,24,226,Sunday
+35,1497,2024-01-07,Home,172,Yes,5,36,432,Sunday
+17,1202,2024-11-29,Grocery,92,Yes,30,45,69,Monday
+25,1876,2024-06-21,Home,589,Yes,30,28,145,Saturday
+24,1324,2024-09-02,Electronics,674,No,0,27,278,Sunday
+8,1350,2024-10-12,Personal Care,1880,Yes,15,18,339,Monday
+21,1678,2024-03-26,Home,2474,Yes,10,25,88,Sunday
+10,1136,2024-11-05,Home,2127,No,0,17,256,Tuesday
+42,1529,2024-08-08,Clothing,2416,No,0,24,303,Friday
+39,1219,2024-07-29,Grocery,1785,No,0,7,156,Monday
+29,1097,2024-12-17,Grocery,1787,No,0,12,48,Saturday
+23,1766,2024-01-09,Electronics,1516,No,0,28,145,Tuesday
+22,1843,2024-09-21,Clothing,2831,Yes,10,41,254,Sunday
+47,1462,2024-05-24,Personal Care,1736,No,0,21,123,Thursday
+42,1825,2024-07-13,Electronics,2107,No,0,29,232,Saturday
+31,1417,2024-01-23,Electronics,2076,Yes,20,38,389,Saturday
+45,1214,2024-09-13,Grocery,1808,No,0,47,376,Saturday
+34,1419,2024-10-27,Electronics,1372,No,0,5,187,Monday
+24,1588,2024-12-23,Personal Care,1940,Yes,30,26,26,Wednesday
+50,1911,2024-01-15,Grocery,2399,No,0,31,383,Tuesday
+10,1863,2024-01-11,Personal Care,2864,Yes,15,17,102,Tuesday
+42,1565,2024-12-20,Home,1700,Yes,20,39,53,Monday
+29,1849,2024-05-27,Home,1056,No,0,28,51,Monday
+26,1813,2024-06-17,Clothing,821,Yes,5,20,206,Thursday
+48,1773,2024-07-01,Personal Care,123,Yes,0,15,441,Thursday
+32,1683,2024-08-11,Grocery,199,No,0,16,81,Wednesday
+50,1830,2024-05-21,Grocery,244,No,0,6,397,Wednesday
+48,1211,2024-09-23,Grocery,728,Yes,5,26,211,Friday
+8,1961,2024-12-09,Electronics,924,Yes,10,36,377,Wednesday
+41,1656,2024-05-25,Personal Care,1809,No,0,15,205,Tuesday
+45,1940,2024-02-29,Home,2126,No,0,49,288,Saturday
+34,1992,2024-10-13,Personal Care,2357,No,0,35,247,Sunday
+49,1722,2024-04-07,Personal Care,2302,No,0,26,451,Sunday
+6,1340,2024-06-13,Clothing,2249,No,0,10,474,Monday
+18,1375,2024-11-01,Home,1397,No,0,29,64,Monday
+24,1238,2024-08-10,Home,1421,Yes,5,41,87,Monday
+12,1820,2024-04-26,Electronics,2637,No,0,8,193,Thursday
+24,1574,2024-02-09,Home,2623,Yes,20,4,44,Friday
+28,1531,2024-07-15,Electronics,130,Yes,0,18,95,Sunday
+46,1218,2024-05-10,Personal Care,1607,No,0,28,86,Tuesday
+9,1107,2024-03-31,Clothing,946,Yes,0,14,54,Monday
+17,1490,2024-02-06,Electronics,1263,Yes,5,29,455,Thursday
+20,1522,2024-11-20,Clothing,789,Yes,30,45,268,Sunday
+46,1635,2024-07-22,Personal Care,2106,No,0,27,466,Saturday
+6,1446,2024-10-03,Grocery,2846,Yes,5,28,105,Tuesday
+5,1846,2024-05-16,Personal Care,1326,Yes,5,28,159,Saturday
+44,1492,2024-09-25,Electronics,1416,No,0,27,193,Friday
+45,1796,2024-08-31,Electronics,880,No,0,20,105,Tuesday
+38,1813,2024-03-30,Clothing,2882,No,0,30,498,Monday
+39,1269,2024-08-05,Grocery,864,No,0,7,268,Friday
+20,1758,2024-11-29,Clothing,1960,Yes,0,14,110,Monday
+36,1619,2024-10-18,Electronics,2475,No,0,29,477,Wednesday
+7,1379,2024-02-05,Home,678,No,0,16,163,Wednesday
+41,1997,2024-04-21,Grocery,1724,Yes,0,11,197,Wednesday
+13,1577,2024-10-06,Electronics,780,Yes,20,11,423,Friday
+41,1797,2024-01-12,Grocery,486,Yes,0,42,470,Saturday
+18,1694,2024-04-12,Grocery,311,No,0,21,445,Friday
+14,1830,2024-09-12,Electronics,395,Yes,20,22,186,Wednesday
+44,1526,2024-06-29,Grocery,237,No,0,20,43,Tuesday
+36,1722,2024-08-18,Electronics,2345,Yes,15,23,494,Sunday
+40,1759,2024-03-24,Clothing,1544,No,0,34,87,Friday
+42,1956,2024-05-18,Home,2633,No,0,5,259,Friday
+3,1314,2024-04-03,Personal Care,1930,Yes,30,19,224,Tuesday
+27,1390,2024-03-24,Clothing,59,No,0,27,444,Tuesday
+7,1445,2024-03-29,Grocery,2834,No,0,23,242,Saturday
+43,1536,2024-10-16,Grocery,1979,Yes,20,13,465,Tuesday
+5,1988,2024-12-19,Electronics,2909,Yes,20,36,158,Sunday
+36,1704,2024-12-23,Electronics,2738,Yes,10,10,382,Tuesday
+9,1114,2024-07-11,Home,1152,No,0,37,387,Monday
+8,1277,2024-04-15,Grocery,1820,Yes,20,32,127,Sunday
+33,1576,2024-02-05,Home,1448,Yes,15,10,147,Friday
+20,1266,2024-06-17,Electronics,1359,Yes,10,35,395,Monday
+29,1708,2024-08-30,Clothing,1279,No,0,25,102,Thursday
+20,1538,2024-05-18,Clothing,1805,Yes,0,49,138,Sunday
+2,1191,2024-05-27,Personal Care,361,Yes,0,15,350,Sunday
+44,1184,2024-07-19,Clothing,1375,No,0,18,110,Tuesday
+42,1680,2024-01-09,Grocery,1892,Yes,10,15,30,Thursday
+39,1383,2024-10-09,Personal Care,2787,No,0,30,35,Sunday
+50,1463,2024-11-28,Electronics,2858,Yes,20,29,380,Tuesday
+46,1012,2024-08-26,Grocery,2691,Yes,5,39,386,Sunday
+16,1214,2024-01-10,Electronics,312,Yes,20,37,189,Tuesday
+18,1835,2024-04-10,Electronics,315,No,0,10,151,Wednesday
+21,1044,2024-06-13,Electronics,721,Yes,15,8,33,Friday
+33,1981,2024-05-02,Clothing,1954,No,0,6,58,Monday
+33,1209,2024-08-24,Grocery,2779,Yes,10,15,464,Thursday
+11,1503,2024-11-22,Home,2889,No,0,28,196,Saturday
+13,1437,2024-01-26,Electronics,1166,No,0,16,395,Friday
+18,1224,2024-09-23,Personal Care,2581,Yes,0,45,452,Sunday
+39,1273,2024-01-21,Electronics,2708,No,0,19,479,Wednesday
+12,1817,2024-12-03,Clothing,1534,No,0,29,228,Saturday
+42,1460,2024-07-18,Personal Care,78,No,0,23,149,Friday
+30,1805,2024-04-29,Grocery,1608,Yes,0,26,340,Tuesday
+27,1101,2024-04-02,Electronics,135,Yes,10,39,464,Sunday
+2,1875,2024-01-05,Personal Care,900,No,0,24,24,Sunday
+9,1268,2024-03-08,Home,2508,No,0,15,270,Friday
+31,1287,2024-01-22,Personal Care,1975,Yes,30,22,142,Friday
+5,1757,2024-02-15,Home,1106,No,0,15,289,Monday
+46,1013,2024-07-18,Clothing,633,No,0,32,78,Tuesday
+22,1466,2024-03-01,Personal Care,227,No,0,36,167,Thursday
+19,1178,2024-05-20,Home,2385,No,0,19,379,Sunday
+9,1903,2024-02-01,Personal Care,862,No,0,36,478,Monday
+13,1747,2024-11-08,Home,274,No,0,27,379,Friday
+17,1820,2024-06-05,Home,2077,No,0,32,164,Thursday
+9,1746,2024-02-05,Home,236,Yes,30,41,492,Friday
+33,1917,2024-06-06,Personal Care,1050,No,0,5,87,Wednesday
+31,1378,2024-09-28,Grocery,2160,Yes,15,15,55,Monday
+8,1132,2024-07-13,Electronics,2534,No,0,37,173,Wednesday
+45,1761,2024-10-05,Grocery,302,Yes,0,16,115,Wednesday
+11,1551,2024-08-07,Electronics,1866,Yes,15,41,84,Sunday
+21,1243,2024-12-06,Grocery,2887,No,0,35,61,Wednesday
+31,1793,2024-12-21,Home,2774,No,0,28,363,Monday
+13,1247,2024-04-06,Clothing,1452,Yes,20,12,494,Friday
+20,1955,2024-06-07,Personal Care,940,No,0,27,293,Wednesday
+49,1797,2024-05-27,Home,231,No,0,31,35,Wednesday
+1,1514,2024-11-20,Personal Care,1294,Yes,15,17,48,Saturday
+12,1422,2024-09-20,Clothing,377,Yes,30,15,469,Wednesday
+10,1359,2024-05-01,Clothing,2498,Yes,20,42,249,Tuesday
+42,1233,2024-03-09,Clothing,1295,No,0,22,318,Thursday
+4,1925,2024-02-17,Electronics,2325,Yes,10,33,172,Tuesday
+14,1493,2024-01-18,Personal Care,2309,Yes,5,21,21,Tuesday
+48,1926,2024-01-13,Grocery,574,No,0,15,379,Monday
+23,1831,2024-06-17,Grocery,1098,Yes,10,21,98,Monday
+38,1555,2024-02-09,Home,2103,Yes,20,25,235,Saturday
+18,1330,2024-12-31,Personal Care,1389,Yes,10,19,261,Thursday
+50,1510,2024-09-02,Personal Care,2750,No,0,30,176,Wednesday
+2,1488,2024-04-23,Electronics,253,Yes,30,12,219,Wednesday
+25,1398,2024-10-13,Grocery,2707,No,0,38,188,Tuesday
+25,1396,2024-01-13,Clothing,2790,No,0,18,308,Wednesday
+27,1074,2024-02-14,Home,1791,No,0,32,177,Tuesday
+38,1970,2024-07-18,Home,2183,No,0,7,305,Friday
+48,1720,2024-01-23,Clothing,1914,Yes,15,18,374,Friday
+22,1702,2024-12-05,Home,1211,Yes,0,41,363,Saturday
+3,1481,2024-12-16,Clothing,2271,Yes,20,28,442,Sunday
+47,1824,2024-08-11,Personal Care,331,No,0,10,307,Friday
+39,1019,2024-06-21,Electronics,1424,No,0,14,390,Thursday
+46,1679,2024-01-09,Personal Care,1925,Yes,15,30,179,Friday
+6,1174,2024-09-16,Clothing,2954,Yes,30,13,20,Monday
+29,1130,2024-07-18,Clothing,366,No,0,30,237,Sunday
+34,1591,2024-12-28,Grocery,2035,No,0,13,155,Thursday
+20,1222,2024-05-08,Electronics,655,No,0,22,168,Saturday
+47,1171,2024-01-02,Grocery,2042,Yes,15,23,357,Wednesday
+25,1308,2024-12-04,Home,2706,No,0,35,138,Monday
+31,1178,2024-02-25,Electronics,1472,Yes,15,39,475,Saturday
+10,1709,2024-10-13,Grocery,2710,No,0,32,47,Monday
+12,1532,2024-07-25,Personal Care,1023,Yes,5,9,190,Wednesday
+17,1287,2024-09-23,Grocery,1101,No,0,33,286,Tuesday
+13,1649,2024-09-27,Electronics,557,Yes,10,9,455,Monday
+18,1296,2024-04-21,Grocery,1625,Yes,20,13,362,Wednesday
+17,1579,2024-08-20,Clothing,2899,Yes,5,8,295,Friday
+18,1062,2024-02-06,Home,1049,Yes,5,10,373,Wednesday
+11,1226,2024-09-12,Electronics,1209,No,0,14,348,Wednesday
+43,1264,2024-12-09,Personal Care,170,Yes,0,29,166,Friday
+14,1710,2024-04-11,Personal Care,1751,No,0,50,383,Saturday
+33,1970,2024-08-29,Home,362,Yes,0,37,400,Monday
+28,1140,2024-08-22,Electronics,2618,No,0,43,325,Sunday
+14,1407,2024-05-24,Home,2926,Yes,20,16,426,Friday
+14,1278,2024-12-03,Clothing,1095,Yes,30,30,33,Saturday
+48,1690,2024-11-24,Personal Care,1313,No,0,49,74,Saturday
+11,1716,2024-07-15,Personal Care,2330,Yes,10,29,427,Friday
+13,1828,2024-03-23,Grocery,1497,Yes,5,9,158,Monday
+5,1850,2024-07-23,Clothing,430,Yes,5,36,391,Wednesday
+12,1243,2024-11-09,Electronics,1740,Yes,10,34,231,Tuesday
+20,1421,2024-08-01,Grocery,2998,Yes,20,42,400,Friday
+11,1278,2024-11-14,Home,2552,No,0,49,474,Sunday
+33,1691,2024-10-25,Home,2583,Yes,0,3,46,Friday
+7,1689,2024-04-15,Personal Care,2604,No,0,21,162,Friday
+30,1902,2024-12-31,Electronics,987,Yes,15,37,352,Sunday
+35,1752,2024-01-16,Grocery,82,No,0,13,99,Tuesday
+45,1800,2024-06-01,Personal Care,1789,Yes,0,33,269,Tuesday
+45,1387,2024-02-25,Grocery,2267,No,0,33,486,Friday
+50,1809,2024-03-12,Electronics,860,Yes,0,36,473,Friday
+25,1178,2024-07-15,Clothing,2038,Yes,5,23,258,Wednesday
+37,1433,2024-09-21,Home,2883,No,0,33,342,Thursday
+25,1509,2024-11-18,Clothing,498,No,0,17,34,Sunday
+12,1552,2024-08-27,Home,372,No,0,37,316,Saturday
+35,1994,2024-11-22,Personal Care,1634,Yes,10,47,327,Saturday
+40,1381,2024-12-10,Home,1691,No,0,10,142,Monday
+41,1473,2024-09-02,Personal Care,1320,Yes,10,10,96,Thursday
+30,1881,2024-06-27,Personal Care,809,No,0,17,310,Monday
+23,1317,2024-01-17,Home,147,Yes,5,35,308,Friday
+14,1253,2024-06-29,Home,2518,Yes,5,15,196,Wednesday
+8,1274,2024-02-19,Home,73,No,0,34,426,Wednesday
+47,1065,2024-07-24,Electronics,1128,Yes,5,29,152,Tuesday
+30,1786,2024-10-24,Home,538,Yes,10,14,487,Wednesday
+35,1860,2024-02-05,Electronics,349,No,0,20,406,Monday
+9,1556,2024-11-21,Clothing,2027,No,0,21,445,Friday
+29,1101,2024-09-19,Electronics,2008,Yes,5,32,78,Monday
+27,1339,2024-11-09,Clothing,2752,No,0,19,271,Tuesday
+4,1378,2024-10-06,Personal Care,1933,Yes,20,21,150,Wednesday
+49,1527,2024-03-30,Electronics,2959,No,0,25,159,Friday
+4,1192,2024-10-04,Home,1799,No,0,6,437,Tuesday
+10,1628,2024-10-05,Grocery,2744,No,0,49,371,Saturday
+15,1778,2024-01-28,Personal Care,1199,Yes,30,40,279,Tuesday
+44,1926,2024-05-28,Electronics,2478,Yes,5,25,301,Friday
+16,1130,2024-12-27,Clothing,1124,No,0,35,291,Sunday
+20,1608,2024-11-07,Electronics,1806,No,0,26,371,Friday
+46,1805,2024-11-14,Electronics,274,Yes,10,34,73,Sunday
+14,1587,2024-08-14,Home,110,Yes,30,22,449,Sunday
+2,1228,2024-02-12,Home,421,Yes,20,26,459,Tuesday
+6,1553,2024-10-06,Clothing,144,Yes,30,38,460,Thursday
+46,1472,2024-09-10,Personal Care,2848,Yes,20,21,21,Wednesday
+28,1479,2024-12-04,Personal Care,2643,Yes,30,14,21,Monday
+10,1525,2024-02-16,Home,2259,No,0,18,133,Friday
+25,1392,2024-08-25,Grocery,998,No,0,23,168,Wednesday
+16,1076,2024-04-30,Grocery,2510,No,0,35,63,Monday
+48,1761,2024-04-27,Grocery,1498,No,0,26,151,Wednesday
+38,1763,2024-02-24,Clothing,2261,No,0,26,40,Thursday
+12,1196,2024-07-11,Electronics,2428,No,0,37,261,Sunday
+34,1291,2024-08-23,Grocery,515,Yes,10,33,143,Thursday
+31,1900,2024-03-17,Home,2091,No,0,29,104,Tuesday
+18,1371,2024-06-20,Electronics,2156,Yes,0,24,24,Sunday
+36,1165,2024-08-16,Grocery,2357,Yes,20,17,395,Friday
+1,1091,2024-01-10,Personal Care,1424,No,0,36,350,Thursday
+26,1802,2024-04-23,Electronics,230,No,0,18,147,Tuesday
+17,1739,2024-05-19,Grocery,2271,No,0,23,295,Monday
+50,1770,2024-07-11,Clothing,1508,No,0,28,338,Tuesday
+32,1139,2024-08-10,Grocery,2617,Yes,10,42,111,Sunday
+46,1882,2024-11-14,Personal Care,2465,No,0,14,65,Monday
+3,1872,2024-10-29,Clothing,1356,No,0,16,240,Thursday
+36,1079,2024-10-03,Home,910,No,0,10,123,Friday
+44,1839,2024-03-07,Clothing,1964,No,0,22,101,Thursday
+33,1871,2024-04-29,Clothing,1504,No,0,22,260,Tuesday
+27,1562,2024-05-29,Grocery,2007,No,0,12,189,Wednesday
+11,1367,2024-10-15,Clothing,1613,No,0,21,21,Sunday
+22,1880,2024-12-08,Personal Care,2139,No,0,6,479,Friday
+8,1684,2024-11-21,Electronics,1712,Yes,10,24,83,Monday
+43,1551,2024-10-09,Clothing,1853,Yes,20,12,57,Tuesday
+41,1356,2024-03-22,Electronics,1442,Yes,15,12,485,Monday
+16,1662,2024-03-26,Grocery,945,No,0,32,352,Thursday
+16,1141,2024-05-11,Personal Care,1310,No,0,21,327,Thursday
+12,1642,2024-04-14,Home,1357,Yes,5,11,199,Thursday
+24,1220,2024-04-09,Clothing,2113,No,0,41,416,Sunday
+45,1923,2024-03-17,Clothing,1992,No,0,7,168,Friday
+5,1258,2024-03-21,Personal Care,2709,No,0,22,230,Thursday
+48,1374,2024-10-05,Electronics,543,Yes,30,30,174,Wednesday
+16,1858,2024-10-21,Electronics,1498,Yes,0,44,276,Sunday
+44,1016,2024-10-09,Home,62,No,0,29,50,Tuesday
+50,1553,2024-04-12,Electronics,1373,Yes,10,28,159,Sunday
+33,1159,2024-07-30,Personal Care,61,Yes,0,20,407,Saturday
+19,1868,2024-10-26,Electronics,121,Yes,10,9,450,Tuesday
+13,1135,2024-03-08,Grocery,1445,Yes,0,18,431,Tuesday
+12,1893,2024-07-22,Electronics,534,No,0,34,277,Saturday
+20,1135,2024-01-20,Clothing,2297,Yes,0,22,99,Tuesday
+36,1846,2024-08-07,Home,2664,No,0,42,261,Sunday
+33,1770,2024-12-09,Home,405,No,0,24,339,Friday
+13,1993,2024-07-22,Personal Care,441,No,0,28,148,Saturday
+50,1163,2024-06-11,Electronics,2373,Yes,10,37,154,Saturday
+49,1355,2024-03-14,Home,1439,Yes,15,31,261,Friday
+16,1952,2024-04-15,Home,919,Yes,5,19,285,Wednesday
+46,1047,2024-06-27,Clothing,835,No,0,19,316,Monday
+22,1460,2024-05-31,Electronics,686,No,0,36,175,Tuesday
+24,1568,2024-01-05,Personal Care,473,No,0,14,278,Wednesday
+24,1097,2024-08-29,Home,647,No,0,22,207,Friday
+24,1700,2024-12-04,Personal Care,2238,No,0,24,60,Monday
+8,1596,2024-01-11,Home,1198,Yes,10,17,277,Sunday
+42,1325,2024-03-15,Clothing,1971,Yes,5,25,118,Thursday
+2,1272,2024-07-04,Personal Care,359,No,0,9,69,Thursday
+34,1153,2024-08-30,Electronics,2820,No,0,42,391,Saturday
+50,1303,2024-06-26,Home,262,Yes,5,42,94,Sunday
+26,1721,2024-11-27,Home,617,No,0,25,96,Friday
+8,1668,2024-03-08,Electronics,2039,Yes,30,34,191,Saturday
+16,1572,2024-11-04,Clothing,779,Yes,0,34,217,Saturday
+25,1528,2024-03-18,Clothing,2370,Yes,5,40,357,Thursday
+50,1330,2024-11-11,Personal Care,187,No,0,27,116,Saturday
+10,1862,2024-06-28,Clothing,163,Yes,30,40,248,Saturday
+12,1160,2024-04-15,Electronics,884,Yes,15,24,460,Tuesday
+9,1505,2024-04-01,Grocery,467,No,0,27,108,Wednesday
+28,1756,2024-03-03,Home,1702,Yes,0,7,404,Wednesday
+34,1721,2024-08-22,Grocery,1971,Yes,5,43,436,Saturday
+35,1781,2024-12-14,Electronics,849,Yes,0,20,473,Saturday
+48,1722,2024-08-12,Personal Care,1793,No,0,35,372,Wednesday
+28,1048,2024-06-24,Home,1157,No,0,37,448,Tuesday
+44,1284,2024-12-10,Clothing,1808,Yes,0,23,363,Sunday
+38,1604,2024-10-07,Clothing,352,Yes,30,45,51,Saturday
+18,1180,2024-08-21,Personal Care,1875,No,0,26,301,Tuesday
+11,1991,2024-10-06,Clothing,792,Yes,20,44,102,Tuesday
+11,1079,2024-01-27,Home,1590,No,0,32,185,Monday
+18,1541,2024-05-07,Home,2059,Yes,10,29,127,Saturday
+28,1668,2024-03-10,Personal Care,1414,No,0,10,422,Friday
+14,1060,2024-12-07,Electronics,153,Yes,20,37,384,Wednesday
+9,1060,2024-01-05,Personal Care,2233,Yes,0,11,140,Friday
+8,1936,2024-08-29,Electronics,2571,Yes,20,11,33,Wednesday
+40,1595,2024-09-04,Personal Care,599,No,0,15,230,Saturday
+48,1161,2024-08-14,Personal Care,2260,No,0,8,127,Wednesday
+43,1794,2024-11-16,Home,637,Yes,10,26,26,Thursday
+7,1211,2024-02-05,Grocery,2137,No,0,32,160,Thursday
+9,1180,2024-12-25,Personal Care,1639,No,0,38,255,Saturday
+40,1638,2024-11-01,Personal Care,708,No,0,5,329,Tuesday
+37,1978,2024-09-22,Clothing,567,Yes,20,24,410,Saturday
+38,1280,2024-12-29,Electronics,894,No,0,22,228,Wednesday
+47,1603,2024-04-11,Grocery,474,No,0,21,243,Friday
+11,1182,2024-09-12,Clothing,2745,Yes,10,18,90,Sunday
+43,1886,2024-02-18,Clothing,633,Yes,15,9,22,Tuesday
+37,1650,2024-04-05,Grocery,626,No,0,31,204,Friday
+41,1749,2024-05-23,Electronics,1626,No,0,42,337,Saturday
+27,1916,2024-10-28,Personal Care,160,No,0,50,137,Sunday
+2,1658,2024-09-16,Personal Care,2496,No,0,45,335,Sunday
+37,1712,2024-07-18,Electronics,1089,Yes,0,26,61,Thursday
+44,1635,2024-08-18,Clothing,717,No,0,33,74,Saturday
+46,1676,2024-01-19,Grocery,1559,Yes,10,9,410,Friday
+13,1798,2024-07-09,Personal Care,674,Yes,5,19,368,Thursday
+36,1084,2024-08-20,Personal Care,695,Yes,20,54,380,Sunday
+14,1357,2024-04-29,Personal Care,787,No,0,27,387,Friday
+17,1644,2024-04-09,Electronics,271,Yes,30,26,215,Sunday
+19,1265,2024-07-26,Clothing,1820,No,0,30,145,Sunday
+38,1052,2024-07-04,Clothing,2968,No,0,13,79,Monday
+47,1848,2024-11-30,Personal Care,2728,Yes,15,11,164,Friday
+30,1636,2024-11-03,Grocery,1354,Yes,30,56,266,Sunday
+32,1031,2024-08-04,Personal Care,2770,No,0,5,269,Monday
+13,1357,2024-10-19,Clothing,2833,No,0,38,158,Tuesday
+12,1229,2024-06-27,Clothing,840,Yes,15,38,85,Monday
+40,1906,2024-02-22,Home,1315,Yes,15,13,282,Tuesday
+7,1620,2024-11-16,Personal Care,2854,No,0,31,365,Wednesday
+18,1032,2024-11-28,Clothing,345,Yes,30,35,482,Friday
+16,1817,2024-04-30,Clothing,2953,No,0,24,53,Saturday
+44,1270,2024-02-25,Home,2090,Yes,30,33,240,Wednesday
+28,1324,2024-08-18,Personal Care,1937,Yes,30,44,322,Sunday
+10,1600,2024-08-15,Clothing,2326,Yes,5,18,95,Thursday
+29,1586,2024-04-04,Home,1634,No,0,17,446,Monday
+11,1416,2024-09-25,Grocery,931,No,0,6,235,Friday
+16,1064,2024-11-19,Grocery,1542,No,0,13,375,Thursday
+32,1152,2024-07-11,Home,2686,No,0,17,328,Tuesday
+28,1971,2024-04-26,Electronics,585,No,0,10,274,Friday
+29,1072,2024-10-10,Home,1691,No,0,38,89,Sunday
+1,1064,2024-07-21,Clothing,2823,Yes,10,36,131,Wednesday
+29,1443,2024-09-04,Clothing,978,No,0,18,383,Saturday
+23,1612,2024-04-15,Personal Care,1697,Yes,30,35,236,Friday
+10,1664,2024-11-29,Personal Care,2132,No,0,21,157,Sunday
+41,1436,2024-10-07,Clothing,1023,Yes,30,27,318,Saturday
+6,1113,2024-09-27,Grocery,2106,No,0,37,82,Thursday
+21,1965,2024-11-24,Grocery,2009,Yes,20,19,267,Sunday
+8,1363,2024-09-03,Electronics,1916,No,0,19,231,Sunday
+38,1400,2024-08-11,Clothing,758,Yes,15,16,152,Wednesday
+21,1692,2024-11-02,Electronics,564,No,0,10,135,Tuesday
+40,1789,2024-03-01,Clothing,61,No,0,36,219,Sunday
+6,1567,2024-05-30,Clothing,1484,Yes,15,23,480,Thursday
+1,1658,2024-09-24,Clothing,2539,Yes,10,39,240,Saturday
+45,1259,2024-03-22,Grocery,1818,No,0,29,292,Thursday
+8,1975,2024-05-05,Home,1811,No,0,25,333,Monday
+40,1287,2024-11-14,Personal Care,1319,Yes,15,28,356,Wednesday
+37,1085,2024-10-20,Grocery,579,No,0,12,101,Tuesday
+37,1254,2024-03-02,Home,1123,Yes,15,25,310,Thursday
+2,1312,2024-12-15,Electronics,523,Yes,30,31,45,Monday
+22,1148,2024-06-07,Home,2731,Yes,10,10,386,Thursday
+15,1158,2024-09-13,Clothing,936,No,0,30,342,Thursday
+16,1121,2024-10-12,Personal Care,2180,Yes,15,24,419,Tuesday
+15,1200,2024-05-22,Electronics,1191,No,0,27,206,Monday
+41,1359,2024-11-23,Personal Care,2354,No,0,7,296,Thursday
+24,1562,2024-04-08,Home,2144,No,0,18,325,Sunday
+5,1528,2024-12-26,Home,900,Yes,20,27,78,Friday
+14,1566,2024-03-08,Clothing,2202,Yes,5,26,89,Sunday
+32,1323,2024-05-03,Grocery,2322,Yes,0,35,262,Sunday
+3,1840,2024-08-10,Personal Care,2050,Yes,20,41,110,Tuesday
+27,1103,2024-08-20,Personal Care,1847,Yes,10,45,378,Saturday
+38,1272,2024-10-17,Electronics,1061,Yes,5,22,473,Monday
+23,1072,2024-07-07,Electronics,402,Yes,0,39,493,Sunday
+5,1949,2024-07-28,Clothing,920,No,0,6,117,Thursday
+43,1557,2024-03-14,Clothing,1866,Yes,5,39,489,Wednesday
+21,1524,2024-08-22,Clothing,2757,Yes,30,24,173,Tuesday
+26,1258,2024-06-11,Home,2220,Yes,5,41,131,Thursday
+34,1959,2024-01-30,Personal Care,2984,Yes,10,42,221,Sunday
+15,1407,2024-06-04,Personal Care,969,Yes,20,29,56,Sunday
+40,1756,2024-10-17,Clothing,1595,No,0,38,454,Monday
+15,1650,2024-10-01,Electronics,930,Yes,15,37,280,Friday
+47,1306,2024-08-03,Personal Care,213,Yes,10,30,35,Tuesday
+47,1946,2024-03-24,Grocery,2915,No,0,29,174,Friday
+22,1413,2024-07-01,Electronics,1062,No,0,16,388,Tuesday
+14,1324,2024-05-24,Personal Care,399,Yes,10,23,432,Wednesday
+2,1856,2024-02-05,Clothing,2536,Yes,30,28,278,Sunday
+3,1833,2024-11-07,Electronics,1052,Yes,0,33,416,Monday
+29,1876,2024-08-25,Grocery,2449,Yes,30,21,334,Thursday
+27,1758,2024-11-09,Clothing,349,No,0,9,233,Thursday
+6,1832,2024-01-15,Grocery,1658,Yes,5,7,427,Wednesday
+33,1135,2024-09-17,Electronics,1454,No,0,20,69,Thursday
+21,1257,2024-10-08,Personal Care,657,No,0,31,96,Saturday
+11,1469,2024-04-25,Clothing,1461,No,0,46,454,Sunday
+19,1766,2024-12-28,Grocery,1715,No,0,17,93,Wednesday
+8,1129,2024-09-07,Personal Care,877,Yes,5,29,81,Sunday
+28,1399,2024-09-11,Home,1940,Yes,5,26,492,Sunday
+23,1368,2024-11-04,Personal Care,2145,Yes,30,18,30,Saturday
+17,1894,2024-08-26,Personal Care,1038,No,0,13,317,Tuesday
+46,1732,2024-04-21,Grocery,335,No,0,10,285,Tuesday
+1,1275,2024-07-21,Clothing,1238,Yes,20,26,430,Thursday
+9,1001,2024-11-24,Home,226,No,0,28,384,Sunday
+40,1515,2024-10-20,Home,1805,Yes,0,17,69,Friday
+37,1052,2024-12-20,Personal Care,2882,No,0,28,124,Thursday
+13,1886,2024-11-11,Clothing,727,Yes,15,40,144,Saturday
+29,1134,2024-05-18,Electronics,1160,Yes,10,32,493,Wednesday
+42,1383,2024-01-15,Home,790,No,0,31,462,Thursday
+43,1063,2024-04-24,Home,1194,Yes,30,45,52,Wednesday
+41,1113,2024-11-10,Electronics,1580,Yes,30,53,116,Sunday
+16,1031,2024-04-24,Clothing,1789,Yes,0,14,337,Thursday
+4,1329,2024-09-09,Clothing,665,No,0,26,395,Friday
+2,1414,2024-10-02,Electronics,602,Yes,15,28,175,Tuesday
+24,1599,2024-11-24,Clothing,2199,Yes,5,35,45,Thursday
+48,1177,2024-01-04,Clothing,2972,Yes,0,15,483,Friday
+10,1406,2024-02-22,Electronics,889,No,0,22,471,Monday
+24,1643,2024-04-25,Personal Care,970,Yes,15,42,258,Sunday
+41,1381,2024-12-13,Grocery,828,No,0,8,436,Tuesday
+38,1667,2024-07-04,Personal Care,2589,Yes,20,17,389,Friday
+29,1525,2024-01-26,Clothing,2567,No,0,14,171,Monday
+20,1903,2024-12-30,Clothing,2139,No,0,39,369,Sunday
+47,1840,2024-01-14,Personal Care,2424,Yes,10,33,377,Friday
+28,1269,2024-08-09,Grocery,57,Yes,15,22,470,Friday
+1,1389,2024-04-15,Home,439,Yes,0,20,300,Thursday
+37,1002,2024-01-05,Personal Care,1912,Yes,10,11,105,Thursday
+7,1497,2024-10-22,Clothing,2504,Yes,10,8,63,Thursday
+30,1727,2024-07-06,Clothing,566,No,0,30,499,Friday
+16,1928,2024-05-03,Electronics,2496,No,0,16,449,Friday
+19,1418,2024-09-08,Home,1442,Yes,15,37,393,Monday
+9,1672,2024-01-01,Clothing,2167,Yes,0,19,26,Friday
+12,1284,2024-06-22,Personal Care,1914,Yes,15,18,184,Saturday
+26,1116,2024-07-06,Personal Care,996,Yes,5,37,393,Sunday
+21,1694,2024-08-19,Home,1222,Yes,30,44,434,Sunday
+47,1307,2024-02-01,Clothing,1423,Yes,0,8,52,Friday
+48,1633,2024-11-16,Electronics,744,No,0,11,498,Monday
+16,1035,2024-01-24,Electronics,206,Yes,5,13,405,Monday
+41,1360,2024-03-13,Grocery,1633,Yes,5,13,281,Tuesday
+22,1365,2024-04-25,Electronics,1793,No,0,9,32,Wednesday
+3,1477,2024-12-19,Clothing,2060,Yes,20,27,41,Thursday
+44,1039,2024-04-26,Grocery,886,Yes,0,18,197,Friday
+17,1980,2024-12-26,Grocery,651,No,0,17,368,Thursday
+16,1410,2024-07-03,Clothing,2377,No,0,27,377,Thursday
+15,1171,2024-08-31,Clothing,2068,No,0,36,106,Friday
+48,1082,2024-12-12,Home,1322,No,0,24,57,Friday
+4,1688,2024-06-19,Personal Care,1653,No,0,33,206,Sunday
+46,1772,2024-01-25,Grocery,397,Yes,30,40,276,Wednesday
+40,1557,2024-08-18,Clothing,2405,Yes,5,31,277,Sunday
+16,1664,2024-12-02,Grocery,340,No,0,12,465,Friday
+50,1810,2024-03-14,Grocery,180,No,0,31,176,Sunday
+26,1289,2024-03-23,Personal Care,433,No,0,33,89,Monday
+32,1426,2024-08-25,Home,2139,No,0,8,426,Friday
+45,1033,2024-02-19,Personal Care,2612,Yes,15,29,461,Thursday
+30,1535,2024-09-21,Grocery,1013,No,0,17,304,Sunday
+40,1382,2024-03-24,Clothing,1352,No,0,30,354,Sunday
+17,1022,2024-10-30,Home,2504,No,0,7,255,Friday
+49,1146,2024-11-06,Clothing,687,No,0,41,186,Saturday
+7,1643,2024-07-19,Grocery,207,No,0,6,179,Monday
+27,1336,2024-12-06,Personal Care,661,No,0,24,413,Monday
+39,1747,2024-07-09,Clothing,362,No,0,7,105,Tuesday
+6,1813,2024-11-27,Home,1424,No,0,26,229,Thursday
+18,1773,2024-01-24,Home,2383,Yes,15,9,259,Tuesday
+47,1055,2024-02-15,Home,606,No,0,39,253,Friday
+47,1080,2024-07-27,Personal Care,1759,No,0,32,205,Friday
+5,1462,2024-06-11,Grocery,2389,No,0,17,416,Thursday
+16,1500,2024-04-18,Electronics,379,No,0,15,179,Sunday
+25,1653,2024-05-17,Clothing,665,No,0,38,450,Monday
+28,1794,2024-09-03,Personal Care,1495,No,0,16,77,Sunday
+5,1790,2024-06-30,Home,471,No,0,17,282,Wednesday
+1,1649,2024-11-03,Clothing,370,Yes,5,20,276,Saturday
+36,1697,2024-08-21,Personal Care,815,No,0,26,103,Saturday
+40,1654,2024-09-03,Clothing,1065,Yes,20,41,282,Tuesday
+49,1544,2024-09-27,Home,2913,Yes,15,24,138,Thursday
+46,1166,2024-09-21,Clothing,2077,Yes,30,36,59,Monday
+35,1631,2024-11-28,Clothing,2355,Yes,10,32,282,Sunday
+35,1355,2024-08-15,Personal Care,382,No,0,13,91,Wednesday
+27,1452,2024-08-04,Clothing,1893,Yes,15,7,45,Tuesday
+12,1264,2024-09-25,Personal Care,2697,Yes,5,4,38,Monday
+17,1503,2024-04-16,Personal Care,1776,Yes,0,16,128,Saturday
+17,1757,2024-02-02,Electronics,1629,No,0,24,401,Sunday
+26,1679,2024-05-08,Personal Care,1256,Yes,20,30,108,Wednesday
+42,1377,2024-02-28,Grocery,2465,No,0,13,317,Friday
+45,1446,2024-04-28,Grocery,207,No,0,17,496,Thursday
+2,1277,2024-09-23,Electronics,1595,Yes,30,50,244,Sunday
+32,1918,2024-04-19,Grocery,2584,Yes,15,30,411,Thursday
+32,1616,2024-10-01,Grocery,2643,No,0,35,83,Tuesday
+14,1443,2024-04-21,Personal Care,2059,Yes,5,19,403,Thursday
+48,1806,2024-11-23,Clothing,1806,Yes,0,36,171,Tuesday
+31,1007,2024-03-25,Home,1826,Yes,0,37,381,Wednesday
+4,1362,2024-03-03,Grocery,2728,No,0,28,277,Tuesday
+22,1751,2024-06-06,Grocery,1007,Yes,15,25,25,Friday
+19,1070,2024-08-21,Clothing,2497,Yes,15,10,185,Thursday
+7,1844,2024-05-15,Grocery,66,No,0,36,264,Sunday
+16,1842,2024-07-07,Home,2794,Yes,20,21,310,Thursday
+22,1674,2024-09-11,Electronics,1596,No,0,23,262,Saturday
+21,1433,2024-07-22,Grocery,1603,No,0,27,292,Thursday
+15,1784,2024-02-15,Home,2894,No,0,22,272,Friday
+13,1343,2024-01-24,Personal Care,2823,No,0,30,393,Tuesday
+7,1815,2024-09-26,Grocery,907,No,0,8,194,Friday
+45,1646,2024-04-29,Electronics,91,No,0,30,299,Monday
+14,1182,2024-07-17,Clothing,1919,Yes,0,21,236,Saturday
+22,1580,2024-04-02,Personal Care,1981,Yes,0,40,58,Sunday
+31,1139,2024-07-20,Clothing,1576,No,0,45,301,Saturday
+42,1672,2024-09-05,Clothing,2024,No,0,38,100,Monday
+39,1896,2024-02-10,Personal Care,2552,No,0,16,366,Saturday
+11,1582,2024-12-16,Grocery,585,Yes,30,31,320,Wednesday
+31,1402,2024-07-16,Personal Care,2153,Yes,15,23,85,Wednesday
+34,1521,2024-04-24,Personal Care,728,Yes,5,22,247,Tuesday
+49,1075,2024-08-05,Home,71,No,0,47,104,Saturday
+11,1979,2024-01-23,Personal Care,2673,Yes,0,49,75,Sunday
+18,1935,2024-09-12,Clothing,2113,Yes,20,38,129,Wednesday
+15,1285,2024-02-12,Electronics,2177,Yes,15,39,346,Tuesday
+18,1071,2024-05-03,Grocery,600,Yes,20,24,255,Wednesday
+47,1433,2024-10-06,Personal Care,1928,No,0,24,401,Sunday
+43,1101,2024-01-31,Home,472,No,0,26,185,Thursday
+2,1253,2024-10-12,Home,1230,Yes,20,25,110,Friday
+29,1351,2024-03-01,Home,2398,Yes,20,31,356,Sunday
+48,1525,2024-05-08,Clothing,1213,No,0,15,181,Wednesday
+33,1000,2024-02-14,Electronics,1013,No,0,23,301,Monday
+45,1019,2024-11-07,Electronics,137,No,0,31,132,Thursday
+45,1387,2024-04-18,Grocery,1463,No,0,7,181,Monday
+4,1467,2024-02-13,Clothing,2615,Yes,0,20,481,Sunday
+23,1350,2024-05-08,Grocery,2030,Yes,30,14,112,Thursday
+9,1332,2024-08-10,Home,886,Yes,5,21,119,Monday
+33,1044,2024-03-14,Home,408,Yes,5,20,108,Wednesday
+2,1923,2024-01-29,Personal Care,1883,No,0,47,317,Sunday
+22,1849,2024-08-13,Clothing,924,Yes,20,9,415,Monday
+22,1266,2024-06-28,Clothing,541,Yes,15,31,73,Friday
+9,1414,2024-01-25,Electronics,2052,Yes,5,20,412,Monday
+31,1568,2024-04-03,Clothing,1321,Yes,15,25,148,Friday
+30,1013,2024-04-14,Grocery,815,Yes,5,7,293,Tuesday
+37,1092,2024-06-03,Home,1201,Yes,30,12,208,Thursday
+22,1229,2024-04-11,Clothing,1977,Yes,20,42,485,Tuesday
+44,1971,2024-09-08,Personal Care,1464,Yes,10,27,447,Thursday
+50,1242,2024-01-21,Grocery,2324,No,0,16,60,Wednesday
+29,1364,2024-10-06,Grocery,247,No,0,9,362,Friday
+34,1305,2024-10-24,Clothing,2677,Yes,15,12,288,Wednesday
+8,1779,2024-12-15,Clothing,608,No,0,47,255,Sunday
+22,1487,2024-02-07,Clothing,1577,Yes,20,38,194,Sunday
+16,1240,2024-06-23,Electronics,135,Yes,0,30,173,Monday
+10,1705,2024-11-16,Grocery,1232,No,0,24,268,Wednesday
+12,1839,2024-03-31,Clothing,966,No,0,11,484,Monday
+50,1431,2024-11-04,Clothing,1911,No,0,21,307,Saturday
+20,1107,2024-03-06,Grocery,2280,No,0,31,56,Friday
+45,1596,2024-06-15,Personal Care,1570,Yes,30,56,473,Sunday
+26,1450,2024-04-19,Personal Care,2129,No,0,35,221,Saturday
+44,1077,2024-05-04,Home,514,Yes,15,34,303,Friday
+14,1016,2024-01-18,Clothing,2590,No,0,29,113,Monday
+32,1054,2024-12-27,Grocery,1241,No,0,6,90,Wednesday
+8,1109,2024-04-13,Electronics,857,Yes,10,26,68,Thursday
+15,1525,2024-11-29,Electronics,578,No,0,24,347,Saturday
+6,1838,2024-05-12,Home,1202,No,0,10,239,Wednesday
+25,1207,2024-08-15,Clothing,60,Yes,0,19,326,Monday
+29,1921,2024-09-20,Clothing,1423,Yes,10,41,473,Sunday
+32,1081,2024-02-19,Personal Care,1819,No,0,39,261,Friday
+3,1486,2024-03-01,Grocery,458,Yes,5,23,39,Wednesday
+37,1022,2024-12-01,Clothing,2137,No,0,26,64,Wednesday
+14,1908,2024-10-19,Grocery,2772,No,0,21,281,Sunday
+22,1074,2024-06-08,Home,1154,No,0,24,321,Tuesday
+7,1330,2024-08-30,Clothing,2331,Yes,0,7,413,Wednesday
+47,1250,2024-08-22,Electronics,2448,Yes,5,24,199,Saturday
+49,1952,2024-07-14,Electronics,856,Yes,20,14,482,Tuesday
+33,1986,2024-10-13,Grocery,856,Yes,15,35,418,Sunday
+18,1361,2024-09-27,Electronics,598,No,0,38,277,Tuesday
+27,1132,2024-02-08,Clothing,1138,No,0,19,227,Thursday
+33,1930,2024-09-25,Clothing,2403,No,0,7,457,Tuesday
+48,1181,2024-06-19,Electronics,2786,Yes,0,29,464,Tuesday
+39,1396,2024-10-07,Electronics,1415,No,0,36,278,Monday
+47,1512,2024-10-07,Grocery,636,No,0,16,287,Friday
+10,1072,2024-10-03,Home,1416,Yes,5,31,190,Saturday
+34,1228,2024-01-28,Clothing,196,No,0,16,86,Sunday
+38,1102,2024-01-06,Electronics,284,Yes,0,22,282,Wednesday
+37,1704,2024-05-09,Personal Care,2661,Yes,20,41,294,Sunday
+35,1688,2024-12-09,Home,401,No,0,14,201,Wednesday
+23,1809,2024-04-23,Clothing,2528,Yes,10,24,448,Tuesday
+41,1049,2024-09-23,Grocery,865,No,0,10,46,Thursday
+10,1266,2024-11-11,Electronics,2138,No,0,5,437,Tuesday
+4,1628,2024-12-27,Grocery,962,No,0,14,105,Thursday
+9,1521,2024-12-27,Home,1286,No,0,13,414,Thursday
+3,1311,2024-07-24,Home,1235,Yes,15,35,108,Monday
+24,1005,2024-08-30,Electronics,860,No,0,10,181,Monday
+22,1676,2024-02-17,Home,2594,No,0,17,107,Monday
+3,1595,2024-09-13,Electronics,1624,Yes,0,26,250,Sunday
+23,1999,2024-09-27,Grocery,1537,Yes,20,21,496,Thursday
+12,1805,2024-09-14,Personal Care,670,No,0,40,317,Wednesday
+36,1189,2024-05-13,Electronics,1454,No,0,22,134,Wednesday
+19,1999,2024-10-09,Clothing,1304,Yes,15,26,440,Sunday
+16,1548,2024-03-05,Home,2809,Yes,5,27,477,Thursday
+11,1711,2024-12-15,Personal Care,509,No,0,39,412,Sunday
+9,1622,2024-06-02,Clothing,1975,No,0,16,257,Thursday
+12,1340,2024-12-02,Personal Care,1175,No,0,33,321,Saturday
+10,1315,2024-07-20,Home,720,Yes,10,14,494,Tuesday
+29,1548,2024-03-06,Clothing,400,Yes,20,21,383,Friday
+41,1303,2024-04-08,Grocery,1024,Yes,30,18,364,Thursday
+12,1401,2024-05-21,Clothing,579,No,0,35,220,Thursday
+49,1738,2024-11-20,Grocery,2275,Yes,10,23,25,Friday
+2,1086,2024-09-20,Electronics,2573,No,0,34,447,Wednesday
+4,1536,2024-08-20,Personal Care,1178,Yes,30,38,68,Friday
+27,1262,2024-10-13,Home,516,Yes,30,37,176,Sunday
+1,1106,2024-03-02,Grocery,1398,Yes,5,41,465,Friday
+17,1832,2024-04-02,Personal Care,1801,No,0,5,161,Friday
+26,1120,2024-01-26,Electronics,1448,Yes,15,28,145,Monday
+41,1980,2024-04-18,Home,1324,No,0,29,33,Friday
+47,1641,2024-04-25,Electronics,1504,No,0,30,301,Sunday
+28,1814,2024-05-27,Grocery,2814,No,0,24,237,Monday
+20,1113,2024-05-22,Personal Care,2015,No,0,15,450,Tuesday
+49,1357,2024-06-03,Electronics,760,No,0,22,44,Thursday
+42,1028,2024-07-18,Personal Care,1920,Yes,0,30,37,Friday
+19,1015,2024-01-09,Clothing,2140,Yes,5,23,98,Thursday
+25,1918,2024-01-24,Grocery,1436,Yes,10,36,295,Monday
+29,1361,2024-10-31,Personal Care,1966,Yes,0,12,353,Wednesday
+37,1476,2024-01-15,Grocery,1686,Yes,15,35,452,Monday
+35,1042,2024-02-13,Grocery,1320,No,0,24,233,Monday
+14,1680,2024-12-25,Home,809,Yes,30,17,77,Thursday
+5,1458,2024-03-05,Electronics,2464,Yes,30,16,74,Tuesday
+2,1409,2024-10-14,Clothing,248,Yes,15,37,157,Sunday
+24,1318,2024-12-26,Grocery,2822,No,0,19,80,Saturday
+11,1918,2024-08-11,Grocery,2598,Yes,5,6,300,Monday
+49,1146,2024-02-01,Grocery,1596,Yes,10,34,342,Wednesday
+47,1149,2024-03-15,Personal Care,2120,Yes,30,37,120,Wednesday
+35,1779,2024-04-16,Personal Care,670,No,0,28,243,Saturday
+20,1216,2024-07-05,Home,2464,Yes,0,30,275,Monday
+5,1932,2024-08-23,Grocery,2095,Yes,0,9,57,Thursday
+31,1724,2024-04-23,Grocery,1382,Yes,10,23,146,Thursday
+45,1836,2024-04-26,Home,850,No,0,41,61,Sunday
+44,1222,2024-04-22,Personal Care,2814,No,0,37,194,Sunday
+23,1926,2024-03-21,Clothing,1388,Yes,0,11,414,Tuesday
+2,1499,2024-01-04,Clothing,608,Yes,15,21,93,Friday
+31,1004,2024-04-25,Electronics,2256,Yes,5,6,378,Monday
+12,1494,2024-08-13,Electronics,1639,No,0,21,234,Monday
+50,1997,2024-01-14,Home,221,Yes,15,34,252,Friday
+40,1607,2024-01-14,Grocery,626,Yes,0,48,50,Saturday
+3,1579,2024-11-12,Clothing,1265,Yes,5,27,230,Sunday
+19,1573,2024-08-27,Home,2076,No,0,38,429,Tuesday
+39,1312,2024-04-11,Home,1030,No,0,50,382,Sunday
+32,1429,2024-09-19,Home,2994,No,0,11,21,Sunday
+16,1371,2024-01-01,Grocery,1407,Yes,15,31,499,Thursday
+6,1863,2024-01-20,Grocery,519,No,0,17,335,Wednesday
+4,1136,2024-02-05,Grocery,2086,Yes,15,17,72,Wednesday
+23,1929,2024-02-10,Personal Care,1867,Yes,5,41,456,Wednesday
+16,1560,2024-07-14,Electronics,1202,Yes,15,44,86,Sunday
+26,1217,2024-05-25,Clothing,979,No,0,12,481,Thursday
+10,1915,2024-02-04,Grocery,2651,Yes,0,9,491,Thursday
+10,1217,2024-09-01,Home,1348,Yes,10,31,140,Wednesday
+11,1203,2024-04-19,Personal Care,1168,Yes,0,39,145,Monday
+21,1042,2024-03-30,Electronics,1379,No,0,7,113,Tuesday
+47,1917,2024-05-17,Home,2395,No,0,26,437,Tuesday
+11,1917,2024-08-01,Grocery,2489,No,0,36,308,Saturday
+45,1661,2024-01-09,Personal Care,2469,Yes,15,40,137,Wednesday
+25,1894,2024-11-14,Home,2352,Yes,15,31,374,Thursday
+28,1111,2024-10-28,Electronics,495,No,0,5,87,Tuesday
+42,1155,2024-02-18,Clothing,2044,Yes,5,40,482,Tuesday
+34,1921,2024-01-11,Grocery,1771,Yes,15,26,483,Thursday
+23,1224,2024-03-09,Electronics,1152,Yes,20,41,79,Tuesday
+46,1840,2024-08-28,Electronics,925,No,0,21,213,Wednesday
+22,1273,2024-10-10,Electronics,215,Yes,0,20,50,Tuesday
+3,1862,2024-02-25,Personal Care,1546,Yes,15,34,326,Monday
+35,1474,2024-02-08,Electronics,2531,No,0,27,140,Wednesday
+10,1131,2024-07-15,Electronics,520,Yes,30,28,93,Sunday
+9,1917,2024-05-29,Electronics,2491,Yes,15,38,352,Friday
+29,1177,2024-03-01,Grocery,2437,No,0,14,136,Wednesday
+29,1335,2024-06-07,Home,1835,Yes,15,11,149,Thursday
+4,1734,2024-06-19,Electronics,2279,Yes,5,31,451,Monday
+4,1089,2024-03-07,Electronics,2721,No,0,12,206,Friday
+39,1567,2024-08-18,Personal Care,181,Yes,0,13,300,Thursday
+19,1251,2024-10-05,Home,303,Yes,0,29,74,Friday
+32,1430,2024-11-09,Electronics,1443,No,0,31,65,Tuesday
+19,1670,2024-01-22,Clothing,828,Yes,10,21,176,Wednesday
+16,1198,2024-08-24,Grocery,1533,Yes,30,55,325,Saturday
+16,1377,2024-08-08,Clothing,938,No,0,29,38,Monday
+3,1874,2024-03-14,Grocery,683,Yes,10,27,382,Monday
+19,1873,2024-12-10,Electronics,120,No,0,46,365,Saturday
+27,1936,2024-07-08,Home,336,Yes,5,45,77,Saturday
+4,1814,2024-02-08,Grocery,610,No,0,37,376,Monday
+17,1299,2024-02-06,Home,996,Yes,10,25,379,Wednesday
+20,1678,2024-01-22,Grocery,2812,No,0,6,253,Friday
+47,1164,2024-11-29,Grocery,1541,No,0,24,295,Sunday
+31,1756,2024-07-01,Grocery,1884,No,0,31,344,Monday
+36,1985,2024-10-29,Home,2947,No,0,28,132,Thursday
+19,1826,2024-09-19,Home,861,No,0,32,151,Wednesday
+27,1950,2024-12-03,Personal Care,2912,Yes,30,32,323,Sunday
+34,1965,2024-01-26,Grocery,2401,No,0,32,461,Friday
+11,1136,2024-03-25,Home,2857,Yes,20,38,315,Thursday
+9,1141,2024-04-21,Grocery,1645,No,0,14,264,Wednesday
+28,1644,2024-11-01,Electronics,1586,Yes,20,32,318,Thursday
+12,1132,2024-06-22,Grocery,833,Yes,0,18,110,Saturday
+33,1014,2024-01-08,Electronics,2598,No,0,12,466,Friday
+44,1775,2024-10-18,Electronics,1932,Yes,0,8,329,Tuesday
+14,1310,2024-06-21,Home,50,No,0,35,80,Thursday
+15,1379,2024-10-26,Home,75,Yes,15,41,92,Tuesday
+39,1799,2024-10-23,Clothing,706,No,0,40,161,Saturday
+36,1079,2024-01-08,Grocery,2219,Yes,10,14,234,Thursday
+37,1267,2024-09-01,Clothing,766,No,0,22,180,Sunday
+22,1971,2024-01-29,Grocery,1478,No,0,34,118,Monday
+13,1610,2024-05-07,Home,185,No,0,36,317,Sunday
+12,1073,2024-03-12,Electronics,1069,No,0,42,193,Sunday
+39,1203,2024-11-24,Personal Care,2310,No,0,19,339,Wednesday
+18,1349,2024-09-15,Electronics,1054,No,0,26,312,Saturday
+37,1745,2024-05-19,Grocery,1164,No,0,15,157,Tuesday
+34,1110,2024-08-24,Electronics,2839,No,0,21,27,Friday
+44,1756,2024-01-11,Home,829,No,0,33,116,Friday
+45,1431,2024-11-10,Electronics,1308,No,0,12,210,Tuesday
+34,1603,2024-11-06,Home,2951,No,0,17,375,Sunday
+6,1539,2024-08-15,Home,2285,Yes,10,34,166,Thursday
+25,1609,2024-12-21,Home,3000,Yes,20,19,272,Monday
+48,1413,2024-01-24,Home,2458,No,0,16,169,Tuesday
+48,1820,2024-02-21,Electronics,2017,No,0,14,78,Thursday
+38,1292,2024-03-08,Home,759,Yes,10,52,466,Sunday
+28,1589,2024-08-28,Clothing,2563,No,0,15,399,Sunday
+47,1948,2024-06-25,Home,837,No,0,8,284,Wednesday
+2,1902,2024-08-05,Grocery,1746,Yes,0,22,137,Sunday
+23,1361,2024-09-25,Grocery,378,Yes,30,28,418,Friday
+24,1589,2024-06-25,Grocery,2438,No,0,36,434,Monday
+16,1274,2024-12-29,Grocery,951,Yes,10,16,76,Monday
+4,1636,2024-11-25,Personal Care,2075,No,0,30,207,Friday
+48,1499,2024-04-16,Personal Care,1384,Yes,20,16,239,Friday
+28,1324,2024-03-18,Home,1001,No,0,10,470,Thursday
+30,1370,2024-11-08,Grocery,394,No,0,14,93,Wednesday
+40,1593,2024-07-21,Clothing,2791,No,0,21,161,Sunday
+29,1557,2024-06-28,Personal Care,688,Yes,20,33,33,Friday
+12,1361,2024-06-10,Grocery,1656,No,0,26,171,Wednesday
+7,1186,2024-07-31,Personal Care,1245,Yes,15,9,122,Friday
+10,1172,2024-03-05,Grocery,1043,Yes,30,41,79,Friday
+1,1809,2024-06-30,Personal Care,183,No,0,10,467,Monday
+44,1796,2024-11-04,Grocery,1817,No,0,30,396,Monday
+33,1362,2024-11-24,Grocery,1773,No,0,16,388,Tuesday
+8,1787,2024-08-18,Grocery,1635,No,0,19,346,Monday
+32,1974,2024-06-26,Clothing,637,Yes,10,35,222,Thursday
+45,1002,2024-11-04,Home,228,No,0,11,154,Friday
+20,1464,2024-12-26,Clothing,2165,Yes,5,19,429,Monday
+2,1017,2024-04-19,Personal Care,2100,Yes,20,26,267,Monday
+8,1246,2024-02-23,Home,470,Yes,5,32,211,Sunday
+17,1633,2024-08-08,Electronics,2432,Yes,30,51,401,Saturday
+23,1494,2024-01-18,Home,936,Yes,10,31,102,Tuesday
+41,1586,2024-02-07,Personal Care,1000,No,0,9,241,Thursday
+16,1346,2024-07-04,Grocery,2190,No,0,28,188,Friday
+23,1825,2024-07-15,Home,226,No,0,23,108,Wednesday
+36,1248,2024-01-25,Personal Care,1748,Yes,30,22,408,Tuesday
+7,1026,2024-05-19,Home,2481,Yes,30,20,109,Thursday
+4,1463,2024-03-03,Grocery,2357,Yes,0,5,369,Tuesday
+43,1618,2024-04-21,Clothing,703,No,0,26,458,Thursday
+38,1186,2024-04-18,Personal Care,1242,No,0,41,344,Sunday
+20,1108,2024-08-15,Electronics,626,No,0,30,242,Monday
+9,1236,2024-12-30,Personal Care,80,Yes,0,37,145,Thursday
+28,1725,2024-06-29,Home,697,No,0,31,84,Tuesday
+13,1549,2024-05-29,Home,2318,No,0,37,83,Wednesday
+29,1600,2024-08-15,Clothing,1461,No,0,25,357,Thursday
+14,1253,2024-03-24,Personal Care,1490,No,0,23,54,Sunday
+23,1535,2024-06-19,Personal Care,644,No,0,8,440,Tuesday
+29,1680,2024-05-21,Grocery,1003,Yes,20,33,269,Thursday
+9,1094,2024-11-30,Clothing,2703,No,0,18,145,Saturday
+35,1484,2024-06-12,Clothing,716,No,0,29,333,Sunday
+43,1343,2024-03-12,Personal Care,2073,No,0,36,55,Monday
+27,1775,2024-08-07,Home,2170,Yes,0,7,487,Wednesday
+2,1356,2024-04-12,Home,2735,Yes,15,30,30,Saturday
+37,1301,2024-07-15,Clothing,670,No,0,16,315,Friday
+49,1651,2024-09-27,Personal Care,2532,Yes,10,14,498,Tuesday
+35,1763,2024-02-17,Personal Care,1096,Yes,20,43,92,Monday
+16,1172,2024-11-30,Electronics,2496,Yes,15,18,58,Sunday
+6,1722,2024-01-30,Grocery,1800,Yes,5,27,45,Saturday
+16,1143,2024-12-15,Electronics,2554,Yes,30,15,81,Wednesday
+26,1129,2024-01-28,Personal Care,1499,No,0,25,125,Sunday
+36,1047,2024-04-23,Grocery,2469,Yes,20,32,142,Friday
+14,1513,2024-07-06,Grocery,2404,No,0,21,418,Sunday
+27,1969,2024-04-21,Personal Care,1838,Yes,10,36,171,Saturday
+21,1285,2024-12-30,Home,2844,No,0,27,222,Monday
+3,1652,2024-06-21,Personal Care,1699,No,0,37,437,Wednesday
+48,1112,2024-07-01,Home,2058,No,0,25,197,Saturday
+7,1597,2024-10-05,Home,2896,Yes,10,24,381,Thursday
+7,1890,2024-06-13,Electronics,62,Yes,20,43,356,Friday
+21,1787,2024-06-21,Clothing,2266,No,0,36,42,Sunday
+3,1728,2024-09-20,Clothing,1172,Yes,30,28,376,Sunday
+12,1437,2024-07-24,Electronics,2957,Yes,10,14,216,Thursday
+46,1890,2024-05-28,Personal Care,2186,Yes,30,50,471,Saturday
+19,1946,2024-07-23,Clothing,2904,No,0,29,89,Thursday
+2,1217,2024-11-20,Home,2873,No,0,40,498,Saturday
+4,1142,2024-05-27,Home,1430,Yes,10,20,328,Friday
+37,1998,2024-09-28,Home,2594,No,0,29,197,Saturday
+33,1842,2024-10-23,Home,1985,No,0,13,466,Friday
+1,1472,2024-10-21,Electronics,126,Yes,5,18,278,Monday
+3,1884,2024-02-27,Personal Care,1295,No,0,40,360,Saturday
+47,1547,2024-03-27,Home,1288,Yes,10,39,463,Thursday
+33,1114,2024-10-05,Home,1912,No,0,38,307,Sunday
+38,1719,2024-10-28,Grocery,859,Yes,10,32,39,Friday
+42,1397,2024-02-01,Clothing,2845,Yes,15,24,160,Thursday
+5,1095,2024-08-07,Electronics,333,Yes,0,7,325,Friday
+11,1670,2024-09-19,Home,648,Yes,5,42,292,Sunday
+48,1644,2024-06-18,Home,1829,No,0,22,65,Saturday
+12,1810,2024-05-07,Home,2465,No,0,14,367,Wednesday
+25,1988,2024-07-23,Clothing,909,No,0,7,446,Monday
+41,1444,2024-03-13,Grocery,2706,Yes,30,14,369,Thursday
+2,1470,2024-05-07,Clothing,374,No,0,12,405,Friday
+38,1906,2024-11-04,Home,1545,Yes,20,37,78,Monday
+48,1968,2024-01-01,Clothing,1426,Yes,5,44,409,Saturday
+34,1080,2024-10-26,Grocery,1376,No,0,14,60,Friday
+40,1293,2024-08-01,Grocery,1553,Yes,30,34,403,Wednesday
+43,1205,2024-02-25,Home,1300,Yes,15,44,161,Sunday
+39,1608,2024-02-20,Home,1828,Yes,0,16,27,Thursday
+5,1095,2024-10-01,Electronics,876,No,0,35,184,Tuesday
+35,1853,2024-04-08,Grocery,2860,Yes,20,31,172,Thursday
+30,1456,2024-09-13,Personal Care,861,Yes,30,13,300,Thursday
+22,1685,2024-04-26,Grocery,2699,No,0,12,46,Wednesday
+49,1243,2024-10-12,Personal Care,863,No,0,29,457,Sunday
+14,1578,2024-08-13,Clothing,2492,No,0,17,255,Tuesday
+46,1574,2024-11-09,Home,1243,Yes,30,48,331,Saturday
+49,1284,2024-01-30,Electronics,1867,Yes,5,15,494,Tuesday
+3,1691,2024-11-19,Electronics,1058,No,0,24,131,Friday
+42,1283,2024-10-09,Grocery,648,No,0,18,228,Saturday
+27,1094,2024-04-14,Home,788,No,0,34,457,Sunday
+15,1573,2024-12-15,Personal Care,2870,No,0,30,129,Saturday
+18,1434,2024-04-09,Personal Care,1605,Yes,15,31,345,Thursday
+19,1968,2024-04-27,Personal Care,1143,No,0,20,331,Monday
+36,1048,2024-10-04,Electronics,2690,Yes,0,12,206,Monday
+29,1719,2024-11-19,Personal Care,2856,No,0,11,374,Thursday
+24,1886,2024-01-02,Personal Care,1386,Yes,5,10,429,Wednesday
+35,1142,2024-01-10,Personal Care,797,Yes,15,30,30,Saturday
+40,1310,2024-03-01,Grocery,2023,Yes,0,17,480,Sunday
+15,1292,2024-07-05,Home,495,No,0,19,135,Saturday
+17,1162,2024-02-17,Clothing,1866,Yes,0,6,450,Thursday
+42,1342,2024-11-14,Electronics,2208,Yes,20,12,183,Tuesday
+8,1055,2024-12-09,Home,2342,Yes,30,41,186,Sunday
+45,1605,2024-12-15,Personal Care,976,No,0,36,174,Tuesday
+48,1966,2024-08-08,Electronics,739,Yes,20,28,322,Wednesday
+9,1909,2024-12-15,Personal Care,1734,Yes,20,41,299,Wednesday
+38,1410,2024-04-26,Grocery,1390,Yes,5,27,130,Monday
+39,1532,2024-05-30,Clothing,1583,Yes,30,15,186,Thursday
+15,1047,2024-02-19,Grocery,693,Yes,5,33,64,Thursday
+46,1412,2024-11-05,Personal Care,2280,Yes,20,18,366,Monday
+40,1388,2024-06-02,Personal Care,1511,Yes,20,43,272,Sunday
+30,1007,2024-12-28,Clothing,420,No,0,50,128,Sunday
+9,1558,2024-02-11,Home,2465,No,0,47,83,Saturday
+46,1977,2024-01-26,Electronics,199,Yes,30,26,268,Sunday
+23,1573,2024-03-24,Clothing,2772,Yes,30,36,483,Friday
+20,1099,2024-08-18,Grocery,2362,Yes,30,44,196,Saturday
+34,1000,2024-10-03,Electronics,2300,No,0,27,199,Friday
+41,1090,2024-08-14,Electronics,2297,Yes,0,19,144,Wednesday
+4,1754,2024-06-22,Clothing,2406,Yes,10,13,157,Wednesday
+23,1328,2024-12-10,Clothing,1147,No,0,30,331,Monday
+10,1045,2024-01-19,Home,671,No,0,6,70,Friday
+19,1074,2024-10-18,Clothing,1714,No,0,34,180,Saturday
+11,1153,2024-10-27,Home,1609,No,0,14,142,Thursday
+24,1958,2024-01-06,Personal Care,1875,No,0,8,365,Wednesday
+42,1527,2024-05-22,Home,917,No,0,19,498,Friday
+35,1744,2024-05-10,Electronics,612,No,0,16,355,Tuesday
+21,1233,2024-03-16,Clothing,1050,No,0,37,118,Sunday
+23,1982,2024-06-20,Home,749,No,0,35,429,Friday
+37,1774,2024-08-21,Home,1433,Yes,5,24,58,Tuesday
+7,1670,2024-10-23,Personal Care,2717,Yes,15,27,444,Tuesday
+28,1172,2024-09-11,Grocery,1276,Yes,15,36,193,Thursday
+30,1892,2024-06-28,Grocery,893,Yes,10,21,388,Monday
+43,1691,2024-07-27,Electronics,2983,Yes,10,20,401,Friday
+42,1892,2024-01-25,Clothing,1393,No,0,27,391,Thursday
+25,1675,2024-10-29,Personal Care,712,No,0,15,499,Sunday
+17,1674,2024-09-20,Grocery,2859,No,0,30,325,Tuesday
+4,1639,2024-11-29,Home,909,No,0,8,44,Wednesday
+15,1465,2024-08-05,Home,2702,Yes,5,20,449,Friday
+31,1312,2024-01-19,Grocery,682,Yes,30,25,168,Wednesday
+45,1742,2024-11-16,Home,2865,Yes,20,22,353,Friday
+18,1367,2024-02-28,Grocery,1094,No,0,19,293,Friday
+18,1709,2024-02-24,Personal Care,1053,No,0,21,21,Saturday
+27,1173,2024-06-20,Personal Care,1105,Yes,15,26,322,Friday
+47,1319,2024-02-25,Electronics,1533,No,0,17,324,Sunday
+39,1519,2024-06-14,Home,2171,No,0,31,317,Wednesday
+48,1470,2024-09-02,Home,1834,Yes,10,14,270,Friday
+32,1787,2024-03-22,Home,1720,Yes,20,40,190,Sunday
+43,1569,2024-12-19,Personal Care,2135,Yes,0,39,158,Saturday
+39,1570,2024-11-03,Grocery,1695,Yes,30,35,445,Tuesday
+32,1385,2024-10-27,Personal Care,1572,Yes,30,37,401,Friday
+26,1651,2024-01-11,Clothing,2144,Yes,10,43,376,Sunday
+15,1689,2024-09-28,Grocery,371,Yes,10,24,482,Thursday
+25,1629,2024-03-13,Home,341,Yes,10,7,492,Thursday
+49,1021,2024-06-28,Clothing,2484,Yes,20,29,194,Tuesday
+11,1572,2024-05-01,Grocery,1644,No,0,33,83,Tuesday
+24,1901,2024-03-20,Home,2018,No,0,23,341,Wednesday
+7,1137,2024-06-27,Clothing,2109,Yes,0,22,422,Sunday
+6,1556,2024-12-25,Clothing,2704,Yes,0,19,101,Friday
+33,1751,2024-10-17,Personal Care,1074,Yes,20,24,187,Friday
+23,1472,2024-12-08,Personal Care,767,No,0,39,415,Thursday
+47,1913,2024-03-28,Personal Care,1711,No,0,36,285,Tuesday
+1,1346,2024-10-06,Electronics,1680,No,0,21,425,Tuesday
+12,1643,2024-01-25,Personal Care,139,Yes,10,50,476,Sunday
+26,1900,2024-05-25,Home,1633,Yes,15,43,109,Sunday
+47,1082,2024-11-01,Electronics,2943,No,0,9,36,Monday
+32,1480,2024-07-18,Clothing,52,Yes,20,37,344,Monday
+22,1045,2024-12-30,Electronics,2767,Yes,30,29,489,Saturday
+28,1137,2024-01-20,Clothing,2934,Yes,20,33,390,Saturday
+43,1730,2024-01-11,Personal Care,2606,Yes,5,37,69,Sunday
+8,1317,2024-12-07,Clothing,1978,No,0,18,123,Monday
+21,1883,2024-05-25,Clothing,1030,No,0,12,402,Tuesday
+46,1010,2024-09-04,Grocery,1988,Yes,30,43,378,Friday
+41,1865,2024-06-12,Grocery,2189,No,0,34,371,Wednesday
+12,1109,2024-03-12,Electronics,2549,No,0,16,336,Friday
+50,1860,2024-06-26,Clothing,2913,No,0,6,400,Friday
+13,1684,2024-07-17,Personal Care,2916,Yes,20,15,388,Wednesday
+32,1628,2024-07-19,Electronics,2482,Yes,0,25,378,Sunday
+16,1634,2024-06-13,Grocery,1760,Yes,10,29,450,Monday
+16,1357,2024-05-24,Electronics,2347,Yes,20,45,52,Saturday
+30,1986,2024-03-12,Personal Care,2489,No,0,30,169,Thursday
+43,1629,2024-06-04,Home,1921,No,0,16,235,Sunday
+41,1836,2024-12-11,Grocery,1257,No,0,14,148,Monday
+46,1451,2024-09-20,Grocery,597,Yes,20,15,144,Monday
+20,1118,2024-01-21,Electronics,1830,Yes,20,34,344,Wednesday
+41,1277,2024-06-15,Electronics,2779,Yes,5,28,205,Thursday
+20,1167,2024-03-18,Grocery,2335,No,0,15,164,Thursday
+23,1367,2024-02-13,Clothing,1121,No,0,39,313,Monday
+1,1043,2024-10-30,Electronics,1487,Yes,15,27,468,Monday
+43,1530,2024-12-27,Grocery,887,No,0,41,127,Sunday
+25,1879,2024-11-16,Clothing,2177,No,0,25,493,Tuesday
+30,1053,2024-04-08,Personal Care,1605,Yes,0,16,281,Monday
+7,1320,2024-05-28,Grocery,2666,Yes,20,37,61,Wednesday
+47,1490,2024-11-28,Electronics,378,Yes,15,10,73,Wednesday
+35,1331,2024-12-07,Home,511,No,0,14,269,Wednesday
+43,1015,2024-03-01,Clothing,262,Yes,5,29,240,Wednesday
+24,1930,2024-07-25,Home,2883,Yes,30,18,209,Tuesday
+12,1365,2024-12-17,Grocery,2875,Yes,30,26,350,Sunday
+15,1907,2024-10-16,Electronics,1060,No,0,33,368,Saturday
+4,1984,2024-08-28,Personal Care,790,No,0,28,393,Monday
+9,1989,2024-07-06,Home,398,No,0,18,328,Monday
+9,1851,2024-03-15,Grocery,599,No,0,19,366,Tuesday
+7,1696,2024-09-28,Home,668,Yes,15,53,294,Saturday
+6,1646,2024-04-10,Grocery,1957,No,0,17,203,Sunday
+33,1051,2024-09-18,Personal Care,1920,Yes,15,33,184,Wednesday
+12,1687,2024-05-25,Personal Care,1700,Yes,10,39,158,Sunday
+16,1636,2024-08-01,Home,1125,No,0,32,239,Tuesday
+17,1784,2024-06-10,Personal Care,1189,Yes,10,10,198,Friday
+15,1205,2024-09-23,Clothing,1843,Yes,20,32,183,Wednesday
+50,1801,2024-02-24,Electronics,2875,Yes,15,34,432,Wednesday
+11,1756,2024-06-15,Grocery,2535,Yes,15,25,382,Friday
+27,1323,2024-02-15,Personal Care,2159,No,0,28,78,Wednesday
+3,1422,2024-07-28,Grocery,1089,No,0,31,94,Saturday
+17,1394,2024-01-23,Personal Care,1673,No,0,27,136,Friday
+34,1326,2024-11-07,Grocery,1904,Yes,5,36,280,Thursday
+41,1733,2024-06-16,Electronics,884,Yes,10,32,377,Wednesday
+32,1958,2024-06-23,Grocery,1729,No,0,25,25,Wednesday
+39,1250,2024-04-16,Grocery,2131,No,0,30,58,Saturday
+40,1378,2024-02-26,Personal Care,299,No,0,12,166,Friday
+14,1869,2024-04-06,Electronics,2514,Yes,5,20,213,Tuesday
+30,1891,2024-08-06,Personal Care,186,Yes,30,30,64,Saturday
+22,1921,2024-05-27,Clothing,1249,Yes,5,27,163,Sunday
+21,1616,2024-07-09,Personal Care,1291,No,0,17,207,Sunday
+37,1352,2024-04-20,Grocery,356,Yes,15,21,379,Sunday
+49,1925,2024-05-30,Electronics,1871,Yes,5,14,37,Saturday
+24,1849,2024-11-16,Home,597,Yes,5,28,479,Thursday
+27,1545,2024-06-04,Grocery,483,No,0,34,89,Monday
+25,1893,2024-12-19,Home,2798,Yes,5,11,417,Tuesday
+37,1847,2024-06-28,Grocery,1571,No,0,18,94,Monday
+43,1220,2024-06-14,Clothing,1506,Yes,20,33,425,Monday
+42,1461,2024-08-23,Personal Care,2986,No,0,26,271,Saturday
+23,1469,2024-10-17,Home,2743,Yes,15,14,179,Wednesday
+11,1347,2024-11-11,Grocery,1500,Yes,20,21,470,Wednesday
+16,1244,2024-07-06,Clothing,1721,No,0,32,458,Friday
+11,1066,2024-04-12,Electronics,2472,No,0,20,172,Tuesday
+43,1224,2024-12-23,Grocery,2334,No,0,31,290,Friday
+49,1739,2024-06-25,Clothing,2822,No,0,32,338,Monday
+13,1136,2024-02-14,Personal Care,418,Yes,30,16,347,Monday
+47,1920,2024-06-12,Grocery,2915,No,0,14,69,Monday
+35,1292,2024-11-22,Personal Care,1367,Yes,5,38,333,Thursday
+29,1895,2024-07-19,Grocery,1586,No,0,27,311,Tuesday
+17,1115,2024-08-28,Personal Care,742,No,0,38,123,Monday
+1,1195,2024-09-23,Personal Care,1763,No,0,9,424,Monday
+25,1524,2024-03-07,Electronics,1318,Yes,10,29,205,Wednesday
+41,1366,2024-03-12,Grocery,1921,No,0,14,134,Monday
+44,1383,2024-03-22,Electronics,1827,No,0,15,366,Tuesday
+13,1608,2024-04-09,Electronics,2419,Yes,10,17,180,Tuesday
+34,1378,2024-05-03,Electronics,698,Yes,30,23,224,Tuesday
+36,1492,2024-08-14,Personal Care,1313,No,0,23,483,Thursday
+18,1098,2024-02-15,Electronics,1558,No,0,25,333,Wednesday
+38,1021,2024-12-14,Electronics,2985,Yes,30,45,115,Friday
+36,1404,2024-12-19,Clothing,2451,No,0,30,449,Thursday
+24,1799,2024-05-01,Personal Care,1062,Yes,5,38,379,Monday
+7,1917,2024-01-09,Clothing,1219,No,0,12,181,Thursday
+3,1119,2024-11-22,Home,2823,Yes,15,11,90,Monday
+17,1130,2024-02-14,Personal Care,2075,Yes,30,24,331,Tuesday
+41,1385,2024-10-28,Personal Care,925,No,0,29,259,Thursday
+37,1150,2024-11-22,Personal Care,595,Yes,10,8,460,Friday
+47,1425,2024-12-23,Grocery,1567,No,0,39,245,Tuesday
+27,1052,2024-09-23,Home,2984,No,0,26,184,Friday
+26,1845,2024-09-23,Personal Care,297,Yes,15,13,24,Wednesday
+29,1237,2024-10-23,Electronics,762,No,0,48,126,Saturday
+18,1740,2024-01-07,Grocery,1466,Yes,5,33,463,Friday
+16,1636,2024-08-24,Grocery,118,Yes,30,48,329,Saturday
+7,1143,2024-07-15,Grocery,2593,No,0,41,275,Sunday
+1,1350,2024-11-17,Clothing,2022,No,0,50,462,Sunday
+26,1101,2024-10-03,Personal Care,1543,No,0,14,241,Thursday
+27,1558,2024-07-02,Grocery,915,Yes,20,22,101,Wednesday
+40,1625,2024-01-23,Home,1535,Yes,20,13,26,Wednesday
+24,1474,2024-10-19,Grocery,386,Yes,10,19,310,Thursday
+22,1317,2024-06-23,Clothing,1778,No,0,28,448,Friday
+32,1737,2024-12-28,Electronics,855,No,0,25,451,Monday
+14,1591,2024-08-22,Electronics,2357,Yes,5,10,243,Tuesday
+35,1061,2024-02-29,Personal Care,1843,Yes,30,39,459,Monday
+4,1150,2024-10-19,Clothing,1438,No,0,38,465,Tuesday
+13,1291,2024-03-11,Home,1830,Yes,0,7,165,Thursday
+46,1762,2024-12-04,Clothing,178,No,0,23,276,Wednesday
+31,1880,2024-05-03,Electronics,1389,No,0,47,153,Sunday
+2,1171,2024-04-29,Clothing,2962,No,0,1,33,Monday
+24,1998,2024-01-12,Electronics,1270,No,0,19,378,Friday
+13,1563,2024-01-14,Electronics,2209,Yes,10,24,346,Tuesday
+9,1925,2024-07-13,Personal Care,2043,No,0,2,21,Tuesday
+30,1244,2024-06-07,Personal Care,1605,Yes,10,41,396,Tuesday
+36,1414,2024-08-26,Clothing,1623,Yes,10,7,94,Friday
+46,1003,2024-02-25,Clothing,2226,No,0,6,256,Tuesday
+50,1093,2024-07-24,Home,1417,Yes,15,16,303,Monday
+14,1722,2024-02-24,Electronics,2860,No,0,14,453,Monday
+26,1536,2024-03-02,Clothing,2987,No,0,35,301,Tuesday
+13,1330,2024-05-27,Electronics,994,Yes,15,15,71,Wednesday
+30,1662,2024-11-26,Home,1749,No,0,13,83,Tuesday
+6,1285,2024-02-05,Home,1588,No,0,40,85,Saturday
+15,1566,2024-11-10,Electronics,2129,Yes,30,34,92,Tuesday
+45,1129,2024-05-18,Home,2627,No,0,20,417,Thursday
+19,1550,2024-06-10,Grocery,1711,Yes,10,22,460,Thursday
+29,1736,2024-02-03,Grocery,302,No,0,16,332,Sunday
+29,1332,2024-12-17,Home,1800,Yes,10,13,20,Tuesday
+24,1206,2024-02-13,Grocery,2633,Yes,15,27,385,Wednesday
+10,1571,2024-04-21,Personal Care,442,Yes,10,36,234,Wednesday
+18,1606,2024-04-02,Electronics,112,Yes,20,23,374,Wednesday
+17,1559,2024-07-18,Home,1935,Yes,5,37,417,Sunday
+32,1961,2024-03-01,Personal Care,1398,No,0,5,460,Wednesday
+2,1952,2024-10-22,Personal Care,2702,No,0,28,423,Thursday
+50,1284,2024-03-25,Personal Care,581,No,0,25,129,Monday
+49,1554,2024-07-25,Grocery,93,No,0,45,386,Sunday
+22,1945,2024-04-19,Grocery,726,Yes,5,24,24,Wednesday
+36,1964,2024-07-12,Home,210,No,0,25,81,Friday
+20,1998,2024-04-26,Home,2021,No,0,25,188,Saturday
+18,1598,2024-01-02,Home,2516,No,0,31,128,Friday
+22,1094,2024-09-27,Home,429,Yes,20,23,367,Saturday
+20,1816,2024-12-18,Clothing,2718,Yes,0,11,307,Wednesday
+20,1810,2024-02-02,Clothing,1585,Yes,0,15,446,Wednesday
+4,1256,2024-12-07,Electronics,2900,No,0,8,398,Tuesday
+43,1844,2024-01-11,Personal Care,699,Yes,10,30,441,Thursday
+24,1861,2024-10-06,Home,1595,Yes,0,26,472,Thursday
+42,1616,2024-03-05,Grocery,1537,Yes,20,15,322,Thursday
+8,1900,2024-11-03,Grocery,71,No,0,30,412,Saturday
+18,1438,2024-03-26,Personal Care,787,Yes,30,37,485,Monday
+7,1685,2024-08-08,Grocery,2989,Yes,15,31,225,Monday
+46,1791,2024-12-12,Clothing,2557,Yes,30,32,68,Saturday
+34,1683,2024-01-24,Electronics,75,Yes,20,26,368,Friday
+8,1512,2024-07-24,Clothing,764,No,0,19,142,Thursday
+46,1477,2024-05-26,Personal Care,171,Yes,10,15,49,Saturday
+26,1839,2024-05-02,Clothing,601,No,0,24,24,Wednesday
+47,1954,2024-05-23,Clothing,2721,Yes,5,46,225,Saturday
+2,1590,2024-09-17,Home,2599,No,0,15,457,Tuesday
+30,1876,2024-07-03,Grocery,1101,Yes,20,26,32,Sunday
+7,1289,2024-12-11,Grocery,2663,Yes,30,26,244,Saturday
+45,1224,2024-11-14,Grocery,705,No,0,38,218,Thursday
+5,1095,2024-01-21,Grocery,1857,No,0,31,440,Tuesday
+46,1114,2024-10-31,Clothing,1812,No,0,16,373,Wednesday
+7,1256,2024-07-30,Grocery,1708,No,0,32,281,Friday
+9,1174,2024-10-15,Home,226,Yes,10,22,144,Saturday
+38,1829,2024-11-07,Personal Care,1521,Yes,5,21,192,Friday
+8,1044,2024-04-29,Grocery,523,No,0,29,210,Tuesday
+15,1213,2024-02-23,Grocery,379,Yes,20,34,332,Saturday
+36,1085,2024-03-17,Electronics,2308,Yes,5,34,52,Sunday
+14,1488,2024-02-22,Clothing,1034,Yes,20,42,95,Monday
+39,1178,2024-02-26,Home,986,Yes,15,28,308,Friday
+42,1289,2024-09-23,Grocery,2964,No,0,10,321,Monday
+48,1330,2024-02-22,Home,1757,Yes,30,44,135,Monday
+8,1907,2024-11-07,Grocery,915,No,0,20,91,Friday
+15,1857,2024-04-14,Home,794,Yes,10,9,364,Friday
+49,1400,2024-01-23,Home,1860,Yes,5,13,426,Monday
+4,1064,2024-11-26,Home,2060,Yes,0,10,425,Wednesday
+22,1026,2024-02-05,Grocery,2650,No,0,14,271,Friday
+13,1882,2024-09-05,Home,1869,No,0,31,269,Saturday
+8,1973,2024-11-04,Personal Care,227,No,0,24,62,Friday
+16,1565,2024-07-28,Clothing,1486,No,0,21,473,Monday
+32,1202,2024-10-22,Grocery,2243,No,0,26,436,Tuesday
+1,1759,2024-03-06,Grocery,2591,Yes,30,32,142,Friday
+37,1172,2024-09-07,Electronics,1707,No,0,47,476,Sunday
+13,1532,2024-12-14,Electronics,1290,No,0,19,177,Thursday
+1,1202,2024-01-24,Clothing,73,Yes,30,51,427,Sunday
+17,1017,2024-09-13,Clothing,113,Yes,20,29,118,Monday
+27,1787,2024-06-12,Grocery,991,No,0,30,115,Monday
+48,1124,2024-03-30,Grocery,64,No,0,7,359,Tuesday
+27,1236,2024-08-23,Grocery,202,No,0,26,136,Tuesday
+5,1338,2024-10-29,Home,2220,No,0,42,241,Sunday
+30,1184,2024-08-20,Electronics,2562,Yes,15,20,352,Thursday
+11,1162,2024-11-15,Electronics,1086,No,0,25,164,Monday
+1,1267,2024-06-21,Home,1703,Yes,20,22,140,Thursday
+2,1140,2024-01-11,Clothing,1515,No,0,22,443,Thursday
+3,1518,2024-11-24,Grocery,391,Yes,30,37,105,Sunday
+42,1878,2024-04-06,Grocery,1102,Yes,20,31,171,Sunday
+22,1326,2024-11-16,Personal Care,2206,No,0,32,289,Saturday
+10,1823,2024-09-04,Home,572,Yes,0,20,220,Thursday
+49,1042,2024-04-01,Personal Care,2144,No,0,8,222,Tuesday
+50,1302,2024-11-07,Clothing,238,No,0,39,437,Friday
+6,1093,2024-12-29,Personal Care,1875,No,0,33,135,Saturday
+26,1994,2024-07-23,Home,1298,No,0,26,61,Monday
+13,1191,2024-01-21,Electronics,1514,Yes,10,34,221,Monday
+28,1862,2024-06-26,Clothing,1259,No,0,39,358,Wednesday
+26,1210,2024-04-27,Grocery,945,Yes,20,20,402,Saturday
+37,1025,2024-12-31,Grocery,2911,No,0,40,311,Friday
+11,1469,2024-07-28,Electronics,1443,Yes,30,37,275,Saturday
+5,1207,2024-05-12,Electronics,2503,Yes,0,37,241,Tuesday
+38,1477,2024-05-13,Clothing,2249,Yes,5,23,355,Friday
+48,1172,2024-07-28,Personal Care,605,No,0,26,492,Thursday
+20,1116,2024-06-18,Personal Care,1484,No,0,32,212,Saturday
+20,1974,2024-12-10,Grocery,431,No,0,19,56,Tuesday
+12,1226,2024-08-13,Grocery,1714,Yes,30,14,281,Tuesday
+27,1418,2024-09-30,Home,752,No,0,5,156,Wednesday
+33,1834,2024-01-24,Electronics,1082,Yes,15,42,245,Sunday
+34,1192,2024-06-22,Clothing,157,No,0,28,169,Thursday
+26,1248,2024-06-21,Home,1609,Yes,10,23,65,Saturday
+20,1395,2024-06-23,Grocery,1875,No,0,15,394,Monday
+45,1410,2024-09-27,Electronics,1079,No,0,47,349,Saturday
+22,1053,2024-11-14,Personal Care,1160,Yes,10,25,127,Monday
+12,1507,2024-12-12,Electronics,234,Yes,5,14,61,Friday
+3,1949,2024-05-26,Electronics,2131,Yes,10,44,247,Sunday
+44,1157,2024-01-29,Grocery,720,Yes,10,8,455,Monday
+31,1049,2024-09-15,Personal Care,465,Yes,5,27,476,Monday
+7,1368,2024-05-05,Clothing,961,Yes,10,39,357,Wednesday
+10,1030,2024-07-21,Electronics,2140,Yes,5,17,396,Wednesday
+46,1036,2024-11-01,Home,547,No,0,38,151,Tuesday
+40,1943,2024-03-27,Clothing,266,No,0,35,35,Sunday
+12,1433,2024-02-03,Clothing,659,Yes,20,13,292,Monday
+5,1369,2024-04-12,Electronics,2835,Yes,30,21,316,Tuesday
+39,1232,2024-04-02,Electronics,1086,No,0,40,234,Tuesday
+3,1940,2024-08-30,Clothing,2119,Yes,0,17,68,Saturday
+34,1441,2024-12-26,Electronics,2607,Yes,5,26,144,Thursday
+49,1154,2024-05-31,Personal Care,1927,Yes,30,23,23,Monday
+50,1837,2024-03-06,Electronics,2618,No,0,7,433,Tuesday
+44,1592,2024-09-10,Grocery,1106,Yes,5,27,53,Saturday
+48,1911,2024-10-29,Clothing,1547,Yes,20,35,366,Sunday
+21,1041,2024-03-23,Personal Care,344,Yes,20,21,476,Saturday
+22,1546,2024-04-26,Personal Care,2050,No,0,38,299,Tuesday
+8,1393,2024-09-26,Electronics,1440,Yes,5,16,191,Tuesday
+31,1458,2024-09-30,Clothing,117,Yes,30,40,454,Saturday
+42,1067,2024-05-03,Personal Care,960,Yes,10,8,143,Monday
+6,1436,2024-03-05,Clothing,2360,No,0,20,192,Wednesday
+17,1559,2024-05-07,Grocery,1813,No,0,6,490,Friday
+12,1309,2024-11-02,Electronics,2378,No,0,41,450,Saturday
+6,1150,2024-06-07,Grocery,1971,No,0,30,296,Thursday
+30,1840,2024-03-14,Personal Care,1949,No,0,18,52,Saturday
+13,1759,2024-02-22,Grocery,2921,No,0,22,137,Friday
+2,1487,2024-05-15,Personal Care,2847,Yes,10,23,250,Sunday
+32,1486,2024-09-25,Electronics,817,Yes,10,8,466,Wednesday
+18,1000,2024-03-02,Home,2649,No,0,22,110,Thursday
+36,1059,2024-04-14,Electronics,1158,Yes,20,22,332,Thursday
+37,1578,2024-12-13,Grocery,2990,Yes,15,43,126,Sunday
+3,1244,2024-10-18,Grocery,1445,No,0,29,420,Friday
+47,1762,2024-06-16,Home,2536,Yes,0,24,292,Friday
+17,1965,2024-01-24,Electronics,56,No,0,12,206,Monday
+14,1230,2024-01-25,Clothing,848,No,0,19,241,Tuesday
+28,1035,2024-05-24,Clothing,1309,Yes,0,19,285,Saturday
+37,1210,2024-03-06,Personal Care,2353,No,0,20,248,Thursday
+20,1688,2024-11-01,Personal Care,2836,No,0,30,84,Tuesday
+45,1095,2024-03-01,Electronics,1734,No,0,24,91,Wednesday
+46,1135,2024-12-22,Home,2914,No,0,24,269,Saturday
+42,1553,2024-09-26,Grocery,69,No,0,13,493,Wednesday
+14,1864,2024-11-22,Personal Care,2523,Yes,5,44,338,Saturday
+20,1083,2024-12-15,Electronics,279,Yes,20,35,344,Sunday
+11,1107,2024-02-26,Personal Care,53,Yes,10,32,369,Tuesday
+15,1974,2024-10-12,Clothing,71,No,0,17,139,Monday
+1,1013,2024-09-12,Personal Care,128,No,0,6,397,Monday
+45,1834,2024-11-26,Home,383,No,0,22,325,Friday
+48,1689,2024-01-09,Personal Care,2683,No,0,47,80,Sunday
+17,1995,2024-04-18,Home,403,Yes,0,41,470,Saturday
+3,1507,2024-11-26,Clothing,2607,Yes,5,26,100,Sunday
+48,1430,2024-05-11,Clothing,1407,Yes,10,34,34,Wednesday
+23,1296,2024-10-09,Personal Care,2646,No,0,38,347,Thursday
+23,1719,2024-08-31,Grocery,1732,Yes,20,21,216,Wednesday
+1,1578,2024-07-04,Grocery,63,No,0,21,347,Saturday
+2,1153,2024-07-14,Clothing,1205,Yes,30,16,289,Monday
+4,1961,2024-04-08,Home,2176,Yes,20,33,498,Thursday
+24,1723,2024-01-28,Home,2602,Yes,20,36,240,Thursday
+10,1734,2024-09-03,Grocery,2612,Yes,10,18,446,Tuesday
+27,1229,2024-03-15,Grocery,2696,No,0,31,202,Friday
+11,1337,2024-10-07,Home,816,Yes,10,43,146,Sunday
+6,1027,2024-12-18,Home,2850,No,0,34,472,Thursday
+10,1625,2024-12-28,Grocery,175,No,0,45,224,Sunday
+50,1316,2024-05-19,Clothing,2203,Yes,5,40,245,Sunday
+42,1629,2024-12-11,Clothing,2616,No,0,12,104,Thursday
+21,1761,2024-06-11,Home,773,No,0,11,226,Monday
+41,1629,2024-04-11,Clothing,1443,Yes,5,18,158,Friday
+48,1904,2024-05-03,Grocery,1406,Yes,5,13,387,Monday
+22,1364,2024-04-30,Personal Care,1559,No,0,34,256,Friday
+35,1090,2024-06-11,Grocery,1729,No,0,18,240,Saturday
+33,1023,2024-12-06,Grocery,1579,No,0,32,51,Friday
+6,1500,2024-11-14,Home,2840,No,0,18,419,Saturday
+18,1512,2024-09-06,Personal Care,1911,Yes,20,36,237,Friday
+43,1917,2024-01-20,Electronics,1961,No,0,27,173,Tuesday
+36,1102,2024-05-07,Electronics,2474,Yes,15,28,192,Thursday
+12,1050,2024-04-30,Electronics,1405,Yes,5,40,79,Sunday
+33,1915,2024-06-05,Clothing,1588,Yes,20,38,252,Saturday
+28,1915,2024-05-22,Personal Care,881,Yes,10,10,88,Friday
+37,1520,2024-06-02,Electronics,973,No,0,18,473,Friday
+18,1780,2024-05-20,Clothing,1964,No,0,30,490,Wednesday
+41,1053,2024-04-12,Personal Care,278,Yes,30,33,436,Wednesday
+8,1173,2024-12-04,Home,723,No,0,17,132,Wednesday
+38,1375,2024-07-19,Electronics,901,No,0,37,177,Monday
+45,1524,2024-12-09,Grocery,2379,Yes,0,15,180,Tuesday
+35,1317,2024-02-02,Home,1379,Yes,20,19,289,Tuesday
+23,1493,2024-12-18,Electronics,2923,Yes,0,26,30,Sunday
+4,1948,2024-01-15,Electronics,2510,No,0,18,109,Friday
+21,1126,2024-11-08,Personal Care,1980,Yes,5,37,283,Sunday
+28,1434,2024-11-18,Grocery,2849,Yes,0,23,491,Friday
+18,1334,2024-03-16,Electronics,348,Yes,0,50,478,Saturday
+42,1555,2024-12-28,Electronics,2489,No,0,7,433,Tuesday
+18,1427,2024-12-21,Clothing,2377,Yes,15,45,463,Saturday
+23,1837,2024-09-25,Grocery,2003,Yes,15,10,389,Friday
+5,1043,2024-10-23,Home,359,Yes,20,19,226,Monday
+20,1601,2024-06-06,Electronics,2614,No,0,28,85,Thursday
+23,1361,2024-05-14,Home,1578,No,0,22,332,Friday
+20,1824,2024-02-02,Home,2275,Yes,15,41,468,Thursday
+50,1802,2024-05-21,Home,2421,Yes,5,8,125,Wednesday
+13,1840,2024-08-10,Electronics,867,No,0,30,53,Tuesday
+23,1358,2024-08-20,Home,1694,No,0,26,306,Tuesday
+40,1651,2024-05-02,Electronics,1284,No,0,21,42,Monday
+21,1776,2024-09-28,Clothing,527,No,0,28,235,Wednesday
+37,1994,2024-08-28,Grocery,1638,No,0,40,83,Thursday
+6,1210,2024-08-13,Home,2682,Yes,0,6,260,Wednesday
+24,1404,2024-07-19,Home,374,No,0,40,98,Saturday
+15,1119,2024-08-01,Grocery,2866,No,0,29,316,Friday
+31,1101,2024-09-11,Home,287,No,0,10,332,Tuesday
+44,1844,2024-09-13,Grocery,403,No,0,18,135,Thursday
+36,1057,2024-02-08,Grocery,2951,No,0,27,73,Friday
+18,1312,2024-05-09,Electronics,1903,Yes,15,42,113,Monday
+20,1196,2024-03-21,Grocery,1824,No,0,31,262,Saturday
+43,1628,2024-02-24,Personal Care,1490,No,0,10,40,Sunday
+5,1160,2024-09-07,Electronics,2549,No,0,14,121,Monday
+30,1611,2024-09-12,Personal Care,2327,Yes,10,32,53,Thursday
+31,1584,2024-07-01,Grocery,2209,Yes,0,32,246,Monday
+31,1889,2024-02-11,Personal Care,1724,Yes,10,41,148,Saturday
+21,1792,2024-11-19,Electronics,1269,Yes,15,43,355,Saturday
+20,1692,2024-12-12,Electronics,1006,Yes,30,14,258,Thursday
+2,1701,2024-01-13,Clothing,2733,No,0,37,268,Friday
+50,1534,2024-05-21,Grocery,1930,No,0,41,114,Sunday
+12,1344,2024-07-15,Home,1479,Yes,0,30,327,Wednesday
+26,1639,2024-09-26,Electronics,2533,Yes,15,19,81,Saturday
+25,1453,2024-02-13,Personal Care,2094,Yes,30,24,24,Saturday
+14,1480,2024-11-28,Personal Care,2068,No,0,27,66,Sunday
+15,1064,2024-05-22,Clothing,1550,Yes,20,11,181,Friday
+5,1049,2024-08-23,Home,1256,No,0,40,349,Saturday
+16,1304,2024-03-18,Electronics,565,No,0,5,383,Tuesday
+41,1644,2024-11-11,Grocery,1076,No,0,43,395,Sunday
+15,1475,2024-09-15,Personal Care,2408,Yes,15,42,135,Saturday
+40,1457,2024-07-31,Clothing,1221,Yes,10,21,411,Saturday
+25,1297,2024-11-11,Electronics,2942,Yes,10,18,339,Saturday
+45,1102,2024-09-10,Clothing,1558,Yes,10,34,127,Sunday
+36,1345,2024-12-10,Electronics,2555,No,0,14,393,Tuesday
+23,1257,2024-11-13,Grocery,1351,Yes,30,42,343,Monday
+11,1659,2024-12-07,Clothing,1848,No,0,31,448,Monday
+11,1974,2024-05-13,Personal Care,265,Yes,30,26,404,Saturday
+18,1377,2024-02-04,Electronics,2030,No,0,15,316,Sunday
+9,1446,2024-01-18,Grocery,807,Yes,20,41,209,Tuesday
+30,1625,2024-03-11,Clothing,1596,Yes,10,28,292,Friday
+41,1373,2024-03-02,Personal Care,281,No,0,48,106,Saturday
+42,1155,2024-03-31,Electronics,1019,Yes,15,36,411,Tuesday
+45,1197,2024-02-26,Grocery,2891,Yes,0,11,267,Thursday
+38,1146,2024-10-01,Home,2590,Yes,30,33,424,Wednesday
+47,1940,2024-12-03,Clothing,308,No,0,32,40,Saturday
+30,1118,2024-06-16,Personal Care,2752,No,0,27,159,Wednesday
+36,1680,2024-09-26,Home,2076,No,0,29,428,Tuesday
+43,1103,2024-05-25,Electronics,950,No,0,14,478,Tuesday
+47,1416,2024-08-15,Clothing,1589,Yes,10,21,21,Wednesday
+37,1001,2024-09-17,Clothing,2335,Yes,20,17,213,Tuesday
+15,1205,2024-01-28,Clothing,868,No,0,47,101,Saturday
+50,1718,2024-02-24,Home,960,Yes,10,12,306,Friday
+14,1188,2024-08-16,Personal Care,2237,Yes,5,16,308,Monday
+16,1101,2024-10-24,Home,2854,Yes,15,14,269,Friday
+44,1156,2024-07-24,Clothing,1585,Yes,20,23,81,Tuesday
+13,1850,2024-09-06,Home,2619,No,0,30,392,Thursday
+8,1831,2024-01-02,Grocery,729,Yes,30,13,456,Monday
+14,1875,2024-11-21,Clothing,2155,Yes,30,37,479,Sunday
+24,1376,2024-12-07,Home,2845,Yes,15,36,444,Wednesday
+23,1310,2024-10-08,Personal Care,2619,Yes,10,3,29,Tuesday
+27,1090,2024-10-01,Personal Care,493,Yes,10,43,195,Sunday
+5,1491,2024-05-23,Personal Care,548,Yes,15,36,43,Wednesday
+30,1122,2024-04-25,Electronics,2800,No,0,14,319,Tuesday
+12,1740,2024-03-22,Electronics,2969,Yes,20,26,365,Tuesday
+29,1733,2024-09-17,Home,1260,Yes,30,17,215,Monday
+19,1283,2024-11-12,Grocery,1760,No,0,26,448,Thursday
+31,1126,2024-04-08,Grocery,801,Yes,0,22,47,Wednesday
+22,1560,2024-11-14,Personal Care,2452,Yes,0,18,235,Thursday
+38,1554,2024-05-15,Grocery,2201,Yes,30,24,252,Monday
+22,1804,2024-08-04,Personal Care,2653,No,0,32,316,Saturday
+25,1776,2024-09-14,Personal Care,1089,No,0,47,219,Sunday
+28,1792,2024-08-19,Home,1126,Yes,30,54,466,Sunday
+27,1663,2024-07-16,Electronics,637,No,0,21,141,Sunday
+43,1940,2024-11-30,Grocery,805,Yes,0,18,268,Monday
+23,1400,2024-02-12,Grocery,2936,Yes,10,35,105,Saturday
+16,1236,2024-04-04,Clothing,128,No,0,13,31,Tuesday
+18,1317,2024-10-01,Grocery,1403,Yes,5,17,435,Saturday
+15,1084,2024-01-29,Clothing,379,No,0,40,70,Saturday
+24,1939,2024-04-22,Clothing,783,Yes,15,31,266,Tuesday
+9,1918,2024-12-25,Electronics,545,No,0,25,305,Sunday
+11,1923,2024-04-18,Electronics,1173,Yes,5,35,140,Friday
+41,1458,2024-07-27,Home,470,No,0,10,152,Tuesday
+10,1921,2024-02-07,Grocery,695,No,0,39,45,Saturday
+32,1766,2024-05-03,Home,2908,No,0,17,44,Wednesday
+23,1966,2024-01-10,Home,1191,Yes,0,38,170,Tuesday
+6,1053,2024-12-22,Personal Care,2369,No,0,6,235,Thursday
+42,1285,2024-04-28,Personal Care,2193,No,0,25,243,Friday
+32,1842,2024-03-23,Home,99,Yes,30,29,152,Sunday
+30,1105,2024-06-20,Clothing,1370,No,0,24,213,Tuesday
+13,1293,2024-04-06,Clothing,2017,No,0,32,420,Wednesday
+26,1377,2024-02-21,Electronics,2343,No,0,43,367,Sunday
+38,1183,2024-06-12,Electronics,2578,No,0,29,311,Tuesday
+21,1606,2024-12-15,Home,1981,No,0,24,393,Tuesday
+50,1565,2024-02-03,Electronics,268,Yes,30,40,101,Saturday
+14,1408,2024-02-11,Electronics,2263,No,0,21,474,Wednesday
+23,1257,2024-03-06,Electronics,366,No,0,26,456,Monday
+34,1640,2024-11-19,Electronics,880,No,0,19,342,Friday
+29,1590,2024-10-16,Grocery,735,No,0,10,102,Wednesday
+30,1874,2024-09-02,Clothing,2331,Yes,30,33,52,Thursday
+38,1992,2024-10-21,Electronics,2063,Yes,20,39,398,Sunday
+37,1984,2024-08-28,Home,676,Yes,10,7,320,Friday
+33,1769,2024-04-05,Electronics,2981,Yes,10,12,86,Tuesday
+13,1199,2024-01-19,Personal Care,1754,No,0,33,338,Wednesday
+35,1191,2024-07-30,Electronics,1941,Yes,15,19,179,Tuesday
+26,1878,2024-12-21,Electronics,1089,No,0,24,64,Monday
+46,1212,2024-05-10,Grocery,2338,No,0,43,303,Saturday
+3,1415,2024-06-23,Grocery,2306,No,0,23,69,Saturday
+16,1040,2024-03-23,Grocery,576,No,0,40,131,Monday
+11,1340,2024-02-10,Home,2231,No,0,15,415,Thursday
+9,1807,2024-01-27,Home,842,No,0,50,393,Sunday
+13,1261,2024-07-07,Personal Care,2243,No,0,33,381,Friday
+23,1818,2024-08-24,Personal Care,323,No,0,24,116,Tuesday
+8,1492,2024-04-25,Home,2065,No,0,49,265,Saturday
+44,1218,2024-12-27,Home,2277,Yes,15,19,474,Monday
+20,1452,2024-06-02,Home,1539,No,0,23,75,Monday
+13,1339,2024-02-05,Grocery,237,No,0,26,435,Friday
+9,1523,2024-01-23,Personal Care,1573,Yes,20,12,394,Wednesday
+6,1426,2024-03-02,Grocery,2472,Yes,30,23,46,Saturday
+44,1361,2024-04-16,Home,1845,No,0,39,62,Tuesday
+26,1274,2024-07-21,Clothing,2407,No,0,4,35,Friday
+8,1409,2024-10-11,Personal Care,1343,Yes,30,38,293,Tuesday
+25,1273,2024-07-05,Personal Care,1137,No,0,9,182,Wednesday
+8,1330,2024-07-23,Clothing,2691,No,0,6,231,Thursday
+46,1579,2024-02-17,Personal Care,283,No,0,14,413,Thursday
+50,1096,2024-09-10,Personal Care,1129,No,0,24,411,Monday
+24,1721,2024-03-25,Clothing,1384,No,0,30,34,Friday
+41,1957,2024-10-05,Grocery,2477,No,0,20,331,Sunday
+10,1008,2024-08-15,Home,2633,No,0,15,345,Tuesday
+24,1992,2024-06-17,Clothing,2478,No,0,32,218,Monday
+28,1987,2024-03-27,Grocery,58,Yes,20,41,91,Sunday
+12,1047,2024-07-04,Grocery,2089,Yes,15,48,450,Sunday
+18,1592,2024-10-28,Clothing,2151,Yes,30,38,64,Saturday
+26,1905,2024-03-27,Home,172,No,0,28,333,Sunday
+30,1103,2024-04-10,Personal Care,754,Yes,20,18,401,Wednesday
+9,1298,2024-07-19,Clothing,2660,No,0,20,450,Monday
+40,1526,2024-01-07,Electronics,863,No,0,28,179,Wednesday
+16,1714,2024-04-11,Home,2190,Yes,0,11,84,Tuesday
+29,1954,2024-12-16,Clothing,1629,Yes,5,22,130,Saturday
+46,1148,2024-05-09,Personal Care,702,Yes,10,29,318,Monday
+37,1994,2024-08-09,Grocery,940,Yes,5,30,94,Saturday
+24,1949,2024-01-29,Clothing,808,Yes,10,38,326,Friday
+50,1649,2024-01-19,Clothing,2453,Yes,20,14,169,Thursday
+11,1159,2024-06-19,Personal Care,1760,No,0,25,400,Saturday
+18,1021,2024-07-29,Home,280,No,0,9,170,Monday
+15,1076,2024-10-08,Home,1693,No,0,42,315,Sunday
+35,1099,2024-05-28,Home,2011,No,0,33,157,Saturday
+8,1096,2024-06-18,Personal Care,2748,Yes,10,8,167,Wednesday
+26,1947,2024-07-28,Clothing,1211,Yes,30,27,384,Wednesday
+2,1038,2024-03-11,Electronics,613,No,0,12,463,Monday
+7,1988,2024-03-18,Electronics,657,Yes,20,18,170,Thursday
+40,1914,2024-04-02,Personal Care,1104,Yes,10,39,135,Sunday
+12,1316,2024-04-26,Electronics,337,Yes,20,17,63,Thursday
+16,1519,2024-06-21,Grocery,2474,No,0,21,373,Tuesday
+7,1229,2024-10-24,Home,1046,No,0,19,117,Tuesday
+32,1777,2024-09-26,Clothing,444,No,0,27,125,Saturday
+39,1306,2024-10-15,Grocery,1552,No,0,26,272,Sunday
+29,1805,2024-01-15,Grocery,928,No,0,31,123,Sunday
+31,1695,2024-04-10,Clothing,130,No,0,38,415,Thursday
+9,1217,2024-04-13,Grocery,2280,No,0,23,475,Tuesday
+17,1991,2024-09-29,Electronics,2312,No,0,21,68,Friday
+9,1828,2024-11-05,Home,932,Yes,5,10,187,Tuesday
+32,1618,2024-08-12,Grocery,2810,No,0,39,299,Sunday
+17,1094,2024-06-26,Grocery,58,Yes,5,37,65,Saturday
+2,1164,2024-11-02,Clothing,2671,Yes,20,16,457,Tuesday
+36,1560,2024-08-23,Grocery,330,Yes,5,32,177,Tuesday
+1,1458,2024-07-24,Home,1544,No,0,20,361,Sunday
+39,1703,2024-01-12,Home,1623,No,0,37,370,Thursday
+29,1145,2024-09-25,Clothing,1343,Yes,10,29,301,Friday
+45,1903,2024-03-15,Electronics,384,No,0,46,273,Saturday
+18,1856,2024-06-06,Home,339,No,0,34,454,Thursday
+23,1716,2024-10-20,Grocery,2875,Yes,15,23,432,Saturday
+47,1187,2024-08-23,Grocery,1064,Yes,10,8,119,Friday
+27,1322,2024-02-10,Clothing,389,Yes,5,41,452,Sunday
+46,1901,2024-09-26,Home,211,Yes,10,37,78,Tuesday
+9,1187,2024-10-04,Personal Care,1224,No,0,27,190,Saturday
+39,1369,2024-10-09,Personal Care,980,No,0,25,410,Sunday
+44,1926,2024-05-28,Home,496,No,0,34,53,Monday
+39,1468,2024-11-01,Personal Care,2776,Yes,0,25,367,Tuesday
+50,1458,2024-07-05,Grocery,1930,Yes,30,18,486,Thursday
+45,1757,2024-05-30,Home,1027,No,0,27,223,Monday
+36,1725,2024-01-05,Clothing,758,Yes,10,28,494,Thursday
+27,1487,2024-03-07,Grocery,2711,Yes,0,22,447,Monday
+12,1152,2024-10-09,Home,341,No,0,28,249,Wednesday
+50,1203,2024-08-04,Home,1763,No,0,44,187,Sunday
+15,1405,2024-12-05,Personal Care,2285,Yes,0,21,187,Sunday
+16,1560,2024-03-04,Home,761,Yes,0,16,321,Wednesday
+8,1650,2024-05-30,Clothing,970,Yes,30,27,235,Thursday
+1,1158,2024-08-27,Grocery,2252,No,0,28,256,Wednesday
+20,1661,2024-04-21,Clothing,1962,No,0,23,494,Saturday
+42,1667,2024-03-07,Personal Care,2653,No,0,16,204,Saturday
+16,1810,2024-11-01,Electronics,1422,Yes,0,15,282,Thursday
+41,1015,2024-01-14,Clothing,740,Yes,0,37,37,Sunday
+46,1803,2024-01-12,Personal Care,1777,Yes,0,27,429,Friday
+42,1032,2024-08-10,Clothing,2333,No,0,33,405,Monday
+43,1283,2024-09-02,Electronics,1691,No,0,5,434,Tuesday
+50,1198,2024-09-27,Clothing,1874,No,0,36,375,Wednesday
+19,1528,2024-12-14,Grocery,2078,No,0,19,382,Friday
+21,1314,2024-05-29,Grocery,1967,No,0,43,197,Saturday
+49,1607,2024-03-07,Personal Care,248,Yes,15,19,465,Tuesday
+42,1556,2024-01-30,Electronics,1874,No,0,20,161,Wednesday
+34,1837,2024-08-11,Grocery,2771,No,0,29,379,Wednesday
+9,1013,2024-09-02,Electronics,1000,No,0,35,168,Sunday
+6,1933,2024-06-03,Grocery,2784,No,0,11,262,Tuesday
+26,1946,2024-02-27,Personal Care,844,Yes,10,40,406,Friday
+39,1564,2024-04-10,Clothing,869,No,0,36,82,Wednesday
+24,1146,2024-05-17,Grocery,50,Yes,30,37,435,Saturday
+18,1377,2024-02-03,Personal Care,2879,Yes,0,24,497,Wednesday
+29,1427,2024-03-26,Grocery,2257,No,0,35,347,Wednesday
+10,1527,2024-09-04,Home,1482,No,0,16,407,Saturday
+7,1782,2024-07-19,Personal Care,1129,No,0,36,71,Monday
+18,1574,2024-04-14,Electronics,1221,Yes,20,29,453,Friday
+38,1997,2024-05-20,Grocery,2279,Yes,10,42,303,Thursday
+12,1166,2024-05-23,Electronics,1101,No,0,7,187,Friday
+49,1482,2024-08-13,Personal Care,359,No,0,20,331,Wednesday
+27,1265,2024-02-29,Electronics,130,Yes,30,45,471,Friday
+34,1476,2024-01-13,Home,2953,Yes,30,46,289,Monday
+35,1053,2024-11-03,Grocery,1224,Yes,15,26,315,Sunday
+7,1337,2024-06-25,Personal Care,2983,No,0,23,150,Sunday
+24,1131,2024-09-24,Grocery,2360,Yes,5,36,414,Monday
+23,1557,2024-03-14,Grocery,1922,Yes,30,49,458,Saturday
+30,1239,2024-01-06,Personal Care,1938,Yes,30,20,313,Wednesday
+41,1888,2024-07-30,Grocery,2979,Yes,0,32,286,Monday
+20,1950,2024-06-07,Grocery,1769,No,0,14,103,Wednesday
+11,1110,2024-12-28,Home,90,Yes,0,37,283,Sunday
+30,1519,2024-02-09,Electronics,1330,No,0,32,297,Friday
+3,1748,2024-11-01,Clothing,2823,Yes,30,16,188,Tuesday
+7,1292,2024-06-25,Home,2424,Yes,10,29,145,Thursday
+46,1572,2024-06-16,Grocery,1144,Yes,10,34,85,Thursday
+7,1186,2024-05-18,Clothing,2698,No,0,9,112,Tuesday
+3,1530,2024-05-18,Grocery,691,Yes,5,18,20,Friday
+42,1963,2024-06-21,Home,192,No,0,14,322,Wednesday
+15,1670,2024-05-23,Clothing,2783,Yes,0,40,310,Sunday
+38,1108,2024-12-27,Electronics,2998,Yes,5,17,63,Wednesday
+28,1257,2024-02-29,Personal Care,1520,No,0,17,439,Thursday
+27,1477,2024-03-20,Home,826,Yes,30,45,412,Friday
+12,1165,2024-09-10,Clothing,64,Yes,10,24,249,Friday
+29,1202,2024-08-13,Clothing,1022,Yes,20,27,299,Wednesday
+44,1208,2024-05-11,Home,1912,No,0,34,273,Saturday
+3,1693,2024-11-03,Grocery,1883,Yes,10,8,87,Thursday
+25,1780,2024-05-14,Home,834,Yes,20,19,245,Saturday
+5,1934,2024-08-02,Home,1326,Yes,20,35,196,Saturday
+43,1964,2024-12-24,Electronics,1388,Yes,10,42,274,Monday
+9,1964,2024-05-17,Clothing,334,Yes,0,5,311,Friday
+40,1954,2024-03-22,Electronics,2058,Yes,0,37,111,Tuesday
+26,1268,2024-07-24,Home,334,No,0,30,200,Monday
+42,1167,2024-06-09,Grocery,1392,Yes,15,36,86,Monday
+40,1416,2024-08-26,Electronics,1468,Yes,15,38,126,Thursday
+4,1633,2024-09-17,Electronics,877,Yes,15,19,217,Saturday
+11,1596,2024-02-03,Electronics,334,Yes,5,16,257,Wednesday
+10,1949,2024-10-26,Personal Care,764,No,0,25,403,Saturday
+23,1060,2024-01-12,Electronics,321,No,0,10,30,Friday
+33,1836,2024-07-29,Electronics,2593,Yes,5,15,222,Wednesday
+45,1396,2024-03-20,Electronics,1981,Yes,0,39,91,Tuesday
+10,1017,2024-04-30,Home,454,Yes,20,36,87,Sunday
+43,1136,2024-04-15,Clothing,1924,Yes,20,30,31,Tuesday
+28,1586,2024-10-04,Grocery,2930,Yes,10,12,164,Monday
+12,1327,2024-05-24,Clothing,1391,No,0,21,482,Monday
+25,1149,2024-09-22,Personal Care,1090,No,0,44,500,Saturday
+36,1937,2024-12-10,Home,1500,No,0,32,364,Monday
+32,1427,2024-03-13,Electronics,2426,No,0,47,194,Saturday
+20,1973,2024-06-26,Home,107,Yes,30,35,213,Monday
+39,1845,2024-07-20,Clothing,846,No,0,39,432,Friday
+15,1548,2024-04-26,Personal Care,977,Yes,20,34,246,Sunday
+27,1271,2024-02-11,Grocery,536,Yes,30,23,210,Friday
+1,1653,2024-11-02,Home,716,No,0,29,414,Monday
+45,1218,2024-04-22,Home,795,Yes,15,3,23,Friday
+23,1919,2024-11-26,Grocery,811,Yes,0,34,409,Friday
+49,1287,2024-03-21,Clothing,2370,Yes,5,34,109,Thursday
+23,1010,2024-02-23,Home,2294,No,0,42,362,Saturday
+17,1918,2024-06-05,Home,2422,No,0,30,150,Thursday
+47,1537,2024-07-26,Grocery,1050,Yes,5,32,394,Tuesday
+39,1550,2024-06-11,Home,1111,No,0,6,38,Monday
+42,1190,2024-04-07,Grocery,2593,No,0,21,490,Monday
+21,1878,2024-12-23,Home,667,No,0,40,285,Tuesday
+11,1951,2024-06-18,Personal Care,1789,Yes,30,31,426,Sunday
+20,1047,2024-01-17,Electronics,1136,No,0,18,397,Tuesday
+36,1850,2024-05-24,Personal Care,187,No,0,40,396,Tuesday
+45,1461,2024-04-05,Electronics,231,Yes,20,23,90,Tuesday
+19,1497,2024-07-10,Home,2989,Yes,0,35,54,Friday
+48,1305,2024-11-21,Clothing,2430,No,0,34,68,Monday
+8,1365,2024-01-18,Grocery,1777,No,0,17,178,Tuesday
+21,1367,2024-07-14,Electronics,476,No,0,20,381,Saturday
+10,1475,2024-08-03,Personal Care,2240,No,0,45,170,Saturday
+36,1821,2024-09-17,Electronics,1410,No,0,14,197,Thursday
+6,1862,2024-03-12,Electronics,2544,Yes,10,26,84,Sunday
+16,1052,2024-07-19,Electronics,2680,No,0,7,470,Monday
+14,1972,2024-09-17,Personal Care,1901,Yes,30,36,97,Monday
+6,1067,2024-12-20,Home,1101,No,0,35,378,Thursday
+21,1437,2024-11-02,Personal Care,1920,No,0,34,311,Saturday
+48,1459,2024-05-02,Grocery,1001,No,0,33,237,Tuesday
+23,1158,2024-07-29,Grocery,312,Yes,5,19,97,Wednesday
+4,1328,2024-10-26,Personal Care,1146,Yes,5,27,35,Sunday
+7,1001,2024-04-27,Grocery,2560,No,0,23,491,Saturday
+18,1136,2024-12-25,Home,1917,Yes,20,15,53,Tuesday
+4,1135,2024-11-30,Clothing,390,No,0,34,312,Saturday
+27,1408,2024-05-30,Electronics,695,Yes,5,35,374,Friday
+7,1328,2024-03-29,Electronics,1378,Yes,30,27,32,Thursday
+10,1244,2024-08-16,Clothing,486,Yes,30,35,209,Sunday
+17,1777,2024-02-07,Grocery,410,No,0,22,405,Sunday
+8,1352,2024-06-30,Electronics,145,No,0,37,360,Wednesday
+24,1106,2024-10-16,Home,2302,Yes,20,31,152,Thursday
+47,1145,2024-07-27,Electronics,2917,No,0,20,122,Friday
+2,1199,2024-07-01,Clothing,1814,No,0,33,438,Sunday
+29,1655,2024-12-23,Personal Care,940,No,0,21,330,Saturday
+6,1144,2024-10-11,Electronics,721,Yes,0,27,418,Friday
+30,1748,2024-07-03,Grocery,523,Yes,30,12,49,Monday
+40,1655,2024-01-13,Home,383,No,0,26,51,Wednesday
+45,1822,2024-08-17,Clothing,2105,Yes,0,29,457,Thursday
+42,1669,2024-03-08,Grocery,455,Yes,10,25,237,Monday
+43,1343,2024-08-07,Home,2736,Yes,10,37,412,Wednesday
+20,1472,2024-09-20,Grocery,1803,Yes,15,44,381,Sunday
+38,1872,2024-09-23,Home,2043,Yes,10,22,447,Monday
+46,1614,2024-01-15,Clothing,1344,Yes,10,24,241,Sunday
+42,1719,2024-05-26,Electronics,388,No,0,11,346,Friday
+6,1415,2024-01-21,Grocery,789,Yes,10,29,35,Sunday
+39,1950,2024-01-02,Electronics,996,Yes,0,40,129,Saturday
+26,1693,2024-06-19,Electronics,518,Yes,20,40,465,Monday
+18,1337,2024-01-11,Clothing,476,Yes,15,37,445,Sunday
+33,1351,2024-10-08,Clothing,2713,No,0,26,106,Friday
+13,1721,2024-12-24,Clothing,1483,Yes,20,42,316,Tuesday
+2,1384,2024-02-20,Home,1287,No,0,19,190,Friday
+6,1978,2024-12-29,Personal Care,2869,No,0,12,192,Monday
+37,1888,2024-06-24,Clothing,1049,No,0,23,98,Sunday
+18,1631,2024-08-08,Personal Care,1404,Yes,5,33,99,Wednesday
+8,1563,2024-02-22,Clothing,2336,Yes,20,19,447,Friday
+15,1214,2024-05-12,Personal Care,1045,Yes,5,16,393,Monday
+3,1395,2024-04-21,Home,892,Yes,15,26,346,Wednesday
+3,1743,2024-09-15,Home,1228,Yes,15,42,225,Monday
+33,1509,2024-08-07,Personal Care,263,Yes,30,46,334,Friday
+49,1921,2024-05-19,Grocery,542,No,0,13,231,Monday
+4,1756,2024-07-02,Clothing,2870,No,0,37,152,Saturday
+10,1087,2024-08-24,Grocery,1272,No,0,31,487,Monday
+30,1518,2024-10-17,Electronics,2576,Yes,10,24,483,Tuesday
+49,1203,2024-01-19,Electronics,2058,No,0,11,95,Monday
+31,1573,2024-11-24,Grocery,1548,No,0,15,117,Tuesday
+34,1958,2024-07-22,Clothing,1970,No,0,47,214,Sunday
+23,1552,2024-03-26,Personal Care,1122,No,0,36,266,Monday
+41,1482,2024-06-18,Clothing,2196,Yes,0,48,262,Saturday
+35,1832,2024-06-29,Electronics,2261,Yes,0,35,295,Monday
+38,1480,2024-07-04,Electronics,772,Yes,0,12,189,Tuesday
+19,1194,2024-03-19,Home,931,No,0,24,429,Tuesday
+49,1137,2024-10-25,Personal Care,660,Yes,30,29,392,Monday
+13,1594,2024-08-07,Home,748,No,0,25,246,Saturday
+35,1749,2024-01-30,Grocery,2999,No,0,22,462,Wednesday
+34,1434,2024-07-04,Electronics,2908,No,0,27,230,Sunday
+15,1722,2024-12-13,Electronics,2265,No,0,38,297,Thursday
+49,1670,2024-08-11,Electronics,2114,Yes,5,43,91,Sunday
+12,1431,2024-03-25,Personal Care,232,Yes,15,32,113,Thursday
+38,1142,2024-08-17,Grocery,2318,Yes,10,23,220,Wednesday
+7,1925,2024-01-20,Clothing,1927,No,0,36,189,Wednesday
+37,1542,2024-12-27,Grocery,1218,Yes,30,29,268,Friday
+37,1746,2024-07-19,Home,311,Yes,0,38,461,Wednesday
+44,1404,2024-10-09,Personal Care,1516,No,0,24,457,Wednesday
+44,1249,2024-11-10,Grocery,2456,No,0,18,386,Friday
+15,1316,2024-01-18,Personal Care,1159,No,0,26,194,Thursday
+11,1755,2024-04-16,Electronics,688,Yes,10,11,327,Thursday
+41,1399,2024-02-02,Clothing,2026,Yes,30,26,124,Thursday
+31,1410,2024-02-16,Grocery,991,Yes,10,41,117,Tuesday
+28,1704,2024-08-11,Grocery,2628,No,0,34,173,Sunday
+25,1337,2024-04-07,Personal Care,976,No,0,20,390,Sunday
+40,1587,2024-05-13,Electronics,2512,No,0,13,329,Tuesday
+25,1838,2024-04-29,Home,422,Yes,0,33,436,Sunday
+26,1250,2024-06-03,Clothing,1366,Yes,10,51,397,Sunday
+13,1141,2024-08-07,Clothing,1191,Yes,20,18,149,Tuesday
+9,1644,2024-01-17,Home,2642,Yes,20,19,207,Tuesday
+43,1423,2024-12-24,Electronics,769,Yes,20,30,287,Tuesday
+13,1404,2024-04-04,Grocery,2148,No,0,34,371,Sunday
+14,1932,2024-04-26,Clothing,2704,No,0,17,324,Wednesday
+27,1154,2024-05-28,Electronics,1378,Yes,5,34,308,Wednesday
+28,1626,2024-03-08,Grocery,1665,Yes,5,25,385,Sunday
+48,1931,2024-12-23,Home,1233,Yes,15,38,211,Saturday
+42,1199,2024-04-25,Grocery,2731,Yes,10,31,496,Saturday
+6,1361,2024-02-18,Home,2407,No,0,8,392,Thursday
+45,1553,2024-05-19,Home,2969,Yes,0,10,348,Tuesday
+10,1442,2024-05-31,Electronics,2373,Yes,5,9,441,Monday
+3,1154,2024-12-03,Home,2400,No,0,26,139,Friday
+4,1329,2024-08-02,Personal Care,1822,Yes,20,19,283,Saturday
+28,1028,2024-08-13,Personal Care,1534,No,0,28,65,Tuesday
+21,1257,2024-04-29,Personal Care,602,No,0,11,291,Monday
+10,1576,2024-11-10,Electronics,437,Yes,5,21,227,Thursday
+35,1766,2024-02-27,Personal Care,1348,Yes,15,17,189,Thursday
+40,1683,2024-11-12,Home,2209,Yes,5,46,339,Saturday
+21,1196,2024-12-05,Electronics,803,No,0,33,154,Monday
+48,1517,2024-04-11,Grocery,1031,Yes,30,53,238,Saturday
+26,1285,2024-12-31,Personal Care,746,No,0,36,135,Saturday
+9,1709,2024-09-19,Home,566,Yes,20,30,152,Tuesday
+7,1257,2024-04-11,Electronics,748,Yes,15,21,260,Friday
+43,1519,2024-09-09,Clothing,1039,No,0,22,225,Tuesday
+31,1958,2024-05-03,Clothing,1336,Yes,30,29,36,Saturday
+25,1258,2024-06-24,Grocery,1491,No,0,35,401,Monday
+39,1036,2024-11-18,Clothing,1242,Yes,5,25,64,Saturday
+8,1613,2024-02-09,Clothing,2890,Yes,15,53,436,Sunday
+49,1574,2024-05-08,Home,422,No,0,40,160,Wednesday
+29,1255,2024-12-10,Home,307,No,0,21,111,Tuesday
+31,1492,2024-10-07,Clothing,2077,No,0,9,191,Friday
+11,1924,2024-09-05,Clothing,2978,No,0,30,444,Sunday
+36,1587,2024-09-05,Clothing,632,Yes,20,41,103,Friday
+34,1626,2024-09-23,Grocery,1431,No,0,40,404,Thursday
+11,1428,2024-06-17,Electronics,1896,No,0,38,436,Saturday
+25,1873,2024-11-05,Clothing,60,Yes,20,44,359,Thursday
+35,1732,2024-11-09,Home,387,Yes,20,35,283,Friday
+19,1148,2024-11-29,Grocery,838,Yes,0,34,276,Wednesday
+8,1195,2024-11-30,Home,373,Yes,0,17,209,Tuesday
+4,1518,2024-07-11,Electronics,2262,Yes,20,32,194,Sunday
+36,1670,2024-11-06,Personal Care,1153,No,0,39,257,Wednesday
+46,1654,2024-10-05,Electronics,105,Yes,30,53,121,Sunday
+40,1534,2024-04-29,Grocery,585,No,0,15,381,Friday
+15,1574,2024-02-25,Home,1492,Yes,10,31,374,Friday
+37,1430,2024-01-21,Grocery,219,No,0,34,338,Thursday
+17,1266,2024-07-10,Grocery,86,No,0,31,161,Thursday
+5,1039,2024-09-11,Home,2058,No,0,43,139,Sunday
+7,1308,2024-10-27,Grocery,2393,No,0,20,92,Friday
+43,1269,2024-04-16,Personal Care,362,Yes,30,43,196,Thursday
+15,1423,2024-09-26,Grocery,1234,Yes,20,37,162,Wednesday
+2,1307,2024-05-09,Personal Care,1739,No,0,25,99,Monday
+15,1893,2024-05-01,Grocery,2753,Yes,0,32,359,Wednesday
+44,1768,2024-10-23,Grocery,2364,Yes,30,23,332,Thursday
+38,1778,2024-09-17,Home,670,No,0,23,378,Wednesday
+2,1759,2024-10-13,Personal Care,974,No,0,29,496,Wednesday
+23,1333,2024-04-02,Personal Care,962,No,0,40,391,Thursday
+1,1360,2024-06-08,Personal Care,1048,Yes,20,19,73,Sunday
+21,1262,2024-10-25,Personal Care,207,No,0,26,334,Wednesday
+13,1372,2024-05-03,Clothing,910,Yes,5,21,29,Wednesday
+19,1564,2024-03-23,Grocery,2127,Yes,15,45,297,Sunday
+13,1627,2024-02-25,Personal Care,1710,No,0,19,464,Thursday
+10,1021,2024-06-21,Clothing,1389,Yes,30,24,325,Sunday
+22,1349,2024-01-24,Clothing,378,Yes,10,27,226,Tuesday
+41,1776,2024-09-25,Home,2358,Yes,0,47,79,Saturday
+49,1749,2024-04-08,Home,1581,Yes,30,25,368,Saturday
+8,1473,2024-05-21,Home,1634,No,0,17,374,Friday
+33,1664,2024-06-15,Grocery,654,Yes,20,15,368,Monday
+29,1601,2024-11-06,Electronics,2026,Yes,5,40,78,Tuesday
+41,1329,2024-12-15,Home,94,Yes,5,24,252,Sunday
+36,1634,2024-02-17,Electronics,400,Yes,15,14,464,Tuesday
+41,1884,2024-10-07,Clothing,1593,No,0,37,178,Saturday
+37,1281,2024-02-14,Electronics,149,No,0,10,136,Friday
+17,1056,2024-01-10,Grocery,2759,Yes,30,37,405,Sunday
+48,1993,2024-04-04,Clothing,399,Yes,5,25,268,Friday
+27,1709,2024-04-30,Grocery,717,Yes,10,25,483,Wednesday
+19,1827,2024-02-20,Grocery,2872,Yes,15,15,151,Wednesday
+49,1341,2024-01-01,Personal Care,389,Yes,10,14,373,Thursday
+25,1804,2024-11-14,Home,201,Yes,20,42,336,Monday
+12,1539,2024-05-26,Clothing,1164,Yes,15,36,248,Friday
+19,1712,2024-01-25,Home,1595,No,0,23,173,Wednesday
+26,1327,2024-10-22,Personal Care,1272,Yes,5,16,182,Friday
+39,1334,2024-12-18,Personal Care,701,Yes,5,41,110,Thursday
+47,1664,2024-08-24,Clothing,2321,Yes,30,32,486,Sunday
+6,1817,2024-09-17,Personal Care,2347,Yes,5,36,127,Sunday
+26,1680,2024-08-26,Electronics,1982,No,0,18,95,Tuesday
+18,1067,2024-11-05,Grocery,295,Yes,20,37,184,Thursday
+29,1018,2024-04-25,Grocery,2882,Yes,0,17,369,Wednesday
+32,1885,2024-01-19,Home,2803,No,0,11,111,Wednesday
+13,1546,2024-09-15,Electronics,2549,No,0,14,369,Tuesday
+6,1551,2024-11-26,Personal Care,900,No,0,26,267,Wednesday
+27,1757,2024-03-14,Clothing,1906,Yes,5,30,484,Saturday
+20,1151,2024-02-22,Home,323,No,0,12,275,Tuesday
+38,1743,2024-09-18,Clothing,2980,No,0,10,29,Tuesday
+36,1300,2024-12-21,Electronics,2964,No,0,8,450,Friday
+16,1244,2024-11-14,Grocery,1358,No,0,16,315,Friday
+36,1136,2024-08-14,Electronics,2738,No,0,22,405,Monday
+28,1985,2024-04-28,Electronics,1756,No,0,18,351,Sunday
+45,1040,2024-01-12,Home,2367,No,0,42,488,Sunday
+24,1110,2024-12-02,Clothing,1848,Yes,5,22,147,Thursday
+37,1354,2024-01-29,Clothing,2746,No,0,43,329,Saturday
+40,1137,2024-04-11,Home,1922,Yes,30,42,368,Saturday
+48,1012,2024-04-03,Grocery,823,No,0,15,481,Wednesday
+11,1092,2024-01-30,Clothing,2677,Yes,15,40,72,Thursday
+50,1157,2024-01-01,Grocery,2348,No,0,13,204,Thursday
+18,1945,2024-04-10,Grocery,241,No,0,22,60,Sunday
+38,1894,2024-05-04,Home,1255,Yes,15,33,261,Friday
+10,1322,2024-03-09,Personal Care,868,Yes,15,39,426,Tuesday
+36,1838,2024-08-07,Personal Care,344,No,0,40,148,Tuesday
+17,1765,2024-01-10,Electronics,1715,Yes,10,11,420,Tuesday
+4,1050,2024-04-14,Clothing,1888,Yes,20,12,257,Monday
+47,1889,2024-05-27,Electronics,1725,No,0,33,91,Sunday
+6,1182,2024-12-15,Electronics,2223,No,0,34,149,Tuesday
+42,1589,2024-12-31,Clothing,2088,Yes,5,7,305,Friday
+38,1082,2024-12-28,Personal Care,958,Yes,5,32,103,Thursday
+26,1397,2024-08-20,Clothing,2567,No,0,21,80,Wednesday
+49,1464,2024-04-05,Home,1358,Yes,5,41,279,Monday
+16,1046,2024-12-25,Personal Care,476,No,0,48,405,Sunday
+31,1615,2024-09-11,Grocery,231,Yes,5,30,319,Friday
+20,1539,2024-02-05,Personal Care,2194,No,0,38,286,Monday
+32,1813,2024-07-01,Home,627,No,0,26,429,Wednesday
+20,1048,2024-01-20,Home,2163,Yes,5,30,430,Wednesday
+16,1877,2024-04-02,Clothing,2612,No,0,20,411,Friday
+30,1505,2024-10-26,Home,2175,No,0,43,146,Sunday
+19,1123,2024-12-02,Clothing,458,No,0,30,256,Wednesday
+46,1819,2024-10-04,Personal Care,1857,No,0,29,420,Saturday
+32,1077,2024-05-02,Electronics,399,No,0,13,230,Tuesday
+35,1178,2024-06-11,Grocery,1384,No,0,31,171,Tuesday
+8,1737,2024-05-31,Personal Care,1546,No,0,16,211,Friday
+40,1448,2024-02-24,Clothing,1443,No,0,35,85,Tuesday
+18,1672,2024-06-04,Home,1656,Yes,10,28,367,Sunday
+46,1580,2024-12-18,Electronics,303,Yes,20,27,376,Sunday
+6,1272,2024-08-14,Electronics,63,Yes,15,5,37,Monday
+47,1879,2024-04-20,Electronics,1260,Yes,10,35,287,Wednesday
+37,1747,2024-10-06,Personal Care,241,Yes,30,19,317,Monday
+49,1284,2024-10-23,Grocery,1205,No,0,17,281,Saturday
+4,1946,2024-01-13,Home,1961,No,0,50,91,Sunday
+27,1626,2024-10-26,Grocery,415,No,0,11,149,Thursday
+42,1379,2024-12-15,Personal Care,2079,No,0,7,351,Thursday
+29,1287,2024-10-07,Electronics,622,No,0,24,110,Tuesday
+47,1207,2024-02-01,Personal Care,2938,Yes,5,16,116,Thursday
+8,1924,2024-08-11,Personal Care,226,No,0,13,359,Wednesday
+19,1961,2024-08-19,Home,2203,Yes,10,41,60,Thursday
+30,1562,2024-01-20,Home,2732,No,0,36,315,Saturday
+38,1546,2024-11-22,Clothing,497,No,0,33,380,Monday
+23,1996,2024-05-28,Grocery,1817,No,0,17,317,Thursday
+33,1027,2024-09-26,Electronics,2178,No,0,21,288,Thursday
+32,1876,2024-09-07,Personal Care,115,No,0,10,337,Thursday
+46,1518,2024-09-07,Clothing,2612,No,0,39,232,Thursday
+6,1978,2024-10-10,Personal Care,2219,No,0,31,251,Thursday
+11,1122,2024-09-03,Personal Care,96,No,0,20,378,Thursday
+16,1168,2024-09-13,Personal Care,2571,Yes,15,32,178,Saturday
+41,1788,2024-11-09,Clothing,2818,Yes,20,14,412,Wednesday
+29,1582,2024-11-06,Electronics,2501,No,0,19,113,Monday
+41,1478,2024-12-08,Clothing,2184,Yes,5,32,155,Thursday
+47,1484,2024-02-27,Home,1569,Yes,20,9,287,Tuesday
+19,1577,2024-02-14,Electronics,2611,No,0,12,408,Wednesday
+2,1278,2024-11-22,Electronics,705,No,0,26,241,Tuesday
+26,1568,2024-07-07,Electronics,69,No,0,37,242,Monday
+36,1331,2024-10-12,Home,1301,Yes,15,43,475,Friday
+20,1487,2024-12-23,Clothing,1376,No,0,14,114,Monday
+1,1995,2024-09-11,Electronics,656,No,0,18,63,Friday
+2,1207,2024-12-20,Home,1520,No,0,33,175,Thursday
+8,1512,2024-06-17,Grocery,1507,No,0,29,29,Saturday
+1,1723,2024-02-14,Home,904,Yes,10,30,169,Tuesday
+3,1151,2024-02-16,Electronics,636,Yes,15,8,37,Thursday
+6,1250,2024-09-06,Home,683,Yes,5,18,106,Tuesday
+39,1362,2024-10-30,Grocery,2537,No,0,6,96,Tuesday
+45,1267,2024-04-13,Home,2056,No,0,8,177,Monday
+38,1620,2024-05-10,Personal Care,1698,No,0,32,268,Tuesday
+33,1527,2024-05-19,Grocery,323,No,0,18,436,Saturday
+36,1859,2024-11-08,Home,346,Yes,10,18,281,Saturday
+16,1576,2024-06-06,Grocery,2845,Yes,15,31,186,Monday
+14,1085,2024-08-03,Home,793,No,0,33,452,Thursday
+34,1631,2024-01-08,Electronics,2749,No,0,32,60,Saturday
+3,1888,2024-05-07,Electronics,879,Yes,0,16,419,Monday
+20,1639,2024-08-12,Grocery,1817,No,0,2,49,Friday
+36,1268,2024-02-12,Grocery,573,Yes,20,53,264,Saturday
+15,1958,2024-04-21,Personal Care,1534,No,0,33,118,Friday
+11,1048,2024-10-08,Clothing,879,Yes,10,29,500,Saturday
+30,1090,2024-08-17,Grocery,1974,Yes,20,19,144,Tuesday
+25,1093,2024-03-08,Electronics,1612,No,0,28,441,Wednesday
+39,1787,2024-11-11,Home,1986,No,0,30,210,Wednesday
+20,1633,2024-08-09,Clothing,822,No,0,24,81,Sunday
+20,1554,2024-03-27,Personal Care,2288,Yes,5,21,295,Monday
+36,1554,2024-02-18,Personal Care,2101,Yes,0,23,354,Friday
+33,1644,2024-02-28,Clothing,1843,Yes,10,7,165,Wednesday
+13,1060,2024-02-03,Electronics,517,No,0,28,236,Thursday
+8,1015,2024-04-09,Clothing,2546,Yes,5,23,39,Thursday
+4,1031,2024-09-03,Home,1459,Yes,0,42,162,Sunday
+25,1494,2024-06-22,Electronics,2065,No,0,11,151,Thursday
+32,1976,2024-10-17,Clothing,109,No,0,34,452,Thursday
+27,1781,2024-06-14,Electronics,1604,No,0,30,450,Tuesday
+46,1646,2024-01-15,Electronics,1175,Yes,20,43,213,Sunday
+19,1340,2024-09-14,Grocery,2136,No,0,35,308,Tuesday
+5,1930,2024-09-14,Personal Care,1742,No,0,46,326,Saturday
+40,1624,2024-10-14,Clothing,1317,No,0,16,435,Monday
+22,1315,2024-10-21,Clothing,2514,Yes,5,37,109,Monday
+21,1129,2024-11-25,Personal Care,2466,No,0,31,194,Wednesday
+46,1563,2024-05-03,Grocery,909,No,0,18,104,Wednesday
+46,1034,2024-01-28,Home,943,Yes,10,18,127,Friday
+15,1996,2024-07-02,Clothing,1871,Yes,5,36,99,Sunday
+46,1880,2024-07-01,Home,1513,No,0,34,187,Saturday
+29,1375,2024-02-29,Home,1931,No,0,37,442,Saturday
+1,1053,2024-03-04,Grocery,1128,Yes,5,35,207,Friday
+23,1321,2024-09-06,Grocery,790,Yes,20,17,342,Monday
+43,1705,2024-08-28,Personal Care,72,No,0,30,195,Monday
+21,1549,2024-07-07,Home,1687,No,0,14,77,Thursday
+18,1556,2024-06-11,Clothing,2771,No,0,11,494,Monday
+22,1831,2024-08-30,Grocery,2150,Yes,15,19,393,Sunday
+38,1283,2024-12-05,Clothing,1949,Yes,20,33,495,Tuesday
+5,1052,2024-05-19,Personal Care,1244,No,0,20,204,Sunday
+47,1735,2024-11-30,Home,420,Yes,10,25,490,Sunday
+27,1988,2024-04-24,Home,2735,Yes,10,32,375,Tuesday
+17,1065,2024-11-24,Personal Care,1167,Yes,20,39,361,Wednesday
+10,1683,2024-05-15,Electronics,2292,Yes,0,39,100,Sunday
+27,1941,2024-03-01,Electronics,1529,No,0,16,193,Wednesday
+19,1954,2024-03-30,Home,806,Yes,0,10,90,Monday
+9,1363,2024-05-26,Grocery,924,No,0,34,272,Monday
+38,1216,2024-01-04,Grocery,2138,No,0,32,415,Wednesday
+15,1824,2024-07-22,Personal Care,1302,No,0,16,99,Monday
+9,1612,2024-05-20,Electronics,1184,Yes,0,13,217,Thursday
+13,1687,2024-11-25,Personal Care,622,Yes,0,35,49,Friday
+41,1634,2024-02-22,Clothing,625,No,0,34,225,Monday
+49,1826,2024-09-16,Home,1383,No,0,6,156,Friday
+26,1780,2024-05-24,Electronics,93,No,0,25,44,Thursday
+23,1254,2024-12-22,Personal Care,1123,Yes,0,15,339,Thursday
+49,1880,2024-08-10,Electronics,330,No,0,34,434,Thursday
+37,1027,2024-08-29,Personal Care,2772,Yes,10,15,306,Tuesday
+25,1447,2024-10-18,Personal Care,1675,Yes,20,26,421,Tuesday
+46,1840,2024-08-25,Grocery,291,Yes,0,50,275,Saturday
+38,1371,2024-03-22,Electronics,284,No,0,15,185,Wednesday
+13,1279,2024-02-05,Electronics,1561,No,0,25,77,Wednesday
+34,1264,2024-05-28,Personal Care,1718,No,0,26,112,Saturday
+7,1831,2024-08-30,Personal Care,1851,Yes,20,13,173,Thursday
+48,1571,2024-08-07,Electronics,1039,No,0,34,353,Thursday
+44,1385,2024-05-21,Electronics,370,No,0,32,473,Friday
+30,1296,2024-01-21,Electronics,329,No,0,16,412,Monday
+40,1771,2024-09-11,Grocery,193,Yes,0,19,118,Wednesday
+36,1811,2024-07-27,Personal Care,576,No,0,42,279,Sunday
+33,1670,2024-08-17,Grocery,890,No,0,33,314,Saturday
+47,1258,2024-10-06,Personal Care,173,No,0,22,251,Wednesday
+32,1823,2024-09-15,Grocery,850,No,0,18,49,Wednesday
+29,1540,2024-12-04,Home,353,No,0,34,429,Friday
+7,1502,2024-05-24,Electronics,747,Yes,20,12,329,Friday
+35,1051,2024-05-08,Electronics,707,No,0,43,348,Saturday
+41,1094,2024-04-11,Electronics,2405,Yes,15,37,474,Tuesday
+50,1670,2024-09-02,Electronics,2172,No,0,18,219,Tuesday
+47,1160,2024-07-20,Home,2416,No,0,1,26,Friday
+46,1584,2024-05-17,Clothing,750,Yes,20,22,209,Monday
+3,1817,2024-06-22,Home,1884,No,0,20,412,Monday
+5,1289,2024-07-16,Clothing,1964,Yes,30,22,403,Sunday
+33,1595,2024-02-03,Home,1239,No,0,43,473,Saturday
+8,1274,2024-12-12,Grocery,339,Yes,5,26,199,Friday
+32,1226,2024-04-13,Clothing,2012,No,0,37,490,Thursday
+27,1905,2024-09-25,Grocery,2746,Yes,5,24,301,Wednesday
+39,1303,2024-02-15,Home,2763,Yes,5,33,100,Thursday
+39,1127,2024-12-12,Grocery,1711,No,0,36,250,Monday
+37,1811,2024-05-20,Grocery,1257,Yes,10,43,361,Saturday
+14,1982,2024-02-28,Clothing,2464,Yes,10,16,190,Monday
+46,1223,2024-09-19,Home,1672,No,0,16,313,Sunday
+22,1489,2024-12-31,Clothing,1898,Yes,15,18,21,Friday
+11,1152,2024-06-12,Personal Care,1540,No,0,22,89,Friday
+20,1354,2024-06-19,Clothing,2967,No,0,23,449,Thursday
+49,1564,2024-07-25,Grocery,2041,Yes,10,40,162,Wednesday
+6,1813,2024-02-11,Clothing,1030,Yes,5,12,406,Friday
+19,1299,2024-07-01,Clothing,384,Yes,10,27,489,Sunday
+20,1233,2024-05-28,Electronics,441,No,0,26,370,Monday
+8,1551,2024-02-25,Grocery,1442,No,0,29,357,Saturday
+1,1408,2024-04-01,Personal Care,2089,Yes,10,20,63,Monday
+7,1407,2024-01-28,Grocery,2508,No,0,10,285,Monday
+15,1348,2024-02-08,Clothing,156,Yes,0,13,367,Wednesday
+38,1111,2024-09-05,Home,1149,No,0,15,91,Saturday
+29,1258,2024-08-12,Electronics,1438,Yes,30,33,450,Monday
+36,1352,2024-12-22,Electronics,2099,No,0,24,439,Friday
+30,1814,2024-01-20,Clothing,1773,Yes,10,26,446,Tuesday
+42,1672,2024-07-19,Home,2150,Yes,20,21,344,Tuesday
+24,1921,2024-02-26,Home,869,Yes,15,29,345,Wednesday
+1,1712,2024-08-02,Home,1537,No,0,9,286,Monday
+29,1206,2024-03-16,Electronics,2412,Yes,20,37,445,Tuesday
+33,1390,2024-09-07,Electronics,2239,Yes,5,19,104,Saturday
+14,1140,2024-02-04,Clothing,2907,No,0,10,236,Thursday
+14,1480,2024-10-04,Grocery,2440,Yes,10,36,75,Thursday
+39,1935,2024-01-22,Electronics,2842,No,0,14,438,Wednesday
+41,1768,2024-04-15,Electronics,1677,Yes,0,31,317,Saturday
+20,1441,2024-06-28,Grocery,604,Yes,30,25,72,Tuesday
+34,1972,2024-08-12,Clothing,2044,Yes,5,25,413,Sunday
+49,1110,2024-04-05,Home,887,Yes,5,16,237,Monday
+8,1157,2024-08-13,Clothing,2415,Yes,5,38,68,Saturday
+30,1409,2024-04-25,Personal Care,2515,No,0,17,487,Friday
+37,1300,2024-02-24,Clothing,1142,Yes,10,30,386,Wednesday
+8,1908,2024-01-27,Clothing,156,No,0,19,377,Friday
+5,1620,2024-07-17,Electronics,2326,No,0,18,122,Tuesday
+42,1846,2024-11-25,Electronics,2168,Yes,0,32,393,Monday
+26,1501,2024-05-07,Electronics,1896,No,0,18,181,Saturday
+48,1202,2024-10-24,Home,114,Yes,15,29,241,Wednesday
+19,1602,2024-08-02,Clothing,289,No,0,6,89,Monday
+21,1384,2024-10-17,Personal Care,2831,No,0,26,457,Tuesday
+8,1108,2024-02-21,Electronics,444,Yes,15,28,307,Monday
+47,1919,2024-11-08,Electronics,2365,Yes,15,13,157,Monday
+31,1154,2024-11-27,Clothing,1487,Yes,15,22,94,Sunday
+7,1296,2024-02-15,Home,1658,No,0,32,256,Tuesday
+5,1054,2024-04-17,Electronics,2032,Yes,15,15,473,Thursday
+18,1273,2024-04-12,Personal Care,203,No,0,18,209,Friday
+24,1300,2024-10-02,Grocery,2598,No,0,37,476,Thursday
+29,1765,2024-02-19,Electronics,105,No,0,15,119,Friday
+26,1627,2024-04-21,Grocery,2019,No,0,6,64,Friday
+3,1227,2024-01-05,Personal Care,956,Yes,10,15,36,Friday
+20,1679,2024-02-13,Grocery,81,Yes,15,37,466,Thursday
+28,1412,2024-05-23,Electronics,518,Yes,5,38,418,Saturday
+45,1141,2024-12-21,Home,1331,No,0,20,372,Monday
+46,1154,2024-06-28,Clothing,222,Yes,0,37,212,Monday
+27,1958,2024-05-17,Clothing,1202,No,0,8,449,Tuesday
+3,1461,2024-12-07,Personal Care,1936,No,0,10,84,Friday
+4,1652,2024-06-21,Electronics,621,Yes,10,28,220,Sunday
+15,1911,2024-09-16,Clothing,551,Yes,0,6,393,Thursday
+12,1606,2024-10-02,Grocery,356,Yes,20,37,486,Monday
+24,1809,2024-09-09,Home,1564,Yes,5,25,160,Wednesday
+50,1238,2024-01-09,Clothing,2670,Yes,0,26,94,Sunday
+18,1193,2024-04-28,Electronics,808,Yes,30,38,356,Tuesday
+39,1962,2024-06-15,Home,1708,No,0,6,109,Friday
+28,1969,2024-08-16,Electronics,1391,Yes,5,51,214,Sunday
+22,1910,2024-09-19,Clothing,1099,No,0,37,129,Tuesday
+43,1667,2024-06-03,Personal Care,2747,Yes,5,17,209,Tuesday
+20,1506,2024-06-18,Home,2039,Yes,30,36,294,Tuesday
+14,1927,2024-05-02,Electronics,1349,Yes,10,38,76,Friday
+44,1957,2024-09-05,Grocery,1564,Yes,20,43,351,Monday
+39,1213,2024-08-02,Personal Care,851,No,0,18,374,Wednesday
+3,1185,2024-02-05,Personal Care,1704,No,0,11,371,Friday
+40,1355,2024-08-10,Personal Care,1889,Yes,20,49,436,Sunday
+10,1352,2024-08-20,Personal Care,2028,Yes,10,20,217,Thursday
+26,1612,2024-02-22,Clothing,1680,Yes,10,41,244,Tuesday
+44,1653,2024-08-20,Home,1128,No,0,6,240,Friday
+32,1726,2024-10-01,Clothing,2467,No,0,12,69,Monday
+43,1836,2024-12-09,Home,574,No,0,40,196,Wednesday
+26,1636,2024-07-13,Grocery,2799,Yes,30,43,441,Thursday
+33,1473,2024-01-09,Home,480,Yes,10,20,455,Wednesday
+50,1952,2024-07-23,Personal Care,868,No,0,50,53,Saturday
+34,1390,2024-08-23,Home,2601,Yes,5,29,35,Wednesday
+11,1935,2024-06-23,Grocery,2666,Yes,30,40,398,Wednesday
+13,1604,2024-08-06,Electronics,2022,No,0,34,88,Sunday
+8,1498,2024-12-28,Personal Care,2246,Yes,20,9,304,Monday
+38,1029,2024-06-21,Home,2284,Yes,0,45,202,Saturday
+7,1527,2024-10-26,Personal Care,2608,Yes,30,31,52,Tuesday
+36,1025,2024-07-01,Grocery,185,No,0,10,169,Thursday
+44,1063,2024-08-16,Clothing,1996,No,0,19,288,Wednesday
+18,1804,2024-02-19,Grocery,2119,Yes,5,51,444,Saturday
+39,1504,2024-11-06,Clothing,1588,No,0,40,67,Tuesday
+29,1901,2024-01-16,Personal Care,224,Yes,15,40,270,Sunday
+47,1898,2024-06-10,Home,443,No,0,26,140,Tuesday
+24,1503,2024-12-16,Electronics,2080,No,0,29,411,Sunday
+30,1894,2024-08-01,Clothing,570,Yes,15,19,63,Sunday
+39,1027,2024-11-21,Electronics,80,Yes,10,49,320,Saturday
+36,1290,2024-12-31,Clothing,1350,Yes,5,25,187,Monday
+48,1010,2024-08-13,Home,784,Yes,30,36,260,Saturday
+29,1575,2024-11-12,Personal Care,1702,Yes,0,12,463,Friday
+32,1779,2024-01-21,Grocery,2591,No,0,22,51,Friday
+6,1566,2024-02-11,Clothing,2143,No,0,16,216,Thursday
+43,1913,2024-09-21,Home,92,No,0,28,421,Thursday
+27,1306,2024-12-19,Personal Care,2705,Yes,10,41,157,Thursday
+11,1885,2024-05-07,Grocery,2713,Yes,10,16,65,Tuesday
+31,1393,2024-10-27,Grocery,1551,No,0,39,266,Wednesday
+36,1430,2024-03-06,Personal Care,2118,Yes,5,30,179,Wednesday
+28,1518,2024-03-24,Electronics,257,Yes,0,50,85,Saturday
+15,1732,2024-03-20,Personal Care,1763,No,0,35,154,Friday
+16,1316,2024-12-20,Personal Care,2794,Yes,10,17,323,Wednesday
+15,1800,2024-06-11,Clothing,2797,No,0,20,35,Tuesday
+16,1914,2024-08-01,Grocery,2785,Yes,30,46,283,Sunday
+20,1527,2024-02-14,Electronics,1684,Yes,10,23,458,Wednesday
+7,1905,2024-10-29,Electronics,907,Yes,10,11,71,Tuesday
+4,1976,2024-02-26,Clothing,1489,No,0,30,394,Wednesday
+18,1897,2024-09-19,Home,2316,Yes,30,44,134,Wednesday
+17,1528,2024-10-29,Electronics,105,No,0,20,199,Thursday
+37,1098,2024-09-12,Clothing,2068,No,0,28,276,Thursday
+17,1269,2024-02-09,Clothing,626,No,0,14,51,Tuesday
+13,1441,2024-11-05,Clothing,2676,Yes,15,35,495,Wednesday
+34,1235,2024-01-03,Home,1117,Yes,0,50,375,Saturday
+48,1218,2024-04-04,Clothing,2160,Yes,20,27,288,Saturday
+30,1717,2024-08-22,Clothing,534,Yes,30,52,364,Sunday
+6,1974,2024-10-04,Personal Care,1096,No,0,40,464,Saturday
+27,1060,2024-12-06,Home,1113,No,0,38,248,Tuesday
+19,1226,2024-05-24,Electronics,1933,No,0,23,446,Wednesday
+8,1571,2024-10-05,Personal Care,2661,No,0,29,499,Wednesday
+6,1131,2024-11-12,Personal Care,2585,Yes,30,32,32,Wednesday
+27,1865,2024-05-16,Personal Care,2395,No,0,19,190,Thursday
+22,1999,2024-11-27,Personal Care,2149,No,0,48,277,Sunday
+4,1470,2024-01-16,Home,1923,Yes,10,33,450,Friday
+45,1496,2024-08-23,Electronics,765,Yes,5,32,41,Saturday
+29,1089,2024-11-09,Electronics,1278,Yes,0,24,157,Sunday
+2,1916,2024-08-09,Clothing,2609,Yes,30,21,365,Thursday
+29,1383,2024-12-19,Electronics,2677,No,0,35,247,Saturday
+6,1013,2024-08-18,Personal Care,701,No,0,28,28,Monday
+43,1918,2024-03-01,Electronics,792,Yes,15,36,158,Tuesday

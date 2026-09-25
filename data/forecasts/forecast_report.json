@@ -1,0 +1,26 @@
+{
+    "date_column": "date",
+    "target_column": "daily_demand",
+    "forecast_horizon": 30,
+    "best_model": "Random Forest",
+    "best_mse": 1172.91,
+    "best_mae": 29.6,
+    "best_rmse": 34.25,
+    "models": [
+        {
+            "model": "Random Forest",
+            "mse": 1172.91,
+            "mae": 29.6,
+            "rmse": 34.25,
+            "r2": -0.0583
+        },
+        {
+            "model": "Gradient Boosting",
+            "mse": 1246.99,
+            "mae": 30.35,
+            "rmse": 35.31,
+            "r2": -0.1252
+        }
+    ],
+    "forecast_file": "D:\\Retail_Demand_Forecasting_system\\data\\forecasts\\forecast_results.csv"
+}

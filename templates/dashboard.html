@@ -1,0 +1,587 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard | Retail Demand Forecasting System
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <div class="dashboard-label">
+                RETAIL ANALYTICS PLATFORM
+            </div>
+
+            <h1>
+                Welcome, {{ user.name }}
+            </h1>
+
+            <p>
+                Monitor sales, forecasts, inventory and
+                business insights from one place.
+            </p>
+
+        </div>
+
+        <div class="role-badge">
+            <i class="bi bi-person-badge"></i>
+            {{ user.role }}
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MAIN MODULE CARDS
+    ====================================================== -->
+
+    <div class="row g-4">
+
+
+        <!-- DATASET MANAGEMENT -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <a href="{{ url_for('datasets') }}"
+               class="dashboard-card-link">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+
+                    <h5>
+                        Dataset Management
+                    </h5>
+
+                    <p>
+                        Upload and analyze retail CSV data.
+                    </p>
+
+                    <span>
+                        Manage Datasets
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- SALES FORECAST -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <a href="{{ url_for('forecasting') }}"
+               class="dashboard-card-link">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+
+                    <h5>
+                        Sales Forecast
+                    </h5>
+
+                    <p>
+                        Predict future product demand.
+                    </p>
+
+                    <span>
+                        Open Forecasting
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- ANALYTICS -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <a href="{{ url_for('analytics') }}"
+               class="dashboard-card-link">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-calendar2-week"></i>
+                    </div>
+
+                    <h5>
+                        Analytics
+                    </h5>
+
+                    <p>
+                        Analyze trends and demand drivers.
+                    </p>
+
+                    <span>
+                        Open Analytics
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- SEASONAL ANALYSIS -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <a href="{{ url_for('seasonal') }}"
+               class="dashboard-card-link">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+                        <i class="bi bi-bell"></i>
+                    </div>
+
+                    <h5>
+                        Seasonal Analysis
+                    </h5>
+
+                    <p>
+                        Explore seasonal and event-driven demand.
+                    </p>
+
+                    <span>
+                        Open Seasonal Analysis
+                        <i class="bi bi-arrow-right"></i>
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         QUICK ACCESS
+    ====================================================== -->
+
+    <div class="row g-4 mt-3">
+
+
+        <!-- INVENTORY -->
+
+        <div class="col-lg-4">
+
+            <a href="{{ url_for('inventory') }}"
+               class="dashboard-card-link">
+
+                <div class="large-card quick-card">
+
+                    <div class="quick-icon">
+                        <i class="bi bi-cloud-arrow-up"></i>
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Inventory Optimization
+                        </h4>
+
+                        <p class="muted">
+                            Monitor stock and reorder levels.
+                        </p>
+
+                        <span class="quick-link">
+                            Open Inventory
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- SMART ALERTS -->
+
+        <div class="col-lg-4">
+
+            <a href="{{ url_for('alerts') }}"
+               class="dashboard-card-link">
+
+                <div class="large-card quick-card">
+
+                    <div class="quick-icon">
+                        <i class="bi bi-file-earmark-bar-graph"></i>
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Smart Alerts
+                        </h4>
+
+                        <p class="muted">
+                            Receive proactive inventory alerts.
+                        </p>
+
+                        <span class="quick-link">
+                            Open Alerts
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- REPORTS -->
+
+        <div class="col-lg-4">
+
+            <a href="{{ url_for('reports') }}"
+               class="dashboard-card-link">
+
+                <div class="large-card quick-card">
+
+                    <div class="quick-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Reports
+                        </h4>
+
+                        <p class="muted">
+                            Generate forecasting and business reports.
+                        </p>
+
+                        <span class="quick-link">
+                            View Reports
+                            <i class="bi bi-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SYSTEM WORKFLOW
+    ====================================================== -->
+
+    <div class="row g-4 mt-3">
+
+
+        <!-- WORKFLOW -->
+
+        <div class="col-lg-8">
+
+            <div class="large-card">
+
+                <h4>
+                    System Workflow
+                </h4>
+
+                <p class="muted">
+                    Your retail data will move through
+                    the following process.
+                </p>
+
+
+                <div class="workflow">
+
+
+                    <!-- STEP 1 -->
+
+                    <a href="{{ url_for('datasets') }}"
+                       class="workflow-item workflow-link">
+
+                        <div class="workflow-number">
+                            1
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Dataset Upload
+                            </strong>
+
+                            <p>
+                                Import your retail CSV files.
+                            </p>
+
+                        </div>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- STEP 2 -->
+
+                    <a href="{{ url_for('forecasting') }}"
+                       class="workflow-item workflow-link">
+
+                        <div class="workflow-number">
+                            2
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Demand Forecasting
+                            </strong>
+
+                            <p>
+                                Predict future product demand.
+                            </p>
+
+                        </div>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- STEP 3 -->
+
+                    <a href="{{ url_for('analytics') }}"
+                       class="workflow-item workflow-link">
+
+                        <div class="workflow-number">
+                            3
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Demand Analytics
+                            </strong>
+
+                            <p>
+                                Analyze trends and demand drivers.
+                            </p>
+
+                        </div>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- STEP 4 -->
+
+                    <a href="{{ url_for('seasonal') }}"
+                       class="workflow-item workflow-link">
+
+                        <div class="workflow-number">
+                            4
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Seasonal & Event Analysis
+                            </strong>
+
+                            <p>
+                                Identify seasonal and event-driven demand.
+                            </p>
+
+                        </div>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- STEP 5 -->
+
+                    <a href="{{ url_for('inventory') }}"
+                       class="workflow-item workflow-link">
+
+                        <div class="workflow-number">
+                            5
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Inventory Optimization
+                            </strong>
+
+                            <p>
+                                Generate reorder recommendations.
+                            </p>
+
+                        </div>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- STEP 6 -->
+
+                    <a href="{{ url_for('alerts') }}"
+                       class="workflow-item workflow-link">
+
+                        <div class="workflow-number">
+                            6
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Smart Alerts
+                            </strong>
+
+                            <p>
+                                Review proactive demand and stock alerts.
+                            </p>
+
+                        </div>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+
+                    <!-- STEP 7 -->
+
+                    <a href="{{ url_for('reports') }}"
+                       class="workflow-item workflow-link">
+
+                        <div class="workflow-number">
+                            7
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Reports
+                            </strong>
+
+                            <p>
+                                View generated business results.
+                            </p>
+
+                        </div>
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SYSTEM STATUS -->
+
+        <div class="col-lg-4">
+
+            <div class="large-card">
+
+                <h4>
+                    System Status
+                </h4>
+
+
+                <div class="status-item">
+
+                    <span>
+                        Flask Backend
+                    </span>
+
+                    <strong class="online">
+                        Online
+                    </strong>
+
+                </div>
+
+
+                <div class="status-item">
+
+                    <span>
+                        Authentication
+                    </span>
+
+                    <strong class="online">
+                        Active
+                    </strong>
+
+                </div>
+
+
+                <div class="status-item">
+
+                    <span>
+                        MySQL
+                    </span>
+
+                    <strong class="online">
+                        Connected
+                    </strong>
+
+                </div>
+
+
+                <div class="status-item">
+
+                    <span>
+                        ML Engine
+                    </span>
+
+                    <strong class="ready">
+                        Ready
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,2165 @@
+{% extends "base.html" %}
+
+{% block title %}
+Demand Analytics | Retail Demand Forecasting System
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <div class="dashboard-label">
+                DEMAND DRIVERS & FEATURE ENGINEERING
+            </div>
+
+            <h1>
+                Demand Analytics
+            </h1>
+
+            <p>
+                Analyze the factors that influence product demand,
+                seasonal patterns, anomalies and business performance.
+            </p>
+
+        </div>
+
+        <div class="role-badge">
+
+            <i class="bi bi-bar-chart-line"></i>
+
+            Analytics Hub
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DATASET SOURCE
+    ====================================================== -->
+
+    {% include "_dataset_source.html" %}
+
+
+    <!-- =====================================================
+         ANALYTICS STATUS
+    ====================================================== -->
+
+    <div class="large-card">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    Analytics Status
+                </h4>
+
+                <p class="muted mb-0">
+
+                    AI-powered analytics using the selected
+                    retail dataset.
+
+                </p>
+
+            </div>
+
+            {% if analytics_available %}
+
+            <span class="badge bg-success">
+
+                <i class="bi bi-check-circle"></i>
+
+                ML Analytics Active
+
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-warning text-dark">
+
+                <i class="bi bi-clock"></i>
+
+                Awaiting Dataset
+
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if analytics_available %}
+
+        <div class="alert alert-success mt-4">
+
+            <i class="bi bi-robot"></i>
+
+            <strong>Analytics ML Engine Active</strong>
+
+            <br>
+
+            {{ analytics_message }}
+
+            <div class="mt-2">
+
+                <strong>Dataset:</strong>
+
+                {{ selected_dataset_filename }}
+
+                &nbsp; | &nbsp;
+
+                <strong>Source:</strong>
+
+                {{ selected_dataset_source|capitalize }}
+
+            </div>
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-info mt-4">
+
+            <i class="bi bi-info-circle"></i>
+
+            {{ analytics_message }}
+
+            <br><br>
+
+            Upload and process a compatible retail dataset
+            from the <strong>Dataset Management</strong> page
+            to activate Analytics.
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         ANALYTICS OVERVIEW
+    ====================================================== -->
+
+    <div class="row g-4 mt-1">
+
+
+        <!-- TOTAL SALES -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-currency-rupee"></i>
+
+                </div>
+
+                <h5>
+                    Total Sales
+                </h5>
+
+                <h3>
+
+                    {% if total_sales is not none %}
+
+                        {{ total_sales }}
+
+                    {% else %}
+
+                        —
+
+                    {% endif %}
+
+                </h3>
+
+                <span>
+
+                    {{ selected_dataset_source|capitalize }}
+                    dataset
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- TOTAL DEMAND -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-graph-up-arrow"></i>
+
+                </div>
+
+                <h5>
+                    Total Demand
+                </h5>
+
+                <h3>
+
+                    {% if total_demand is not none %}
+
+                        {{ total_demand }}
+
+                    {% else %}
+
+                        —
+
+                    {% endif %}
+
+                </h3>
+
+                <span>
+
+                    Total units / demand
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTS -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-box-seam"></i>
+
+                </div>
+
+                <h5>
+                    Products Analyzed
+                </h5>
+
+                <h3>
+
+                    {% if products_analyzed is not none %}
+
+                        {{ products_analyzed }}
+
+                    {% else %}
+
+                        —
+
+                    {% endif %}
+
+                </h3>
+
+                <span>
+                    Unique products
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- DATA PERIOD -->
+
+        <div class="col-md-6 col-xl-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+
+                    <i class="bi bi-calendar-range"></i>
+
+                </div>
+
+                <h5>
+                    Data Period
+                </h5>
+
+                <h3>
+
+                    {% if data_period %}
+
+                        {{ data_period }}
+
+                    {% else %}
+
+                        —
+
+                    {% endif %}
+
+                </h3>
+
+                <span>
+                    Date range
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DEMAND TREND
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-graph-up"></i>
+                    Demand Trend
+                </h4>
+
+                <p class="muted mb-0">
+
+                    Historical demand pattern derived
+                    from the selected dataset.
+
+                </p>
+
+            </div>
+
+            {% if chart_dates and chart_demand %}
+
+            <span class="badge bg-success">
+
+                Trend Available
+
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+
+                No Data
+
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if chart_dates and chart_demand %}
+
+        <div
+            class="mt-4"
+            style="height: 350px;"
+        >
+
+            <canvas id="demandTrendChart"></canvas>
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-light border mt-4 text-center p-5">
+
+            <i class="bi bi-graph-up display-6"></i>
+
+            <h5 class="mt-3">
+
+                Demand Trend Not Available
+
+            </h5>
+
+            <p class="muted mb-0">
+
+                A valid date and demand/sales column
+                are required to generate the trend.
+
+            </p>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         DEMAND DRIVERS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    <i class="bi bi-sliders"></i>
+                    Demand Drivers
+                </h4>
+
+                <p class="muted mb-0">
+
+                    Statistical relationships between available
+                    variables and demand.
+
+                </p>
+
+            </div>
+
+            {% if demand_drivers %}
+
+            <span class="badge bg-success">
+                Analyzed
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                Awaiting Data
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="row g-4 mt-2">
+
+
+            <!-- PRICE -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-currency-rupee"></i>
+
+                    </div>
+
+                    <h5>
+                        Price
+                    </h5>
+
+                    {% if demand_drivers.get("Price") is not none %}
+
+                    <h3>
+
+                        {{ "%.2f"|format(
+                            demand_drivers.get("Price")
+                        ) }}
+
+                    </h3>
+
+                    <span>
+                        Demand correlation
+                    </span>
+
+                    {% else %}
+
+                    <h3>
+                        —
+                    </h3>
+
+                    <span>
+                        Data unavailable
+                    </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <!-- DISCOUNT -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-percent"></i>
+
+                    </div>
+
+                    <h5>
+                        Discount
+                    </h5>
+
+                    {% if demand_drivers.get("Discount") is not none %}
+
+                    <h3>
+
+                        {{ "%.2f"|format(
+                            demand_drivers.get("Discount")
+                        ) }}
+
+                    </h3>
+
+                    <span>
+                        Demand correlation
+                    </span>
+
+                    {% else %}
+
+                    <h3>
+                        —
+                    </h3>
+
+                    <span>
+                        Data unavailable
+                    </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <!-- PROMOTION -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-megaphone"></i>
+
+                    </div>
+
+                    <h5>
+                        Promotion
+                    </h5>
+
+                    {% if demand_drivers.get("Promotion") is not none %}
+
+                    <h3>
+
+                        {{ "%.2f"|format(
+                            demand_drivers.get("Promotion")
+                        ) }}
+
+                    </h3>
+
+                    <span>
+                        Demand relationship
+                    </span>
+
+                    {% else %}
+
+                    <h3>
+                        —
+                    </h3>
+
+                    <span>
+                        Data unavailable
+                    </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <!-- SEASONALITY -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-calendar-event"></i>
+
+                    </div>
+
+                    <h5>
+                        Seasonality
+                    </h5>
+
+                    {% if weekly_pattern %}
+
+                    <h3>
+
+                        {{ weekly_pattern }}
+
+                    </h3>
+
+                    <span>
+                        Highest-demand weekday
+                    </span>
+
+                    {% else %}
+
+                    <h3>
+                        —
+                    </h3>
+
+                    <span>
+                        Pattern unavailable
+                    </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MACHINE LEARNING ANALYTICS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+
+                    <i class="bi bi-robot"></i>
+
+                    Machine Learning Analytics
+
+                </h4>
+
+                <p class="muted mb-0">
+
+                    AI-powered demand classification,
+                    anomaly detection and product analysis.
+
+                </p>
+
+            </div>
+
+            {% if ml_accuracy is not none %}
+
+            <span class="badge bg-success">
+
+                ML Active
+
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+
+                Waiting for Data
+
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="row g-4 mt-2">
+
+
+            <!-- MODEL ACCURACY -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-cpu"></i>
+
+                    </div>
+
+                    <h5>
+                        Model Accuracy
+                    </h5>
+
+                    <h3>
+
+                        {% if ml_accuracy is not none %}
+
+                            {{ ml_accuracy }}%
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+
+                        {{ ml_model
+                           if ml_model
+                           else "Random Forest" }}
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ANOMALIES -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-exclamation-triangle"></i>
+
+                    </div>
+
+                    <h5>
+                        Demand Anomalies
+                    </h5>
+
+                    <h3>
+                        {{ anomaly_count }}
+                    </h3>
+
+                    <span>
+
+                        {{ anomaly_percentage }}%
+                        of records
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-boxes"></i>
+
+                    </div>
+
+                    <h5>
+                        Products
+                    </h5>
+
+                    <h3>
+
+                        {% if products_analyzed is not none %}
+
+                            {{ products_analyzed }}
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+                        Product performance analyzed
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PEAK WEEKDAY -->
+
+            <div class="col-md-6 col-xl-3">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-calendar-check"></i>
+
+                    </div>
+
+                    <h5>
+                        Peak Weekday
+                    </h5>
+
+                    <h3>
+
+                        {% if weekly_pattern %}
+
+                            {{ weekly_pattern }}
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+                        Highest average demand
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         ML FEATURE IMPORTANCE
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+
+                    <i class="bi bi-bar-chart-fill"></i>
+
+                    ML Feature Importance
+
+                </h4>
+
+                <p class="muted mb-0">
+
+                    Factors used by the Random Forest model
+                    for demand classification.
+
+                </p>
+
+            </div>
+
+            {% if feature_importance %}
+
+            <span class="badge bg-success">
+                Available
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                Waiting
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if feature_importance %}
+
+        <div class="table-responsive mt-4">
+
+            <table class="table table-bordered align-middle">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Feature
+                        </th>
+
+                        <th>
+                            Importance
+                        </th>
+
+                        <th>
+                            Relative Impact
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {% for feature, importance in feature_importance.items() %}
+
+                    <tr>
+
+                        <td>
+
+                            <strong>
+
+                                {{ feature
+                                   |replace("_", " ")
+                                   |title }}
+
+                            </strong>
+
+                        </td>
+
+                        <td>
+
+                            {{ "%.4f"|format(
+                                importance
+                            ) }}
+
+                        </td>
+
+                        <td>
+
+                            <div
+                                class="progress"
+                                style="height: 10px;"
+                            >
+
+                                <div
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    style="width: {{ (importance * 100)|round(1) }}%;"
+                                >
+                                </div>
+
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-light border mt-4">
+
+            <i class="bi bi-info-circle"></i>
+
+            Feature importance will be displayed after
+            the ML model is successfully trained.
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         PRODUCT PERFORMANCE
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+
+                    <i class="bi bi-box-seam"></i>
+
+                    Product Demand Analysis
+
+                </h4>
+
+                <p class="muted mb-0">
+
+                    Product-level demand performance
+                    generated from the dataset.
+
+                </p>
+
+            </div>
+
+            {% if product_analysis %}
+
+            <span class="badge bg-success">
+
+                {{ product_analysis|length }}
+                Products
+
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+                No Data
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="table-responsive mt-4">
+
+            <table class="table table-bordered align-middle">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Product
+                        </th>
+
+                        <th>
+                            Total Demand
+                        </th>
+
+                        <th>
+                            Average Demand
+                        </th>
+
+                        <th>
+                            Transactions
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% if product_analysis %}
+
+                        {% for product in product_analysis %}
+
+                        <tr>
+
+                            <td>
+
+                                <strong>
+                                    {{ product.product }}
+                                </strong>
+
+                            </td>
+
+                            <td>
+
+                                {{ product.total_demand }}
+
+                            </td>
+
+                            <td>
+
+                                {{ product.average_demand }}
+
+                            </td>
+
+                            <td>
+
+                                {{ product.transactions }}
+
+                            </td>
+
+                            <td>
+
+                                {% if loop.index <= 3 %}
+
+                                <span class="badge bg-success">
+
+                                    High Performer
+
+                                </span>
+
+                                {% elif loop.index <= 10 %}
+
+                                <span class="badge bg-info">
+
+                                    Stable
+
+                                </span>
+
+                                {% else %}
+
+                                <span class="badge bg-warning text-dark">
+
+                                    Monitor
+
+                                </span>
+
+                                {% endif %}
+
+                            </td>
+
+                        </tr>
+
+                        {% endfor %}
+
+                    {% else %}
+
+                    <tr>
+
+                        <td
+                            colspan="5"
+                            class="text-center text-muted py-5"
+                        >
+
+                            <i class="bi bi-database-x fs-3"></i>
+
+                            <br><br>
+
+                            No product demand data available.
+
+                            <br>
+
+                            A compatible product and
+                            demand column are required.
+
+                        </td>
+
+                    </tr>
+
+                    {% endif %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         SEASONAL ANALYSIS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+
+                    <i class="bi bi-calendar3"></i>
+
+                    Seasonal Analysis
+
+                </h4>
+
+                <p class="muted mb-0">
+
+                    Weekly and monthly demand patterns
+                    detected from historical data.
+
+                </p>
+
+            </div>
+
+            {% if weekly_pattern or monthly_pattern %}
+
+            <span class="badge bg-success">
+
+                Pattern Detected
+
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-secondary">
+
+                Awaiting Data
+
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="row g-4 mt-2">
+
+
+            <!-- WEEKLY -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-calendar-week"></i>
+
+                    </div>
+
+                    <h5>
+                        Weekly Pattern
+                    </h5>
+
+                    <h3>
+
+                        {% if weekly_pattern %}
+
+                            {{ weekly_pattern }}
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+
+                        Highest average demand
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MONTHLY -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-calendar-month"></i>
+
+                    </div>
+
+                    <h5>
+                        Monthly Pattern
+                    </h5>
+
+                    <h3>
+
+                        {% if monthly_pattern %}
+
+                            {{ monthly_pattern }}
+
+                        {% else %}
+
+                            —
+
+                        {% endif %}
+
+                    </h3>
+
+                    <span>
+
+                        Highest-demand month
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- FESTIVAL -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="card-icon">
+
+                        <i class="bi bi-calendar-heart"></i>
+
+                    </div>
+
+                    <h5>
+                        Festival Effect
+                    </h5>
+
+                    <h3>
+                        —
+                    </h3>
+
+                    <span>
+
+                        Festival column not detected
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DEMAND ANOMALIES
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+
+                    <i class="bi bi-shield-exclamation"></i>
+
+                    Demand Anomaly Detection
+
+                </h4>
+
+                <p class="muted mb-0">
+
+                    Isolation Forest identifies unusual
+                    demand behaviour.
+
+                </p>
+
+            </div>
+
+
+            {% if anomaly_count > 0 %}
+
+            <span class="badge bg-warning text-dark">
+
+                {{ anomaly_count }}
+                Anomalies
+
+            </span>
+
+            {% else %}
+
+            <span class="badge bg-success">
+
+                Normal
+
+            </span>
+
+            {% endif %}
+
+        </div>
+
+
+        {% if anomalies %}
+
+        <div class="table-responsive mt-4">
+
+            <table class="table table-bordered align-middle">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Date
+                        </th>
+
+                        <th>
+                            Product
+                        </th>
+
+                        <th>
+                            Demand
+                        </th>
+
+                        <th>
+                            Anomaly Score
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    {% for anomaly in anomalies %}
+
+                    <tr>
+
+                        <td>
+
+                            {% if anomaly.date %}
+
+                                {{ anomaly.date }}
+
+                            {% else %}
+
+                                —
+
+                            {% endif %}
+
+                        </td>
+
+
+                        <td>
+
+                            {% if anomaly.product %}
+
+                                {{ anomaly.product }}
+
+                            {% else %}
+
+                                —
+
+                            {% endif %}
+
+                        </td>
+
+
+                        <td>
+
+                            {{ anomaly.demand }}
+
+                        </td>
+
+
+                        <td>
+
+                            {{ anomaly.anomaly_score }}
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="badge bg-warning text-dark">
+
+                                Unusual Demand
+
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        {% else %}
+
+        <div class="alert alert-success mt-4">
+
+            <i class="bi bi-check-circle"></i>
+
+            No major demand anomalies were detected
+            by the Isolation Forest model.
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         AI BUSINESS INSIGHTS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+
+                    <i class="bi bi-lightbulb"></i>
+
+                    AI-Generated Business Insights
+
+                </h4>
+
+                <p class="muted mb-0">
+
+                    Automatically generated insights based
+                    on analytics and machine learning results.
+
+                </p>
+
+            </div>
+
+            <span class="badge bg-primary">
+
+                AI Insights
+
+            </span>
+
+        </div>
+
+
+        <div class="mt-4">
+
+            {% if business_insights %}
+
+                {% for insight in business_insights %}
+
+                <div
+                    class="alert alert-light border
+                           d-flex align-items-start"
+                >
+
+                    <i class="bi bi-stars me-3 fs-4"></i>
+
+                    <div>
+
+                        {{ insight }}
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            {% else %}
+
+            <div class="alert alert-info">
+
+                <i class="bi bi-info-circle"></i>
+
+                Business insights will appear after
+                the Analytics ML pipeline processes
+                a compatible dataset.
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         DATA REQUIREMENTS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <h4>
+            Required Data for Analytics
+        </h4>
+
+        <p class="muted">
+
+            The system automatically detects compatible
+            columns from the cleaned dataset.
+
+        </p>
+
+
+        <div class="row g-4 mt-2">
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="status-item">
+
+                    <span>
+                        Date
+                    </span>
+
+                    {% if date_column %}
+
+                    <strong class="online">
+                        ✓ Detected
+                    </strong>
+
+                    {% else %}
+
+                    <strong class="ready">
+                        Optional
+                    </strong>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="status-item">
+
+                    <span>
+                        Product
+                    </span>
+
+                    {% if product_column %}
+
+                    <strong class="online">
+                        ✓ Detected
+                    </strong>
+
+                    {% else %}
+
+                    <strong class="ready">
+                        Recommended
+                    </strong>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="status-item">
+
+                    <span>
+                        Demand / Sales
+                    </span>
+
+                    {% if demand_column or sales_column %}
+
+                    <strong class="online">
+                        ✓ Detected
+                    </strong>
+
+                    {% else %}
+
+                    <strong class="ready">
+                        Required
+                    </strong>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="status-item">
+
+                    <span>
+                        Price
+                    </span>
+
+                    {% if demand_drivers.get("Price") is not none %}
+
+                    <strong class="online">
+                        ✓ Detected
+                    </strong>
+
+                    {% else %}
+
+                    <strong class="ready">
+                        Optional
+                    </strong>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="status-item">
+
+                    <span>
+                        Discount
+                    </span>
+
+                    {% if demand_drivers.get("Discount") is not none %}
+
+                    <strong class="online">
+                        ✓ Detected
+                    </strong>
+
+                    {% else %}
+
+                    <strong class="ready">
+                        Optional
+                    </strong>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="status-item">
+
+                    <span>
+                        Promotion
+                    </span>
+
+                    {% if demand_drivers.get("Promotion") is not none %}
+
+                    <strong class="online">
+                        ✓ Detected
+                    </strong>
+
+                    {% else %}
+
+                    <strong class="ready">
+                        Optional
+                    </strong>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         ANALYTICS PIPELINE
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <h4>
+                    Analytics Pipeline
+                </h4>
+
+                <p class="muted mb-0">
+
+                    Current status of the demand analytics
+                    and machine learning workflow.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="mt-4">
+
+
+            <div class="status-item">
+
+                <span>
+                    Dataset Upload
+                </span>
+
+                {% if selected_dataset_filename %}
+
+                <strong class="online">
+                    ✓ Available
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Data Quality Analysis
+                </span>
+
+                <strong class="online">
+                    ✓ Available
+                </strong>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Automatic Column Mapping
+                </span>
+
+                <strong class="online">
+                    ✓ Available
+                </strong>
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Demand Trend Analysis
+                </span>
+
+                {% if chart_dates and chart_demand %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Demand Driver Analysis
+                </span>
+
+                {% if demand_drivers %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Random Forest Classification
+                </span>
+
+                {% if ml_accuracy is not none %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Isolation Forest Anomaly Detection
+                </span>
+
+                {% if anomaly_count is not none %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Product Performance Analysis
+                </span>
+
+                {% if product_analysis %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    Seasonal Analysis
+                </span>
+
+                {% if weekly_pattern or monthly_pattern %}
+
+                <strong class="online">
+                    ✓ Completed
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+
+            <div class="status-item">
+
+                <span>
+                    AI Business Insights
+                </span>
+
+                {% if business_insights %}
+
+                <strong class="online">
+                    ✓ Generated
+                </strong>
+
+                {% else %}
+
+                <strong class="ready">
+                    Waiting
+                </strong>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<!-- =========================================================
+     CHART.JS
+========================================================== -->
+
+{% if chart_dates and chart_demand %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const canvas =
+            document.getElementById(
+                "demandTrendChart"
+            );
+
+        if (!canvas) {
+            return;
+        }
+
+        const demandTrendLabels =
+            {{ chart_dates | tojson }};
+
+        const demandTrendValues =
+            {{ chart_demand | tojson }};
+
+
+        new Chart(
+            canvas,
+            {
+
+                type: "line",
+
+                data: {
+
+                    labels:
+                        demandTrendLabels,
+
+                    datasets: [
+
+                        {
+
+                            label:
+                                "Historical Demand",
+
+                            data:
+                                demandTrendValues,
+
+                            tension:
+                                0.35,
+
+                            fill:
+                                false,
+
+                            pointRadius:
+                                2,
+
+                            pointHoverRadius:
+                                5
+
+                        }
+
+                    ]
+
+                },
+
+                options: {
+
+                    responsive:
+                        true,
+
+                    maintainAspectRatio:
+                        false,
+
+                    interaction: {
+
+                        intersect:
+                            false,
+
+                        mode:
+                            "index"
+
+                    },
+
+                    plugins: {
+
+                        legend: {
+
+                            display:
+                                true
+
+                        },
+
+                        tooltip: {
+
+                            enabled:
+                                true
+
+                        }
+
+                    },
+
+                    scales: {
+
+                        x: {
+
+                            ticks: {
+
+                                maxTicksLimit:
+                                    12
+
+                            }
+
+                        },
+
+                        y: {
+
+                            beginAtZero:
+                                true,
+
+                            title: {
+
+                                display:
+                                    true,
+
+                                text:
+                                    "Demand"
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+        );
+
+    }
+);
+
+</script>
+
+{% endif %}
+
+{% endblock %}

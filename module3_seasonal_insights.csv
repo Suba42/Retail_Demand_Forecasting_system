@@ -1,0 +1,8 @@
+Insight_Type,Entity,Metric,Value,Interpretation,Business_Action
+Monthly Seasonality,December,Average Sales,453.7403702065264,This month has the highest average demand.,Increase inventory preparation before this month.
+Monthly Seasonality,February,Average Sales,320.9288688131747,This month has the lowest average demand.,Avoid excessive inventory accumulation.
+Weekly Seasonality,Sunday,Average Sales,463.08536564499695,This day has the highest average demand.,Ensure sufficient stock before high-demand days.
+Quarterly Seasonality,Q4,Average Sales,396.8932425333122,This quarter has the strongest demand.,Prepare inventory and replenishment capacity in advance.
+Holiday Impact,Holiday,Sales Change %,10.657947964689782,Holiday periods show higher average demand.,Increase stock availability before important holidays.
+Store Demand,44.0,Average Sales,1117.2452539064457,This store has the highest average sales.,Prioritize inventory availability for this store.
+Product Demand,GROCERY I,Average Sales,3776.9721000043983,This product family has the highest average demand.,Maintain higher safety stock for this product family.

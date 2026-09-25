@@ -1,0 +1,7 @@
+Recommendation_Type,Target,Priority,Recommendation,Reason
+Seasonal Stock Planning,December,High,Increase inventory preparation before the peak-demand month.,Average sales = 453.74
+Inventory Reduction,February,Medium,Reduce excess inventory during the low-demand month.,Average sales = 320.93
+Weekly Replenishment,Sunday,High,Complete replenishment before the highest-demand weekday.,Average sales = 463.09
+Holiday Preparation,Holiday Periods,High,Increase stock levels before major holiday periods.,Average sales increase = 10.66%
+Store Allocation,Store 44.0,High,Prioritize inventory allocation for the highest-demand store.,Average sales = 1117.25
+Product Stock,GROCERY I,High,Maintain stronger stock availability for the highest-demand product family.,Average sales = 3776.97

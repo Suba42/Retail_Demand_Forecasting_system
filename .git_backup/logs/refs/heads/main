@@ -1,0 +1,21 @@
+0000000000000000000000000000000000000000 5d800458794a1beea009164b687400ae633a10cb unknown <ELCOT@WINDOWS-11-PERSONAL-PC.(none)> 1786475436 +0530	clone: from https://github.com/mounikapandiyarajan/Retail_Demand_Forecasting_system.git
+5d800458794a1beea009164b687400ae633a10cb aa97cbd39d557184f0f068d2c38825f7d059d5d6 SUBASRI G <24suds42@tcarts.in> 1786479375 +0530	commit: Added retail demand forecasting application
+aa97cbd39d557184f0f068d2c38825f7d059d5d6 f99b28f9e5be72cc6b17346726d6853ded3cdebd SUBASRI G <24suds42@tcarts.in> 1786539934 +0530	commit: 6:35 12-8-26
+f99b28f9e5be72cc6b17346726d6853ded3cdebd 54dc5b90afbfbb65c57de35f9d029076dd4011b2 SUBASRI G <24suds42@tcarts.in> 1786566746 +0530	commit: Almost over
+54dc5b90afbfbb65c57de35f9d029076dd4011b2 15eeb8c64e51b9652703b325df43d877d146acbc SUBASRI G <24suds42@tcarts.in> 1786626403 +0530	commit: 13-8-26 6:30
+15eeb8c64e51b9652703b325df43d877d146acbc 5433725bcc453dd3816190c36e374b05a1f1b3ce SUBASRI G <24suds42@tcarts.in> 1786653023 +0530	commit: Made some changes again in templates and app
+5433725bcc453dd3816190c36e374b05a1f1b3ce 43bb58a2ee4460fc6ea3524a198c3bb8046c7eed SUBASRI G <24suds42@tcarts.in> 1786685846 +0530	pull: Fast-forward
+43bb58a2ee4460fc6ea3524a198c3bb8046c7eed f324e962cc8ecb4d526544c11de8056193e7d142 SUBASRI G <24suds42@tcarts.in> 1786692068 +0530	commit: Backend Frontend completed entirely
+f324e962cc8ecb4d526544c11de8056193e7d142 738331fe82e13dd53f1243ba241ad0ca83836e55 SUBASRI G <24suds42@tcarts.in> 1786699881 +0530	commit: Nothing
+738331fe82e13dd53f1243ba241ad0ca83836e55 5433725bcc453dd3816190c36e374b05a1f1b3ce SUBASRI G <24suds42@tcarts.in> 1786736053 +0530	reset: moving to 5433725
+5433725bcc453dd3816190c36e374b05a1f1b3ce 12b5dbfc97bebbe6456084ca13e109601ad7eb2a SUBASRI G <24suds42@tcarts.in> 1787043792 +0530	pull origin main: Fast-forward
+12b5dbfc97bebbe6456084ca13e109601ad7eb2a 93f229497bda48d8d50ffacde8e6bbbf7c11dfb9 SUBASRI G <24suds42@tcarts.in> 1787152136 +0530	pull: Fast-forward
+93f229497bda48d8d50ffacde8e6bbbf7c11dfb9 54a22e54f32034e4d2dda89b48025c66a6a9cf32 SUBASRI G <24suds42@tcarts.in> 1787158434 +0530	commit: Rearranging the modules and dual option of using csv for all modules
+54a22e54f32034e4d2dda89b48025c66a6a9cf32 0c595aa62b5f2072df9b1aa6015e40086defb4ca SUBASRI G <24suds42@tcarts.in> 1787224331 +0530	commit: Checking first 3 modules and text colour change
+0c595aa62b5f2072df9b1aa6015e40086defb4ca 0f9f7fd9368f95cecb7521d0d9c72f705cbb59a3 SUBASRI G <24suds42@tcarts.in> 1787998420 +0530	pull origin main: Fast-forward
+0f9f7fd9368f95cecb7521d0d9c72f705cbb59a3 e4da657e409fbc88f35d9148ae7c8e195234c62b SUBASRI G <24suds42@tcarts.in> 1788645097 +0530	commit: inventory analytics seasonalanalysis completely done and mlcode only for smart alerts
+e4da657e409fbc88f35d9148ae7c8e195234c62b 417c9074d80d0e83a25cf447c2ab91a5e4bcd782 SUBASRI G <24suds42@tcarts.in> 1788786846 +0530	commit: smart alerts module
+417c9074d80d0e83a25cf447c2ab91a5e4bcd782 7943e368ab85356e1619677488de9e573498e352 SUBASRI G <24suds42@tcarts.in> 1788900111 +0530	commit: Improved the models accuracy in ml files
+7943e368ab85356e1619677488de9e573498e352 9e93e02678c57be2278c38721effa85fe3019ac2 SUBASRI G <24suds42@tcarts.in> 1789339567 +0530	commit: Reports module
+9e93e02678c57be2278c38721effa85fe3019ac2 07959988572db12ad3615af515e6d84c3bf63dcd SUBASRI G <24suds42@tcarts.in> 1790320482 +0530	commit: Last updates
+07959988572db12ad3615af515e6d84c3bf63dcd 6e06b9c471feeebc2ce5e5d19c34635378649d4c SUBASRI G <24suds42@tcarts.in> 1790322876 +0530	commit: Complete Retail Demand Forecasting System

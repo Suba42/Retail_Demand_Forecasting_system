@@ -1,0 +1,77 @@
+{
+    "analytics": {
+        "filename": "inventory_test_saless_4.csv",
+        "rows": 9,
+        "columns": 5,
+        "cleaning_report": {
+            "original_rows": 10,
+            "cleaned_rows": 9,
+            "original_columns": 5,
+            "cleaned_columns": 5,
+            "duplicates_removed": 1,
+            "missing_values_before": 1,
+            "missing_values_after": 0,
+            "outliers_detected": {
+                "quantity": 0,
+                "price": 2
+            },
+            "extreme_outliers_removed": 0,
+            "automatic_column_mapping": {
+                "date": "date",
+                "product": "product",
+                "demand": "quantity",
+                "price": "price",
+                "store": "store"
+            },
+            "warnings": []
+        }
+    },
+    "seasonal": {
+        "filename": "module5_model_ready.csv",
+        "rows": 3000888,
+        "columns": 27,
+        "cleaning_report": {
+            "original_rows": 3000888,
+            "cleaned_rows": 3000888,
+            "original_columns": 26,
+            "cleaned_columns": 27,
+            "duplicates_removed": 0,
+            "missing_values_before": 0,
+            "missing_values_after": 0,
+            "outliers_detected": {
+                "store_nbr": 0,
+                "cluster": 0,
+                "sales": 447105,
+                "oil_price": 0,
+                "holiday_count": 0,
+                "day": 0,
+                "dayofweek": 0,
+                "month": 0,
+                "year": 0,
+                "weekofyear": 0,
+                "weekend_flag": 0,
+                "holiday_flag": 0,
+                "festival_flag": 0,
+                "promotion_status": 0,
+                "promotion_quantity": 0,
+                "transactions": 166749,
+                "sales_per_transaction": 393510,
+                "oil_price_missing": 0
+            },
+            "extreme_outliers_removed": 0,
+            "automatic_column_mapping": {
+                "date": "date",
+                "category": "product_category",
+                "sales": "sales",
+                "promotion": "promotion_status",
+                "holiday": "holiday_flag",
+                "festival": "festival_flag",
+                "demand": "promotion_quantity",
+                "price": "oil_price",
+                "store": "store_nbr",
+                "lead_time": "day"
+            },
+            "warnings": []
+        }
+    }
+}

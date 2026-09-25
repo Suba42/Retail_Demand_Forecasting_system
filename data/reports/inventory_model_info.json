@@ -1,0 +1,22 @@
+{
+    "model": "Random Forest Classifier",
+    "ml_available": true,
+    "accuracy": 73.81,
+    "training_rows": 2800,
+    "service_level": 0.95,
+    "z_score": 1.645,
+    "review_period_days": 7,
+    "demand_std_proxy": 32.9818,
+    "message": "Random Forest stockout-risk model trained successfully.",
+    "feature_importance": {
+        "numeric__current_stock": 0.2686,
+        "numeric__daily_demand": 0.2535,
+        "numeric__supplier_reliability_score": 0.2257,
+        "numeric__lead_time_days": 0.1595,
+        "categorical__weather_impact_Medium": 0.0211,
+        "categorical__weather_impact_High": 0.0203,
+        "categorical__weather_impact_Low": 0.02,
+        "categorical__promotion_active_No": 0.0158,
+        "categorical__promotion_active_Yes": 0.0156
+    }
+}

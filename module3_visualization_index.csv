@@ -1,0 +1,8 @@
+Chart_ID,Chart_Name,File,Purpose
+1,Monthly Seasonality,01_monthly_seasonality.png,Shows monthly demand pattern
+2,Weekday Pattern,02_weekday_pattern.png,Shows demand variation by weekday
+3,Quarterly Pattern,03_quarterly_pattern.png,Shows quarterly demand pattern
+4,Holiday Impact,04_holiday_impact.png,Compares holiday and normal-day demand
+5,Top Stores,05_top_stores.png,Shows highest-demand stores
+6,Top Product Families,06_top_product_families.png,Shows highest-demand product families
+7,Seasonal Index,07_seasonal_index.png,Shows monthly seasonal strength

@@ -1,0 +1,11 @@
+Date,Product,Quantity,Price,Store
+2026-01-01,Milk,25,50,Store A
+2026-01-02,Bread,30,40,Store A
+2026-01-03,Milk,28,50,Store A
+2026-01-04,Bread,35,40,Store A
+2026-01-05,Rice,20,80,Store B
+2026-01-06,Milk,,50,Store A
+2026-01-07,Bread,32,40,Store A
+2026-01-08,Rice,22,80,Store B
+2026-01-09,Milk,31,50,Store A
+2026-01-09,Milk,31,50,Store A

@@ -1,0 +1,1976 @@
+{% extends "base.html" %}
+
+{% block title %}
+Smart Alerts | Retail Demand Forecasting System
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-container">
+
+    <!-- =====================================================
+         PAGE HEADER
+    ====================================================== -->
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <div class="dashboard-label">
+                AI-POWERED MONITORING
+            </div>
+
+            <h1>
+                Smart Alerts
+            </h1>
+
+            <p class="muted">
+                AI-driven detection of unusual demand and inventory conditions.
+            </p>
+
+        </div>
+
+        <div class="card-icon">
+            <i class="bi bi-bell-fill"></i>
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         FLASH MESSAGES
+    ====================================================== -->
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+
+        {% if messages %}
+
+            {% for category, message in messages %}
+
+                <div class="alert alert-{{ category }} alert-dismissible fade show mt-3"
+                     role="alert">
+
+                    {{ message }}
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="alert">
+                    </button>
+
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+    {% endwith %}
+
+
+    <!-- =====================================================
+         ANALYSIS STATUS
+    ====================================================== -->
+
+    {% if alerts_success %}
+
+        <div class="alert alert-success mt-4">
+
+            <i class="bi bi-check-circle-fill me-2"></i>
+
+            <strong>Smart Alert analysis completed.</strong>
+
+            {{ alerts_message }}
+
+        </div>
+
+    {% elif alerts_message %}
+
+        <div class="alert alert-warning mt-4">
+
+            <i class="bi bi-info-circle-fill me-2"></i>
+
+            <strong>Smart Alert status:</strong>
+
+            {{ alerts_message }}
+
+        </div>
+
+    {% endif %}
+
+
+    <!-- =====================================================
+         EMAIL NOTIFICATION RESULT
+    ====================================================== -->
+
+    {% if notification_result %}
+
+        {% if notification_result.notifications_sent > 0 %}
+
+            <div class="alert alert-success mt-4">
+
+                <i class="bi bi-envelope-check-fill me-2"></i>
+
+                <strong>
+                    Email notifications sent successfully.
+                </strong>
+
+                {{ notification_result.notifications_sent }}
+                alert notification(s) were delivered by email.
+
+            </div>
+
+        {% endif %}
+
+
+        {% if notification_result.notifications_failed > 0 %}
+
+            <div class="alert alert-danger mt-4">
+
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+
+                <strong>
+                    Some email notifications could not be sent.
+                </strong>
+
+                {{ notification_result.notifications_failed }}
+                notification(s) failed.
+
+            </div>
+
+        {% endif %}
+
+    {% endif %}
+
+
+    <!-- =====================================================
+         SUMMARY CARDS
+    ====================================================== -->
+
+    <div class="row g-4 mt-2">
+
+
+        <!-- TOTAL ALERTS -->
+
+        <div class="col-md-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-bell-fill"></i>
+                </div>
+
+                <div class="dashboard-label">
+                    TOTAL ALERTS
+                </div>
+
+                <h2>
+                    {{ total_alerts | default(0) }}
+                </h2>
+
+                <p class="muted mb-0">
+                    Active smart alerts
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CRITICAL -->
+
+        <div class="col-md-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-exclamation-octagon-fill"></i>
+                </div>
+
+                <div class="dashboard-label">
+                    CRITICAL
+                </div>
+
+                <h2>
+                    {{ critical_alerts | default(0) }}
+                </h2>
+
+                <p class="muted mb-0">
+                    Immediate attention
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- HIGH -->
+
+        <div class="col-md-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                </div>
+
+                <div class="dashboard-label">
+                    HIGH
+                </div>
+
+                <h2>
+                    {{ high_alerts | default(0) }}
+                </h2>
+
+                <p class="muted mb-0">
+                    High-priority alerts
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MEDIUM -->
+
+        <div class="col-md-3">
+
+            <div class="dashboard-card">
+
+                <div class="card-icon">
+                    <i class="bi bi-info-circle-fill"></i>
+                </div>
+
+                <div class="dashboard-label">
+                    MEDIUM
+                </div>
+
+                <h2>
+                    {{ medium_alerts | default(0) }}
+                </h2>
+
+                <p class="muted mb-0">
+                    Monitoring required
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         LOW ALERT SUMMARY
+    ====================================================== -->
+
+    {% if low_alerts is defined and low_alerts > 0 %}
+
+        <div class="mt-3">
+
+            <div class="dashboard-card">
+
+                <div class="d-flex justify-content-between align-items-center">
+
+                    <div>
+
+                        <div class="dashboard-label">
+                            LOW PRIORITY
+                        </div>
+
+                        <h5 class="mb-1">
+                            {{ low_alerts }}
+                        </h5>
+
+                        <p class="muted mb-0">
+                            Low-priority conditions detected.
+                        </p>
+
+                    </div>
+
+                    <div class="card-icon">
+                        <i class="bi bi-bell"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    {% endif %}
+
+
+    <!-- =====================================================
+         MACHINE LEARNING ENGINE
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    MACHINE LEARNING ENGINE
+                </div>
+
+                <h4>
+                    Smart Alert Detection Status
+                </h4>
+
+                <p class="muted mb-0">
+                    AI-based anomaly detection using the Smart Alerts engine.
+                </p>
+
+            </div>
+
+            <div class="card-icon">
+                <i class="bi bi-cpu-fill"></i>
+            </div>
+
+        </div>
+
+
+        <div class="row g-4 mt-3">
+
+
+            <!-- =================================================
+                 DETECTION METHOD
+            ================================================== -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-label">
+                        DETECTION METHOD
+                    </div>
+
+                    <h5>
+
+                        {{ ml_info.method
+                           | default("Isolation Forest") }}
+
+                    </h5>
+
+                    <p class="muted mb-0">
+                        Machine learning anomaly detection
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ANOMALIES DETECTED
+            ================================================== -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-label">
+                        ANOMALIES DETECTED
+                    </div>
+
+                    <h5>
+
+                        {{ ml_info.anomalies_detected
+                           | default(0) }}
+
+                    </h5>
+
+                    <p class="muted mb-0">
+                        Potential unusual conditions
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ANOMALY RATE
+            ================================================== -->
+
+            <div class="col-md-4">
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-label">
+                        ANOMALY RATE
+                    </div>
+
+                    <h5>
+
+                        {{ ml_info.anomaly_rate
+                           | default(0) }}%
+
+                    </h5>
+
+                    <p class="muted mb-0">
+                        Detected across the dataset
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ML STATUS DETAILS
+        ================================================== -->
+
+        {% if ml_info %}
+
+            <div class="dashboard-card mt-4">
+
+                <div class="dashboard-label">
+                    DETECTION DETAILS
+                </div>
+
+                <div class="row g-3 mt-2">
+
+
+                    {% if ml_info.records_analyzed is defined %}
+
+                        <div class="col-md-3">
+
+                            <div class="dashboard-label">
+                                RECORDS ANALYZED
+                            </div>
+
+                            <h5>
+                                {{ ml_info.records_analyzed }}
+                            </h5>
+
+                        </div>
+
+                    {% endif %}
+
+
+                    {% if ml_info.features_used is defined %}
+
+                        <div class="col-md-3">
+
+                            <div class="dashboard-label">
+                                FEATURES USED
+                            </div>
+
+                            <h5>
+                                {{ ml_info.features_used }}
+                            </h5>
+
+                        </div>
+
+                    {% endif %}
+
+
+                    {% if ml_info.contamination is defined %}
+
+                        <div class="col-md-3">
+
+                            <div class="dashboard-label">
+                                CONTAMINATION
+                            </div>
+
+                            <h5>
+                                {{ ml_info.contamination }}
+                            </h5>
+
+                        </div>
+
+                    {% endif %}
+
+
+                    {% if ml_info.status is defined %}
+
+                        <div class="col-md-3">
+
+                            <div class="dashboard-label">
+                                STATUS
+                            </div>
+
+                            <h5>
+                                {{ ml_info.status }}
+                            </h5>
+
+                        </div>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         EMAIL ALERT SUMMARY
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    EMAIL ALERT SUMMARY
+                </div>
+
+                <h4>
+                    Send a short alert summary
+                </h4>
+
+                <p class="muted mb-0">
+                    Enter an email address to receive the current alert counts and priority items.
+                </p>
+
+            </div>
+
+            <div class="card-icon">
+                <i class="bi bi-send-fill"></i>
+            </div>
+
+        </div>
+
+        <form
+            method="POST"
+            action="{{ url_for('email_alert_summary') }}"
+            class="mt-4"
+        >
+
+            <div class="row g-3 align-items-end">
+
+                <div class="col-md-8">
+
+                    <label
+                        for="summary_email"
+                        class="form-label"
+                    >
+                        Email address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="summary_email"
+                        name="summary_email"
+                        class="form-control"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary w-100"
+                    >
+                        <i class="bi bi-envelope-arrow-up me-2"></i>
+                        Email Summary
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- =====================================================
+         ACTIVE SMART ALERTS
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    ACTIVE SMART ALERTS
+                </div>
+
+                <h4>
+                    Detected Demand & Inventory Conditions
+                </h4>
+
+                <p class="muted mb-0">
+                    AI-generated alerts requiring business attention.
+                </p>
+
+            </div>
+
+            <div class="card-icon">
+                <i class="bi bi-activity"></i>
+            </div>
+
+        </div>
+
+
+        {% if alerts %}
+
+            <div class="mt-4">
+
+                {% for alert in alerts %}
+
+                    <!-- =================================================
+                         INDIVIDUAL ALERT
+                    ================================================== -->
+
+                    <div class="dashboard-card mb-4">
+
+
+                        <!-- =================================================
+                             ALERT HEADER
+                        ================================================== -->
+
+                        <div class="d-flex justify-content-between align-items-start">
+
+                            <div class="flex-grow-1">
+
+
+                                <!-- SEVERITY -->
+
+                                <div class="dashboard-label">
+
+                                    {{ alert.severity
+                                       | default("LOW")
+                                       | upper }}
+
+                                </div>
+
+
+                                <!-- TITLE -->
+
+                                <h4 class="mb-2">
+
+                                    {{ alert.title
+                                       | default("Smart Alert") }}
+
+                                </h4>
+
+
+                                <!-- SHORT MESSAGE -->
+
+                                {% if alert.message %}
+
+                                    <p class="mb-2">
+
+                                        {{ alert.message }}
+
+                                    </p>
+
+                                {% endif %}
+
+                            </div>
+
+
+                            <!-- SEVERITY BADGE -->
+
+                            <div class="ms-3">
+
+                                {% set severity =
+                                    alert.severity
+                                    | default("low")
+                                    | lower
+                                %}
+
+
+                                {% if severity == "critical" %}
+
+                                    <span class="badge bg-danger">
+
+                                        <i class="bi bi-exclamation-octagon-fill me-1"></i>
+
+                                        CRITICAL
+
+                                    </span>
+
+
+                                {% elif severity == "high" %}
+
+                                    <span class="badge bg-warning text-dark">
+
+                                        <i class="bi bi-exclamation-triangle-fill me-1"></i>
+
+                                        HIGH
+
+                                    </span>
+
+
+                                {% elif severity == "medium" %}
+
+                                    <span class="badge bg-info text-dark">
+
+                                        <i class="bi bi-info-circle-fill me-1"></i>
+
+                                        MEDIUM
+
+                                    </span>
+
+
+                                {% else %}
+
+                                    <span class="badge bg-secondary">
+
+                                        <i class="bi bi-bell-fill me-1"></i>
+
+                                        LOW
+
+                                    </span>
+
+                                {% endif %}
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             WHY DID THIS ALERT APPEAR?
+                        ================================================== -->
+
+                        {% if alert.reason
+                              or alert.why
+                              or alert.explanation
+                              or alert.description %}
+
+                            <div class="mt-4 p-3 border rounded">
+
+                                <div class="dashboard-label">
+
+                                    <i class="bi bi-question-circle-fill me-2"></i>
+
+                                    WHY DID THIS ALERT APPEAR?
+
+                                </div>
+
+                                <p class="mb-0 mt-2">
+
+                                    {{ alert.reason
+                                       | default(
+                                           alert.why
+                                           | default(
+                                               alert.explanation
+                                               | default(
+                                                   alert.description
+                                                   | default(
+                                                       "The Smart Alerts engine detected an unusual condition."
+                                                   )
+                                               )
+                                           )
+                                       )
+                                    }}
+
+                                </p>
+
+                            </div>
+
+                        {% else %}
+
+                            <div class="mt-4 p-3 border rounded">
+
+                                <div class="dashboard-label">
+
+                                    <i class="bi bi-question-circle-fill me-2"></i>
+
+                                    WHY DID THIS ALERT APPEAR?
+
+                                </div>
+
+                                <p class="mb-0 mt-2 muted">
+
+                                    The Smart Alerts engine detected a condition
+                                    requiring attention.
+
+                                </p>
+
+                            </div>
+
+                        {% endif %}
+
+
+                        <!-- =================================================
+                             ALERT EVIDENCE / METRICS
+                        ================================================== -->
+
+                        <div class="mt-4">
+
+                            <div class="dashboard-label mb-3">
+                                ALERT EVIDENCE
+                            </div>
+
+
+                            <div class="row g-3">
+
+
+                                <!-- PRODUCT -->
+
+                                <div class="col-md-4">
+
+                                    <div class="dashboard-card">
+
+                                        <div class="dashboard-label">
+                                            PRODUCT
+                                        </div>
+
+                                        <div>
+
+                                            {{ alert.product
+                                               | default("N/A") }}
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- METRIC -->
+
+                                <div class="col-md-4">
+
+                                    <div class="dashboard-card">
+
+                                        <div class="dashboard-label">
+                                            METRIC
+                                        </div>
+
+                                        <div>
+
+                                            {{ alert.metric
+                                               | default("N/A") }}
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- VALUE -->
+
+                                <div class="col-md-4">
+
+                                    <div class="dashboard-card">
+
+                                        <div class="dashboard-label">
+                                            DETECTED VALUE
+                                        </div>
+
+                                        <div>
+
+                                            {{ alert.value
+                                               | default("N/A") }}
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- CURRENT STOCK -->
+
+                                {% if alert.current_stock is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-card">
+
+                                            <div class="dashboard-label">
+                                                CURRENT STOCK
+                                            </div>
+
+                                            <div>
+
+                                                {{ alert.current_stock }}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                <!-- FORECAST DEMAND -->
+
+                                {% if alert.forecast_demand is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-card">
+
+                                            <div class="dashboard-label">
+                                                FORECAST DEMAND
+                                            </div>
+
+                                            <div>
+
+                                                {{ alert.forecast_demand }}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                <!-- ACTUAL DEMAND -->
+
+                                {% if alert.actual_demand is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-card">
+
+                                            <div class="dashboard-label">
+                                                ACTUAL DEMAND
+                                            </div>
+
+                                            <div>
+
+                                                {{ alert.actual_demand }}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                <!-- EXPECTED DEMAND -->
+
+                                {% if alert.expected_demand is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-card">
+
+                                            <div class="dashboard-label">
+                                                EXPECTED DEMAND
+                                            </div>
+
+                                            <div>
+
+                                                {{ alert.expected_demand }}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                <!-- THRESHOLD -->
+
+                                {% if alert.threshold is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-card">
+
+                                            <div class="dashboard-label">
+                                                THRESHOLD
+                                            </div>
+
+                                            <div>
+
+                                                {{ alert.threshold }}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                <!-- ANOMALY SCORE -->
+
+                                {% if alert.anomaly_score is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-card">
+
+                                            <div class="dashboard-label">
+                                                ANOMALY SCORE
+                                            </div>
+
+                                            <div>
+
+                                                {{ alert.anomaly_score }}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                <!-- DEVIATION -->
+
+                                {% if alert.deviation is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-card">
+
+                                            <div class="dashboard-label">
+                                                DEVIATION
+                                            </div>
+
+                                            <div>
+
+                                                {{ alert.deviation }}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                <!-- DATE -->
+
+                                {% if alert.date is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-card">
+
+                                            <div class="dashboard-label">
+                                                DATE
+                                            </div>
+
+                                            <div>
+
+                                                {{ alert.date }}
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- =================================================
+                             BUSINESS IMPACT
+                        ================================================== -->
+
+                        {% if alert.impact
+                              or alert.business_impact %}
+
+                            <div class="mt-4 p-3 border rounded">
+
+                                <div class="dashboard-label">
+
+                                    <i class="bi bi-graph-up-arrow me-2"></i>
+
+                                    BUSINESS IMPACT
+
+                                </div>
+
+                                <p class="mb-0 mt-2">
+
+                                    {{ alert.impact
+                                       | default(
+                                           alert.business_impact
+                                       )
+                                    }}
+
+                                </p>
+
+                            </div>
+
+                        {% endif %}
+
+
+                        <!-- =================================================
+                             RECOMMENDED ACTION
+                        ================================================== -->
+
+                        {% if alert.recommendation
+                              or alert.recommended_action %}
+
+                            <div class="mt-4 p-3 border rounded">
+
+                                <div class="dashboard-label">
+
+                                    <i class="bi bi-lightbulb-fill me-2"></i>
+
+                                    RECOMMENDED ACTION
+
+                                </div>
+
+                                <p class="mb-0 mt-2">
+
+                                    {{ alert.recommendation
+                                       | default(
+                                           alert.recommended_action
+                                       )
+                                    }}
+
+                                </p>
+
+                            </div>
+
+                        {% endif %}
+
+
+                        <!-- =================================================
+                             ALERT STATUS
+                        ================================================== -->
+
+                        <div class="mt-4">
+
+                            <div class="row g-3">
+
+
+                                {% if alert.status is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-label">
+                                            STATUS
+                                        </div>
+
+                                        <div>
+
+                                            {{ alert.status
+                                               | upper }}
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                {% if alert.created_at is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-label">
+                                            DETECTED AT
+                                        </div>
+
+                                        <div>
+
+                                            {{ alert.created_at }}
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+
+                                {% if alert.alert_id is defined %}
+
+                                    <div class="col-md-4">
+
+                                        <div class="dashboard-label">
+                                            ALERT ID
+                                        </div>
+
+                                        <div>
+
+                                            {{ alert.alert_id }}
+
+                                        </div>
+
+                                    </div>
+
+                                {% endif %}
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+
+        {% else %}
+
+            <!-- =================================================
+                 NO ALERTS
+            ================================================== -->
+
+            <div class="text-center py-5">
+
+                <div class="card-icon mx-auto mb-4">
+
+                    {% if alerts_success %}
+
+                        <i class="bi bi-shield-check"></i>
+
+                    {% else %}
+
+                        <i class="bi bi-info-circle"></i>
+
+                    {% endif %}
+
+                </div>
+
+
+                {% if alerts_success %}
+
+                    <h5>
+                        No Active Alerts
+                    </h5>
+
+                    <p class="muted mb-2">
+
+                        Smart Alerts analyzed the available dataset
+                        successfully.
+
+                    </p>
+
+                    <p class="muted mb-0">
+
+                        No demand or inventory conditions exceeded
+                        the configured alert thresholds.
+
+                    </p>
+
+                {% else %}
+
+                    <h5>
+                        Smart Alert Analysis Not Available
+                    </h5>
+
+                    <p class="muted mb-0">
+
+                        {{ alerts_message
+                           | default(
+                               "Smart Alert detection could not be completed."
+                           )
+                        }}
+
+                    </p>
+
+                {% endif %}
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- =====================================================
+         ALERT INSIGHTS
+    ====================================================== -->
+
+    {% if alert_insights %}
+
+        <div class="large-card mt-4">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <div>
+
+                    <div class="dashboard-label">
+                        AI INSIGHTS
+                    </div>
+
+                    <h4>
+                        Smart Alert Analysis
+                    </h4>
+
+                    <p class="muted mb-0">
+                        Key observations generated from the alert detection engine.
+                    </p>
+
+                </div>
+
+                <div class="card-icon">
+
+                    <i class="bi bi-stars"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="mt-4">
+
+                {% for insight in alert_insights %}
+
+                    <div class="dashboard-card mb-3">
+
+                        <i class="bi bi-lightbulb-fill me-2"></i>
+
+                        {{ insight }}
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+    {% endif %}
+
+
+    <!-- =====================================================
+         EMAIL NOTIFICATION SUBSCRIPTION
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    EMAIL NOTIFICATIONS
+                </div>
+
+                <h4>
+                    Smart Alert Email Subscription
+                </h4>
+
+                <p class="muted mb-0">
+                    Receive AI-generated Smart Alerts directly in your email.
+                </p>
+
+            </div>
+
+            <div class="card-icon">
+
+                <i class="bi bi-envelope-fill"></i>
+
+            </div>
+
+        </div>
+
+
+        <form
+            method="POST"
+            action="{{ url_for('subscribe_alert_notifications') }}"
+            class="mt-4"
+        >
+
+            <div class="row g-4">
+
+
+                <!-- EMAIL -->
+
+                <div class="col-md-12">
+
+                    <label class="form-label">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="your@email.com"
+                        value="{{ subscription.email if subscription else '' }}"
+                        required
+                    >
+
+                    <small class="muted">
+                        Smart Alert notifications will be sent to this address.
+                    </small>
+
+                </div>
+
+
+                <!-- ENABLE -->
+
+                <div class="col-md-12">
+
+                    <div class="form-check">
+
+                        <input
+                            class="form-check-input"
+                            type="checkbox"
+                            name="email_enabled"
+                            id="email_enabled"
+
+                            {% if not subscription
+                               or subscription.email_enabled %}
+                                checked
+                            {% endif %}
+                        >
+
+                        <label
+                            class="form-check-label"
+                            for="email_enabled"
+                        >
+
+                            <i class="bi bi-envelope-fill me-2"></i>
+
+                            Enable Email Notifications
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRIORITIES -->
+
+                <div class="col-md-12">
+
+                    <div class="dashboard-label mb-3">
+                        ALERT PRIORITIES
+                    </div>
+
+                    <p class="muted">
+                        Choose which Smart Alert severity levels should
+                        trigger email notifications.
+                    </p>
+
+
+                    <div class="row g-3">
+
+
+                        <!-- CRITICAL -->
+
+                        <div class="col-md-3">
+
+                            <div class="form-check">
+
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="critical_enabled"
+                                    id="critical_enabled"
+
+                                    {% if not subscription
+                                       or subscription.critical_enabled %}
+                                        checked
+                                    {% endif %}
+                                >
+
+                                <label
+                                    class="form-check-label"
+                                    for="critical_enabled"
+                                >
+
+                                    <i class="bi bi-exclamation-octagon-fill me-1"></i>
+
+                                    Critical
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- HIGH -->
+
+                        <div class="col-md-3">
+
+                            <div class="form-check">
+
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="high_enabled"
+                                    id="high_enabled"
+
+                                    {% if not subscription
+                                       or subscription.high_enabled %}
+                                        checked
+                                    {% endif %}
+                                >
+
+                                <label
+                                    class="form-check-label"
+                                    for="high_enabled"
+                                >
+
+                                    <i class="bi bi-exclamation-triangle-fill me-1"></i>
+
+                                    High
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MEDIUM -->
+
+                        <div class="col-md-3">
+
+                            <div class="form-check">
+
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="medium_enabled"
+                                    id="medium_enabled"
+
+                                    {% if not subscription
+                                       or subscription.medium_enabled %}
+                                        checked
+                                    {% endif %}
+                                >
+
+                                <label
+                                    class="form-check-label"
+                                    for="medium_enabled"
+                                >
+
+                                    <i class="bi bi-info-circle-fill me-1"></i>
+
+                                    Medium
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- LOW -->
+
+                        <div class="col-md-3">
+
+                            <div class="form-check">
+
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    name="low_enabled"
+                                    id="low_enabled"
+
+                                    {% if not subscription
+                                       or subscription.low_enabled %}
+                                        checked
+                                    {% endif %}
+                                >
+
+                                <label
+                                    class="form-check-label"
+                                    for="low_enabled"
+                                >
+
+                                    <i class="bi bi-bell-fill me-1"></i>
+
+                                    Low
+
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SAVE -->
+
+                <div class="col-md-12">
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+
+                        <i class="bi bi-save-fill me-2"></i>
+
+                        Save Email Notification Settings
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- =====================================================
+         EMAIL CONFIGURATION STATUS
+    ====================================================== -->
+
+    {% if subscription %}
+
+        <div class="large-card mt-4">
+
+            <div class="d-flex justify-content-between align-items-center">
+
+                <div>
+
+                    <div class="dashboard-label">
+                        NOTIFICATION STATUS
+                    </div>
+
+                    <h4>
+                        Email Delivery Configuration
+                    </h4>
+
+                    <p class="muted mb-0">
+                        Current Smart Alert email notification configuration.
+                    </p>
+
+                </div>
+
+                <div class="card-icon">
+
+                    <i class="bi bi-envelope-check-fill"></i>
+
+                </div>
+
+            </div>
+
+
+            <div class="row g-4 mt-3">
+
+
+                <!-- EMAIL STATUS -->
+
+                <div class="col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-label">
+                            EMAIL
+                        </div>
+
+                        <h5>
+
+                            {% if subscription.email_enabled
+                                  and subscription.email %}
+
+                                <span class="text-success">
+
+                                    <i class="bi bi-check-circle-fill me-1"></i>
+
+                                    Enabled
+
+                                </span>
+
+                            {% else %}
+
+                                <span class="text-secondary">
+
+                                    <i class="bi bi-x-circle-fill me-1"></i>
+
+                                    Disabled
+
+                                </span>
+
+                            {% endif %}
+
+                        </h5>
+
+
+                        {% if subscription.email %}
+
+                            <p class="muted mb-0">
+                                {{ subscription.email }}
+                            </p>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRIORITIES -->
+
+                <div class="col-md-6">
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-label">
+                            SELECTED PRIORITIES
+                        </div>
+
+                        <div class="mt-2">
+
+                            {% if subscription.critical_enabled %}
+
+                                <span class="badge bg-danger me-1">
+                                    Critical
+                                </span>
+
+                            {% endif %}
+
+
+                            {% if subscription.high_enabled %}
+
+                                <span class="badge bg-warning text-dark me-1">
+                                    High
+                                </span>
+
+                            {% endif %}
+
+
+                            {% if subscription.medium_enabled %}
+
+                                <span class="badge bg-info text-dark me-1">
+                                    Medium
+                                </span>
+
+                            {% endif %}
+
+
+                            {% if subscription.low_enabled %}
+
+                                <span class="badge bg-secondary me-1">
+                                    Low
+                                </span>
+
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    {% endif %}
+
+
+    <!-- =====================================================
+         NOTIFICATION ACTIVITY
+    ====================================================== -->
+
+    <div class="large-card mt-4">
+
+        <div class="d-flex justify-content-between align-items-center">
+
+            <div>
+
+                <div class="dashboard-label">
+                    NOTIFICATION ACTIVITY
+                </div>
+
+                <h4>
+                    Email Delivery History
+                </h4>
+
+                <p class="muted mb-0">
+                    Recent email notification activity generated
+                    by the Smart Alerts engine.
+                </p>
+
+            </div>
+
+            <div class="card-icon">
+
+                <i class="bi bi-clock-history"></i>
+
+            </div>
+
+        </div>
+
+
+        {% if notification_history %}
+
+            <div class="mt-4">
+
+                {% for notification in notification_history %}
+
+                    <div class="dashboard-card mb-3">
+
+                        <div class="d-flex justify-content-between align-items-start">
+
+
+                            <div>
+
+                                <div class="dashboard-label">
+
+                                    {{ notification.severity
+                                       | default("LOW")
+                                       | upper }}
+
+                                </div>
+
+
+                                <h5 class="mb-1">
+
+                                    {{ notification.alert_title
+                                       | default("Smart Alert") }}
+
+                                </h5>
+
+
+                                <small class="muted">
+
+                                    {% if notification.sent_at %}
+
+                                        {{ notification.sent_at.strftime(
+                                            "%d %b %Y, %I:%M %p"
+                                        ) }}
+
+                                    {% endif %}
+
+                                </small>
+
+                            </div>
+
+
+                            <!-- STATUS -->
+
+                            <div>
+
+                                {% if notification.status == "sent" %}
+
+                                    <span class="badge bg-success">
+
+                                        <i class="bi bi-check-circle-fill me-1"></i>
+
+                                        Sent
+
+                                    </span>
+
+
+                                {% elif notification.status == "failed" %}
+
+                                    <span class="badge bg-danger">
+
+                                        <i class="bi bi-x-circle-fill me-1"></i>
+
+                                        Failed
+
+                                    </span>
+
+
+                                {% else %}
+
+                                    <span class="badge bg-secondary">
+
+                                        {{ notification.status
+                                           | default("Unknown")
+                                           | upper }}
+
+                                    </span>
+
+                                {% endif %}
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CHANNEL -->
+
+                        <div class="mt-3">
+
+                            <span>
+
+                                <i class="bi bi-envelope-fill me-2"></i>
+
+                                Email Notification
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- ERROR -->
+
+                        {% if notification.error_message %}
+
+                            <div class="mt-3">
+
+                                <small class="text-danger">
+
+                                    <i class="bi bi-exclamation-circle me-1"></i>
+
+                                    {{ notification.error_message }}
+
+                                </small>
+
+                            </div>
+
+                        {% endif %}
+
+                    </div>
+
+                {% endfor %}
+
+            </div>
+
+
+        {% else %}
+
+            <div class="text-center py-5">
+
+                <div class="card-icon mx-auto mb-4">
+
+                    <i class="bi bi-inbox"></i>
+
+                </div>
+
+                <h5>
+                    No Email Notification Activity
+                </h5>
+
+                <p class="muted mb-0">
+
+                    Email delivery history will appear here
+                    after Smart Alerts are processed.
+
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+</div>
+
+{% endblock %}
